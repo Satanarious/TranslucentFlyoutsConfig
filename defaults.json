@@ -1,0 +1,82 @@
+{
+  "General": {
+    "Scope": { "default": 0, "unsupported": 0 },
+    "Effect Type": { "default": 5, "unsupported": 0 },
+    "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
+    "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+    "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+    "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+    "Light Mode Opacity": { "default": "", "unsupported": 0 },
+    "Disabled": { "default": 0, "unsupported": 0 }
+  },
+  "DropDown": {
+    "Effect Type": { "default": 5, "unsupported": 0 },
+    "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
+    "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+    "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+    "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+    "Light Mode Opacity": { "default": "", "unsupported": 0 },
+    "Disabled": { "default": 0, "unsupported": 0 }
+  },
+  "Menu": {
+    "No System Outline": { "default": 0, "unsupported": 0 },
+    "Enable Immersive Style": { "default": 1, "unsupported": 11 },
+    "Enable Custom Rendering": { "default": 0, "unsupported": 0 },
+    "Effect Type": { "default": 5, "unsupported": 0 },
+    "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
+    "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+    "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+    "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+    "Light Mode Opacity": { "default": "", "unsupported": 0 },
+    "Disabled": { "default": 0, "unsupported": 0 }
+  },
+  "Menu Items": {
+    "Hot": {
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+      "Light Mode Opacity": { "default": "", "unsupported": 0 },
+      "Disabled": { "default": 0, "unsupported": 0 },
+      "Corner Radius": { "default": 0, "unsupported": 0 },
+      "Enable Theme Customization": { "default": 0, "unsupported": 0 }
+    },
+    "Disabled Hot": {
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+      "Light Mode Opacity": { "default": "", "unsupported": 0 },
+      "Disabled": { "default": 0, "unsupported": 0 },
+      "Corner Radius": { "default": 0, "unsupported": 0 },
+      "Enable Theme Customization": { "default": 0, "unsupported": 0 }
+    },
+    "Focusing": {
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+      "Light Mode Opacity": { "default": "", "unsupported": 0 },
+      "Disabled": { "default": 0, "unsupported": 0 },
+      "Corner Radius": { "default": 0, "unsupported": 0 },
+      "Enable Theme Customization": { "default": 0, "unsupported": 0 }
+    },
+    "Border": {
+      "No Border Color": { "default": 0, "unsupported": 10 },
+      "Corner Type": { "default": 0, "unsupported": 10 },
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 10 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 10 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 11 },
+      "Light Mode Opacity": { "default": "", "unsupported": 11 },
+      "Corner Radius": { "default": 0, "unsupported": 0 },
+      "Enable Theme Customization": { "default": 0, "unsupported": 0 }
+    },
+    "Separator": {
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+      "Light Mode Opacity": { "default": "", "unsupported": 0 },
+      "Disabled": { "default": 0, "unsupported": 0 },
+      "Corner Radius": { "default": 0, "unsupported": 0 },
+      "Enable Theme Customization": { "default": 0, "unsupported": 0 }
+    }
+  },
+  "Tooltip": {}
+}
