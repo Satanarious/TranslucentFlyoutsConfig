@@ -1,0 +1,6 @@
+<RCC>
+  <qresource lang="Icons">
+    <file alias="color_picker_icon">Assets/2867978.png</file>
+    <file alias="reset_icon">Assets/View-refresh.svg.png</file>
+  </qresource>
+</RCC>
