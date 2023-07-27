@@ -1,5 +1,7 @@
 # Translucent Flyouts Config GUI
 
+>Note: This software is in its early stages of development. It will only work after the first alpha release.
+
 **Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts) for Windows 10/11, which allows transparency and blur for windows32 style context menus.
 
 Take a look at the [Config File](https://github.com/ALTaleX531/TranslucentFlyouts/blob/master/CONFIG.md) which provides description as well as methods to configure various aspects of the windows32 style context menus. Though some features are restricted to Windows 11 due to the absence of Mica on Windows 10.
