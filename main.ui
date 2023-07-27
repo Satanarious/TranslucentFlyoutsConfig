@@ -101,8 +101,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -178,8 +178,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -217,8 +217,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -255,8 +255,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -266,8 +266,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -304,8 +304,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -315,8 +315,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -353,8 +353,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -364,8 +364,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -405,8 +405,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -416,8 +416,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -452,8 +452,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -608,8 +608,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -647,8 +647,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -685,8 +685,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -696,8 +696,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -734,8 +734,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -745,8 +745,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -778,13 +778,13 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="dark_mode_opacity2_2">
+             <widget class="QPushButton" name="dark_mode_opacity_picker2">
               <property name="text">
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -794,8 +794,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -830,13 +830,13 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="light_mode_opacity2_2">
+             <widget class="QPushButton" name="light_mode_opacity_picker2">
               <property name="text">
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -846,8 +846,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -885,8 +885,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -993,8 +993,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1035,8 +1035,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1074,8 +1074,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1151,8 +1151,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1190,8 +1190,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1228,8 +1228,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -1239,8 +1239,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1277,8 +1277,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -1288,8 +1288,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1321,13 +1321,13 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="dark_mode_opacity3">
+             <widget class="QPushButton" name="dark_mode_opacity_picker3">
               <property name="text">
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -1337,8 +1337,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1373,13 +1373,13 @@
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="light_mode_opacity3">
+             <widget class="QPushButton" name="light_mode_opacity_picker3">
               <property name="text">
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+               <iconset>
+                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
               </property>
              </widget>
             </item>
@@ -1389,8 +1389,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1428,8 +1428,8 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+               <iconset>
+                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
               </property>
              </widget>
             </item>
@@ -1549,8 +1549,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1560,8 +1560,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1598,8 +1598,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1609,8 +1609,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1642,13 +1642,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="dark_mode_opacity4_1">
+                 <widget class="QPushButton" name="dark_mode_opacity_picker4_1">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1658,8 +1658,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1694,13 +1694,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy4_1">
+                 <widget class="QPushButton" name="light_mode_opactiy_picker4_1">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1710,8 +1710,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1749,8 +1749,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1784,8 +1784,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1823,8 +1823,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1912,8 +1912,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1923,8 +1923,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1961,8 +1961,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -1972,8 +1972,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2005,13 +2005,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="dark_mode_opacity4_2">
+                 <widget class="QPushButton" name="dark_mode_opacity_picker4_2">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2021,8 +2021,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2057,13 +2057,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy4_2">
+                 <widget class="QPushButton" name="light_mode_opactiy_picker4_2">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2073,8 +2073,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2112,8 +2112,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2147,8 +2147,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2186,8 +2186,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2275,8 +2275,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2286,8 +2286,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2324,8 +2324,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2335,8 +2335,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2368,13 +2368,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="dark_mode_opacity4_3">
+                 <widget class="QPushButton" name="dark_mode_opacity_picker4_3">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2384,8 +2384,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2420,13 +2420,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy4_3">
+                 <widget class="QPushButton" name="light_mode_opactiy_picker4_3">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2436,8 +2436,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2475,8 +2475,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2510,8 +2510,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2549,8 +2549,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2639,8 +2639,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2683,8 +2683,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2721,8 +2721,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2732,8 +2732,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2770,8 +2770,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2781,8 +2781,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2814,13 +2814,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="dark_mode_opacity4_4">
+                 <widget class="QPushButton" name="dark_mode_opacity_picker4_4">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2830,8 +2830,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2866,13 +2866,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy4_4">
+                 <widget class="QPushButton" name="light_mode_opactiy_picker4_4">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2882,8 +2882,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2917,8 +2917,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -2956,8 +2956,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3045,8 +3045,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3056,8 +3056,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3094,8 +3094,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3105,8 +3105,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3138,13 +3138,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="dark_mode_opacity4_5">
+                 <widget class="QPushButton" name="dark_mode_opacity_picker4_5">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3154,8 +3154,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3190,13 +3190,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy4_5">
+                 <widget class="QPushButton" name="light_mode_opactiy_picker4_5">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/color_picker_icon</normaloff>:/color_picker_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3206,8 +3206,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3245,8 +3245,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3280,8 +3280,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
@@ -3319,8 +3319,8 @@
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
-                    <normaloff>:/reset_icon</normaloff>:/reset_icon</iconset>
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
                   </property>
                  </widget>
                 </item>
