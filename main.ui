@@ -1694,7 +1694,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy_picker4_1">
+                 <widget class="QPushButton" name="light_mode_opacity_picker4_1">
                   <property name="text">
                    <string/>
                   </property>
@@ -2057,7 +2057,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy_picker4_2">
+                 <widget class="QPushButton" name="light_mode_opacity_picker4_2">
                   <property name="text">
                    <string/>
                   </property>
@@ -2420,7 +2420,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy_picker4_3">
+                 <widget class="QPushButton" name="light_mode_opacity_picker4_3">
                   <property name="text">
                    <string/>
                   </property>
@@ -2703,7 +2703,7 @@
                  <number>4</number>
                 </property>
                 <item>
-                 <widget class="QLineEdit" name="darkModeGradientColor4_5">
+                 <widget class="QLineEdit" name="darkModeGradientColor4_4">
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -2866,7 +2866,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy_picker4_4">
+                 <widget class="QPushButton" name="light_mode_opacity_picker4_4">
                   <property name="text">
                    <string/>
                   </property>
@@ -3027,7 +3027,7 @@
                  <number>4</number>
                 </property>
                 <item>
-                 <widget class="QLineEdit" name="darkModeGradientColor4_6">
+                 <widget class="QLineEdit" name="darkModeGradientColor4_5">
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -3190,7 +3190,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="light_mode_opactiy_picker4_5">
+                 <widget class="QPushButton" name="light_mode_opacity_picker4_5">
                   <property name="text">
                    <string/>
                   </property>

@@ -25,7 +25,7 @@ darkModeOpacity = "Dark Mode Opacity"
 lightModeOpacity = "Light Mode Opacity"
 disabled = "Disabled"
 noSystemOutline = "No System Outline"
-enableImmersiveMode = "Enable Immersive Mode"
+enableImmersiveStyle = "Enable Immersive Style"
 enableCustomRendering = "Enable Custom Rendering"
 cornerRadius = "Corner Radius"
 enableThemeCustomization = "Enable Theme Customization"
@@ -94,9 +94,9 @@ class Defaults:
             Default = rawDefaults[menu][noSystemOutline][default]
             Unsupported = rawDefaults[menu][noSystemOutline][unsupported]
 
-        class EnableImmersiveMode:
-            Default = rawDefaults[menu][enableImmersiveMode][default]
-            Unsupported = rawDefaults[menu][enableImmersiveMode][unsupported]
+        class EnableImmersiveStyle:
+            Default = rawDefaults[menu][enableImmersiveStyle][default]
+            Unsupported = rawDefaults[menu][enableImmersiveStyle][unsupported]
 
         class EnableCustomRendering:
             Default = rawDefaults[menu][enableCustomRendering][default]

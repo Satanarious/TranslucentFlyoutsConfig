@@ -40,9 +40,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_2.setToolTip("")
         self.label_2.setObjectName("label_2")
-        self.formLayout.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_2
-        )
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_2)
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_10.setSpacing(4)
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
@@ -54,23 +52,15 @@ class Ui_MainWindow(object):
         self.reset_scope = QtWidgets.QPushButton(parent=self.tab_1)
         self.reset_scope.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap("Assets/View-refresh.svg.png"),
-            QtGui.QIcon.Mode.Normal,
-            QtGui.QIcon.State.Off,
-        )
+        icon.addPixmap(QtGui.QPixmap("Assets/View-refresh.svg.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.reset_scope.setIcon(icon)
         self.reset_scope.setObjectName("reset_scope")
         self.horizontalLayout_10.addWidget(self.reset_scope)
         self.horizontalLayout_10.setStretch(0, 1)
-        self.formLayout.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_10
-        )
+        self.formLayout.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_10)
         self.label_6 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_6.setObjectName("label_6")
-        self.formLayout.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_6
-        )
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_6)
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_11.setSpacing(4)
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
@@ -92,14 +82,10 @@ class Ui_MainWindow(object):
         self.reset_effect_type1.setObjectName("reset_effect_type1")
         self.horizontalLayout_11.addWidget(self.reset_effect_type1)
         self.horizontalLayout_11.setStretch(0, 1)
-        self.formLayout.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_11
-        )
+        self.formLayout.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_11)
         self.label_7 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_7.setObjectName("label_7")
-        self.formLayout.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_7
-        )
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_7)
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_12.setSpacing(4)
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
@@ -114,88 +100,58 @@ class Ui_MainWindow(object):
         self.reset_drop_shadow1.setObjectName("reset_drop_shadow1")
         self.horizontalLayout_12.addWidget(self.reset_drop_shadow1)
         self.horizontalLayout_12.setStretch(0, 1)
-        self.formLayout.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_12
-        )
+        self.formLayout.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_12)
         self.label_8 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_8.setObjectName("label_8")
-        self.formLayout.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_8
-        )
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_8)
         self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_13.setSpacing(4)
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
         self.darkModeGradientColor1 = QtWidgets.QLineEdit(parent=self.tab_1)
         self.darkModeGradientColor1.setToolTip("")
-        self.darkModeGradientColor1.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeGradientColor1.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeGradientColor1.setObjectName("darkModeGradientColor1")
         self.horizontalLayout_13.addWidget(self.darkModeGradientColor1)
         self.dark_mode_gradient_color_picker1 = QtWidgets.QPushButton(parent=self.tab_1)
         self.dark_mode_gradient_color_picker1.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(
-            QtGui.QPixmap("Assets/2867978.png"),
-            QtGui.QIcon.Mode.Normal,
-            QtGui.QIcon.State.Off,
-        )
+        icon1.addPixmap(QtGui.QPixmap("Assets/2867978.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.dark_mode_gradient_color_picker1.setIcon(icon1)
-        self.dark_mode_gradient_color_picker1.setObjectName(
-            "dark_mode_gradient_color_picker1"
-        )
+        self.dark_mode_gradient_color_picker1.setObjectName("dark_mode_gradient_color_picker1")
         self.horizontalLayout_13.addWidget(self.dark_mode_gradient_color_picker1)
         self.reset_dark_mode_gradient_color1 = QtWidgets.QPushButton(parent=self.tab_1)
         self.reset_dark_mode_gradient_color1.setText("")
         self.reset_dark_mode_gradient_color1.setIcon(icon)
-        self.reset_dark_mode_gradient_color1.setObjectName(
-            "reset_dark_mode_gradient_color1"
-        )
+        self.reset_dark_mode_gradient_color1.setObjectName("reset_dark_mode_gradient_color1")
         self.horizontalLayout_13.addWidget(self.reset_dark_mode_gradient_color1)
         self.horizontalLayout_13.setStretch(0, 1)
-        self.formLayout.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_13
-        )
+        self.formLayout.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_13)
         self.label_9 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_9.setObjectName("label_9")
-        self.formLayout.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_9
-        )
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_9)
         self.horizontalLayout_14 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_14.setSpacing(4)
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
         self.lightModeGradientColor1 = QtWidgets.QLineEdit(parent=self.tab_1)
         self.lightModeGradientColor1.setToolTip("")
-        self.lightModeGradientColor1.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor1.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor1.setObjectName("lightModeGradientColor1")
         self.horizontalLayout_14.addWidget(self.lightModeGradientColor1)
-        self.light_mode_gradient_color_picker1 = QtWidgets.QPushButton(
-            parent=self.tab_1
-        )
+        self.light_mode_gradient_color_picker1 = QtWidgets.QPushButton(parent=self.tab_1)
         self.light_mode_gradient_color_picker1.setText("")
         self.light_mode_gradient_color_picker1.setIcon(icon1)
-        self.light_mode_gradient_color_picker1.setObjectName(
-            "light_mode_gradient_color_picker1"
-        )
+        self.light_mode_gradient_color_picker1.setObjectName("light_mode_gradient_color_picker1")
         self.horizontalLayout_14.addWidget(self.light_mode_gradient_color_picker1)
         self.reset_light_mode_gradient_color1 = QtWidgets.QPushButton(parent=self.tab_1)
         self.reset_light_mode_gradient_color1.setText("")
         self.reset_light_mode_gradient_color1.setIcon(icon)
-        self.reset_light_mode_gradient_color1.setObjectName(
-            "reset_light_mode_gradient_color1"
-        )
+        self.reset_light_mode_gradient_color1.setObjectName("reset_light_mode_gradient_color1")
         self.horizontalLayout_14.addWidget(self.reset_light_mode_gradient_color1)
         self.horizontalLayout_14.setStretch(0, 1)
-        self.formLayout.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_14
-        )
+        self.formLayout.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_14)
         self.label_10 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_10.setObjectName("label_10")
-        self.formLayout.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_10
-        )
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_10)
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_15.setSpacing(4)
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
@@ -215,14 +171,10 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity1.setObjectName("reset_dark_mode_opacity1")
         self.horizontalLayout_15.addWidget(self.reset_dark_mode_opacity1)
         self.horizontalLayout_15.setStretch(0, 1)
-        self.formLayout.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_15
-        )
+        self.formLayout.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_15)
         self.label_11 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_11.setObjectName("label_11")
-        self.formLayout.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_11
-        )
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_11)
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_16.setSpacing(4)
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
@@ -243,14 +195,10 @@ class Ui_MainWindow(object):
         self.reset_light_mode_opacity1.setObjectName("reset_light_mode_opacity1")
         self.horizontalLayout_16.addWidget(self.reset_light_mode_opacity1)
         self.horizontalLayout_16.setStretch(0, 1)
-        self.formLayout.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_16
-        )
+        self.formLayout.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_16)
         self.label_12 = QtWidgets.QLabel(parent=self.tab_1)
         self.label_12.setObjectName("label_12")
-        self.formLayout.setWidget(
-            7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_12
-        )
+        self.formLayout.setWidget(7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_12)
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.disabledEffect1 = QtWidgets.QComboBox(parent=self.tab_1)
@@ -264,9 +212,7 @@ class Ui_MainWindow(object):
         self.reset_disabled1.setObjectName("reset_disabled1")
         self.horizontalLayout_17.addWidget(self.reset_disabled1)
         self.horizontalLayout_17.setStretch(0, 1)
-        self.formLayout.setLayout(
-            7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_17
-        )
+        self.formLayout.setLayout(7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_17)
         self.verticalLayout.addLayout(self.formLayout)
         self.note1 = QtWidgets.QLabel(parent=self.tab_1)
         self.note1.setWordWrap(True)
@@ -274,25 +220,13 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.note1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        spacerItem = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.applyButton1 = QtWidgets.QPushButton(parent=self.tab_1)
-        self.applyButton1.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton1.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton1.setObjectName("applyButton1")
         self.horizontalLayout_2.addWidget(self.applyButton1)
-        spacerItem1 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem1)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.verticalLayout.setStretch(1, 1)
@@ -313,9 +247,7 @@ class Ui_MainWindow(object):
         self.formLayout_2.setObjectName("formLayout_2")
         self.label_13 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_13.setObjectName("label_13")
-        self.formLayout_2.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_13
-        )
+        self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_13)
         self.horizontalLayout_18 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_18.setSpacing(4)
         self.horizontalLayout_18.setObjectName("horizontalLayout_18")
@@ -337,14 +269,10 @@ class Ui_MainWindow(object):
         self.reset_effect_type2.setObjectName("reset_effect_type2")
         self.horizontalLayout_18.addWidget(self.reset_effect_type2)
         self.horizontalLayout_18.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_18
-        )
+        self.formLayout_2.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_18)
         self.label_14 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_14.setObjectName("label_14")
-        self.formLayout_2.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_14
-        )
+        self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_14)
         self.horizontalLayout_19 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_19.setSpacing(4)
         self.horizontalLayout_19.setObjectName("horizontalLayout_19")
@@ -359,30 +287,22 @@ class Ui_MainWindow(object):
         self.reset_drop_shadow2.setObjectName("reset_drop_shadow2")
         self.horizontalLayout_19.addWidget(self.reset_drop_shadow2)
         self.horizontalLayout_19.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_19
-        )
+        self.formLayout_2.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_19)
         self.label_15 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_15.setObjectName("label_15")
-        self.formLayout_2.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_15
-        )
+        self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_15)
         self.horizontalLayout_20 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_20.setSpacing(4)
         self.horizontalLayout_20.setObjectName("horizontalLayout_20")
         self.darkModeGradientColor2 = QtWidgets.QLineEdit(parent=self.tab_2)
         self.darkModeGradientColor2.setToolTip("")
-        self.darkModeGradientColor2.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeGradientColor2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeGradientColor2.setObjectName("darkModeGradientColor2")
         self.horizontalLayout_20.addWidget(self.darkModeGradientColor2)
         self.dark_mode_gradient_color_picker2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.dark_mode_gradient_color_picker2.setText("")
         self.dark_mode_gradient_color_picker2.setIcon(icon1)
-        self.dark_mode_gradient_color_picker2.setObjectName(
-            "dark_mode_gradient_color_picker2"
-        )
+        self.dark_mode_gradient_color_picker2.setObjectName("dark_mode_gradient_color_picker2")
         self.horizontalLayout_20.addWidget(self.dark_mode_gradient_color_picker2)
         self.dark_mode_gradient_color2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.dark_mode_gradient_color2.setText("")
@@ -390,32 +310,22 @@ class Ui_MainWindow(object):
         self.dark_mode_gradient_color2.setObjectName("dark_mode_gradient_color2")
         self.horizontalLayout_20.addWidget(self.dark_mode_gradient_color2)
         self.horizontalLayout_20.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_20
-        )
+        self.formLayout_2.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_20)
         self.label_16 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_16.setObjectName("label_16")
-        self.formLayout_2.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_16
-        )
+        self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_16)
         self.horizontalLayout_21 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_21.setSpacing(4)
         self.horizontalLayout_21.setObjectName("horizontalLayout_21")
         self.lightModeGradientColor2 = QtWidgets.QLineEdit(parent=self.tab_2)
         self.lightModeGradientColor2.setToolTip("")
-        self.lightModeGradientColor2.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor2.setObjectName("lightModeGradientColor2")
         self.horizontalLayout_21.addWidget(self.lightModeGradientColor2)
-        self.light_mode_gradient_color_picker2 = QtWidgets.QPushButton(
-            parent=self.tab_2
-        )
+        self.light_mode_gradient_color_picker2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.light_mode_gradient_color_picker2.setText("")
         self.light_mode_gradient_color_picker2.setIcon(icon1)
-        self.light_mode_gradient_color_picker2.setObjectName(
-            "light_mode_gradient_color_picker2"
-        )
+        self.light_mode_gradient_color_picker2.setObjectName("light_mode_gradient_color_picker2")
         self.horizontalLayout_21.addWidget(self.light_mode_gradient_color_picker2)
         self.light_mode_gradient_color2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.light_mode_gradient_color2.setText("")
@@ -423,14 +333,10 @@ class Ui_MainWindow(object):
         self.light_mode_gradient_color2.setObjectName("light_mode_gradient_color2")
         self.horizontalLayout_21.addWidget(self.light_mode_gradient_color2)
         self.horizontalLayout_21.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_21
-        )
+        self.formLayout_2.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_21)
         self.label_17 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_17.setObjectName("label_17")
-        self.formLayout_2.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_17
-        )
+        self.formLayout_2.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_17)
         self.horizontalLayout_22 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_22.setSpacing(4)
         self.horizontalLayout_22.setObjectName("horizontalLayout_22")
@@ -450,14 +356,10 @@ class Ui_MainWindow(object):
         self.dark_mode_opacity2.setObjectName("dark_mode_opacity2")
         self.horizontalLayout_22.addWidget(self.dark_mode_opacity2)
         self.horizontalLayout_22.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_22
-        )
+        self.formLayout_2.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_22)
         self.label_18 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_18.setObjectName("label_18")
-        self.formLayout_2.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_18
-        )
+        self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_18)
         self.horizontalLayout_23 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_23.setSpacing(4)
         self.horizontalLayout_23.setObjectName("horizontalLayout_23")
@@ -478,14 +380,10 @@ class Ui_MainWindow(object):
         self.light_mode_opacity2.setObjectName("light_mode_opacity2")
         self.horizontalLayout_23.addWidget(self.light_mode_opacity2)
         self.horizontalLayout_23.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_23
-        )
+        self.formLayout_2.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_23)
         self.label_19 = QtWidgets.QLabel(parent=self.tab_2)
         self.label_19.setObjectName("label_19")
-        self.formLayout_2.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_19
-        )
+        self.formLayout_2.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_19)
         self.horizontalLayout_24 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_24.setSpacing(4)
         self.horizontalLayout_24.setObjectName("horizontalLayout_24")
@@ -500,31 +398,17 @@ class Ui_MainWindow(object):
         self.reset_disabled2.setObjectName("reset_disabled2")
         self.horizontalLayout_24.addWidget(self.reset_disabled2)
         self.horizontalLayout_24.setStretch(0, 1)
-        self.formLayout_2.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_24
-        )
+        self.formLayout_2.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_24)
         self.verticalLayout_2.addLayout(self.formLayout_2)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        spacerItem2 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem2)
         self.applyButton2 = QtWidgets.QPushButton(parent=self.tab_2)
-        self.applyButton2.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton2.setObjectName("applyButton2")
         self.horizontalLayout_3.addWidget(self.applyButton2)
-        spacerItem3 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem3)
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
         self.verticalLayout_2.setStretch(1, 1)
@@ -545,9 +429,7 @@ class Ui_MainWindow(object):
         self.formLayout_4.setObjectName("formLayout_4")
         self.label_20 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_20.setObjectName("label_20")
-        self.formLayout_4.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_20
-        )
+        self.formLayout_4.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_20)
         self.horizontalLayout_25 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_25.setSpacing(4)
         self.horizontalLayout_25.setObjectName("horizontalLayout_25")
@@ -562,14 +444,10 @@ class Ui_MainWindow(object):
         self.reset_system_outline.setObjectName("reset_system_outline")
         self.horizontalLayout_25.addWidget(self.reset_system_outline)
         self.horizontalLayout_25.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_25
-        )
+        self.formLayout_4.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_25)
         self.label_21 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_21.setObjectName("label_21")
-        self.formLayout_4.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_21
-        )
+        self.formLayout_4.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_21)
         self.horizontalLayout_26 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_26.setSpacing(4)
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
@@ -584,14 +462,10 @@ class Ui_MainWindow(object):
         self.reset_immersive_style.setObjectName("reset_immersive_style")
         self.horizontalLayout_26.addWidget(self.reset_immersive_style)
         self.horizontalLayout_26.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_26
-        )
+        self.formLayout_4.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_26)
         self.label_22 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_22.setObjectName("label_22")
-        self.formLayout_4.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_22
-        )
+        self.formLayout_4.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_22)
         self.horizontalLayout_27 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_27.setSpacing(4)
         self.horizontalLayout_27.setObjectName("horizontalLayout_27")
@@ -606,14 +480,10 @@ class Ui_MainWindow(object):
         self.reset_custom_rendering.setObjectName("reset_custom_rendering")
         self.horizontalLayout_27.addWidget(self.reset_custom_rendering)
         self.horizontalLayout_27.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_27
-        )
+        self.formLayout_4.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_27)
         self.label_23 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_23.setObjectName("label_23")
-        self.formLayout_4.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_23
-        )
+        self.formLayout_4.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_23)
         self.horizontalLayout_28 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_28.setSpacing(4)
         self.horizontalLayout_28.setObjectName("horizontalLayout_28")
@@ -635,14 +505,10 @@ class Ui_MainWindow(object):
         self.reset_effect_type3.setObjectName("reset_effect_type3")
         self.horizontalLayout_28.addWidget(self.reset_effect_type3)
         self.horizontalLayout_28.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_28
-        )
+        self.formLayout_4.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_28)
         self.label_24 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_24.setObjectName("label_24")
-        self.formLayout_4.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_24
-        )
+        self.formLayout_4.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_24)
         self.horizontalLayout_29 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_29.setSpacing(4)
         self.horizontalLayout_29.setObjectName("horizontalLayout_29")
@@ -657,82 +523,56 @@ class Ui_MainWindow(object):
         self.reset_drop_shadow3.setObjectName("reset_drop_shadow3")
         self.horizontalLayout_29.addWidget(self.reset_drop_shadow3)
         self.horizontalLayout_29.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_29
-        )
+        self.formLayout_4.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_29)
         self.label_25 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_25.setObjectName("label_25")
-        self.formLayout_4.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_25
-        )
+        self.formLayout_4.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_25)
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_30.setSpacing(4)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.darkModeGradientColor3 = QtWidgets.QLineEdit(parent=self.tab_3)
         self.darkModeGradientColor3.setToolTip("")
-        self.darkModeGradientColor3.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeGradientColor3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeGradientColor3.setObjectName("darkModeGradientColor3")
         self.horizontalLayout_30.addWidget(self.darkModeGradientColor3)
         self.dark_mode_gradient_color_picker3 = QtWidgets.QPushButton(parent=self.tab_3)
         self.dark_mode_gradient_color_picker3.setText("")
         self.dark_mode_gradient_color_picker3.setIcon(icon1)
-        self.dark_mode_gradient_color_picker3.setObjectName(
-            "dark_mode_gradient_color_picker3"
-        )
+        self.dark_mode_gradient_color_picker3.setObjectName("dark_mode_gradient_color_picker3")
         self.horizontalLayout_30.addWidget(self.dark_mode_gradient_color_picker3)
         self.reset_dark_mode_gradient_color3 = QtWidgets.QPushButton(parent=self.tab_3)
         self.reset_dark_mode_gradient_color3.setText("")
         self.reset_dark_mode_gradient_color3.setIcon(icon)
-        self.reset_dark_mode_gradient_color3.setObjectName(
-            "reset_dark_mode_gradient_color3"
-        )
+        self.reset_dark_mode_gradient_color3.setObjectName("reset_dark_mode_gradient_color3")
         self.horizontalLayout_30.addWidget(self.reset_dark_mode_gradient_color3)
         self.horizontalLayout_30.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_30
-        )
+        self.formLayout_4.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_30)
         self.label_26 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_26.setObjectName("label_26")
-        self.formLayout_4.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_26
-        )
+        self.formLayout_4.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_26)
         self.horizontalLayout_31 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_31.setSpacing(4)
         self.horizontalLayout_31.setObjectName("horizontalLayout_31")
         self.lightModeGradientColor3 = QtWidgets.QLineEdit(parent=self.tab_3)
         self.lightModeGradientColor3.setToolTip("")
-        self.lightModeGradientColor3.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor3.setObjectName("lightModeGradientColor3")
         self.horizontalLayout_31.addWidget(self.lightModeGradientColor3)
-        self.light_mode_gradient_color_picker3 = QtWidgets.QPushButton(
-            parent=self.tab_3
-        )
+        self.light_mode_gradient_color_picker3 = QtWidgets.QPushButton(parent=self.tab_3)
         self.light_mode_gradient_color_picker3.setText("")
         self.light_mode_gradient_color_picker3.setIcon(icon1)
-        self.light_mode_gradient_color_picker3.setObjectName(
-            "light_mode_gradient_color_picker3"
-        )
+        self.light_mode_gradient_color_picker3.setObjectName("light_mode_gradient_color_picker3")
         self.horizontalLayout_31.addWidget(self.light_mode_gradient_color_picker3)
         self.reset_light_mode_gradient_color3 = QtWidgets.QPushButton(parent=self.tab_3)
         self.reset_light_mode_gradient_color3.setText("")
         self.reset_light_mode_gradient_color3.setIcon(icon)
-        self.reset_light_mode_gradient_color3.setObjectName(
-            "reset_light_mode_gradient_color3"
-        )
+        self.reset_light_mode_gradient_color3.setObjectName("reset_light_mode_gradient_color3")
         self.horizontalLayout_31.addWidget(self.reset_light_mode_gradient_color3)
         self.horizontalLayout_31.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_31
-        )
+        self.formLayout_4.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_31)
         self.label_27 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_27.setObjectName("label_27")
-        self.formLayout_4.setWidget(
-            7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_27
-        )
+        self.formLayout_4.setWidget(7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_27)
         self.horizontalLayout_32 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_32.setSpacing(4)
         self.horizontalLayout_32.setObjectName("horizontalLayout_32")
@@ -752,14 +592,10 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity3.setObjectName("reset_dark_mode_opacity3")
         self.horizontalLayout_32.addWidget(self.reset_dark_mode_opacity3)
         self.horizontalLayout_32.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_32
-        )
+        self.formLayout_4.setLayout(7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_32)
         self.label_28 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_28.setObjectName("label_28")
-        self.formLayout_4.setWidget(
-            8, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_28
-        )
+        self.formLayout_4.setWidget(8, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_28)
         self.horizontalLayout_33 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_33.setSpacing(4)
         self.horizontalLayout_33.setObjectName("horizontalLayout_33")
@@ -780,14 +616,10 @@ class Ui_MainWindow(object):
         self.reset_light_mode_opacity3.setObjectName("reset_light_mode_opacity3")
         self.horizontalLayout_33.addWidget(self.reset_light_mode_opacity3)
         self.horizontalLayout_33.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            8, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_33
-        )
+        self.formLayout_4.setLayout(8, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_33)
         self.label_29 = QtWidgets.QLabel(parent=self.tab_3)
         self.label_29.setObjectName("label_29")
-        self.formLayout_4.setWidget(
-            9, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_29
-        )
+        self.formLayout_4.setWidget(9, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_29)
         self.horizontalLayout_34 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_34.setSpacing(4)
         self.horizontalLayout_34.setObjectName("horizontalLayout_34")
@@ -802,31 +634,17 @@ class Ui_MainWindow(object):
         self.reset_disabled3.setObjectName("reset_disabled3")
         self.horizontalLayout_34.addWidget(self.reset_disabled3)
         self.horizontalLayout_34.setStretch(0, 1)
-        self.formLayout_4.setLayout(
-            9, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_34
-        )
+        self.formLayout_4.setLayout(9, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_34)
         self.verticalLayout_3.addLayout(self.formLayout_4)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem4 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem4)
         self.applyButton3 = QtWidgets.QPushButton(parent=self.tab_3)
-        self.applyButton3.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton3.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3.setObjectName("applyButton3")
         self.horizontalLayout_4.addWidget(self.applyButton3)
-        spacerItem5 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem5)
         self.verticalLayout_3.addLayout(self.horizontalLayout_4)
         self.verticalLayout_3.setStretch(1, 1)
@@ -841,9 +659,7 @@ class Ui_MainWindow(object):
         self.description4.setObjectName("description4")
         self.verticalLayout_4.addWidget(self.description4)
         self.QTabWidget2 = QtWidgets.QTabWidget(parent=self.tab_4)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.QTabWidget2.sizePolicy().hasHeightForWidth())
@@ -858,85 +674,59 @@ class Ui_MainWindow(object):
         self.formLayout_3.setObjectName("formLayout_3")
         self.label_33 = QtWidgets.QLabel(parent=self.tab)
         self.label_33.setObjectName("label_33")
-        self.formLayout_3.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_33
-        )
+        self.formLayout_3.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_33)
         self.horizontalLayout_35 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_35.setSpacing(4)
         self.horizontalLayout_35.setObjectName("horizontalLayout_35")
         self.darkModeGradientColor4_1 = QtWidgets.QLineEdit(parent=self.tab)
         self.darkModeGradientColor4_1.setToolTip("")
-        self.darkModeGradientColor4_1.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeGradientColor4_1.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeGradientColor4_1.setObjectName("darkModeGradientColor4_1")
         self.horizontalLayout_35.addWidget(self.darkModeGradientColor4_1)
         self.dark_mode_gradient_color_picker4_1 = QtWidgets.QPushButton(parent=self.tab)
         self.dark_mode_gradient_color_picker4_1.setText("")
         self.dark_mode_gradient_color_picker4_1.setIcon(icon1)
-        self.dark_mode_gradient_color_picker4_1.setObjectName(
-            "dark_mode_gradient_color_picker4_1"
-        )
+        self.dark_mode_gradient_color_picker4_1.setObjectName("dark_mode_gradient_color_picker4_1")
         self.horizontalLayout_35.addWidget(self.dark_mode_gradient_color_picker4_1)
         self.reset_dark_mode_gradient_color4_1 = QtWidgets.QPushButton(parent=self.tab)
         self.reset_dark_mode_gradient_color4_1.setText("")
         self.reset_dark_mode_gradient_color4_1.setIcon(icon)
-        self.reset_dark_mode_gradient_color4_1.setObjectName(
-            "reset_dark_mode_gradient_color4_1"
-        )
+        self.reset_dark_mode_gradient_color4_1.setObjectName("reset_dark_mode_gradient_color4_1")
         self.horizontalLayout_35.addWidget(self.reset_dark_mode_gradient_color4_1)
         self.horizontalLayout_35.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_35
-        )
+        self.formLayout_3.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_35)
         self.label_34 = QtWidgets.QLabel(parent=self.tab)
         self.label_34.setObjectName("label_34")
-        self.formLayout_3.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_34
-        )
+        self.formLayout_3.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_34)
         self.horizontalLayout_36 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_36.setSpacing(4)
         self.horizontalLayout_36.setObjectName("horizontalLayout_36")
         self.lightModeGradientColor4_1 = QtWidgets.QLineEdit(parent=self.tab)
         self.lightModeGradientColor4_1.setToolTip("")
-        self.lightModeGradientColor4_1.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor4_1.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor4_1.setObjectName("lightModeGradientColor4_1")
         self.horizontalLayout_36.addWidget(self.lightModeGradientColor4_1)
-        self.light_mode_gradient_color_picker4_1 = QtWidgets.QPushButton(
-            parent=self.tab
-        )
+        self.light_mode_gradient_color_picker4_1 = QtWidgets.QPushButton(parent=self.tab)
         self.light_mode_gradient_color_picker4_1.setText("")
         self.light_mode_gradient_color_picker4_1.setIcon(icon1)
-        self.light_mode_gradient_color_picker4_1.setObjectName(
-            "light_mode_gradient_color_picker4_1"
-        )
+        self.light_mode_gradient_color_picker4_1.setObjectName("light_mode_gradient_color_picker4_1")
         self.horizontalLayout_36.addWidget(self.light_mode_gradient_color_picker4_1)
         self.reset_light_mode_gradient_color4_1 = QtWidgets.QPushButton(parent=self.tab)
         self.reset_light_mode_gradient_color4_1.setText("")
         self.reset_light_mode_gradient_color4_1.setIcon(icon)
-        self.reset_light_mode_gradient_color4_1.setObjectName(
-            "reset_light_mode_gradient_color4_1"
-        )
+        self.reset_light_mode_gradient_color4_1.setObjectName("reset_light_mode_gradient_color4_1")
         self.horizontalLayout_36.addWidget(self.reset_light_mode_gradient_color4_1)
         self.horizontalLayout_36.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_36
-        )
+        self.formLayout_3.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_36)
         self.label_35 = QtWidgets.QLabel(parent=self.tab)
         self.label_35.setObjectName("label_35")
-        self.formLayout_3.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_35
-        )
+        self.formLayout_3.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_35)
         self.horizontalLayout_37 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_37.setSpacing(4)
         self.horizontalLayout_37.setObjectName("horizontalLayout_37")
         self.darkModeOpacity4_1 = QtWidgets.QLineEdit(parent=self.tab)
         self.darkModeOpacity4_1.setToolTip("")
-        self.darkModeOpacity4_1.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeOpacity4_1.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeOpacity4_1.setObjectName("darkModeOpacity4_1")
         self.horizontalLayout_37.addWidget(self.darkModeOpacity4_1)
         self.dark_mode_opacity_picker4_1 = QtWidgets.QPushButton(parent=self.tab)
@@ -950,44 +740,34 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity4_1.setObjectName("reset_dark_mode_opacity4_1")
         self.horizontalLayout_37.addWidget(self.reset_dark_mode_opacity4_1)
         self.horizontalLayout_37.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_37
-        )
+        self.formLayout_3.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_37)
         self.label_36 = QtWidgets.QLabel(parent=self.tab)
         self.label_36.setObjectName("label_36")
-        self.formLayout_3.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_36
-        )
+        self.formLayout_3.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_36)
         self.horizontalLayout_38 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_38.setSpacing(4)
         self.horizontalLayout_38.setObjectName("horizontalLayout_38")
         self.lightModeOpacity4_1 = QtWidgets.QLineEdit(parent=self.tab)
         self.lightModeOpacity4_1.setToolTip("")
         self.lightModeOpacity4_1.setStatusTip("")
-        self.lightModeOpacity4_1.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeOpacity4_1.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeOpacity4_1.setObjectName("lightModeOpacity4_1")
         self.horizontalLayout_38.addWidget(self.lightModeOpacity4_1)
-        self.light_mode_opactiy_picker4_1 = QtWidgets.QPushButton(parent=self.tab)
-        self.light_mode_opactiy_picker4_1.setText("")
-        self.light_mode_opactiy_picker4_1.setIcon(icon1)
-        self.light_mode_opactiy_picker4_1.setObjectName("light_mode_opactiy_picker4_1")
-        self.horizontalLayout_38.addWidget(self.light_mode_opactiy_picker4_1)
+        self.light_mode_opacity_picker4_1 = QtWidgets.QPushButton(parent=self.tab)
+        self.light_mode_opacity_picker4_1.setText("")
+        self.light_mode_opacity_picker4_1.setIcon(icon1)
+        self.light_mode_opacity_picker4_1.setObjectName("light_mode_opacity_picker4_1")
+        self.horizontalLayout_38.addWidget(self.light_mode_opacity_picker4_1)
         self.reset_light_mode_opacity4_1 = QtWidgets.QPushButton(parent=self.tab)
         self.reset_light_mode_opacity4_1.setText("")
         self.reset_light_mode_opacity4_1.setIcon(icon)
         self.reset_light_mode_opacity4_1.setObjectName("reset_light_mode_opacity4_1")
         self.horizontalLayout_38.addWidget(self.reset_light_mode_opacity4_1)
         self.horizontalLayout_38.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_38
-        )
+        self.formLayout_3.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_38)
         self.label_37 = QtWidgets.QLabel(parent=self.tab)
         self.label_37.setObjectName("label_37")
-        self.formLayout_3.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_37
-        )
+        self.formLayout_3.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_37)
         self.horizontalLayout_39 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_39.setSpacing(4)
         self.horizontalLayout_39.setObjectName("horizontalLayout_39")
@@ -1002,14 +782,10 @@ class Ui_MainWindow(object):
         self.reset_disabled4_1.setObjectName("reset_disabled4_1")
         self.horizontalLayout_39.addWidget(self.reset_disabled4_1)
         self.horizontalLayout_39.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_39
-        )
+        self.formLayout_3.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_39)
         self.label_31 = QtWidgets.QLabel(parent=self.tab)
         self.label_31.setObjectName("label_31")
-        self.formLayout_3.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_31
-        )
+        self.formLayout_3.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_31)
         self.horizontalLayout_40 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_40.setSpacing(4)
         self.horizontalLayout_40.setObjectName("horizontalLayout_40")
@@ -1024,14 +800,10 @@ class Ui_MainWindow(object):
         self.reset_corner_radius1_1.setObjectName("reset_corner_radius1_1")
         self.horizontalLayout_40.addWidget(self.reset_corner_radius1_1)
         self.horizontalLayout_40.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_40
-        )
+        self.formLayout_3.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_40)
         self.label_32 = QtWidgets.QLabel(parent=self.tab)
         self.label_32.setObjectName("label_32")
-        self.formLayout_3.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_32
-        )
+        self.formLayout_3.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_32)
         self.horizontalLayout_41 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_41.setSpacing(4)
         self.horizontalLayout_41.setObjectName("horizontalLayout_41")
@@ -1046,31 +818,17 @@ class Ui_MainWindow(object):
         self.reset_theme_customization1_1.setObjectName("reset_theme_customization1_1")
         self.horizontalLayout_41.addWidget(self.reset_theme_customization1_1)
         self.horizontalLayout_41.setStretch(0, 1)
-        self.formLayout_3.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_41
-        )
+        self.formLayout_3.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_41)
         self.verticalLayout_5.addLayout(self.formLayout_3)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        spacerItem6 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem6)
         self.applyButton4_1 = QtWidgets.QPushButton(parent=self.tab)
-        self.applyButton4_1.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton4_1.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton4_1.setObjectName("applyButton4_1")
         self.horizontalLayout_5.addWidget(self.applyButton4_1)
-        spacerItem7 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem7)
         self.verticalLayout_5.addLayout(self.horizontalLayout_5)
         self.verticalLayout_5.setStretch(0, 1)
@@ -1083,91 +841,59 @@ class Ui_MainWindow(object):
         self.formLayout_5.setObjectName("formLayout_5")
         self.label_38 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_38.setObjectName("label_38")
-        self.formLayout_5.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_38
-        )
+        self.formLayout_5.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_38)
         self.horizontalLayout_42 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_42.setSpacing(4)
         self.horizontalLayout_42.setObjectName("horizontalLayout_42")
         self.darkModeGradientColor4_2 = QtWidgets.QLineEdit(parent=self.tab_6)
         self.darkModeGradientColor4_2.setToolTip("")
-        self.darkModeGradientColor4_2.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeGradientColor4_2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeGradientColor4_2.setObjectName("darkModeGradientColor4_2")
         self.horizontalLayout_42.addWidget(self.darkModeGradientColor4_2)
-        self.dark_mode_gradient_color_picker4_2 = QtWidgets.QPushButton(
-            parent=self.tab_6
-        )
+        self.dark_mode_gradient_color_picker4_2 = QtWidgets.QPushButton(parent=self.tab_6)
         self.dark_mode_gradient_color_picker4_2.setText("")
         self.dark_mode_gradient_color_picker4_2.setIcon(icon1)
-        self.dark_mode_gradient_color_picker4_2.setObjectName(
-            "dark_mode_gradient_color_picker4_2"
-        )
+        self.dark_mode_gradient_color_picker4_2.setObjectName("dark_mode_gradient_color_picker4_2")
         self.horizontalLayout_42.addWidget(self.dark_mode_gradient_color_picker4_2)
-        self.reset_dark_mode_gradient_color4_2 = QtWidgets.QPushButton(
-            parent=self.tab_6
-        )
+        self.reset_dark_mode_gradient_color4_2 = QtWidgets.QPushButton(parent=self.tab_6)
         self.reset_dark_mode_gradient_color4_2.setText("")
         self.reset_dark_mode_gradient_color4_2.setIcon(icon)
-        self.reset_dark_mode_gradient_color4_2.setObjectName(
-            "reset_dark_mode_gradient_color4_2"
-        )
+        self.reset_dark_mode_gradient_color4_2.setObjectName("reset_dark_mode_gradient_color4_2")
         self.horizontalLayout_42.addWidget(self.reset_dark_mode_gradient_color4_2)
         self.horizontalLayout_42.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_42
-        )
+        self.formLayout_5.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_42)
         self.label_39 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_39.setObjectName("label_39")
-        self.formLayout_5.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_39
-        )
+        self.formLayout_5.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_39)
         self.horizontalLayout_43 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_43.setSpacing(4)
         self.horizontalLayout_43.setObjectName("horizontalLayout_43")
         self.lightModeGradientColor4_2 = QtWidgets.QLineEdit(parent=self.tab_6)
         self.lightModeGradientColor4_2.setToolTip("")
-        self.lightModeGradientColor4_2.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor4_2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor4_2.setObjectName("lightModeGradientColor4_2")
         self.horizontalLayout_43.addWidget(self.lightModeGradientColor4_2)
-        self.light_mode_gradient_color_picker4_2 = QtWidgets.QPushButton(
-            parent=self.tab_6
-        )
+        self.light_mode_gradient_color_picker4_2 = QtWidgets.QPushButton(parent=self.tab_6)
         self.light_mode_gradient_color_picker4_2.setText("")
         self.light_mode_gradient_color_picker4_2.setIcon(icon1)
-        self.light_mode_gradient_color_picker4_2.setObjectName(
-            "light_mode_gradient_color_picker4_2"
-        )
+        self.light_mode_gradient_color_picker4_2.setObjectName("light_mode_gradient_color_picker4_2")
         self.horizontalLayout_43.addWidget(self.light_mode_gradient_color_picker4_2)
-        self.reset_light_mode_gradient_color4_2 = QtWidgets.QPushButton(
-            parent=self.tab_6
-        )
+        self.reset_light_mode_gradient_color4_2 = QtWidgets.QPushButton(parent=self.tab_6)
         self.reset_light_mode_gradient_color4_2.setText("")
         self.reset_light_mode_gradient_color4_2.setIcon(icon)
-        self.reset_light_mode_gradient_color4_2.setObjectName(
-            "reset_light_mode_gradient_color4_2"
-        )
+        self.reset_light_mode_gradient_color4_2.setObjectName("reset_light_mode_gradient_color4_2")
         self.horizontalLayout_43.addWidget(self.reset_light_mode_gradient_color4_2)
         self.horizontalLayout_43.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_43
-        )
+        self.formLayout_5.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_43)
         self.label_40 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_40.setObjectName("label_40")
-        self.formLayout_5.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_40
-        )
+        self.formLayout_5.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_40)
         self.horizontalLayout_44 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_44.setSpacing(4)
         self.horizontalLayout_44.setObjectName("horizontalLayout_44")
         self.darkModeOpacity4_2 = QtWidgets.QLineEdit(parent=self.tab_6)
         self.darkModeOpacity4_2.setToolTip("")
-        self.darkModeOpacity4_2.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeOpacity4_2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeOpacity4_2.setObjectName("darkModeOpacity4_2")
         self.horizontalLayout_44.addWidget(self.darkModeOpacity4_2)
         self.dark_mode_opacity_picker4_2 = QtWidgets.QPushButton(parent=self.tab_6)
@@ -1181,44 +907,34 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity4_2.setObjectName("reset_dark_mode_opacity4_2")
         self.horizontalLayout_44.addWidget(self.reset_dark_mode_opacity4_2)
         self.horizontalLayout_44.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_44
-        )
+        self.formLayout_5.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_44)
         self.label_41 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_41.setObjectName("label_41")
-        self.formLayout_5.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_41
-        )
+        self.formLayout_5.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_41)
         self.horizontalLayout_45 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_45.setSpacing(4)
         self.horizontalLayout_45.setObjectName("horizontalLayout_45")
         self.lightModeOpacity4_2 = QtWidgets.QLineEdit(parent=self.tab_6)
         self.lightModeOpacity4_2.setToolTip("")
         self.lightModeOpacity4_2.setStatusTip("")
-        self.lightModeOpacity4_2.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeOpacity4_2.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeOpacity4_2.setObjectName("lightModeOpacity4_2")
         self.horizontalLayout_45.addWidget(self.lightModeOpacity4_2)
-        self.light_mode_opactiy_picker4_2 = QtWidgets.QPushButton(parent=self.tab_6)
-        self.light_mode_opactiy_picker4_2.setText("")
-        self.light_mode_opactiy_picker4_2.setIcon(icon1)
-        self.light_mode_opactiy_picker4_2.setObjectName("light_mode_opactiy_picker4_2")
-        self.horizontalLayout_45.addWidget(self.light_mode_opactiy_picker4_2)
+        self.light_mode_opacity_picker4_2 = QtWidgets.QPushButton(parent=self.tab_6)
+        self.light_mode_opacity_picker4_2.setText("")
+        self.light_mode_opacity_picker4_2.setIcon(icon1)
+        self.light_mode_opacity_picker4_2.setObjectName("light_mode_opacity_picker4_2")
+        self.horizontalLayout_45.addWidget(self.light_mode_opacity_picker4_2)
         self.reset_light_mode_opacity4_2 = QtWidgets.QPushButton(parent=self.tab_6)
         self.reset_light_mode_opacity4_2.setText("")
         self.reset_light_mode_opacity4_2.setIcon(icon)
         self.reset_light_mode_opacity4_2.setObjectName("reset_light_mode_opacity4_2")
         self.horizontalLayout_45.addWidget(self.reset_light_mode_opacity4_2)
         self.horizontalLayout_45.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_45
-        )
+        self.formLayout_5.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_45)
         self.label_42 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_42.setObjectName("label_42")
-        self.formLayout_5.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_42
-        )
+        self.formLayout_5.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_42)
         self.horizontalLayout_46 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_46.setSpacing(4)
         self.horizontalLayout_46.setObjectName("horizontalLayout_46")
@@ -1233,14 +949,10 @@ class Ui_MainWindow(object):
         self.reset_disabled4_2.setObjectName("reset_disabled4_2")
         self.horizontalLayout_46.addWidget(self.reset_disabled4_2)
         self.horizontalLayout_46.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_46
-        )
+        self.formLayout_5.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_46)
         self.label_43 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_43.setObjectName("label_43")
-        self.formLayout_5.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_43
-        )
+        self.formLayout_5.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_43)
         self.horizontalLayout_47 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_47.setSpacing(4)
         self.horizontalLayout_47.setObjectName("horizontalLayout_47")
@@ -1255,14 +967,10 @@ class Ui_MainWindow(object):
         self.reset_corner_radius1_2.setObjectName("reset_corner_radius1_2")
         self.horizontalLayout_47.addWidget(self.reset_corner_radius1_2)
         self.horizontalLayout_47.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_47
-        )
+        self.formLayout_5.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_47)
         self.label_44 = QtWidgets.QLabel(parent=self.tab_6)
         self.label_44.setObjectName("label_44")
-        self.formLayout_5.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_44
-        )
+        self.formLayout_5.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_44)
         self.horizontalLayout_48 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_48.setSpacing(4)
         self.horizontalLayout_48.setObjectName("horizontalLayout_48")
@@ -1277,31 +985,17 @@ class Ui_MainWindow(object):
         self.reset_theme_customization1_2.setObjectName("reset_theme_customization1_2")
         self.horizontalLayout_48.addWidget(self.reset_theme_customization1_2)
         self.horizontalLayout_48.setStretch(0, 1)
-        self.formLayout_5.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_48
-        )
+        self.formLayout_5.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_48)
         self.verticalLayout_6.addLayout(self.formLayout_5)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        spacerItem8 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem8)
         self.applyButton4_2 = QtWidgets.QPushButton(parent=self.tab_6)
-        self.applyButton4_2.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton4_2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton4_2.setObjectName("applyButton4_2")
         self.horizontalLayout_6.addWidget(self.applyButton4_2)
-        spacerItem9 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem9)
         self.verticalLayout_6.addLayout(self.horizontalLayout_6)
         self.verticalLayout_6.setStretch(0, 1)
@@ -1314,91 +1008,59 @@ class Ui_MainWindow(object):
         self.formLayout_6.setObjectName("formLayout_6")
         self.label_45 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_45.setObjectName("label_45")
-        self.formLayout_6.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_45
-        )
+        self.formLayout_6.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_45)
         self.horizontalLayout_49 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_49.setSpacing(4)
         self.horizontalLayout_49.setObjectName("horizontalLayout_49")
         self.darkModeGradientColor4_3 = QtWidgets.QLineEdit(parent=self.tab_7)
         self.darkModeGradientColor4_3.setToolTip("")
-        self.darkModeGradientColor4_3.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeGradientColor4_3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeGradientColor4_3.setObjectName("darkModeGradientColor4_3")
         self.horizontalLayout_49.addWidget(self.darkModeGradientColor4_3)
-        self.dark_mode_gradient_color_picker4_3 = QtWidgets.QPushButton(
-            parent=self.tab_7
-        )
+        self.dark_mode_gradient_color_picker4_3 = QtWidgets.QPushButton(parent=self.tab_7)
         self.dark_mode_gradient_color_picker4_3.setText("")
         self.dark_mode_gradient_color_picker4_3.setIcon(icon1)
-        self.dark_mode_gradient_color_picker4_3.setObjectName(
-            "dark_mode_gradient_color_picker4_3"
-        )
+        self.dark_mode_gradient_color_picker4_3.setObjectName("dark_mode_gradient_color_picker4_3")
         self.horizontalLayout_49.addWidget(self.dark_mode_gradient_color_picker4_3)
-        self.reset_dark_mode_gradient_color4_3 = QtWidgets.QPushButton(
-            parent=self.tab_7
-        )
+        self.reset_dark_mode_gradient_color4_3 = QtWidgets.QPushButton(parent=self.tab_7)
         self.reset_dark_mode_gradient_color4_3.setText("")
         self.reset_dark_mode_gradient_color4_3.setIcon(icon)
-        self.reset_dark_mode_gradient_color4_3.setObjectName(
-            "reset_dark_mode_gradient_color4_3"
-        )
+        self.reset_dark_mode_gradient_color4_3.setObjectName("reset_dark_mode_gradient_color4_3")
         self.horizontalLayout_49.addWidget(self.reset_dark_mode_gradient_color4_3)
         self.horizontalLayout_49.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_49
-        )
+        self.formLayout_6.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_49)
         self.label_46 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_46.setObjectName("label_46")
-        self.formLayout_6.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_46
-        )
+        self.formLayout_6.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_46)
         self.horizontalLayout_50 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_50.setSpacing(4)
         self.horizontalLayout_50.setObjectName("horizontalLayout_50")
         self.lightModeGradientColor4_3 = QtWidgets.QLineEdit(parent=self.tab_7)
         self.lightModeGradientColor4_3.setToolTip("")
-        self.lightModeGradientColor4_3.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor4_3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor4_3.setObjectName("lightModeGradientColor4_3")
         self.horizontalLayout_50.addWidget(self.lightModeGradientColor4_3)
-        self.light_mode_gradient_color_picker4_3 = QtWidgets.QPushButton(
-            parent=self.tab_7
-        )
+        self.light_mode_gradient_color_picker4_3 = QtWidgets.QPushButton(parent=self.tab_7)
         self.light_mode_gradient_color_picker4_3.setText("")
         self.light_mode_gradient_color_picker4_3.setIcon(icon1)
-        self.light_mode_gradient_color_picker4_3.setObjectName(
-            "light_mode_gradient_color_picker4_3"
-        )
+        self.light_mode_gradient_color_picker4_3.setObjectName("light_mode_gradient_color_picker4_3")
         self.horizontalLayout_50.addWidget(self.light_mode_gradient_color_picker4_3)
-        self.reset_light_mode_gradient_color4_3 = QtWidgets.QPushButton(
-            parent=self.tab_7
-        )
+        self.reset_light_mode_gradient_color4_3 = QtWidgets.QPushButton(parent=self.tab_7)
         self.reset_light_mode_gradient_color4_3.setText("")
         self.reset_light_mode_gradient_color4_3.setIcon(icon)
-        self.reset_light_mode_gradient_color4_3.setObjectName(
-            "reset_light_mode_gradient_color4_3"
-        )
+        self.reset_light_mode_gradient_color4_3.setObjectName("reset_light_mode_gradient_color4_3")
         self.horizontalLayout_50.addWidget(self.reset_light_mode_gradient_color4_3)
         self.horizontalLayout_50.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_50
-        )
+        self.formLayout_6.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_50)
         self.label_47 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_47.setObjectName("label_47")
-        self.formLayout_6.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_47
-        )
+        self.formLayout_6.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_47)
         self.horizontalLayout_51 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_51.setSpacing(4)
         self.horizontalLayout_51.setObjectName("horizontalLayout_51")
         self.darkModeOpacity4_3 = QtWidgets.QLineEdit(parent=self.tab_7)
         self.darkModeOpacity4_3.setToolTip("")
-        self.darkModeOpacity4_3.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeOpacity4_3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeOpacity4_3.setObjectName("darkModeOpacity4_3")
         self.horizontalLayout_51.addWidget(self.darkModeOpacity4_3)
         self.dark_mode_opacity_picker4_3 = QtWidgets.QPushButton(parent=self.tab_7)
@@ -1412,44 +1074,34 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity4_3.setObjectName("reset_dark_mode_opacity4_3")
         self.horizontalLayout_51.addWidget(self.reset_dark_mode_opacity4_3)
         self.horizontalLayout_51.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_51
-        )
+        self.formLayout_6.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_51)
         self.label_48 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_48.setObjectName("label_48")
-        self.formLayout_6.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_48
-        )
+        self.formLayout_6.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_48)
         self.horizontalLayout_52 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_52.setSpacing(4)
         self.horizontalLayout_52.setObjectName("horizontalLayout_52")
         self.lightModeOpacity4_3 = QtWidgets.QLineEdit(parent=self.tab_7)
         self.lightModeOpacity4_3.setToolTip("")
         self.lightModeOpacity4_3.setStatusTip("")
-        self.lightModeOpacity4_3.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeOpacity4_3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeOpacity4_3.setObjectName("lightModeOpacity4_3")
         self.horizontalLayout_52.addWidget(self.lightModeOpacity4_3)
-        self.light_mode_opactiy_picker4_3 = QtWidgets.QPushButton(parent=self.tab_7)
-        self.light_mode_opactiy_picker4_3.setText("")
-        self.light_mode_opactiy_picker4_3.setIcon(icon1)
-        self.light_mode_opactiy_picker4_3.setObjectName("light_mode_opactiy_picker4_3")
-        self.horizontalLayout_52.addWidget(self.light_mode_opactiy_picker4_3)
+        self.light_mode_opacity_picker4_3 = QtWidgets.QPushButton(parent=self.tab_7)
+        self.light_mode_opacity_picker4_3.setText("")
+        self.light_mode_opacity_picker4_3.setIcon(icon1)
+        self.light_mode_opacity_picker4_3.setObjectName("light_mode_opacity_picker4_3")
+        self.horizontalLayout_52.addWidget(self.light_mode_opacity_picker4_3)
         self.reset_light_mode_opacity4_3 = QtWidgets.QPushButton(parent=self.tab_7)
         self.reset_light_mode_opacity4_3.setText("")
         self.reset_light_mode_opacity4_3.setIcon(icon)
         self.reset_light_mode_opacity4_3.setObjectName("reset_light_mode_opacity4_3")
         self.horizontalLayout_52.addWidget(self.reset_light_mode_opacity4_3)
         self.horizontalLayout_52.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_52
-        )
+        self.formLayout_6.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_52)
         self.label_49 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_49.setObjectName("label_49")
-        self.formLayout_6.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_49
-        )
+        self.formLayout_6.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_49)
         self.horizontalLayout_53 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_53.setSpacing(4)
         self.horizontalLayout_53.setObjectName("horizontalLayout_53")
@@ -1464,14 +1116,10 @@ class Ui_MainWindow(object):
         self.reset_disabled4_3.setObjectName("reset_disabled4_3")
         self.horizontalLayout_53.addWidget(self.reset_disabled4_3)
         self.horizontalLayout_53.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_53
-        )
+        self.formLayout_6.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_53)
         self.label_50 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_50.setObjectName("label_50")
-        self.formLayout_6.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_50
-        )
+        self.formLayout_6.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_50)
         self.horizontalLayout_54 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_54.setSpacing(4)
         self.horizontalLayout_54.setObjectName("horizontalLayout_54")
@@ -1486,14 +1134,10 @@ class Ui_MainWindow(object):
         self.reset_corner_radius1_3.setObjectName("reset_corner_radius1_3")
         self.horizontalLayout_54.addWidget(self.reset_corner_radius1_3)
         self.horizontalLayout_54.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_54
-        )
+        self.formLayout_6.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_54)
         self.label_51 = QtWidgets.QLabel(parent=self.tab_7)
         self.label_51.setObjectName("label_51")
-        self.formLayout_6.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_51
-        )
+        self.formLayout_6.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_51)
         self.horizontalLayout_55 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_55.setSpacing(4)
         self.horizontalLayout_55.setObjectName("horizontalLayout_55")
@@ -1508,31 +1152,17 @@ class Ui_MainWindow(object):
         self.reset_theme_customization1_3.setObjectName("reset_theme_customization1_3")
         self.horizontalLayout_55.addWidget(self.reset_theme_customization1_3)
         self.horizontalLayout_55.setStretch(0, 1)
-        self.formLayout_6.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_55
-        )
+        self.formLayout_6.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_55)
         self.verticalLayout_7.addLayout(self.formLayout_6)
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        spacerItem10 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem10)
         self.applyButton4_3 = QtWidgets.QPushButton(parent=self.tab_7)
-        self.applyButton4_3.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton4_3.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton4_3.setObjectName("applyButton4_3")
         self.horizontalLayout_7.addWidget(self.applyButton4_3)
-        spacerItem11 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem11 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem11)
         self.verticalLayout_7.addLayout(self.horizontalLayout_7)
         self.verticalLayout_7.setStretch(0, 1)
@@ -1545,9 +1175,7 @@ class Ui_MainWindow(object):
         self.formLayout_7.setObjectName("formLayout_7")
         self.label_59 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_59.setObjectName("label_59")
-        self.formLayout_7.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_59
-        )
+        self.formLayout_7.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_59)
         self.horizontalLayout_56 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_56.setSpacing(4)
         self.horizontalLayout_56.setObjectName("horizontalLayout_56")
@@ -1562,14 +1190,10 @@ class Ui_MainWindow(object):
         self.reset_border_color.setObjectName("reset_border_color")
         self.horizontalLayout_56.addWidget(self.reset_border_color)
         self.horizontalLayout_56.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_56
-        )
+        self.formLayout_7.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_56)
         self.label_60 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_60.setObjectName("label_60")
-        self.formLayout_7.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_60
-        )
+        self.formLayout_7.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_60)
         self.horizontalLayout_57 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_57.setSpacing(4)
         self.horizontalLayout_57.setObjectName("horizontalLayout_57")
@@ -1585,96 +1209,62 @@ class Ui_MainWindow(object):
         self.reset_corner_type.setObjectName("reset_corner_type")
         self.horizontalLayout_57.addWidget(self.reset_corner_type)
         self.horizontalLayout_57.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_57
-        )
+        self.formLayout_7.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_57)
         self.label_52 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_52.setObjectName("label_52")
-        self.formLayout_7.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_52
-        )
+        self.formLayout_7.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_52)
         self.horizontalLayout_58 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_58.setSpacing(4)
         self.horizontalLayout_58.setObjectName("horizontalLayout_58")
-        self.darkModeGradientColor4_5 = QtWidgets.QLineEdit(parent=self.tab_8)
-        self.darkModeGradientColor4_5.setToolTip("")
-        self.darkModeGradientColor4_5.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
-        self.darkModeGradientColor4_5.setObjectName("darkModeGradientColor4_5")
-        self.horizontalLayout_58.addWidget(self.darkModeGradientColor4_5)
-        self.dark_mode_gradient_color_picker4_4 = QtWidgets.QPushButton(
-            parent=self.tab_8
-        )
+        self.darkModeGradientColor4_4 = QtWidgets.QLineEdit(parent=self.tab_8)
+        self.darkModeGradientColor4_4.setToolTip("")
+        self.darkModeGradientColor4_4.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
+        self.darkModeGradientColor4_4.setObjectName("darkModeGradientColor4_4")
+        self.horizontalLayout_58.addWidget(self.darkModeGradientColor4_4)
+        self.dark_mode_gradient_color_picker4_4 = QtWidgets.QPushButton(parent=self.tab_8)
         self.dark_mode_gradient_color_picker4_4.setText("")
         self.dark_mode_gradient_color_picker4_4.setIcon(icon1)
-        self.dark_mode_gradient_color_picker4_4.setObjectName(
-            "dark_mode_gradient_color_picker4_4"
-        )
+        self.dark_mode_gradient_color_picker4_4.setObjectName("dark_mode_gradient_color_picker4_4")
         self.horizontalLayout_58.addWidget(self.dark_mode_gradient_color_picker4_4)
-        self.reset_dark_mode_gradient_color4_4 = QtWidgets.QPushButton(
-            parent=self.tab_8
-        )
+        self.reset_dark_mode_gradient_color4_4 = QtWidgets.QPushButton(parent=self.tab_8)
         self.reset_dark_mode_gradient_color4_4.setText("")
         self.reset_dark_mode_gradient_color4_4.setIcon(icon)
-        self.reset_dark_mode_gradient_color4_4.setObjectName(
-            "reset_dark_mode_gradient_color4_4"
-        )
+        self.reset_dark_mode_gradient_color4_4.setObjectName("reset_dark_mode_gradient_color4_4")
         self.horizontalLayout_58.addWidget(self.reset_dark_mode_gradient_color4_4)
         self.horizontalLayout_58.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_58
-        )
+        self.formLayout_7.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_58)
         self.label_53 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_53.setObjectName("label_53")
-        self.formLayout_7.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_53
-        )
+        self.formLayout_7.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_53)
         self.horizontalLayout_59 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_59.setSpacing(4)
         self.horizontalLayout_59.setObjectName("horizontalLayout_59")
         self.lightModeGradientColor4_4 = QtWidgets.QLineEdit(parent=self.tab_8)
         self.lightModeGradientColor4_4.setToolTip("")
-        self.lightModeGradientColor4_4.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor4_4.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor4_4.setObjectName("lightModeGradientColor4_4")
         self.horizontalLayout_59.addWidget(self.lightModeGradientColor4_4)
-        self.light_mode_gradient_color_picker4_4 = QtWidgets.QPushButton(
-            parent=self.tab_8
-        )
+        self.light_mode_gradient_color_picker4_4 = QtWidgets.QPushButton(parent=self.tab_8)
         self.light_mode_gradient_color_picker4_4.setText("")
         self.light_mode_gradient_color_picker4_4.setIcon(icon1)
-        self.light_mode_gradient_color_picker4_4.setObjectName(
-            "light_mode_gradient_color_picker4_4"
-        )
+        self.light_mode_gradient_color_picker4_4.setObjectName("light_mode_gradient_color_picker4_4")
         self.horizontalLayout_59.addWidget(self.light_mode_gradient_color_picker4_4)
-        self.reset_light_mode_gradient_color4_4 = QtWidgets.QPushButton(
-            parent=self.tab_8
-        )
+        self.reset_light_mode_gradient_color4_4 = QtWidgets.QPushButton(parent=self.tab_8)
         self.reset_light_mode_gradient_color4_4.setText("")
         self.reset_light_mode_gradient_color4_4.setIcon(icon)
-        self.reset_light_mode_gradient_color4_4.setObjectName(
-            "reset_light_mode_gradient_color4_4"
-        )
+        self.reset_light_mode_gradient_color4_4.setObjectName("reset_light_mode_gradient_color4_4")
         self.horizontalLayout_59.addWidget(self.reset_light_mode_gradient_color4_4)
         self.horizontalLayout_59.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_59
-        )
+        self.formLayout_7.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_59)
         self.label_54 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_54.setObjectName("label_54")
-        self.formLayout_7.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_54
-        )
+        self.formLayout_7.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_54)
         self.horizontalLayout_60 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_60.setSpacing(4)
         self.horizontalLayout_60.setObjectName("horizontalLayout_60")
         self.darkModeOpacity4_4 = QtWidgets.QLineEdit(parent=self.tab_8)
         self.darkModeOpacity4_4.setToolTip("")
-        self.darkModeOpacity4_4.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeOpacity4_4.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeOpacity4_4.setObjectName("darkModeOpacity4_4")
         self.horizontalLayout_60.addWidget(self.darkModeOpacity4_4)
         self.dark_mode_opacity_picker4_4 = QtWidgets.QPushButton(parent=self.tab_8)
@@ -1688,44 +1278,34 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity4_4.setObjectName("reset_dark_mode_opacity4_4")
         self.horizontalLayout_60.addWidget(self.reset_dark_mode_opacity4_4)
         self.horizontalLayout_60.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_60
-        )
+        self.formLayout_7.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_60)
         self.label_55 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_55.setObjectName("label_55")
-        self.formLayout_7.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_55
-        )
+        self.formLayout_7.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_55)
         self.horizontalLayout_61 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_61.setSpacing(4)
         self.horizontalLayout_61.setObjectName("horizontalLayout_61")
         self.lightModeOpacity4_4 = QtWidgets.QLineEdit(parent=self.tab_8)
         self.lightModeOpacity4_4.setToolTip("")
         self.lightModeOpacity4_4.setStatusTip("")
-        self.lightModeOpacity4_4.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeOpacity4_4.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeOpacity4_4.setObjectName("lightModeOpacity4_4")
         self.horizontalLayout_61.addWidget(self.lightModeOpacity4_4)
-        self.light_mode_opactiy_picker4_4 = QtWidgets.QPushButton(parent=self.tab_8)
-        self.light_mode_opactiy_picker4_4.setText("")
-        self.light_mode_opactiy_picker4_4.setIcon(icon1)
-        self.light_mode_opactiy_picker4_4.setObjectName("light_mode_opactiy_picker4_4")
-        self.horizontalLayout_61.addWidget(self.light_mode_opactiy_picker4_4)
+        self.light_mode_opacity_picker4_4 = QtWidgets.QPushButton(parent=self.tab_8)
+        self.light_mode_opacity_picker4_4.setText("")
+        self.light_mode_opacity_picker4_4.setIcon(icon1)
+        self.light_mode_opacity_picker4_4.setObjectName("light_mode_opacity_picker4_4")
+        self.horizontalLayout_61.addWidget(self.light_mode_opacity_picker4_4)
         self.reset_light_mode_opacity4_4 = QtWidgets.QPushButton(parent=self.tab_8)
         self.reset_light_mode_opacity4_4.setText("")
         self.reset_light_mode_opacity4_4.setIcon(icon)
         self.reset_light_mode_opacity4_4.setObjectName("reset_light_mode_opacity4_4")
         self.horizontalLayout_61.addWidget(self.reset_light_mode_opacity4_4)
         self.horizontalLayout_61.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_61
-        )
+        self.formLayout_7.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_61)
         self.label_57 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_57.setObjectName("label_57")
-        self.formLayout_7.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_57
-        )
+        self.formLayout_7.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_57)
         self.horizontalLayout_63 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_63.setSpacing(4)
         self.horizontalLayout_63.setObjectName("horizontalLayout_63")
@@ -1740,14 +1320,10 @@ class Ui_MainWindow(object):
         self.reset_corner_radius1_4.setObjectName("reset_corner_radius1_4")
         self.horizontalLayout_63.addWidget(self.reset_corner_radius1_4)
         self.horizontalLayout_63.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_63
-        )
+        self.formLayout_7.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_63)
         self.label_58 = QtWidgets.QLabel(parent=self.tab_8)
         self.label_58.setObjectName("label_58")
-        self.formLayout_7.setWidget(
-            7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_58
-        )
+        self.formLayout_7.setWidget(7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_58)
         self.horizontalLayout_64 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_64.setSpacing(4)
         self.horizontalLayout_64.setObjectName("horizontalLayout_64")
@@ -1762,31 +1338,17 @@ class Ui_MainWindow(object):
         self.reset_theme_customization1_4.setObjectName("reset_theme_customization1_4")
         self.horizontalLayout_64.addWidget(self.reset_theme_customization1_4)
         self.horizontalLayout_64.setStretch(0, 1)
-        self.formLayout_7.setLayout(
-            7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_64
-        )
+        self.formLayout_7.setLayout(7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_64)
         self.verticalLayout_8.addLayout(self.formLayout_7)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        spacerItem12 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem12 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem12)
         self.applyButton4_4 = QtWidgets.QPushButton(parent=self.tab_8)
-        self.applyButton4_4.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton4_4.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton4_4.setObjectName("applyButton4_4")
         self.horizontalLayout_8.addWidget(self.applyButton4_4)
-        spacerItem13 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem13)
         self.verticalLayout_8.addLayout(self.horizontalLayout_8)
         self.verticalLayout_8.setStretch(0, 1)
@@ -1799,91 +1361,59 @@ class Ui_MainWindow(object):
         self.formLayout_8.setObjectName("formLayout_8")
         self.label_61 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_61.setObjectName("label_61")
-        self.formLayout_8.setWidget(
-            0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_61
-        )
+        self.formLayout_8.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_61)
         self.horizontalLayout_65 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_65.setSpacing(4)
         self.horizontalLayout_65.setObjectName("horizontalLayout_65")
-        self.darkModeGradientColor4_6 = QtWidgets.QLineEdit(parent=self.tab_9)
-        self.darkModeGradientColor4_6.setToolTip("")
-        self.darkModeGradientColor4_6.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
-        self.darkModeGradientColor4_6.setObjectName("darkModeGradientColor4_6")
-        self.horizontalLayout_65.addWidget(self.darkModeGradientColor4_6)
-        self.dark_mode_gradient_color_picker4_5 = QtWidgets.QPushButton(
-            parent=self.tab_9
-        )
+        self.darkModeGradientColor4_5 = QtWidgets.QLineEdit(parent=self.tab_9)
+        self.darkModeGradientColor4_5.setToolTip("")
+        self.darkModeGradientColor4_5.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
+        self.darkModeGradientColor4_5.setObjectName("darkModeGradientColor4_5")
+        self.horizontalLayout_65.addWidget(self.darkModeGradientColor4_5)
+        self.dark_mode_gradient_color_picker4_5 = QtWidgets.QPushButton(parent=self.tab_9)
         self.dark_mode_gradient_color_picker4_5.setText("")
         self.dark_mode_gradient_color_picker4_5.setIcon(icon1)
-        self.dark_mode_gradient_color_picker4_5.setObjectName(
-            "dark_mode_gradient_color_picker4_5"
-        )
+        self.dark_mode_gradient_color_picker4_5.setObjectName("dark_mode_gradient_color_picker4_5")
         self.horizontalLayout_65.addWidget(self.dark_mode_gradient_color_picker4_5)
-        self.reset_dark_mode_gradient_color4_5 = QtWidgets.QPushButton(
-            parent=self.tab_9
-        )
+        self.reset_dark_mode_gradient_color4_5 = QtWidgets.QPushButton(parent=self.tab_9)
         self.reset_dark_mode_gradient_color4_5.setText("")
         self.reset_dark_mode_gradient_color4_5.setIcon(icon)
-        self.reset_dark_mode_gradient_color4_5.setObjectName(
-            "reset_dark_mode_gradient_color4_5"
-        )
+        self.reset_dark_mode_gradient_color4_5.setObjectName("reset_dark_mode_gradient_color4_5")
         self.horizontalLayout_65.addWidget(self.reset_dark_mode_gradient_color4_5)
         self.horizontalLayout_65.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_65
-        )
+        self.formLayout_8.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_65)
         self.label_62 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_62.setObjectName("label_62")
-        self.formLayout_8.setWidget(
-            1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_62
-        )
+        self.formLayout_8.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_62)
         self.horizontalLayout_66 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_66.setSpacing(4)
         self.horizontalLayout_66.setObjectName("horizontalLayout_66")
         self.lightModeGradientColor4_5 = QtWidgets.QLineEdit(parent=self.tab_9)
         self.lightModeGradientColor4_5.setToolTip("")
-        self.lightModeGradientColor4_5.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeGradientColor4_5.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeGradientColor4_5.setObjectName("lightModeGradientColor4_5")
         self.horizontalLayout_66.addWidget(self.lightModeGradientColor4_5)
-        self.light_mode_gradient_color_picker4_5 = QtWidgets.QPushButton(
-            parent=self.tab_9
-        )
+        self.light_mode_gradient_color_picker4_5 = QtWidgets.QPushButton(parent=self.tab_9)
         self.light_mode_gradient_color_picker4_5.setText("")
         self.light_mode_gradient_color_picker4_5.setIcon(icon1)
-        self.light_mode_gradient_color_picker4_5.setObjectName(
-            "light_mode_gradient_color_picker4_5"
-        )
+        self.light_mode_gradient_color_picker4_5.setObjectName("light_mode_gradient_color_picker4_5")
         self.horizontalLayout_66.addWidget(self.light_mode_gradient_color_picker4_5)
-        self.reset_light_mode_gradient_color4_5 = QtWidgets.QPushButton(
-            parent=self.tab_9
-        )
+        self.reset_light_mode_gradient_color4_5 = QtWidgets.QPushButton(parent=self.tab_9)
         self.reset_light_mode_gradient_color4_5.setText("")
         self.reset_light_mode_gradient_color4_5.setIcon(icon)
-        self.reset_light_mode_gradient_color4_5.setObjectName(
-            "reset_light_mode_gradient_color4_5"
-        )
+        self.reset_light_mode_gradient_color4_5.setObjectName("reset_light_mode_gradient_color4_5")
         self.horizontalLayout_66.addWidget(self.reset_light_mode_gradient_color4_5)
         self.horizontalLayout_66.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_66
-        )
+        self.formLayout_8.setLayout(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_66)
         self.label_63 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_63.setObjectName("label_63")
-        self.formLayout_8.setWidget(
-            2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_63
-        )
+        self.formLayout_8.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_63)
         self.horizontalLayout_67 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_67.setSpacing(4)
         self.horizontalLayout_67.setObjectName("horizontalLayout_67")
         self.darkModeOpacity4_5 = QtWidgets.QLineEdit(parent=self.tab_9)
         self.darkModeOpacity4_5.setToolTip("")
-        self.darkModeOpacity4_5.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.darkModeOpacity4_5.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.darkModeOpacity4_5.setObjectName("darkModeOpacity4_5")
         self.horizontalLayout_67.addWidget(self.darkModeOpacity4_5)
         self.dark_mode_opacity_picker4_5 = QtWidgets.QPushButton(parent=self.tab_9)
@@ -1897,44 +1427,34 @@ class Ui_MainWindow(object):
         self.reset_dark_mode_opacity4_5.setObjectName("reset_dark_mode_opacity4_5")
         self.horizontalLayout_67.addWidget(self.reset_dark_mode_opacity4_5)
         self.horizontalLayout_67.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_67
-        )
+        self.formLayout_8.setLayout(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_67)
         self.label_64 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_64.setObjectName("label_64")
-        self.formLayout_8.setWidget(
-            3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_64
-        )
+        self.formLayout_8.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_64)
         self.horizontalLayout_68 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_68.setSpacing(4)
         self.horizontalLayout_68.setObjectName("horizontalLayout_68")
         self.lightModeOpacity4_5 = QtWidgets.QLineEdit(parent=self.tab_9)
         self.lightModeOpacity4_5.setToolTip("")
         self.lightModeOpacity4_5.setStatusTip("")
-        self.lightModeOpacity4_5.setLayoutDirection(
-            QtCore.Qt.LayoutDirection.LeftToRight
-        )
+        self.lightModeOpacity4_5.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.lightModeOpacity4_5.setObjectName("lightModeOpacity4_5")
         self.horizontalLayout_68.addWidget(self.lightModeOpacity4_5)
-        self.light_mode_opactiy_picker4_5 = QtWidgets.QPushButton(parent=self.tab_9)
-        self.light_mode_opactiy_picker4_5.setText("")
-        self.light_mode_opactiy_picker4_5.setIcon(icon1)
-        self.light_mode_opactiy_picker4_5.setObjectName("light_mode_opactiy_picker4_5")
-        self.horizontalLayout_68.addWidget(self.light_mode_opactiy_picker4_5)
+        self.light_mode_opacity_picker4_5 = QtWidgets.QPushButton(parent=self.tab_9)
+        self.light_mode_opacity_picker4_5.setText("")
+        self.light_mode_opacity_picker4_5.setIcon(icon1)
+        self.light_mode_opacity_picker4_5.setObjectName("light_mode_opacity_picker4_5")
+        self.horizontalLayout_68.addWidget(self.light_mode_opacity_picker4_5)
         self.reset_light_mode_opacity4_5 = QtWidgets.QPushButton(parent=self.tab_9)
         self.reset_light_mode_opacity4_5.setText("")
         self.reset_light_mode_opacity4_5.setIcon(icon)
         self.reset_light_mode_opacity4_5.setObjectName("reset_light_mode_opacity4_5")
         self.horizontalLayout_68.addWidget(self.reset_light_mode_opacity4_5)
         self.horizontalLayout_68.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_68
-        )
+        self.formLayout_8.setLayout(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_68)
         self.label_65 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_65.setObjectName("label_65")
-        self.formLayout_8.setWidget(
-            4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_65
-        )
+        self.formLayout_8.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_65)
         self.horizontalLayout_69 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_69.setSpacing(4)
         self.horizontalLayout_69.setObjectName("horizontalLayout_69")
@@ -1949,14 +1469,10 @@ class Ui_MainWindow(object):
         self.reset_disabled4_4.setObjectName("reset_disabled4_4")
         self.horizontalLayout_69.addWidget(self.reset_disabled4_4)
         self.horizontalLayout_69.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_69
-        )
+        self.formLayout_8.setLayout(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_69)
         self.label_66 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_66.setObjectName("label_66")
-        self.formLayout_8.setWidget(
-            5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_66
-        )
+        self.formLayout_8.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_66)
         self.horizontalLayout_70 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_70.setSpacing(4)
         self.horizontalLayout_70.setObjectName("horizontalLayout_70")
@@ -1971,14 +1487,10 @@ class Ui_MainWindow(object):
         self.reset_corner_radius1_5.setObjectName("reset_corner_radius1_5")
         self.horizontalLayout_70.addWidget(self.reset_corner_radius1_5)
         self.horizontalLayout_70.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_70
-        )
+        self.formLayout_8.setLayout(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_70)
         self.label_67 = QtWidgets.QLabel(parent=self.tab_9)
         self.label_67.setObjectName("label_67")
-        self.formLayout_8.setWidget(
-            6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_67
-        )
+        self.formLayout_8.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_67)
         self.horizontalLayout_71 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_71.setSpacing(4)
         self.horizontalLayout_71.setObjectName("horizontalLayout_71")
@@ -1993,31 +1505,17 @@ class Ui_MainWindow(object):
         self.reset_theme_customization1_5.setObjectName("reset_theme_customization1_5")
         self.horizontalLayout_71.addWidget(self.reset_theme_customization1_5)
         self.horizontalLayout_71.setStretch(0, 1)
-        self.formLayout_8.setLayout(
-            6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_71
-        )
+        self.formLayout_8.setLayout(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.horizontalLayout_71)
         self.verticalLayout_9.addLayout(self.formLayout_8)
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        spacerItem14 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_9.addItem(spacerItem14)
         self.applyButton4_5 = QtWidgets.QPushButton(parent=self.tab_9)
-        self.applyButton4_5.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
+        self.applyButton4_5.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton4_5.setObjectName("applyButton4_5")
         self.horizontalLayout_9.addWidget(self.applyButton4_5)
-        spacerItem15 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem15 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_9.addItem(spacerItem15)
         self.verticalLayout_9.addLayout(self.horizontalLayout_9)
         self.verticalLayout_9.setStretch(0, 1)
@@ -2058,12 +1556,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(
-            _translate("MainWindow", "Translucent Flyout Configuration GUI")
-        )
-        self.description1.setText(
-            _translate("MainWindow", "Modify your general appearance settings.")
-        )
+        MainWindow.setWindowTitle(_translate("MainWindow", "Translucent Flyout Configuration GUI"))
+        self.description1.setText(_translate("MainWindow", "Modify your general appearance settings."))
         self.label_2.setText(_translate("MainWindow", "Scope"))
         self.scope.setItemText(0, _translate("MainWindow", "Global"))
         self.scope.setItemText(1, _translate("MainWindow", "Individual"))
@@ -2072,9 +1566,7 @@ class Ui_MainWindow(object):
         self.effectType1.setItemText(1, _translate("MainWindow", "Transparent"))
         self.effectType1.setItemText(2, _translate("MainWindow", "Solid"))
         self.effectType1.setItemText(3, _translate("MainWindow", "Blur"))
-        self.effectType1.setItemText(
-            4, _translate("MainWindow", "Classic Acrylic Blur")
-        )
+        self.effectType1.setItemText(4, _translate("MainWindow", "Classic Acrylic Blur"))
         self.effectType1.setItemText(5, _translate("MainWindow", "Modern Acrylic Blur"))
         self.effectType1.setItemText(6, _translate("MainWindow", "Acrylic"))
         self.effectType1.setItemText(7, _translate("MainWindow", "Mica"))
@@ -2083,13 +1575,9 @@ class Ui_MainWindow(object):
         self.enableDropShadow1.setItemText(0, _translate("MainWindow", "No"))
         self.enableDropShadow1.setItemText(1, _translate("MainWindow", "Yes"))
         self.label_8.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor1.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_9.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor1.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_10.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_11.setText(_translate("MainWindow", "Light Mode Opacity"))
@@ -2097,27 +1585,16 @@ class Ui_MainWindow(object):
         self.label_12.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect1.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect1.setItemText(1, _translate("MainWindow", "Yes"))
-        self.note1.setText(
-            _translate(
-                "MainWindow",
-                "Note: If there are values with the same name under Menu or DropDown, the values in the latter sections will be prioritized, and this part will be ignored.",
-            )
-        )
+        self.note1.setText(_translate("MainWindow", "Note: If there are values with the same name under Menu or DropDown, the values in the latter sections will be prioritized, and this part will be ignored."))
         self.applyButton1.setText(_translate("MainWindow", "Apply"))
-        self.tabWidget.setTabText(
-            self.tabWidget.indexOf(self.tab_1), _translate("MainWindow", "General")
-        )
-        self.description2.setText(
-            _translate("MainWindow", "Modify the appearance of the dropdown control.")
-        )
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("MainWindow", "General"))
+        self.description2.setText(_translate("MainWindow", "Modify the appearance of the dropdown control."))
         self.label_13.setText(_translate("MainWindow", "Effect Type"))
         self.effectType2.setItemText(0, _translate("MainWindow", "Disable"))
         self.effectType2.setItemText(1, _translate("MainWindow", "Transparent"))
         self.effectType2.setItemText(2, _translate("MainWindow", "Solid"))
         self.effectType2.setItemText(3, _translate("MainWindow", "Blur"))
-        self.effectType2.setItemText(
-            4, _translate("MainWindow", "Classic Acrylic Blur")
-        )
+        self.effectType2.setItemText(4, _translate("MainWindow", "Classic Acrylic Blur"))
         self.effectType2.setItemText(5, _translate("MainWindow", "Modern Acrylic Blur"))
         self.effectType2.setItemText(6, _translate("MainWindow", "Acrylic"))
         self.effectType2.setItemText(7, _translate("MainWindow", "Mica"))
@@ -2126,13 +1603,9 @@ class Ui_MainWindow(object):
         self.enableDropShadow2.setItemText(0, _translate("MainWindow", "No"))
         self.enableDropShadow2.setItemText(1, _translate("MainWindow", "Yes"))
         self.label_15.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor2.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_16.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor2.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_17.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_18.setText(_translate("MainWindow", "Light Mode Opacity"))
@@ -2141,12 +1614,8 @@ class Ui_MainWindow(object):
         self.disabledEffect2.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect2.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton2.setText(_translate("MainWindow", "Apply"))
-        self.tabWidget.setTabText(
-            self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "DropDown")
-        )
-        self.description3.setText(
-            _translate("MainWindow", "Modify the overall appearance of the popup menu.")
-        )
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "DropDown"))
+        self.description3.setText(_translate("MainWindow", "Modify the overall appearance of the popup menu."))
         self.label_20.setText(_translate("MainWindow", "No System Outline"))
         self.noSystemOutline.setItemText(0, _translate("MainWindow", "No"))
         self.noSystemOutline.setItemText(1, _translate("MainWindow", "Yes"))
@@ -2161,9 +1630,7 @@ class Ui_MainWindow(object):
         self.effectType3.setItemText(1, _translate("MainWindow", "Transparent"))
         self.effectType3.setItemText(2, _translate("MainWindow", "Solid"))
         self.effectType3.setItemText(3, _translate("MainWindow", "Blur"))
-        self.effectType3.setItemText(
-            4, _translate("MainWindow", "Classic Acrylic Blur")
-        )
+        self.effectType3.setItemText(4, _translate("MainWindow", "Classic Acrylic Blur"))
         self.effectType3.setItemText(5, _translate("MainWindow", "Modern Acrylic Blur"))
         self.effectType3.setItemText(6, _translate("MainWindow", "Acrylic"))
         self.effectType3.setItemText(7, _translate("MainWindow", "Mica"))
@@ -2172,13 +1639,9 @@ class Ui_MainWindow(object):
         self.enableDropShadow3.setItemText(0, _translate("MainWindow", "No"))
         self.enableDropShadow3.setItemText(1, _translate("MainWindow", "Yes"))
         self.label_25.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor3.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_26.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor3.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_27.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_28.setText(_translate("MainWindow", "Light Mode Opacity"))
@@ -2187,29 +1650,16 @@ class Ui_MainWindow(object):
         self.disabledEffect3.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect3.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton3.setText(_translate("MainWindow", "Apply"))
-        self.tabWidget.setTabText(
-            self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Menu")
-        )
-        self.description4.setText(
-            _translate(
-                "MainWindow",
-                "Define the appearance of highlighted items, disabled highlighted items, borders, separators, etc., in the popup menu.",
-            )
-        )
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Menu"))
+        self.description4.setText(_translate("MainWindow", "Define the appearance of highlighted items, disabled highlighted items, borders, separators, etc., in the popup menu."))
         self.label_33.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor4_1.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor4_1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_34.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor4_1.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor4_1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_35.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity4_1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_36.setText(_translate("MainWindow", "Light Mode Opacity"))
-        self.lightModeOpacity4_1.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeOpacity4_1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_37.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect4_1.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect4_1.setItemText(1, _translate("MainWindow", "Yes"))
@@ -2218,23 +1668,15 @@ class Ui_MainWindow(object):
         self.enableThemeCustomization1_1.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeCustomization1_1.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton4_1.setText(_translate("MainWindow", "Apply"))
-        self.QTabWidget2.setTabText(
-            self.QTabWidget2.indexOf(self.tab), _translate("MainWindow", "Hot")
-        )
+        self.QTabWidget2.setTabText(self.QTabWidget2.indexOf(self.tab), _translate("MainWindow", "Hot"))
         self.label_38.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor4_2.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor4_2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_39.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor4_2.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor4_2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_40.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity4_2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_41.setText(_translate("MainWindow", "Light Mode Opacity"))
-        self.lightModeOpacity4_2.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeOpacity4_2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_42.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect4_2.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect4_2.setItemText(1, _translate("MainWindow", "Yes"))
@@ -2243,24 +1685,15 @@ class Ui_MainWindow(object):
         self.enableThemeCustomization1_2.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeCustomization1_2.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton4_2.setText(_translate("MainWindow", "Apply"))
-        self.QTabWidget2.setTabText(
-            self.QTabWidget2.indexOf(self.tab_6),
-            _translate("MainWindow", "Disabled Hot"),
-        )
+        self.QTabWidget2.setTabText(self.QTabWidget2.indexOf(self.tab_6), _translate("MainWindow", "Disabled Hot"))
         self.label_45.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor4_3.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor4_3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_46.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor4_3.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor4_3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_47.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity4_3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_48.setText(_translate("MainWindow", "Light Mode Opacity"))
-        self.lightModeOpacity4_3.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeOpacity4_3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_49.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect4_3.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect4_3.setItemText(1, _translate("MainWindow", "Yes"))
@@ -2269,9 +1702,7 @@ class Ui_MainWindow(object):
         self.enableThemeCustomization1_3.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeCustomization1_3.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton4_3.setText(_translate("MainWindow", "Apply"))
-        self.QTabWidget2.setTabText(
-            self.QTabWidget2.indexOf(self.tab_7), _translate("MainWindow", "Focusing")
-        )
+        self.QTabWidget2.setTabText(self.QTabWidget2.indexOf(self.tab_7), _translate("MainWindow", "Focusing"))
         self.label_59.setText(_translate("MainWindow", "No Border Color"))
         self.noBorderColor.setItemText(0, _translate("MainWindow", "No"))
         self.noBorderColor.setItemText(1, _translate("MainWindow", "Yes"))
@@ -2280,41 +1711,27 @@ class Ui_MainWindow(object):
         self.cornerType.setItemText(1, _translate("MainWindow", "Square Corners"))
         self.cornerType.setItemText(2, _translate("MainWindow", "Large Corners"))
         self.label_52.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor4_5.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor4_4.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_53.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor4_4.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor4_4.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_54.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity4_4.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_55.setText(_translate("MainWindow", "Light Mode Opacity"))
-        self.lightModeOpacity4_4.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeOpacity4_4.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_57.setText(_translate("MainWindow", "Corner Radius"))
         self.label_58.setText(_translate("MainWindow", "Enable Theme Customization"))
         self.enableThemeCustomization1_4.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeCustomization1_4.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton4_4.setText(_translate("MainWindow", "Apply"))
-        self.QTabWidget2.setTabText(
-            self.QTabWidget2.indexOf(self.tab_8), _translate("MainWindow", "Border")
-        )
+        self.QTabWidget2.setTabText(self.QTabWidget2.indexOf(self.tab_8), _translate("MainWindow", "Border"))
         self.label_61.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
-        self.darkModeGradientColor4_6.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.darkModeGradientColor4_5.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_62.setText(_translate("MainWindow", "Light Mode Gradient Color"))
-        self.lightModeGradientColor4_5.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeGradientColor4_5.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_63.setText(_translate("MainWindow", "Dark Mode Opacity"))
         self.darkModeOpacity4_5.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_64.setText(_translate("MainWindow", "Light Mode Opacity"))
-        self.lightModeOpacity4_5.setPlaceholderText(
-            _translate("MainWindow", "AARRGGBB")
-        )
+        self.lightModeOpacity4_5.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_65.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect4_4.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect4_4.setItemText(1, _translate("MainWindow", "Yes"))
@@ -2323,18 +1740,8 @@ class Ui_MainWindow(object):
         self.enableThemeCustomization1_5.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeCustomization1_5.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton4_5.setText(_translate("MainWindow", "Apply"))
-        self.QTabWidget2.setTabText(
-            self.QTabWidget2.indexOf(self.tab_9), _translate("MainWindow", "Separator")
-        )
-        self.tabWidget.setTabText(
-            self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Menu Items")
-        )
-        self.label.setText(
-            _translate(
-                "MainWindow", "Modify the overall appearance of the toolbar (tooltip)."
-            )
-        )
+        self.QTabWidget2.setTabText(self.QTabWidget2.indexOf(self.tab_9), _translate("MainWindow", "Separator"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Menu Items"))
+        self.label.setText(_translate("MainWindow", "Modify the overall appearance of the toolbar (tooltip)."))
         self.label_68.setText(_translate("MainWindow", "Coming Soon !"))
-        self.tabWidget.setTabText(
-            self.tabWidget.indexOf(self.tab_5), _translate("MainWindow", "Tooltip")
-        )
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("MainWindow", "Tooltip"))
