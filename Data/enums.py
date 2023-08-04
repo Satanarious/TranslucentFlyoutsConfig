@@ -74,8 +74,3 @@ class Presets(IntEnum):
 
     Null = 0
     # Add More Presets
-
-
-class IconPaths(Enum):
-    ResetIcon = "Assets/View-refresh.svg.png"
-    ColorPicker = "Assets/2867978.png"

@@ -7,29 +7,30 @@
     "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
     "Dark Mode Opacity": { "default": "", "unsupported": 0 },
     "Light Mode Opacity": { "default": "", "unsupported": 0 },
-    "Disabled": { "default": 0, "unsupported": 0 }
+    "Disabled": { "default": 0, "unsupported": 0 },
+    "DropDown": {
+      "Effect Type": { "default": 5, "unsupported": 0 },
+      "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+      "Light Mode Opacity": { "default": "", "unsupported": 0 },
+      "Disabled": { "default": 0, "unsupported": 0 }
+    },
+    "Menu": {
+      "No System Outline": { "default": 0, "unsupported": 0 },
+      "Enable Immersive Style": { "default": 1, "unsupported": 11 },
+      "Enable Custom Rendering": { "default": 0, "unsupported": 0 },
+      "Effect Type": { "default": 5, "unsupported": 0 },
+      "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
+      "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
+      "Dark Mode Opacity": { "default": "", "unsupported": 0 },
+      "Light Mode Opacity": { "default": "", "unsupported": 0 },
+      "Disabled": { "default": 0, "unsupported": 0 }
+    }
   },
-  "DropDown": {
-    "Effect Type": { "default": 5, "unsupported": 0 },
-    "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
-    "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
-    "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
-    "Dark Mode Opacity": { "default": "", "unsupported": 0 },
-    "Light Mode Opacity": { "default": "", "unsupported": 0 },
-    "Disabled": { "default": 0, "unsupported": 0 }
-  },
-  "Menu": {
-    "No System Outline": { "default": 0, "unsupported": 0 },
-    "Enable Immersive Style": { "default": 1, "unsupported": 11 },
-    "Enable Custom Rendering": { "default": 0, "unsupported": 0 },
-    "Effect Type": { "default": 5, "unsupported": 0 },
-    "Enable Drop Shadow": { "default": 0, "unsupported": 0 },
-    "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },
-    "Light Mode Gradient Color": { "default": "", "unsupported": 0 },
-    "Dark Mode Opacity": { "default": "", "unsupported": 0 },
-    "Light Mode Opacity": { "default": "", "unsupported": 0 },
-    "Disabled": { "default": 0, "unsupported": 0 }
-  },
+  
   "Menu Items": {
     "Hot": {
       "Dark Mode Gradient Color": { "default": "", "unsupported": 0 },

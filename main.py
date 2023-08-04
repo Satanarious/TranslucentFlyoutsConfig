@@ -1,11 +1,10 @@
 # Library Imports
 from PyQt6.QtWidgets import QApplication, QMainWindow
 import sys
-from Data.defaults import Defaults
 
 # Relative Imports
 from ui import Ui_MainWindow
-from Dialogs.color_picker import ColorPickerButton
+from Dialogs.color_picker import ColorPicker
 
 
 class Main(Ui_MainWindow):
@@ -13,6 +12,9 @@ class Main(Ui_MainWindow):
         self.mainWindow: QMainWindow = QMainWindow()
         self.setupUi(self.mainWindow)
         self.connectColorPickers()
+        self.scope.currentIndexChanged.connect(
+            lambda index: self.stackedWidget.setCurrentIndex(index)
+        )
 
     def connectResetButtons(self):
         """
@@ -27,101 +29,76 @@ class Main(Ui_MainWindow):
         Connect Color Picker Dialog to:
         - Color Output lineEdit
         """
-        self.dark_mode_gradient_color_picker1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor1)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor1,
+            pushButton=self.dark_mode_gradient_color_picker1,
         )
-        self.light_mode_gradient_color_picker1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor1)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor1,
+            pushButton=self.light_mode_gradient_color_picker1,
         )
-        self.dark_mode_opacity_picker1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity1)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor2,
+            pushButton=self.dark_mode_gradient_color_picker2,
         )
-        self.light_mode_opacity_picker1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity1)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor2,
+            pushButton=self.light_mode_gradient_color_picker2,
         )
-        self.dark_mode_gradient_color_picker2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor2)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor3,
+            pushButton=self.dark_mode_gradient_color_picker3,
         )
-        self.light_mode_gradient_color_picker2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor2)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor3,
+            pushButton=self.light_mode_gradient_color_picker3,
         )
-        self.dark_mode_opacity_picker2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity2)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor4_1,
+            pushButton=self.dark_mode_gradient_color_picker4_1,
         )
-        self.light_mode_opacity_picker2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity2)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor4_1,
+            pushButton=self.light_mode_gradient_color_picker4_1,
         )
-        self.dark_mode_gradient_color_picker3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor3)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor4_2,
+            pushButton=self.dark_mode_gradient_color_picker4_2,
         )
-        self.light_mode_gradient_color_picker3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor3)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor4_2,
+            pushButton=self.light_mode_gradient_color_picker4_2,
         )
-        self.dark_mode_opacity_picker3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity3)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor4_3,
+            pushButton=self.dark_mode_gradient_color_picker4_3,
         )
-        self.light_mode_opacity_picker3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity3)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor4_3,
+            pushButton=self.light_mode_gradient_color_picker4_3,
         )
-        self.dark_mode_gradient_color_picker4_1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor4_1)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor4_4,
+            pushButton=self.dark_mode_gradient_color_picker4_4,
         )
-        self.light_mode_gradient_color_picker4_1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor4_1)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor4_4,
+            pushButton=self.light_mode_gradient_color_picker4_4,
         )
-        self.dark_mode_opacity_picker4_1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity4_1)
+
+        ColorPicker.connectColorDialog(
+            lineEdit=self.darkModeGradientColor4_5,
+            pushButton=self.dark_mode_gradient_color_picker4_5,
         )
-        self.light_mode_opacity_picker4_1.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity4_1)
-        )
-        self.dark_mode_gradient_color_picker4_2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor4_2)
-        )
-        self.light_mode_gradient_color_picker4_2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor4_2)
-        )
-        self.dark_mode_opacity_picker4_2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity4_2)
-        )
-        self.light_mode_opacity_picker4_2.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity4_2)
-        )
-        self.dark_mode_gradient_color_picker4_3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor4_3)
-        )
-        self.light_mode_gradient_color_picker4_3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor4_3)
-        )
-        self.dark_mode_opacity_picker4_3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity4_3)
-        )
-        self.light_mode_opacity_picker4_3.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity4_3)
-        )
-        self.dark_mode_gradient_color_picker4_4.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor4_4)
-        )
-        self.light_mode_gradient_color_picker4_4.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor4_4)
-        )
-        self.dark_mode_opacity_picker4_4.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity4_4)
-        )
-        self.light_mode_opacity_picker4_4.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity4_4)
-        )
-        self.dark_mode_gradient_color_picker4_5.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeGradientColor4_5)
-        )
-        self.light_mode_gradient_color_picker4_5.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeGradientColor4_5)
-        )
-        self.dark_mode_opacity_picker4_5.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.darkModeOpacity4_5)
-        )
-        self.light_mode_opacity_picker4_5.clicked.connect(
-            lambda a: ColorPickerButton.openColorDialog(self.lightModeOpacity4_5)
+        ColorPicker.connectColorDialog(
+            lineEdit=self.lightModeGradientColor4_5,
+            pushButton=self.light_mode_gradient_color_picker4_5,
         )
 
 

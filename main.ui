@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>408</width>
-    <height>434</height>
+    <height>338</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,31 +42,19 @@
        <attribute name="title">
         <string>General</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0,0">
+       <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QLabel" name="description1">
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
+         <layout class="QHBoxLayout" name="horizontalLayout_62">
+          <property name="spacing">
+           <number>4</number>
           </property>
-          <property name="text">
-           <string>Modify your general appearance settings.</string>
+          <property name="leftMargin">
+           <number>10</number>
           </property>
-          <property name="scaledContents">
-           <bool>false</bool>
+          <property name="rightMargin">
+           <number>10</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
+          <item>
            <widget class="QLabel" name="label_2">
             <property name="toolTip">
              <string/>
@@ -76,13 +64,32 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item>
+           <spacer name="horizontalSpacer_17">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,0">
             <property name="spacing">
              <number>4</number>
             </property>
             <item>
              <widget class="QComboBox" name="scope">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <item>
                <property name="text">
                 <string>Global</string>
@@ -97,357 +104,12 @@
             </item>
             <item>
              <widget class="QPushButton" name="reset_scope">
-              <property name="text">
-               <string/>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>Effect Type</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="effectType1">
-              <property name="currentIndex">
-               <number>5</number>
-              </property>
-              <item>
-               <property name="text">
-                <string extracomment="Disable all effects">Disable</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Transparent</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Solid</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Classic Acrylic Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Modern Acrylic Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Acrylic</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mica</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mica Alt</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_effect_type1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>Enable Drop Shadow</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="enableDropShadow1">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_drop_shadow1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Dark Mode Gradient Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="darkModeGradientColor1">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_gradient_color_picker1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_dark_mode_gradient_color1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_9">
-            <property name="text">
-             <string>Light Mode Gradient Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="lightModeGradientColor1">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_gradient_color_picker1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_light_mode_gradient_color1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_10">
-            <property name="text">
-             <string>Dark Mode Opacity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="darkModeOpacity1">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_opacity_picker1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_dark_mode_opacity1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_11">
-            <property name="text">
-             <string>Light Mode Opacity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="lightModeOpacity1">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="statusTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_opacity_picker1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_light_mode_opacity1">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>Disabled</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,0">
-            <item>
-             <widget class="QComboBox" name="disabledEffect1">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_disabled1">
               <property name="text">
                <string/>
               </property>
@@ -462,1020 +124,1461 @@
          </layout>
         </item>
         <item>
-         <widget class="QLabel" name="note1">
-          <property name="text">
-           <string>Note: If there are values with the same name under Menu or DropDown, the values in the latter sections will be prioritized, and this part will be ignored.</string>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="currentIndex">
+           <number>0</number>
           </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
+          <widget class="QWidget" name="page">
+           <layout class="QVBoxLayout" name="verticalLayout_11" stretch="0,1,0,0">
+            <item>
+             <widget class="QLabel" name="description1">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Modify your general appearance settings.</string>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QFormLayout" name="formLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Effect Type</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,0">
+                <property name="spacing">
+                 <number>4</number>
+                </property>
+                <item>
+                 <widget class="QComboBox" name="effectType1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="currentIndex">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string extracomment="Disable all effects">Disable</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Transparent</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Solid</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Blur</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Classic Acrylic Blur</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Modern Acrylic Blur</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Acrylic</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Mica</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Mica Alt</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_effect_type1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Enable Drop Shadow</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,0">
+                <property name="spacing">
+                 <number>4</number>
+                </property>
+                <item>
+                 <widget class="QComboBox" name="enableDropShadow1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>No</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Yes</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_drop_shadow1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Dark Mode Gradient Color</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,0,0">
+                <property name="spacing">
+                 <number>4</number>
+                </property>
+                <item>
+                 <widget class="QLineEdit" name="darkModeGradientColor1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="placeholderText">
+                   <string>AARRGGBB</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="dark_mode_gradient_color_picker1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_dark_mode_gradient_color1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>Light Mode Gradient Color</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="1,0,0">
+                <property name="spacing">
+                 <number>4</number>
+                </property>
+                <item>
+                 <widget class="QLineEdit" name="lightModeGradientColor1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="placeholderText">
+                   <string>AARRGGBB</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="light_mode_gradient_color_picker1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_light_mode_gradient_color1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Disabled</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,0">
+                <item>
+                 <widget class="QComboBox" name="disabledEffect1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>No</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Yes</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_disabled1">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="note1">
+              <property name="text">
+               <string>Note: If there are values with the same name under Menu or DropDown, the values in the latter sections will be prioritized, and this part will be ignored.</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="applyButton1">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Apply</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTabWidget" name="tabWidget_2">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="tab_10">
+               <attribute name="title">
+                <string>DropDown</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_13" stretch="0,1,0">
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <property name="leftMargin">
+                 <number>9</number>
+                </property>
+                <property name="topMargin">
+                 <number>9</number>
+                </property>
+                <property name="rightMargin">
+                 <number>9</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="description2">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Modify the appearance of the dropdown control.</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QFormLayout" name="formLayout_2">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_13">
+                    <property name="text">
+                     <string>Effect Type</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="1,0">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QComboBox" name="effectType2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="currentIndex">
+                       <number>5</number>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>Disable</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Transparent</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Solid</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Blur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Classic Acrylic Blur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Modern Acrylic Blur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Acrylic</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mica</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mica Alt</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="reset_effect_type2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_14">
+                    <property name="text">
+                     <string>Enable Drop Shadow</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="1,0">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QComboBox" name="enableDropShadow2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>No</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Yes</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="reset_drop_shadow2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_15">
+                    <property name="text">
+                     <string>Dark Mode Gradient Color</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="1,0,0">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QLineEdit" name="darkModeGradientColor2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="toolTip">
+                       <string/>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="placeholderText">
+                       <string>AARRGGBB</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="dark_mode_gradient_color_picker2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="dark_mode_gradient_color2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_16">
+                    <property name="text">
+                     <string>Light Mode Gradient Color</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="1,0,0">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QLineEdit" name="lightModeGradientColor2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="toolTip">
+                       <string/>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="placeholderText">
+                       <string>AARRGGBB</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="light_mode_gradient_color_picker2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="light_mode_gradient_color2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_19">
+                    <property name="text">
+                     <string>Disabled</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="1,0">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QComboBox" name="disabledEffect2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>No</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Yes</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="reset_disabled2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <spacer name="horizontalSpacer_3">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="applyButton2">
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="text">
+                     <string>Apply</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_11">
+               <attribute name="title">
+                <string>Menu</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QScrollArea" name="scrollArea">
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>-98</y>
+                     <width>361</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1,0">
+                    <property name="leftMargin">
+                     <number>9</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>9</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="description3">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Modify the overall appearance of the popup menu.</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QFormLayout" name="formLayout_4">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_20">
+                        <property name="text">
+                         <string>No System Outline</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="1,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QComboBox" name="noSystemOutline">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <item>
+                           <property name="text">
+                            <string>No</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Yes</string>
+                           </property>
+                          </item>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_system_outline">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_21">
+                        <property name="text">
+                         <string>Enable Immersive Style</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="1,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QComboBox" name="enableImmersiveStyle">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="currentIndex">
+                           <number>1</number>
+                          </property>
+                          <item>
+                           <property name="text">
+                            <string>No</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Yes</string>
+                           </property>
+                          </item>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_immersive_style">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QLabel" name="label_22">
+                        <property name="text">
+                         <string>Enable Custom Rendering</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="1,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QComboBox" name="enableCustomRendering1">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <item>
+                           <property name="text">
+                            <string>No</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Yes</string>
+                           </property>
+                          </item>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_custom_rendering">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QLabel" name="label_23">
+                        <property name="text">
+                         <string>Effect Type</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_28" stretch="1,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QComboBox" name="effectType3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="currentIndex">
+                           <number>5</number>
+                          </property>
+                          <item>
+                           <property name="text">
+                            <string>Disable</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Transparent</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Solid</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Blur</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Classic Acrylic Blur</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Modern Acrylic Blur</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Acrylic</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Mica</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Mica Alt</string>
+                           </property>
+                          </item>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_effect_type3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="4" column="0">
+                       <widget class="QLabel" name="label_24">
+                        <property name="text">
+                         <string>Enable Drop Shadow</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="1,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QComboBox" name="enableDropShadow3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <item>
+                           <property name="text">
+                            <string>No</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Yes</string>
+                           </property>
+                          </item>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_drop_shadow3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="5" column="0">
+                       <widget class="QLabel" name="label_25">
+                        <property name="text">
+                         <string>Dark Mode Gradient Color</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="1,0,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QLineEdit" name="darkModeGradientColor3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="toolTip">
+                           <string/>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LeftToRight</enum>
+                          </property>
+                          <property name="placeholderText">
+                           <string>AARRGGBB</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="dark_mode_gradient_color_picker3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_dark_mode_gradient_color3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="6" column="0">
+                       <widget class="QLabel" name="label_26">
+                        <property name="text">
+                         <string>Light Mode Gradient Color</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_31" stretch="1,0,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QLineEdit" name="lightModeGradientColor3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="toolTip">
+                           <string/>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LeftToRight</enum>
+                          </property>
+                          <property name="placeholderText">
+                           <string>AARRGGBB</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="light_mode_gradient_color_picker3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_light_mode_gradient_color3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="7" column="0">
+                       <widget class="QLabel" name="label_29">
+                        <property name="text">
+                         <string>Disabled</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_34" stretch="1,0">
+                        <property name="spacing">
+                         <number>4</number>
+                        </property>
+                        <item>
+                         <widget class="QComboBox" name="disabledEffect3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <item>
+                           <property name="text">
+                            <string>No</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Yes</string>
+                           </property>
+                          </item>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="reset_disabled3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_4">
+                      <item>
+                       <spacer name="horizontalSpacer_5">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="applyButton3">
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="text">
+                         <string>Apply</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_6">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="applyButton1">
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Apply</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_2">
-       <attribute name="title">
-        <string>DropDown</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1,0">
-        <item>
-         <widget class="QLabel" name="description2">
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Modify the appearance of the dropdown control.</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QFormLayout" name="formLayout_2">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_13">
-            <property name="text">
-             <string>Effect Type</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="effectType2">
-              <property name="currentIndex">
-               <number>5</number>
-              </property>
-              <item>
-               <property name="text">
-                <string>Disable</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Transparent</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Solid</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Classic Acrylic Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Modern Acrylic Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Acrylic</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mica</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mica Alt</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_effect_type2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_14">
-            <property name="text">
-             <string>Enable Drop Shadow</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="enableDropShadow2">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_drop_shadow2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_15">
-            <property name="text">
-             <string>Dark Mode Gradient Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="darkModeGradientColor2">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_gradient_color_picker2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_gradient_color2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_16">
-            <property name="text">
-             <string>Light Mode Gradient Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="lightModeGradientColor2">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_gradient_color_picker2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_gradient_color2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_17">
-            <property name="text">
-             <string>Dark Mode Opacity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="darkModeOpacity2">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_opacity_picker2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_opacity2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_18">
-            <property name="text">
-             <string>Light Mode Opacity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="lightModeOpacity2">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="statusTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_opacity_picker2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_opacity2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_19">
-            <property name="text">
-             <string>Disabled</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="disabledEffect2">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_disabled2">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <spacer name="horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="applyButton2">
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Apply</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_3">
-       <attribute name="title">
-        <string>Menu</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1,0">
-        <item>
-         <widget class="QLabel" name="description3">
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Modify the overall appearance of the popup menu.</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QFormLayout" name="formLayout_4">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_20">
-            <property name="text">
-             <string>No System Outline</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="noSystemOutline">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_system_outline">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_21">
-            <property name="text">
-             <string>Enable Immersive Style</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="enableImmersiveStyle">
-              <property name="currentIndex">
-               <number>1</number>
-              </property>
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_immersive_style">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_22">
-            <property name="text">
-             <string>Enable Custom Rendering</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="enableCustomRendering1">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_custom_rendering">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_23">
-            <property name="text">
-             <string>Effect Type</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_28" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="effectType3">
-              <property name="currentIndex">
-               <number>5</number>
-              </property>
-              <item>
-               <property name="text">
-                <string>Disable</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Transparent</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Solid</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Classic Acrylic Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Modern Acrylic Blur</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Acrylic</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mica</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mica Alt</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_effect_type3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_24">
-            <property name="text">
-             <string>Enable Drop Shadow</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="enableDropShadow3">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_drop_shadow3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_25">
-            <property name="text">
-             <string>Dark Mode Gradient Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="darkModeGradientColor3">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_gradient_color_picker3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_dark_mode_gradient_color3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_26">
-            <property name="text">
-             <string>Light Mode Gradient Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_31" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="lightModeGradientColor3">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_gradient_color_picker3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_light_mode_gradient_color3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="label_27">
-            <property name="text">
-             <string>Dark Mode Opacity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_32" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="darkModeOpacity3">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dark_mode_opacity_picker3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_dark_mode_opacity3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="8" column="0">
-           <widget class="QLabel" name="label_28">
-            <property name="text">
-             <string>Light Mode Opacity</string>
-            </property>
-           </widget>
-          </item>
-          <item row="8" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_33" stretch="1,0,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QLineEdit" name="lightModeOpacity3">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="statusTip">
-               <string/>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="placeholderText">
-               <string>AARRGGBB</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="light_mode_opacity_picker3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_light_mode_opacity3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="9" column="0">
-           <widget class="QLabel" name="label_29">
-            <property name="text">
-             <string>Disabled</string>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_34" stretch="1,0">
-            <property name="spacing">
-             <number>4</number>
-            </property>
-            <item>
-             <widget class="QComboBox" name="disabledEffect3">
-              <item>
-               <property name="text">
-                <string>No</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Yes</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="reset_disabled3">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <spacer name="horizontalSpacer_5">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="applyButton3">
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="text">
-             <string>Apply</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_6">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
         </item>
        </layout>
       </widget>
@@ -1532,6 +1635,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="darkModeGradientColor4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -1545,6 +1654,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="dark_mode_gradient_color_picker4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1556,6 +1671,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_dark_mode_gradient_color4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1581,6 +1702,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="lightModeGradientColor4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -1594,6 +1721,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="light_mode_gradient_color_picker4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1605,6 +1738,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_light_mode_gradient_color4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1617,120 +1756,25 @@
                </layout>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="label_35">
-                <property name="text">
-                 <string>Dark Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="darkModeOpacity4_1">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="dark_mode_opacity_picker4_1">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_dark_mode_opacity4_1">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_36">
-                <property name="text">
-                 <string>Light Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_38" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="lightModeOpacity4_1">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="statusTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="light_mode_opacity_picker4_1">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_light_mode_opacity4_1">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="4" column="0">
                <widget class="QLabel" name="label_37">
                 <property name="text">
                  <string>Disabled</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="2" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="disabledEffect4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -1745,6 +1789,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_disabled4_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1756,20 +1806,26 @@
                 </item>
                </layout>
               </item>
-              <item row="5" column="0">
+              <item row="3" column="0">
                <widget class="QLabel" name="label_31">
                 <property name="text">
                  <string>Corner Radius</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
+              <item row="3" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_40" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QSpinBox" name="corner_radius1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="maximum">
                    <number>10</number>
                   </property>
@@ -1780,6 +1836,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_corner_radius1_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1791,20 +1853,26 @@
                 </item>
                </layout>
               </item>
-              <item row="6" column="0">
+              <item row="4" column="0">
                <widget class="QLabel" name="label_32">
                 <property name="text">
                  <string>Enable Theme Customization</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="4" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_41" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="enableThemeCustomization1_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -1819,6 +1887,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_theme_customization1_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1895,6 +1969,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="darkModeGradientColor4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -1908,6 +1988,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="dark_mode_gradient_color_picker4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1919,6 +2005,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_dark_mode_gradient_color4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1944,6 +2036,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="lightModeGradientColor4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -1957,6 +2055,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="light_mode_gradient_color_picker4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1968,6 +2072,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_light_mode_gradient_color4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1980,120 +2090,25 @@
                </layout>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="label_40">
-                <property name="text">
-                 <string>Dark Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_44" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="darkModeOpacity4_2">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="dark_mode_opacity_picker4_2">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_dark_mode_opacity4_2">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_41">
-                <property name="text">
-                 <string>Light Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_45" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="lightModeOpacity4_2">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="statusTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="light_mode_opacity_picker4_2">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_light_mode_opacity4_2">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="4" column="0">
                <widget class="QLabel" name="label_42">
                 <property name="text">
                  <string>Disabled</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="2" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_46" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="disabledEffect4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -2108,6 +2123,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_disabled4_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2119,20 +2140,26 @@
                 </item>
                </layout>
               </item>
-              <item row="5" column="0">
+              <item row="3" column="0">
                <widget class="QLabel" name="label_43">
                 <property name="text">
                  <string>Corner Radius</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
+              <item row="3" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_47" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QSpinBox" name="corner_radius1_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="maximum">
                    <number>10</number>
                   </property>
@@ -2143,6 +2170,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_corner_radius1_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2154,20 +2187,26 @@
                 </item>
                </layout>
               </item>
-              <item row="6" column="0">
+              <item row="4" column="0">
                <widget class="QLabel" name="label_44">
                 <property name="text">
                  <string>Enable Theme Customization</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="4" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_48" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="enableThemeCustomization1_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -2182,6 +2221,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_theme_customization1_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2258,6 +2303,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="darkModeGradientColor4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -2271,6 +2322,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="dark_mode_gradient_color_picker4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2282,6 +2339,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_dark_mode_gradient_color4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2307,6 +2370,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="lightModeGradientColor4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -2320,6 +2389,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="light_mode_gradient_color_picker4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2331,6 +2406,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_light_mode_gradient_color4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2343,120 +2424,25 @@
                </layout>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="label_47">
-                <property name="text">
-                 <string>Dark Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_51" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="darkModeOpacity4_3">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="dark_mode_opacity_picker4_3">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_dark_mode_opacity4_3">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_48">
-                <property name="text">
-                 <string>Light Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_52" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="lightModeOpacity4_3">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="statusTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="light_mode_opacity_picker4_3">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_light_mode_opacity4_3">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="4" column="0">
                <widget class="QLabel" name="label_49">
                 <property name="text">
                  <string>Disabled</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="2" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_53" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="disabledEffect4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -2471,6 +2457,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_disabled4_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2482,20 +2474,26 @@
                 </item>
                </layout>
               </item>
-              <item row="5" column="0">
+              <item row="3" column="0">
                <widget class="QLabel" name="label_50">
                 <property name="text">
                  <string>Corner Radius</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
+              <item row="3" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_54" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QSpinBox" name="corner_radius1_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="maximum">
                    <number>10</number>
                   </property>
@@ -2506,6 +2504,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_corner_radius1_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2517,20 +2521,26 @@
                 </item>
                </layout>
               </item>
-              <item row="6" column="0">
+              <item row="4" column="0">
                <widget class="QLabel" name="label_51">
                 <property name="text">
                  <string>Enable Theme Customization</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="4" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_55" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="enableThemeCustomization1_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -2545,6 +2555,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_theme_customization1_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2621,6 +2637,12 @@
                 </property>
                 <item>
                  <widget class="QComboBox" name="noBorderColor">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -2635,6 +2657,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_border_color">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2660,6 +2688,12 @@
                 </property>
                 <item>
                  <widget class="QComboBox" name="cornerType">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>Small Corners</string>
@@ -2679,6 +2713,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_corner_type">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2704,6 +2744,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="darkModeGradientColor4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -2717,6 +2763,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="dark_mode_gradient_color_picker4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2728,6 +2780,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_dark_mode_gradient_color4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2753,6 +2811,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="lightModeGradientColor4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -2766,6 +2830,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="light_mode_gradient_color_picker4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2777,6 +2847,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_light_mode_gradient_color4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2789,43 +2865,41 @@
                </layout>
               </item>
               <item row="4" column="0">
-               <widget class="QLabel" name="label_54">
+               <widget class="QLabel" name="label_57">
                 <property name="text">
-                 <string>Dark Mode Opacity</string>
+                 <string>Corner Radius</string>
                 </property>
                </widget>
               </item>
               <item row="4" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_60" stretch="1,0,0">
+               <layout class="QHBoxLayout" name="horizontalLayout_63" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
-                 <widget class="QLineEdit" name="darkModeOpacity4_4">
-                  <property name="toolTip">
-                   <string/>
+                 <widget class="QSpinBox" name="corner_radius1_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
                   </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
+                  <property name="maximum">
+                   <number>10</number>
                   </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="dark_mode_opacity_picker4_4">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
+                  <property name="value">
+                   <number>0</number>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="reset_dark_mode_opacity4_4">
+                 <widget class="QPushButton" name="reset_corner_radius1_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -2838,106 +2912,25 @@
                </layout>
               </item>
               <item row="5" column="0">
-               <widget class="QLabel" name="label_55">
-                <property name="text">
-                 <string>Light Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_61" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="lightModeOpacity4_4">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="statusTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="light_mode_opacity_picker4_4">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_light_mode_opacity4_4">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_57">
-                <property name="text">
-                 <string>Corner Radius</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_63" stretch="1,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QSpinBox" name="corner_radius1_4">
-                  <property name="maximum">
-                   <number>10</number>
-                  </property>
-                  <property name="value">
-                   <number>0</number>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_corner_radius1_4">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="7" column="0">
                <widget class="QLabel" name="label_58">
                 <property name="text">
                  <string>Enable Theme Customization</string>
                 </property>
                </widget>
               </item>
-              <item row="7" column="1">
+              <item row="5" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="enableThemeCustomization1_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -2952,6 +2945,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_theme_customization1_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3028,6 +3027,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="darkModeGradientColor4_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -3041,6 +3046,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="dark_mode_gradient_color_picker4_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3052,6 +3063,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_dark_mode_gradient_color4_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3077,6 +3094,12 @@
                 </property>
                 <item>
                  <widget class="QLineEdit" name="lightModeGradientColor4_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -3090,6 +3113,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="light_mode_gradient_color_picker4_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3101,6 +3130,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_light_mode_gradient_color4_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3113,120 +3148,25 @@
                </layout>
               </item>
               <item row="2" column="0">
-               <widget class="QLabel" name="label_63">
-                <property name="text">
-                 <string>Dark Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_67" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="darkModeOpacity4_5">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="dark_mode_opacity_picker4_5">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_dark_mode_opacity4_5">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_64">
-                <property name="text">
-                 <string>Light Mode Opacity</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <layout class="QHBoxLayout" name="horizontalLayout_68" stretch="1,0,0">
-                <property name="spacing">
-                 <number>4</number>
-                </property>
-                <item>
-                 <widget class="QLineEdit" name="lightModeOpacity4_5">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="statusTip">
-                   <string/>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>AARRGGBB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="light_mode_opacity_picker4_5">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/2867978.png</normaloff>Assets/2867978.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="reset_light_mode_opacity4_5">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>Assets/View-refresh.svg.png</normaloff>Assets/View-refresh.svg.png</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="4" column="0">
                <widget class="QLabel" name="label_65">
                 <property name="text">
                  <string>Disabled</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="2" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_69" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="disabledEffect4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -3241,6 +3181,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_disabled4_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3252,20 +3198,26 @@
                 </item>
                </layout>
               </item>
-              <item row="5" column="0">
+              <item row="3" column="0">
                <widget class="QLabel" name="label_66">
                 <property name="text">
                  <string>Corner Radius</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
+              <item row="3" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_70" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QSpinBox" name="corner_radius1_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="maximum">
                    <number>10</number>
                   </property>
@@ -3276,6 +3228,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_corner_radius1_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3287,20 +3245,26 @@
                 </item>
                </layout>
               </item>
-              <item row="6" column="0">
+              <item row="4" column="0">
                <widget class="QLabel" name="label_67">
                 <property name="text">
                  <string>Enable Theme Customization</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="4" column="1">
                <layout class="QHBoxLayout" name="horizontalLayout_71" stretch="1,0">
                 <property name="spacing">
                  <number>4</number>
                 </property>
                 <item>
                  <widget class="QComboBox" name="enableThemeCustomization1_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <item>
                    <property name="text">
                     <string>No</string>
@@ -3315,6 +3279,12 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="reset_theme_customization1_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -3416,8 +3386,6 @@
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
