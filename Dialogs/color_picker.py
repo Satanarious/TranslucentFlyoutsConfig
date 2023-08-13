@@ -33,7 +33,7 @@ class ColorPicker:
 
         aarrggbb = a_hex + r_hex + g_hex + b_hex
 
-        return aarrggbb.upper()
+        return "0x" + aarrggbb.upper()
 
     @staticmethod
     def connectColorDialog(lineEdit: QLineEdit, pushButton: QPushButton) -> None:
@@ -44,7 +44,7 @@ class ColorPicker:
             - Set the color in the QLineEdit provided
             """
             colorPicker: QColorDialog = QColorDialog()
-            colorPicker.setWindowIcon(QIcon(Path.IconPaths.ColorPicker.value))
+            colorPicker.setWindowIcon(QIcon(Path.IconPaths.ColorPicker))
             color: QColor = colorPicker.getColor(
                 options=QColorDialog.ColorDialogOption.ShowAlphaChannel
             )

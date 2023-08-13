@@ -3,426 +3,119 @@ import json
 
 rawDefaults: dict = dict(json.load(open("defaults.json", "r")))
 
+
 # Keys from JSON file
-default = "default"
-unsupported = "unsupported"
-general = "General"
-dropdown = "DropDown"
-menu = "Menu"
-menuItems = "Menu Items"
-hot = "Hot"
-disabledHot = "Disabled Hot"
-focusing = "Focusing"
-border = "Border"
-separator = "Separator"
-tooltip = "Tooltip"
-scope = "Scope"
-effectType = "Effect Type"
-enableDropShadow = "Enable Drop Shadow"
-darkModeGradientColor = "Dark Mode Gradient Color"
-lightModeGradientColor = "Light Mode Gradient Color"
-darkModeOpacity = "Dark Mode Opacity"
-lightModeOpacity = "Light Mode Opacity"
-disabled = "Disabled"
-noSystemOutline = "No System Outline"
-enableImmersiveStyle = "Enable Immersive Style"
-enableCustomRendering = "Enable Custom Rendering"
-cornerRadius = "Corner Radius"
-enableThemeCustomization = "Enable Theme Customization"
-noBorderColor = "No Border Color"
-cornerType = "Corner Type"
+class Key:
+    general: str = "General"
+    dropdown: str = "DropDown"
+    menu: str = "Menu"
+    animation: str = "Animation"
+    disabledHot: str = "Disabled Hot"
+    focusing: str = "Focusing"
+    hot: str = "Hot"
+    separator: str = "Separator"
+    effectType: str = "Effect Type"
+    cornerType: str = "Corner Type"
+    enableDropShadow: str = "Enable Drop Shadow"
+    noBorderColor: str = "No Border Color"
+    darkModeBorderColor: str = "Dark Mode Border Color"
+    lightModeBorderColor: str = "Light Mode Border Color"
+    darkModeGradientColor: str = "Dark Mode Gradient Color"
+    lightModeGradientColor: str = "Light Mode Gradient Color"
+    disabled: str = "Disabled"
+    noSystemDropShadow: str = "No System Drop Shadow"
+    enableImmersiveStyle: str = "Enable Immersive Style"
+    enableCustomRendering: str = "Enable Custom Rendering"
+    enableFluentAnimation: str = "Enable Fluent Animation"
+    fadeOutTime: str = "Fade Out Time"
+    popInTime: str = "Pop In Time"
+    fadeInTime: str = "Fade In Time"
+    popInStyle: str = "Pop In Style"
+    startRatio: str = "Start Ratio"
+    enableImmediateInterupting: str = "Enable Immediate Interupting"
+    cornerRadius: str = "Corner Radius"
+    darkModeColor: str = "Dark Mode Color"
+    lightModeColor: str = "Light Mode Color"
+    enableThemeColorization: str = "Enable Theme Colorization"
+    width: str = "Width"
 
 
 # Getter Classes
 class Defaults:
     class General:
-        class Scope:
-            Default: int = rawDefaults[general][scope][default]
-            Unsupported: int = rawDefaults[general][scope][unsupported]
+        effectType: int = rawDefaults[Key.general][Key.effectType]
+        cornerType: int = rawDefaults[Key.general][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key.general][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key.general][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key.general][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key.general][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key.general][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key.general][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key.general][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key.general][Key.disabled]
 
-        class EffectType:
-            Default: int = rawDefaults[general][effectType][default]
-            Unsupported: int = rawDefaults[general][effectType][unsupported]
+    class DropDown:
+        effectType: int = rawDefaults[Key.dropdown][Key.effectType]
+        cornerType: int = rawDefaults[Key.dropdown][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key.dropdown][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key.dropdown][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key.dropdown][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key.dropdown][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key.dropdown][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key.dropdown][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key.dropdown][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key.dropdown][Key.disabled]
 
-        class EnableDropShadow:
-            Default: int = rawDefaults[general][enableDropShadow][default]
-            Unsupported: int = rawDefaults[general][enableDropShadow][unsupported]
+    class Menu:
+        noSystemDropShadow: int = rawDefaults[Key.menu][Key.noSystemDropShadow]
+        enableImmersiveStyle: int = rawDefaults[Key.menu][Key.enableImmersiveStyle]
+        enableCustomRendering: int = rawDefaults[Key.menu][Key.enableCustomRendering]
+        enableFluentAnimation: int = rawDefaults[Key.menu][Key.enableFluentAnimation]
+        effectType: int = rawDefaults[Key.menu][Key.effectType]
+        cornerType: int = rawDefaults[Key.menu][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key.menu][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key.menu][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key.menu][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key.menu][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key.menu][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key.menu][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key.menu][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key.menu][Key.disabled]
 
-        class DarkModeGradientColor:
-            Default: int = rawDefaults[general][darkModeGradientColor][default]
-            Unsupported: int = rawDefaults[general][darkModeGradientColor][unsupported]
-
-        class LightModeGradientColor:
-            Default: int = rawDefaults[general][lightModeGradientColor][default]
-            Unsupported: int = rawDefaults[general][lightModeGradientColor][unsupported]
-
-        class LightModeOpacity:
-            Default: int = rawDefaults[general][lightModeOpacity][default]
-            Unsupported: int = rawDefaults[general][lightModeOpacity][unsupported]
-
-        class Disabled:
-            Default: int = rawDefaults[general][disabled][default]
-            Unsupported: int = rawDefaults[general][disabled][unsupported]
-
-        class DropDown:
-            class EffectType:
-                Default: int = rawDefaults[general][dropdown][effectType][default]
-                Unsupported: int = rawDefaults[general][dropdown][effectType][
-                    unsupported
-                ]
-
-            class EnableDropShadow:
-                Default: int = rawDefaults[general][dropdown][enableDropShadow][default]
-                Unsupported: int = rawDefaults[general][dropdown][enableDropShadow][
-                    unsupported
-                ]
-
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[general][dropdown][darkModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[general][dropdown][
-                    darkModeGradientColor
-                ][unsupported]
-
-            class LightModeGradientColor:
-                Default: int = rawDefaults[general][dropdown][lightModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[general][dropdown][
-                    lightModeGradientColor
-                ][unsupported]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[general][dropdown][lightModeOpacity][default]
-                Unsupported: int = rawDefaults[general][dropdown][lightModeOpacity][
-                    unsupported
-                ]
-
-            class Disabled:
-                Default: int = rawDefaults[general][dropdown][disabled][default]
-                Unsupported: int = rawDefaults[general][dropdown][disabled][unsupported]
-
-        class Menu:
-            class NoSystemOutline:
-                Default: int = rawDefaults[general][menu][noSystemOutline][default]
-                Unsupported: int = rawDefaults[general][menu][noSystemOutline][
-                    unsupported
-                ]
-
-            class EnableImmersiveStyle:
-                Default: int = rawDefaults[general][menu][enableImmersiveStyle][default]
-                Unsupported: int = rawDefaults[general][menu][enableImmersiveStyle][
-                    unsupported
-                ]
-
-            class EnableCustomRendering:
-                Default: int = rawDefaults[general][menu][enableCustomRendering][
-                    default
-                ]
-                Unsupported: int = rawDefaults[general][menu][enableCustomRendering][
-                    unsupported
-                ]
-
-            class EffectType:
-                Default: int = rawDefaults[general][menu][effectType][default]
-                Unsupported: int = rawDefaults[general][menu][effectType][unsupported]
-
-            class EnableDropShadow:
-                Default: int = rawDefaults[general][menu][enableDropShadow][default]
-                Unsupported: int = rawDefaults[general][menu][enableDropShadow][
-                    unsupported
-                ]
-
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[general][menu][darkModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[general][menu][darkModeGradientColor][
-                    unsupported
-                ]
-
-            class LightModeGradientColor:
-                Default: int = rawDefaults[general][menu][lightModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[general][menu][lightModeGradientColor][
-                    unsupported
-                ]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[general][menu][lightModeOpacity][default]
-                Unsupported: int = rawDefaults[general][menu][lightModeOpacity][
-                    unsupported
-                ]
-
-            class Disabled:
-                Default: int = rawDefaults[general][menu][disabled][default]
-                Unsupported: int = rawDefaults[general][menu][disabled][unsupported]
-
-    class MenuItems:
-        class Hot:
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[menuItems][hot][darkModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][hot][darkModeGradientColor][
-                    unsupported
-                ]
-
-            class LightModeGradientColor:
-                Defaults: int = rawDefaults[menuItems][hot][lightModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][hot][lightModeGradientColor][
-                    unsupported
-                ]
-
-            class DarkModeOpacity:
-                Default: int = rawDefaults[menuItems][hot][darkModeOpacity][default]
-                Unsupported: int = rawDefaults[menuItems][hot][darkModeOpacity][
-                    unsupported
-                ]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[menuItems][hot][lightModeOpacity][default]
-                Unsupported: int = rawDefaults[menuItems][hot][lightModeOpacity][
-                    unsupported
-                ]
-
-            class Disabled:
-                Default: int = rawDefaults[menuItems][hot][disabled][default]
-                Unsupported: int = rawDefaults[menuItems][hot][disabled][unsupported]
-
-            class CornerRadius:
-                Default: int = rawDefaults[menuItems][hot][cornerRadius][default]
-                Unsupported: int = rawDefaults[menuItems][hot][cornerRadius][
-                    unsupported
-                ]
-
-            class EnableThemeCustomization:
-                Default: int = rawDefaults[menuItems][hot][enableThemeCustomization][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][hot][
-                    enableThemeCustomization
-                ][unsupported]
+        class Animation:
+            fadeOutTime: int = rawDefaults[Key.menu][Key.animation][Key.fadeOutTime]
+            popInTime: int = rawDefaults[Key.menu][Key.animation][Key.popInTime]
+            fadeInTime: int = rawDefaults[Key.menu][Key.animation][Key.fadeInTime]
+            popInStyle: int = rawDefaults[Key.menu][Key.animation][Key.popInStyle]
+            startRatio: int = rawDefaults[Key.menu][Key.animation][Key.startRatio]
+            enableImmediateInterupting: int = rawDefaults[Key.menu][Key.animation][Key.enableImmediateInterupting]
 
         class DisabledHot:
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[menuItems][disabledHot][
-                    darkModeGradientColor
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][
-                    darkModeGradientColor
-                ][unsupported]
-
-            class LightModeGradientColor:
-                Defaults: int = rawDefaults[menuItems][disabledHot][
-                    lightModeGradientColor
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][
-                    lightModeGradientColor
-                ][unsupported]
-
-            class DarkModeOpacity:
-                Default: int = rawDefaults[menuItems][disabledHot][darkModeOpacity][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][darkModeOpacity][
-                    unsupported
-                ]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[menuItems][disabledHot][lightModeOpacity][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][
-                    lightModeOpacity
-                ][unsupported]
-
-            class Disabled:
-                Default: int = rawDefaults[menuItems][disabledHot][disabled][default]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][disabled][
-                    unsupported
-                ]
-
-            class CornerRadius:
-                Default: int = rawDefaults[menuItems][disabledHot][cornerRadius][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][cornerRadius][
-                    unsupported
-                ]
-
-            class EnableThemeCustomization:
-                Default: int = rawDefaults[menuItems][disabledHot][
-                    enableThemeCustomization
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][disabledHot][
-                    enableThemeCustomization
-                ][unsupported]
+            cornerRadius: int = rawDefaults[Key.menu][Key.disabledHot][Key.cornerRadius]
+            darkModeColor: str = rawDefaults[Key.menu][Key.disabledHot][Key.darkModeColor]
+            lightModeColor: str = rawDefaults[Key.menu][Key.disabledHot][Key.lightModeColor]
+            enableThemeColorization: int = rawDefaults[Key.menu][Key.disabledHot][Key.enableThemeColorization]
+            disabled: int = rawDefaults[Key.menu][Key.disabledHot][Key.disabled]
 
         class Focusing:
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[menuItems][focusing][darkModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][focusing][
-                    darkModeGradientColor
-                ][unsupported]
+            width: int = rawDefaults[Key.menu][Key.focusing][Key.width]
+            cornerRadius: int = rawDefaults[Key.menu][Key.focusing][Key.cornerRadius]
+            darkModeColor: str = rawDefaults[Key.menu][Key.focusing][Key.darkModeColor]
+            lightModeColor: str = rawDefaults[Key.menu][Key.focusing][Key.lightModeColor]
+            enableThemeColorization: int = rawDefaults[Key.menu][Key.focusing][Key.enableThemeColorization]
+            disabled: int = rawDefaults[Key.menu][Key.focusing][Key.disabled]
 
-            class LightModeGradientColor:
-                Defaults: int = rawDefaults[menuItems][focusing][
-                    lightModeGradientColor
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][focusing][
-                    lightModeGradientColor
-                ][unsupported]
-
-            class DarkModeOpacity:
-                Default: int = rawDefaults[menuItems][focusing][darkModeOpacity][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][focusing][darkModeOpacity][
-                    unsupported
-                ]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[menuItems][focusing][lightModeOpacity][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][focusing][lightModeOpacity][
-                    unsupported
-                ]
-
-            class Disabled:
-                Default: int = rawDefaults[menuItems][focusing][disabled][default]
-                Unsupported: int = rawDefaults[menuItems][focusing][disabled][
-                    unsupported
-                ]
-
-            class CornerRadius:
-                Default: int = rawDefaults[menuItems][focusing][cornerRadius][default]
-                Unsupported: int = rawDefaults[menuItems][focusing][cornerRadius][
-                    unsupported
-                ]
-
-            class EnableThemeCustomization:
-                Default: int = rawDefaults[menuItems][focusing][
-                    enableThemeCustomization
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][focusing][
-                    enableThemeCustomization
-                ][unsupported]
-
-        class Border:
-            class NoBorderColor:
-                Default: int = rawDefaults[menuItems][border][noBorderColor][default]
-                Unsupported: int = rawDefaults[menuItems][border][noBorderColor][
-                    unsupported
-                ]
-
-            class CornerType:
-                Defaults: int = rawDefaults[menuItems][border][cornerType][default]
-                Unsupported: int = rawDefaults[menuItems][border][cornerType][
-                    unsupported
-                ]
-
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[menuItems][border][darkModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][border][
-                    darkModeGradientColor
-                ][unsupported]
-
-            class LightModeGradientColor:
-                Defaults: int = rawDefaults[menuItems][border][lightModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][border][
-                    lightModeGradientColor
-                ][unsupported]
-
-            class DarkModeOpacity:
-                Default: int = rawDefaults[menuItems][border][darkModeOpacity][default]
-                Unsupported: int = rawDefaults[menuItems][border][darkModeOpacity][
-                    unsupported
-                ]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[menuItems][border][lightModeOpacity][default]
-                Unsupported: int = rawDefaults[menuItems][border][lightModeOpacity][
-                    unsupported
-                ]
-
-            class CornerRadius:
-                Default: int = rawDefaults[menuItems][border][cornerRadius][default]
-                Unsupported: int = rawDefaults[menuItems][border][cornerRadius][
-                    unsupported
-                ]
-
-            class EnableThemeCustomization:
-                Default: int = rawDefaults[menuItems][border][enableThemeCustomization][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][border][
-                    enableThemeCustomization
-                ][unsupported]
+        class Hot:
+            cornerRadius: int = rawDefaults[Key.menu][Key.hot][Key.cornerRadius]
+            darkModeColor: str = rawDefaults[Key.menu][Key.hot][Key.darkModeColor]
+            lightModeColor: str = rawDefaults[Key.menu][Key.hot][Key.lightModeColor]
+            enableThemeColorization: int = rawDefaults[Key.menu][Key.hot][Key.enableThemeColorization]
+            disabled: int = rawDefaults[Key.menu][Key.hot][Key.disabled]
 
         class Separator:
-            class DarkModeGradientColor:
-                Default: int = rawDefaults[menuItems][separator][darkModeGradientColor][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][separator][
-                    darkModeGradientColor
-                ][unsupported]
-
-            class LightModeGradientColor:
-                Defaults: int = rawDefaults[menuItems][separator][
-                    lightModeGradientColor
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][separator][
-                    lightModeGradientColor
-                ][unsupported]
-
-            class DarkModeOpacity:
-                Default: int = rawDefaults[menuItems][separator][darkModeOpacity][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][separator][darkModeOpacity][
-                    unsupported
-                ]
-
-            class LightModeOpacity:
-                Default: int = rawDefaults[menuItems][separator][lightModeOpacity][
-                    default
-                ]
-                Unsupported: int = rawDefaults[menuItems][separator][lightModeOpacity][
-                    unsupported
-                ]
-
-            class Disabled:
-                Default: int = rawDefaults[menuItems][separator][disabled][default]
-                Unsupported: int = rawDefaults[menuItems][separator][disabled][
-                    unsupported
-                ]
-
-            class CornerRadius:
-                Default: int = rawDefaults[menuItems][separator][cornerRadius][default]
-                Unsupported: int = rawDefaults[menuItems][separator][cornerRadius][
-                    unsupported
-                ]
-
-            class EnableThemeCustomization:
-                Default: int = rawDefaults[menuItems][separator][
-                    enableThemeCustomization
-                ][default]
-                Unsupported: int = rawDefaults[menuItems][separator][
-                    enableThemeCustomization
-                ][default]
-
-    class Tooltip:
-        pass
+            width: int = rawDefaults[Key.menu][Key.separator][Key.width]
+            cornerRadius: int = rawDefaults[Key.menu][Key.separator][Key.cornerRadius]
+            darkModeColor: str = rawDefaults[Key.menu][Key.separator][Key.darkModeColor]
+            lightModeColor: str = rawDefaults[Key.menu][Key.separator][Key.lightModeColor]
+            enableThemeColorization: int = rawDefaults[Key.menu][Key.separator][Key.enableThemeColorization]
+            disabled: int = rawDefaults[Key.menu][Key.separator][Key.disabled]

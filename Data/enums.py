@@ -1,5 +1,5 @@
 # Library imports
-from enum import Enum, IntEnum
+from enum import IntEnum
 
 
 class Settings:
@@ -7,30 +7,26 @@ class Settings:
     Setttings Enum for various settings parameters
     """
 
-    class Scope(IntEnum):
-        Global = 0
-        Individual = 1
-
     class EffectType(IntEnum):
-        Disable = 0
-        Transparent = 1
-        Solid = 2
-        Blur = 3
-        ClassicAcrylicBlur = 4
-        ModernAcrylicBlur = 5
-        Acrylic = 6
-        Mica = 7
-        MicaAlt = 8
+        Disabled = 0
+        FullyTransparent = 1
+        SolidColor = 2
+        Blurred = 3
+        Acrylic = 4
+        ModernAcrylic = 5
+        AcrylicBackgroundLayer = 6
+        MicaBackgroundLayer = 7
+        MicaVariantBackgroundLayer = 8
 
     class EnableDropShadow(IntEnum):
         No = 0
         Yes = 1
 
-    class Disabled(IntEnum):
-        No = 1
-        Yes = 2
+    class NoSystemDropShadow(IntEnum):
+        No = 0
+        Yes = 1
 
-    class NoSystemOutline(IntEnum):
+    class Disabled(IntEnum):
         No = 0
         Yes = 1
 
@@ -38,11 +34,19 @@ class Settings:
         No = 0
         Yes = 1
 
-    class CustomRendering(IntEnum):
+    class EnableFluentAnimation(IntEnum):
         No = 0
         Yes = 1
 
-    class EnableThemeCustomization(IntEnum):
+    class EnableCustomRendering(IntEnum):
+        No = 0
+        Yes = 1
+
+    class EnableThemeColorization(IntEnum):
+        No = 0
+        Yes = 1
+
+    class EnableImmediateInterupting(IntEnum):
         No = 0
         Yes = 1
 
@@ -51,19 +55,16 @@ class Settings:
         Yes = 1
 
     class CornerType(IntEnum):
-        Small = 0
+        DontChange = 0
         Square = 1
-        Large = 2
+        LargeRound = 2
+        SmallRound = 3
 
-
-class Unsupported(IntEnum):
-    """
-    Unsupported Enum indicates unsupported versions of windows
-    """
-
-    Null = 0
-    Win10 = 10
-    Win11 = 11
+    class PopInStyle(IntEnum):
+        SlideDown = 0
+        Ripple = 1
+        SmoothScroll = 2
+        SmoothZoom = 3
 
 
 class Presets(IntEnum):
