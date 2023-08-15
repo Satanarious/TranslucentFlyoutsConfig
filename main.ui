@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>472</width>
+    <width>471</width>
     <height>536</height>
    </rect>
   </property>
@@ -37,7 +37,7 @@
       </property>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
-        <string>General</string>
+        <string>Global</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0,0">
         <item>
@@ -174,6 +174,9 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="currentIndex">
+               <number>3</number>
               </property>
               <item>
                <property name="text">
@@ -732,7 +735,7 @@
         <item>
          <widget class="QLabel" name="note1">
           <property name="text">
-           <string>Note: If there are values with the same name under Menu or DropDown are modified then, the values in the latter sections will be prioritized, and this part will be ignored.</string>
+           <string>Note: If values in Menu or Dropdown are applied then the corresponsiding Global values will be ignored.</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -830,7 +833,7 @@
                </sizepolicy>
               </property>
               <property name="currentIndex">
-               <number>5</number>
+               <number>9</number>
               </property>
               <item>
                <property name="text">
@@ -877,6 +880,11 @@
                 <string>Mica Alt</string>
                </property>
               </item>
+              <item>
+               <property name="text">
+                <string>Use Global Setting</string>
+               </property>
+              </item>
              </widget>
             </item>
             <item>
@@ -921,6 +929,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="currentIndex">
+               <number>4</number>
+              </property>
               <item>
                <property name="text">
                 <string>Dont't Change</string>
@@ -939,6 +950,11 @@
               <item>
                <property name="text">
                 <string>Small Corners</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Use Global Setting</string>
                </property>
               </item>
              </widget>
@@ -982,6 +998,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="currentIndex">
+               <number>2</number>
+              </property>
               <item>
                <property name="text">
                 <string>No</string>
@@ -990,6 +1009,11 @@
               <item>
                <property name="text">
                 <string>Yes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Use Global Setting</string>
                </property>
               </item>
              </widget>
@@ -1036,6 +1060,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="currentIndex">
+               <number>2</number>
+              </property>
               <item>
                <property name="text">
                 <string>No</string>
@@ -1044,6 +1071,11 @@
               <item>
                <property name="text">
                 <string>Yes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Use Global Setting</string>
                </property>
               </item>
              </widget>
@@ -1236,6 +1268,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="currentIndex">
+               <number>2</number>
+              </property>
               <item>
                <property name="text">
                 <string>No</string>
@@ -1244,6 +1279,11 @@
               <item>
                <property name="text">
                 <string>Yes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Use Global Setting</string>
                </property>
               </item>
              </widget>
@@ -1290,6 +1330,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="currentIndex">
+               <number>2</number>
+              </property>
               <item>
                <property name="text">
                 <string>No</string>
@@ -1298,6 +1341,11 @@
               <item>
                <property name="text">
                 <string>Yes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Use Global Setting</string>
                </property>
               </item>
              </widget>
@@ -1563,8 +1611,8 @@
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-92</y>
-                 <width>387</width>
+                 <y>0</y>
+                 <width>386</width>
                  <height>476</height>
                 </rect>
                </property>
@@ -1604,7 +1652,7 @@
                        </sizepolicy>
                       </property>
                       <property name="currentIndex">
-                       <number>5</number>
+                       <number>9</number>
                       </property>
                       <item>
                        <property name="text">
@@ -1651,6 +1699,11 @@
                         <string>Mica Alt</string>
                        </property>
                       </item>
+                      <item>
+                       <property name="text">
+                        <string>Use Global Setting</string>
+                       </property>
+                      </item>
                      </widget>
                     </item>
                     <item>
@@ -1695,6 +1748,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="currentIndex">
+                       <number>4</number>
+                      </property>
                       <item>
                        <property name="text">
                         <string>Dont't Change</string>
@@ -1713,6 +1769,11 @@
                       <item>
                        <property name="text">
                         <string>Small Corners</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Use Global Setting</string>
                        </property>
                       </item>
                      </widget>
@@ -1756,6 +1817,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="currentIndex">
+                       <number>2</number>
+                      </property>
                       <item>
                        <property name="text">
                         <string>No</string>
@@ -1764,6 +1828,11 @@
                       <item>
                        <property name="text">
                         <string>Yes</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Use Global Setting</string>
                        </property>
                       </item>
                      </widget>
@@ -1810,6 +1879,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="currentIndex">
+                       <number>2</number>
+                      </property>
                       <item>
                        <property name="text">
                         <string>No</string>
@@ -1818,6 +1890,11 @@
                       <item>
                        <property name="text">
                         <string>Yes</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Use Global Setting</string>
                        </property>
                       </item>
                      </widget>
@@ -2010,6 +2087,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="currentIndex">
+                       <number>2</number>
+                      </property>
                       <item>
                        <property name="text">
                         <string>No</string>
@@ -2018,6 +2098,11 @@
                       <item>
                        <property name="text">
                         <string>Yes</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Use Global Setting</string>
                        </property>
                       </item>
                      </widget>
@@ -2064,6 +2149,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="currentIndex">
+                       <number>2</number>
+                      </property>
                       <item>
                        <property name="text">
                         <string>No</string>
@@ -2072,6 +2160,11 @@
                       <item>
                        <property name="text">
                         <string>Yes</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Use Global Setting</string>
                        </property>
                       </item>
                      </widget>
@@ -2548,7 +2641,7 @@
                    <number>100</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>350</number>
                   </property>
                  </widget>
                 </item>
@@ -2598,7 +2691,7 @@
                    <number>100</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>250</number>
                   </property>
                  </widget>
                 </item>
@@ -2648,7 +2741,7 @@
                    <number>100</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>87</number>
                   </property>
                  </widget>
                 </item>
@@ -2759,7 +2852,7 @@
                    <number>1</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>50</number>
                   </property>
                  </widget>
                 </item>
@@ -3099,7 +3192,7 @@
                    <number>10</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>8</number>
                   </property>
                  </widget>
                 </item>
@@ -3439,7 +3532,7 @@
                    <number>10</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>8</number>
                   </property>
                  </widget>
                 </item>
@@ -3779,7 +3872,7 @@
                    <number>10</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>8</number>
                   </property>
                  </widget>
                 </item>
@@ -3880,7 +3973,7 @@
                    <number>1000</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>1000</number>
                   </property>
                  </widget>
                 </item>
@@ -4169,7 +4262,7 @@
                    <number>10</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>8</number>
                   </property>
                  </widget>
                 </item>
@@ -4270,7 +4363,7 @@
                    <number>1000</number>
                   </property>
                   <property name="value">
-                   <number>0</number>
+                   <number>1000</number>
                   </property>
                  </widget>
                 </item>

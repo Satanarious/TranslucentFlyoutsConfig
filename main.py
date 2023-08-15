@@ -6,7 +6,7 @@ import sys
 from ui import Ui_MainWindow
 from connections import Connectors
 from Registry.reg_edit import EditRegistry
-from Data.paths import Path
+from Data.user import Saved
 
 
 class Main(Ui_MainWindow):
@@ -14,6 +14,8 @@ class Main(Ui_MainWindow):
         self.mainWindow: QMainWindow = QMainWindow()
         self.setupUi(self.mainWindow)
         self.callConnectors()
+        EditRegistry.createAllKeys()
+        Saved.updateUI(self)
 
     def callConnectors(self):
         """
@@ -21,6 +23,7 @@ class Main(Ui_MainWindow):
         """
         Connectors.connectColorPickers(self)
         Connectors.connectResetButtons(self)
+        Connectors.connectApplyButtons(self)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,4 @@
 # Relative Imports
-from Data.enums import Settings
 from Registry.reg_edit import EditRegistry
 from Data.paths import Path
 
@@ -8,12 +7,12 @@ class EditSettings:
     @staticmethod
     def changeEffectType(
         keyPath: Path.RegPaths | str,
-        effectType: Settings.EffectType,
+        effectType: int,
     ):
         """
         Method to:
         Change the effect type of various flyout elements.
-        - keyPath: path ot the Key which needs to be changed
+        - keyPath: path of the Key which needs to be changed
         - effectType: Effect type from the predefined effect types, Settings.
         """
         EditRegistry.setValue(
@@ -25,7 +24,7 @@ class EditSettings:
     @staticmethod
     def changeEnableDropShadow(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.EnableDropShadow,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -42,7 +41,7 @@ class EditSettings:
     @staticmethod
     def changeNoSystemDropShadow(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.NoSystemDropShadow,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -82,7 +81,7 @@ class EditSettings:
         Method to:
         Change the color of various menu-items.
         - keyPath: path of the Key which needs to be changed
-        - color: 32-bit color in the form of 0xAARRGGBB
+        - color: 32-bit color in the form of AARRGGBB
         """
         EditRegistry.setValue(
             keyPath=keyPath,
@@ -99,7 +98,7 @@ class EditSettings:
         Method to:
         Change the border color of flyouts.
         - keyPath: path of the Key which needs to be changed
-        - color: 32-bit color in the form of 0xAARRGGBB
+        - color: 32-bit color in the form of AARRGGBB
         """
         EditRegistry.setValue(
             keyPath=keyPath,
@@ -116,7 +115,7 @@ class EditSettings:
         Method to:
         Change the border color of flyouts.
         - keyPath: path of the Key which needs to be changed
-        - color: 32-bit color in the form of 0xAARRGGBB
+        - color: 32-bit color in the form of AARRGGBB
         """
         EditRegistry.setValue(
             keyPath=keyPath,
@@ -133,7 +132,7 @@ class EditSettings:
         Method to:
         Change the gradient color of various flyout elements in dark mode.
         - keyPath: path of the Key which needs to be changed
-        - color: 32-bit color in the form of 0xAARRGGBB
+        - color: 32-bit color in the form of AARRGGBB
         """
         EditRegistry.setValue(
             keyPath=keyPath,
@@ -150,7 +149,7 @@ class EditSettings:
         Method to:
         Change the gradient color of various flyout elements in light mode.
         - keyPath: path of the Key which needs to be changed
-        - color: 32-bit color in the form of 0xAARRGGBB
+        - color: 32-bit color in the form of AARRGGBB
         """
         EditRegistry.setValue(
             keyPath=keyPath,
@@ -161,7 +160,7 @@ class EditSettings:
     @staticmethod
     def changeDisabled(
         keyPath: Path.RegPaths | str,
-        isDisabled: Settings.Disabled,
+        isDisabled: int,
     ):
         """
         Method to:
@@ -178,7 +177,7 @@ class EditSettings:
     @staticmethod
     def changeEnableImmersiveStyle(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.EnableImmersiveStyle,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -195,7 +194,7 @@ class EditSettings:
     @staticmethod
     def changeEnableFluentAnimation(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.EnableFluentAnimation,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -212,7 +211,7 @@ class EditSettings:
     @staticmethod
     def changeEnableCustomRendering(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.EnableCustomRendering,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -230,7 +229,7 @@ class EditSettings:
     @staticmethod
     def changeEnableThemeColorization(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.EnableThemeColorization,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -249,7 +248,7 @@ class EditSettings:
     @staticmethod
     def changeEnableImmediateInterupting(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.EnableImmediateInterupting,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -266,7 +265,7 @@ class EditSettings:
     @staticmethod
     def changeNoBorderColor(
         keyPath: Path.RegPaths | str,
-        isEnabled: Settings.NoBorderColor,
+        isEnabled: int,
     ):
         """
         Method to:
@@ -300,7 +299,7 @@ class EditSettings:
     @staticmethod
     def changeCornerType(
         keyPath: Path.RegPaths | str,
-        type: Settings.CornerType,
+        cornerType: int,
     ):
         """
         Method to:
@@ -311,13 +310,13 @@ class EditSettings:
         EditRegistry.setValue(
             keyPath=keyPath,
             valueName=Path.RegKeys.CornerType,
-            value=type,
+            value=cornerType,
         )
 
     @staticmethod
     def changePopInStyle(
         keyPath: Path.RegPaths | str,
-        style: Settings.PopInStyle,
+        style: int,
     ):
         """
         Method to:

@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(472, 536)
+        MainWindow.resize(471, 536)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -77,11 +77,7 @@ class Ui_MainWindow(object):
         self.reset_effect_type1.setSizePolicy(sizePolicy)
         self.reset_effect_type1.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap("Assets/View-refresh.svg.png"),
-            QtGui.QIcon.Mode.Normal,
-            QtGui.QIcon.State.Off,
-        )
+        icon.addPixmap(QtGui.QPixmap("Assets/View-refresh.svg.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.reset_effect_type1.setIcon(icon)
         self.reset_effect_type1.setObjectName("reset_effect_type1")
         self.horizontalLayout_11.addWidget(self.reset_effect_type1)
@@ -200,11 +196,7 @@ class Ui_MainWindow(object):
         self.dark_mode_gradient_color_picker1.setSizePolicy(sizePolicy)
         self.dark_mode_gradient_color_picker1.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(
-            QtGui.QPixmap("Assets/2867978.png"),
-            QtGui.QIcon.Mode.Normal,
-            QtGui.QIcon.State.Off,
-        )
+        icon1.addPixmap(QtGui.QPixmap("Assets/2867978.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.dark_mode_gradient_color_picker1.setIcon(icon1)
         self.dark_mode_gradient_color_picker1.setObjectName("dark_mode_gradient_color_picker1")
         self.horizontalLayout_13.addWidget(self.dark_mode_gradient_color_picker1)
@@ -407,23 +399,13 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.note1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        spacerItem = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.applyButton1 = QtWidgets.QPushButton(parent=self.tab_1)
         self.applyButton1.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton1.setObjectName("applyButton1")
         self.horizontalLayout_2.addWidget(self.applyButton1)
-        spacerItem1 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem1)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.verticalLayout.setStretch(1, 1)
@@ -465,6 +447,7 @@ class Ui_MainWindow(object):
         self.effectType2.addItem("")
         self.effectType2.addItem("")
         self.effectType2.addItem("")
+        self.effectType2.addItem("")
         self.horizontalLayout_21.addWidget(self.effectType2)
         self.reset_effect_type2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.reset_effect_type2.setEnabled(True)
@@ -492,6 +475,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.cornerType2.sizePolicy().hasHeightForWidth())
         self.cornerType2.setSizePolicy(sizePolicy)
         self.cornerType2.setObjectName("cornerType2")
+        self.cornerType2.addItem("")
         self.cornerType2.addItem("")
         self.cornerType2.addItem("")
         self.cornerType2.addItem("")
@@ -524,6 +508,7 @@ class Ui_MainWindow(object):
         self.enableDropShadow2.setObjectName("enableDropShadow2")
         self.enableDropShadow2.addItem("")
         self.enableDropShadow2.addItem("")
+        self.enableDropShadow2.addItem("")
         self.horizontalLayout_26.addWidget(self.enableDropShadow2)
         self.reset_drop_shadow2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.reset_drop_shadow2.setEnabled(True)
@@ -551,6 +536,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.noBorderColor2.sizePolicy().hasHeightForWidth())
         self.noBorderColor2.setSizePolicy(sizePolicy)
         self.noBorderColor2.setObjectName("noBorderColor2")
+        self.noBorderColor2.addItem("")
         self.noBorderColor2.addItem("")
         self.noBorderColor2.addItem("")
         self.horizontalLayout_72.addWidget(self.noBorderColor2)
@@ -662,6 +648,7 @@ class Ui_MainWindow(object):
         self.disabledEffect2.setObjectName("disabledEffect2")
         self.disabledEffect2.addItem("")
         self.disabledEffect2.addItem("")
+        self.disabledEffect2.addItem("")
         self.horizontalLayout_29.addWidget(self.disabledEffect2)
         self.reset_disabled2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.reset_disabled2.setEnabled(True)
@@ -689,6 +676,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.enableThemeColorization2.sizePolicy().hasHeightForWidth())
         self.enableThemeColorization2.setSizePolicy(sizePolicy)
         self.enableThemeColorization2.setObjectName("enableThemeColorization2")
+        self.enableThemeColorization2.addItem("")
         self.enableThemeColorization2.addItem("")
         self.enableThemeColorization2.addItem("")
         self.horizontalLayout_73.addWidget(self.enableThemeColorization2)
@@ -789,23 +777,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addLayout(self.formLayout_4)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem2 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem2)
         self.applyButton2 = QtWidgets.QPushButton(parent=self.tab_2)
         self.applyButton2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton2.setObjectName("applyButton2")
         self.horizontalLayout_4.addWidget(self.applyButton2)
-        spacerItem3 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem3)
         self.verticalLayout_3.addLayout(self.horizontalLayout_4)
         self.verticalLayout_3.setStretch(1, 1)
@@ -835,7 +813,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -92, 387, 476))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 386, 476))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
@@ -855,6 +833,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.effectType3.sizePolicy().hasHeightForWidth())
         self.effectType3.setSizePolicy(sizePolicy)
         self.effectType3.setObjectName("effectType3")
+        self.effectType3.addItem("")
         self.effectType3.addItem("")
         self.effectType3.addItem("")
         self.effectType3.addItem("")
@@ -895,6 +874,7 @@ class Ui_MainWindow(object):
         self.cornerType3.addItem("")
         self.cornerType3.addItem("")
         self.cornerType3.addItem("")
+        self.cornerType3.addItem("")
         self.horizontalLayout_77.addWidget(self.cornerType3)
         self.reset_corner_type3 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -921,6 +901,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.enableDropShadow3.sizePolicy().hasHeightForWidth())
         self.enableDropShadow3.setSizePolicy(sizePolicy)
         self.enableDropShadow3.setObjectName("enableDropShadow3")
+        self.enableDropShadow3.addItem("")
         self.enableDropShadow3.addItem("")
         self.enableDropShadow3.addItem("")
         self.horizontalLayout_32.addWidget(self.enableDropShadow3)
@@ -950,6 +931,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.noBorderColor3.sizePolicy().hasHeightForWidth())
         self.noBorderColor3.setSizePolicy(sizePolicy)
         self.noBorderColor3.setObjectName("noBorderColor3")
+        self.noBorderColor3.addItem("")
         self.noBorderColor3.addItem("")
         self.noBorderColor3.addItem("")
         self.horizontalLayout_78.addWidget(self.noBorderColor3)
@@ -1061,6 +1043,7 @@ class Ui_MainWindow(object):
         self.disabledEffect3_1.setObjectName("disabledEffect3_1")
         self.disabledEffect3_1.addItem("")
         self.disabledEffect3_1.addItem("")
+        self.disabledEffect3_1.addItem("")
         self.horizontalLayout_37.addWidget(self.disabledEffect3_1)
         self.reset_disabled3_1 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
         self.reset_disabled3_1.setEnabled(True)
@@ -1088,6 +1071,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.enableThemeColorization3_1.sizePolicy().hasHeightForWidth())
         self.enableThemeColorization3_1.setSizePolicy(sizePolicy)
         self.enableThemeColorization3_1.setObjectName("enableThemeColorization3_1")
+        self.enableThemeColorization3_1.addItem("")
         self.enableThemeColorization3_1.addItem("")
         self.enableThemeColorization3_1.addItem("")
         self.horizontalLayout_79.addWidget(self.enableThemeColorization3_1)
@@ -1304,23 +1288,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.addLayout(self.formLayout_9)
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
-        spacerItem4 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_10.addItem(spacerItem4)
         self.applyButton3_1 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
         self.applyButton3_1.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3_1.setObjectName("applyButton3_1")
         self.horizontalLayout_10.addWidget(self.applyButton3_1)
-        spacerItem5 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_10.addItem(spacerItem5)
         self.verticalLayout_11.addLayout(self.horizontalLayout_10)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -1346,7 +1320,7 @@ class Ui_MainWindow(object):
         self.fadeOutTime.setSizePolicy(sizePolicy)
         self.fadeOutTime.setMaximum(5000)
         self.fadeOutTime.setSingleStep(100)
-        self.fadeOutTime.setProperty("value", 0)
+        self.fadeOutTime.setProperty("value", 350)
         self.fadeOutTime.setObjectName("fadeOutTime")
         self.horizontalLayout_59.addWidget(self.fadeOutTime)
         self.reset_fade_out_time = QtWidgets.QPushButton(parent=self.tab_3)
@@ -1375,7 +1349,7 @@ class Ui_MainWindow(object):
         self.popInTime.setSizePolicy(sizePolicy)
         self.popInTime.setMaximum(5000)
         self.popInTime.setSingleStep(100)
-        self.popInTime.setProperty("value", 0)
+        self.popInTime.setProperty("value", 250)
         self.popInTime.setObjectName("popInTime")
         self.horizontalLayout_63.addWidget(self.popInTime)
         self.reset_pop_in_time = QtWidgets.QPushButton(parent=self.tab_3)
@@ -1404,7 +1378,7 @@ class Ui_MainWindow(object):
         self.fadeInTime.setSizePolicy(sizePolicy)
         self.fadeInTime.setMaximum(5000)
         self.fadeInTime.setSingleStep(100)
-        self.fadeInTime.setProperty("value", 0)
+        self.fadeInTime.setProperty("value", 87)
         self.fadeInTime.setObjectName("fadeInTime")
         self.horizontalLayout_74.addWidget(self.fadeInTime)
         self.reset_fade_in_time = QtWidgets.QPushButton(parent=self.tab_3)
@@ -1463,7 +1437,7 @@ class Ui_MainWindow(object):
         self.startRatio.setSizePolicy(sizePolicy)
         self.startRatio.setMaximum(100)
         self.startRatio.setSingleStep(1)
-        self.startRatio.setProperty("value", 0)
+        self.startRatio.setProperty("value", 50)
         self.startRatio.setObjectName("startRatio")
         self.horizontalLayout_76.addWidget(self.startRatio)
         self.reset_start_ratio = QtWidgets.QPushButton(parent=self.tab_3)
@@ -1509,23 +1483,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addLayout(self.formLayout_7)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        spacerItem6 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem6)
         self.applyButton3_2 = QtWidgets.QPushButton(parent=self.tab_3)
         self.applyButton3_2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3_2.setObjectName("applyButton3_2")
         self.horizontalLayout_8.addWidget(self.applyButton3_2)
-        spacerItem7 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem7)
         self.verticalLayout_9.addLayout(self.horizontalLayout_8)
         self.verticalLayout_9.setStretch(0, 1)
@@ -1655,7 +1619,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.cornerRadius1_1.sizePolicy().hasHeightForWidth())
         self.cornerRadius1_1.setSizePolicy(sizePolicy)
         self.cornerRadius1_1.setMaximum(10)
-        self.cornerRadius1_1.setProperty("value", 0)
+        self.cornerRadius1_1.setProperty("value", 8)
         self.cornerRadius1_1.setObjectName("cornerRadius1_1")
         self.horizontalLayout_40.addWidget(self.cornerRadius1_1)
         self.reset_corner_radius1_1 = QtWidgets.QPushButton(parent=self.tab)
@@ -1701,23 +1665,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.addLayout(self.formLayout_3)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        spacerItem8 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem8)
         self.applyButton3_3 = QtWidgets.QPushButton(parent=self.tab)
         self.applyButton3_3.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3_3.setObjectName("applyButton3_3")
         self.horizontalLayout_5.addWidget(self.applyButton3_3)
-        spacerItem9 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem9)
         self.verticalLayout_5.addLayout(self.horizontalLayout_5)
         self.verticalLayout_5.setStretch(0, 1)
@@ -1847,7 +1801,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.cornerRadius1_2.sizePolicy().hasHeightForWidth())
         self.cornerRadius1_2.setSizePolicy(sizePolicy)
         self.cornerRadius1_2.setMaximum(10)
-        self.cornerRadius1_2.setProperty("value", 0)
+        self.cornerRadius1_2.setProperty("value", 8)
         self.cornerRadius1_2.setObjectName("cornerRadius1_2")
         self.horizontalLayout_47.addWidget(self.cornerRadius1_2)
         self.reset_corner_radius1_2 = QtWidgets.QPushButton(parent=self.tab_6)
@@ -1893,23 +1847,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.addLayout(self.formLayout_5)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        spacerItem10 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem10)
         self.applyButton3_4 = QtWidgets.QPushButton(parent=self.tab_6)
         self.applyButton3_4.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3_4.setObjectName("applyButton3_4")
         self.horizontalLayout_6.addWidget(self.applyButton3_4)
-        spacerItem11 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem11 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem11)
         self.verticalLayout_6.addLayout(self.horizontalLayout_6)
         self.verticalLayout_6.setStretch(0, 1)
@@ -2039,7 +1983,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.cornerRadius1_3.sizePolicy().hasHeightForWidth())
         self.cornerRadius1_3.setSizePolicy(sizePolicy)
         self.cornerRadius1_3.setMaximum(10)
-        self.cornerRadius1_3.setProperty("value", 0)
+        self.cornerRadius1_3.setProperty("value", 8)
         self.cornerRadius1_3.setObjectName("cornerRadius1_3")
         self.horizontalLayout_54.addWidget(self.cornerRadius1_3)
         self.reset_corner_radius1_3 = QtWidgets.QPushButton(parent=self.tab_7)
@@ -2096,7 +2040,7 @@ class Ui_MainWindow(object):
         self.width1_1.setSizePolicy(sizePolicy)
         self.width1_1.setMaximum(10000)
         self.width1_1.setSingleStep(1000)
-        self.width1_1.setProperty("value", 0)
+        self.width1_1.setProperty("value", 1000)
         self.width1_1.setObjectName("width1_1")
         self.horizontalLayout_57.addWidget(self.width1_1)
         self.reset_width1_1 = QtWidgets.QPushButton(parent=self.tab_7)
@@ -2114,23 +2058,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.addLayout(self.formLayout_6)
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        spacerItem12 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem12 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem12)
         self.applyButton3_5 = QtWidgets.QPushButton(parent=self.tab_7)
         self.applyButton3_5.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3_5.setObjectName("applyButton3_5")
         self.horizontalLayout_7.addWidget(self.applyButton3_5)
-        spacerItem13 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem13)
         self.verticalLayout_7.addLayout(self.horizontalLayout_7)
         self.verticalLayout_7.setStretch(0, 1)
@@ -2260,7 +2194,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.cornerRadius1_4.sizePolicy().hasHeightForWidth())
         self.cornerRadius1_4.setSizePolicy(sizePolicy)
         self.cornerRadius1_4.setMaximum(10)
-        self.cornerRadius1_4.setProperty("value", 0)
+        self.cornerRadius1_4.setProperty("value", 8)
         self.cornerRadius1_4.setObjectName("cornerRadius1_4")
         self.horizontalLayout_70.addWidget(self.cornerRadius1_4)
         self.reset_corner_radius1_4 = QtWidgets.QPushButton(parent=self.tab_9)
@@ -2317,7 +2251,7 @@ class Ui_MainWindow(object):
         self.width1_2.setSizePolicy(sizePolicy)
         self.width1_2.setMaximum(10000)
         self.width1_2.setSingleStep(1000)
-        self.width1_2.setProperty("value", 0)
+        self.width1_2.setProperty("value", 1000)
         self.width1_2.setObjectName("width1_2")
         self.horizontalLayout_58.addWidget(self.width1_2)
         self.reset_width1_2 = QtWidgets.QPushButton(parent=self.tab_9)
@@ -2335,23 +2269,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.addLayout(self.formLayout_8)
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        spacerItem14 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_9.addItem(spacerItem14)
         self.applyButton3_6 = QtWidgets.QPushButton(parent=self.tab_9)
         self.applyButton3_6.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.applyButton3_6.setObjectName("applyButton3_6")
         self.horizontalLayout_9.addWidget(self.applyButton3_6)
-        spacerItem15 = QtWidgets.QSpacerItem(
-            40,
-            20,
-            QtWidgets.QSizePolicy.Policy.Expanding,
-            QtWidgets.QSizePolicy.Policy.Minimum,
-        )
+        spacerItem15 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_9.addItem(spacerItem15)
         self.verticalLayout_8.addLayout(self.horizontalLayout_9)
         self.verticalLayout_8.setStretch(0, 1)
@@ -2364,9 +2288,20 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         self.effectType1.setCurrentIndex(5)
-        self.effectType2.setCurrentIndex(5)
+        self.cornerType1.setCurrentIndex(3)
+        self.effectType2.setCurrentIndex(9)
+        self.cornerType2.setCurrentIndex(4)
+        self.enableDropShadow2.setCurrentIndex(2)
+        self.noBorderColor2.setCurrentIndex(2)
+        self.disabledEffect2.setCurrentIndex(2)
+        self.enableThemeColorization2.setCurrentIndex(2)
         self.QTabWidget2.setCurrentIndex(0)
-        self.effectType3.setCurrentIndex(5)
+        self.effectType3.setCurrentIndex(9)
+        self.cornerType3.setCurrentIndex(4)
+        self.enableDropShadow3.setCurrentIndex(2)
+        self.noBorderColor3.setCurrentIndex(2)
+        self.disabledEffect3_1.setCurrentIndex(2)
+        self.enableThemeColorization3_1.setCurrentIndex(2)
         self.enableImmersiveStyle.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -2409,14 +2344,9 @@ class Ui_MainWindow(object):
         self.darkModeBorderColor1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_11.setText(_translate("MainWindow", "Light Mode Border Color"))
         self.lightModeBorderColor1.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
-        self.note1.setText(
-            _translate(
-                "MainWindow",
-                "Note: If there are values with the same name under Menu or DropDown are modified then, the values in the latter sections will be prioritized, and this part will be ignored.",
-            )
-        )
+        self.note1.setText(_translate("MainWindow", "Note: If values in Menu or Dropdown are applied then the corresponsiding Global values will be ignored."))
         self.applyButton1.setText(_translate("MainWindow", "Apply"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("MainWindow", "General"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("MainWindow", "Global"))
         self.description1_2.setText(_translate("MainWindow", "Modify the appearance of all Dropdown flyouts"))
         self.label_20.setText(_translate("MainWindow", "Effect Type"))
         self.effectType2.setItemText(0, _translate("MainWindow", "Disable"))
@@ -2428,17 +2358,21 @@ class Ui_MainWindow(object):
         self.effectType2.setItemText(6, _translate("MainWindow", "Acrylic"))
         self.effectType2.setItemText(7, _translate("MainWindow", "Mica"))
         self.effectType2.setItemText(8, _translate("MainWindow", "Mica Alt"))
+        self.effectType2.setItemText(9, _translate("MainWindow", "Use Global Setting"))
         self.label_70.setText(_translate("MainWindow", "Corner Type"))
         self.cornerType2.setItemText(0, _translate("MainWindow", "Dont't Change"))
         self.cornerType2.setItemText(1, _translate("MainWindow", "Square Corners"))
         self.cornerType2.setItemText(2, _translate("MainWindow", "Large Corners"))
         self.cornerType2.setItemText(3, _translate("MainWindow", "Small Corners"))
+        self.cornerType2.setItemText(4, _translate("MainWindow", "Use Global Setting"))
         self.label_21.setText(_translate("MainWindow", "Enable Drop Shadow"))
         self.enableDropShadow2.setItemText(0, _translate("MainWindow", "No"))
         self.enableDropShadow2.setItemText(1, _translate("MainWindow", "Yes"))
+        self.enableDropShadow2.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_71.setText(_translate("MainWindow", "No Border Color"))
         self.noBorderColor2.setItemText(0, _translate("MainWindow", "No"))
         self.noBorderColor2.setItemText(1, _translate("MainWindow", "Yes"))
+        self.noBorderColor2.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_22.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
         self.darkModeGradientColor2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_23.setText(_translate("MainWindow", "Light Mode Gradient Color"))
@@ -2446,9 +2380,11 @@ class Ui_MainWindow(object):
         self.label_24.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect2.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect2.setItemText(1, _translate("MainWindow", "Yes"))
+        self.disabledEffect2.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_72.setText(_translate("MainWindow", "Enable Theme Colorization"))
         self.enableThemeColorization2.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeColorization2.setItemText(1, _translate("MainWindow", "Yes"))
+        self.enableThemeColorization2.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_25.setText(_translate("MainWindow", "Dark Mode Border Color"))
         self.darkModeBorderColor2.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_26.setText(_translate("MainWindow", "Light Mode Border Color"))
@@ -2457,8 +2393,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "DropDown"))
         self.description4.setText(
             _translate(
-                "MainWindow",
-                "Modify the overall appearance of various menu items and their animations  including: Focused, Hot, Disabled Hot & Separator",
+                "MainWindow", "Modify the overall appearance of various menu items and their animations  including: Focused, Hot, Disabled Hot & Separator"
             )
         )
         self.label_27.setText(_translate("MainWindow", "Effect Type"))
@@ -2471,17 +2406,21 @@ class Ui_MainWindow(object):
         self.effectType3.setItemText(6, _translate("MainWindow", "Acrylic"))
         self.effectType3.setItemText(7, _translate("MainWindow", "Mica"))
         self.effectType3.setItemText(8, _translate("MainWindow", "Mica Alt"))
+        self.effectType3.setItemText(9, _translate("MainWindow", "Use Global Setting"))
         self.label_73.setText(_translate("MainWindow", "Corner Type"))
         self.cornerType3.setItemText(0, _translate("MainWindow", "Dont't Change"))
         self.cornerType3.setItemText(1, _translate("MainWindow", "Square Corners"))
         self.cornerType3.setItemText(2, _translate("MainWindow", "Large Corners"))
         self.cornerType3.setItemText(3, _translate("MainWindow", "Small Corners"))
+        self.cornerType3.setItemText(4, _translate("MainWindow", "Use Global Setting"))
         self.label_28.setText(_translate("MainWindow", "Enable Drop Shadow"))
         self.enableDropShadow3.setItemText(0, _translate("MainWindow", "No"))
         self.enableDropShadow3.setItemText(1, _translate("MainWindow", "Yes"))
+        self.enableDropShadow3.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_74.setText(_translate("MainWindow", "No Border Color"))
         self.noBorderColor3.setItemText(0, _translate("MainWindow", "No"))
         self.noBorderColor3.setItemText(1, _translate("MainWindow", "Yes"))
+        self.noBorderColor3.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_29.setText(_translate("MainWindow", "Dark Mode Gradient Color"))
         self.darkModeGradientColor3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_30.setText(_translate("MainWindow", "Light Mode Gradient Color"))
@@ -2489,9 +2428,11 @@ class Ui_MainWindow(object):
         self.label_36.setText(_translate("MainWindow", "Disabled"))
         self.disabledEffect3_1.setItemText(0, _translate("MainWindow", "No"))
         self.disabledEffect3_1.setItemText(1, _translate("MainWindow", "Yes"))
+        self.disabledEffect3_1.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_75.setText(_translate("MainWindow", "Enable Theme Colorization"))
         self.enableThemeColorization3_1.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeColorization3_1.setItemText(1, _translate("MainWindow", "Yes"))
+        self.enableThemeColorization3_1.setItemText(2, _translate("MainWindow", "Use Global Setting"))
         self.label_40.setText(_translate("MainWindow", "Dark Mode Border Color"))
         self.darkModeBorderColor3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_41.setText(_translate("MainWindow", "Light Mode Border Color"))
@@ -2549,10 +2490,7 @@ class Ui_MainWindow(object):
         self.enableThemeColorization3_3.setItemText(0, _translate("MainWindow", "No"))
         self.enableThemeColorization3_3.setItemText(1, _translate("MainWindow", "Yes"))
         self.applyButton3_4.setText(_translate("MainWindow", "Apply"))
-        self.QTabWidget2.setTabText(
-            self.QTabWidget2.indexOf(self.tab_6),
-            _translate("MainWindow", "Disabled Hot"),
-        )
+        self.QTabWidget2.setTabText(self.QTabWidget2.indexOf(self.tab_6), _translate("MainWindow", "Disabled Hot"))
         self.label_45.setText(_translate("MainWindow", "Dark Mode Color"))
         self.darkModeColor1_3.setPlaceholderText(_translate("MainWindow", "AARRGGBB"))
         self.label_46.setText(_translate("MainWindow", "Light Mode Color"))

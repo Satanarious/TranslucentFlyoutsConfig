@@ -6,7 +6,7 @@ rawDefaults: dict = dict(json.load(open("defaults.json", "r")))
 
 # Keys from JSON file
 class Key:
-    general: str = "General"
+    _global: str = "Global"
     dropdown: str = "DropDown"
     menu: str = "Menu"
     animation: str = "Animation"
@@ -42,17 +42,17 @@ class Key:
 
 # Getter Classes
 class Defaults:
-    class General:
-        effectType: int = rawDefaults[Key.general][Key.effectType]
-        cornerType: int = rawDefaults[Key.general][Key.cornerType]
-        enableDropShadow: int = rawDefaults[Key.general][Key.enableDropShadow]
-        noBorderColor: int = rawDefaults[Key.general][Key.noBorderColor]
-        enableThemeColorization: int = rawDefaults[Key.general][Key.enableThemeColorization]
-        darkModeBorderColor: str = rawDefaults[Key.general][Key.darkModeBorderColor]
-        lightModeBorderColor: str = rawDefaults[Key.general][Key.lightModeBorderColor]
-        darkModeGradientColor: str = rawDefaults[Key.general][Key.darkModeGradientColor]
-        lightModeGradientColor: str = rawDefaults[Key.general][Key.lightModeGradientColor]
-        disabled: int = rawDefaults[Key.general][Key.disabled]
+    class Global:
+        effectType: int = rawDefaults[Key._global][Key.effectType]
+        cornerType: int = rawDefaults[Key._global][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key._global][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key._global][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key._global][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key._global][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key._global][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key._global][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key._global][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key._global][Key.disabled]
 
     class DropDown:
         effectType: int = rawDefaults[Key.dropdown][Key.effectType]

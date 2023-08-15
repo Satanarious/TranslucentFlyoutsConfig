@@ -11,7 +11,7 @@ from Dialogs.color_picker import ColorPicker
 from Data.defaults import Defaults
 from Data.stylesheet import StyleSheet
 from Data.paths import Path
-from Data.user import ClassVar
+from Data.user import ClassVar, Saved
 from save_settings import SaveSettings
 
 if TYPE_CHECKING:
@@ -25,14 +25,14 @@ class Connectors:
         Method to:
         - Connect Apply Button to its respective functions
         """
-        window.applyButton1.clicked.connect(SaveSettings.General.save)
-        window.applyButton2.clicked.connect(SaveSettings.DropDown.save)
-        window.applyButton3_1.clicked.connect(SaveSettings.Menu.save)
-        window.applyButton3_2.clicked.connect(SaveSettings.Menu.Animation.save)
-        window.applyButton3_3.clicked.connect(SaveSettings.Menu.Hot.save)
-        window.applyButton3_4.clicked.connect(SaveSettings.Menu.DisabledHot.save)
-        window.applyButton3_5.clicked.connect(SaveSettings.Menu.Focusing.save)
-        window.applyButton3_6.clicked.connect(SaveSettings.Menu.Separator.save)
+        window.applyButton1.clicked.connect(lambda a: SaveSettings.Global.save(window))
+        window.applyButton2.clicked.connect(lambda a: SaveSettings.DropDown.save(window))
+        window.applyButton3_1.clicked.connect(lambda a: SaveSettings.Menu.save(window))
+        window.applyButton3_2.clicked.connect(lambda a: SaveSettings.Menu.Animation.save(window))
+        window.applyButton3_3.clicked.connect(lambda a: SaveSettings.Menu.Hot.save(window))
+        window.applyButton3_4.clicked.connect(lambda a: SaveSettings.Menu.DisabledHot.save(window))
+        window.applyButton3_5.clicked.connect(lambda a: SaveSettings.Menu.Focusing.save(window))
+        window.applyButton3_6.clicked.connect(lambda a: SaveSettings.Menu.Separator.save(window))
 
     @staticmethod
     def connectResetButtons(window: Main) -> None:
@@ -79,75 +79,75 @@ class Connectors:
                     resetButton.clicked.connect(lambda a: valueWidget.setValue(defaultValue))
                     resetButton.customContextMenuRequested.connect(lambda a: valueWidget.setValue(getSavedValue(savedValue)))
 
-        # General
+        # Global
         configureResetButton(
             resetButton=window.reset_effect_type1,
             valueWidget=window.effectType1,
-            defaultValue=Defaults.General.effectType,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.effectType),
+            defaultValue=Defaults.Global.effectType,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.effectType),
             colorPickerButton=None,
         )
         configureResetButton(
             resetButton=window.reset_corner_type1,
             valueWidget=window.cornerType1,
-            defaultValue=Defaults.General.cornerType,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.cornerType),
+            defaultValue=Defaults.Global.cornerType,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.cornerType),
             colorPickerButton=None,
         )
         configureResetButton(
             resetButton=window.reset_drop_shadow1,
             valueWidget=window.enableDropShadow1,
-            defaultValue=Defaults.General.enableDropShadow,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.enableDropShadow),
+            defaultValue=Defaults.Global.enableDropShadow,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.enableDropShadow),
             colorPickerButton=None,
         )
         configureResetButton(
             resetButton=window.reset_theme_colorization1,
             valueWidget=window.enableThemeColorization1,
-            defaultValue=Defaults.General.enableThemeColorization,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.enableThemeColorization),
+            defaultValue=Defaults.Global.enableThemeColorization,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.enableThemeColorization),
             colorPickerButton=None,
         )
         configureResetButton(
             resetButton=window.reset_border_color1,
             valueWidget=window.noBorderColor1,
-            defaultValue=Defaults.General.noBorderColor,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.noBorderColor),
+            defaultValue=Defaults.Global.noBorderColor,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.noBorderColor),
             colorPickerButton=None,
         )
         configureResetButton(
             resetButton=window.reset_dark_mode_border_color1,
             valueWidget=window.darkModeBorderColor1,
-            defaultValue=Defaults.General.darkModeBorderColor,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.darkModeBorderColor),
+            defaultValue=Defaults.Global.darkModeBorderColor,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.darkModeBorderColor),
             colorPickerButton=window.dark_mode_border_color_picker1,
         )
         configureResetButton(
             resetButton=window.reset_light_mode_border_color1,
             valueWidget=window.lightModeBorderColor1,
-            defaultValue=Defaults.General.lightModeBorderColor,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.lightModeBorderColor),
+            defaultValue=Defaults.Global.lightModeBorderColor,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.lightModeBorderColor),
             colorPickerButton=window.light_mode_border_color_picker1,
         )
         configureResetButton(
             resetButton=window.reset_dark_mode_gradient_color1,
             valueWidget=window.darkModeGradientColor1,
-            defaultValue=Defaults.General.darkModeGradientColor,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.darkModeGradientColor),
+            defaultValue=Defaults.Global.darkModeGradientColor,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.darkModeGradientColor),
             colorPickerButton=window.dark_mode_gradient_color_picker1,
         )
         configureResetButton(
             resetButton=window.reset_light_mode_gradient_color1,
             valueWidget=window.lightModeGradientColor1,
-            defaultValue=Defaults.General.lightModeGradientColor,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.lightModeGradientColor),
+            defaultValue=Defaults.Global.lightModeGradientColor,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.lightModeGradientColor),
             colorPickerButton=window.light_mode_gradient_color_picker1,
         )
         configureResetButton(
             resetButton=window.reset_disabled1,
             valueWidget=window.disabledEffect1,
-            defaultValue=Defaults.General.disabled,
-            savedValue=ClassVar.joinVars(ClassVar.general, ClassVar.disabled),
+            defaultValue=Defaults.Global.disabled,
+            savedValue=ClassVar.joinVars(ClassVar._global, ClassVar.disabled),
             colorPickerButton=None,
         )
 
@@ -536,7 +536,7 @@ class Connectors:
         Connect Color Picker Dialog to:
         - Color Output lineEdit
         """
-        # General
+        # Global
         ColorPicker.connectColorDialog(
             lineEdit=window.darkModeBorderColor1,
             pushButton=window.dark_mode_border_color_picker1,

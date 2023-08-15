@@ -1,5 +1,5 @@
 {
-  "General": {
+  "Global": {
     "Effect Type": 5,
     "Corner Type": 3,
     "Enable Drop Shadow": 0,
@@ -7,37 +7,37 @@
     "Enable Theme Colorization": 0,
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
-    "Dark Mode Gradient Color": "412B2B2B",
-    "Light Mode Gradient Color": "9EDDDDDD",
+    "Dark Mode Gradient Color": "",
+    "Light Mode Gradient Color": "",
     "Disabled": 0
   },
   "DropDown": {
-    "Effect Type": 5,
-    "Corner Type": 3,
-    "Enable Drop Shadow": 0,
-    "No Border Color": 0,
-    "Enable Theme Colorization": 0,
+    "Effect Type": 9,
+    "Corner Type": 4,
+    "Enable Drop Shadow": 2,
+    "No Border Color": 2,
+    "Enable Theme Colorization": 2,
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
-    "Dark Mode Gradient Color": "412B2B2B",
-    "Light Mode Gradient Color": "9EDDDDDD",
-    "Disabled": 0
+    "Dark Mode Gradient Color": "",
+    "Light Mode Gradient Color": "",
+    "Disabled": 2
   },
   "Menu": {
     "No System Drop Shadow": 0,
     "Enable Immersive Style": 1,
     "Enable Custom Rendering": 0,
     "Enable Fluent Animation": 0,
-    "Effect Type": 5,
-    "Corner Type": 3,
-    "Enable Drop Shadow": 0,
-    "No Border Color": 0,
-    "Enable Theme Colorization": 0,
+    "Effect Type": 9,
+    "Corner Type": 4,
+    "Enable Drop Shadow": 2,
+    "No Border Color": 2,
+    "Enable Theme Colorization": 2,
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
-    "Dark Mode Gradient Color": "412B2B2B",
-    "Light Mode Gradient Color": "9EDDDDDD",
-    "Disabled": 0,
+    "Dark Mode Gradient Color": "",
+    "Light Mode Gradient Color": "",
+    "Disabled": 2,
     "Animation": {
       "Fade Out Time": 350,
       "Pop In Time": 250,
@@ -56,23 +56,23 @@
     "Focusing": {
       "Width": 1000,
       "Corner Radius": 8,
-      "Dark Mode Color": "FFFFFFFF",
-      "Light Mode Color": "FF000000",
+      "Dark Mode Color": "",
+      "Light Mode Color": "",
       "Enable Theme Colorization": 0,
       "Disabled": 0
     },
     "Hot": {
       "Corner Radius": 8,
-      "Dark Mode Color": "41808080",
-      "Light Mode Color": "30000000",
+      "Dark Mode Color": "",
+      "Light Mode Color": "",
       "Enable Theme Colorization": 0,
       "Disabled": 0
     },
     "Separator": {
       "Width": 1000,
       "Corner Radius": 8,
-      "Dark Mode Color": "30D9D9D9",
-      "Light Mode Color": "30262626",
+      "Dark Mode Color": "",
+      "Light Mode Color": "",
       "Enable Theme Colorization": 0,
       "Disabled": 0
     }

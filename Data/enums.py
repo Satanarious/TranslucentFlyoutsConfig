@@ -17,10 +17,12 @@ class Settings:
         AcrylicBackgroundLayer = 6
         MicaBackgroundLayer = 7
         MicaVariantBackgroundLayer = 8
+        UseGlobalSetting = 9
 
     class EnableDropShadow(IntEnum):
         No = 0
         Yes = 1
+        UseGlobalSetting = 2
 
     class NoSystemDropShadow(IntEnum):
         No = 0
@@ -29,6 +31,7 @@ class Settings:
     class Disabled(IntEnum):
         No = 0
         Yes = 1
+        UseGlobalSetting = 2
 
     class EnableImmersiveStyle(IntEnum):
         No = 0
@@ -45,6 +48,7 @@ class Settings:
     class EnableThemeColorization(IntEnum):
         No = 0
         Yes = 1
+        UseGlobalSetting = 2
 
     class EnableImmediateInterupting(IntEnum):
         No = 0
@@ -53,12 +57,14 @@ class Settings:
     class NoBorderColor(IntEnum):
         No = 0
         Yes = 1
+        UseGlobalSetting = 2
 
     class CornerType(IntEnum):
         DontChange = 0
         Square = 1
         LargeRound = 2
         SmallRound = 3
+        UseGlobalSetting = 4
 
     class PopInStyle(IntEnum):
         SlideDown = 0

@@ -8,28 +8,33 @@ from Data.paths import Path
 
 class EditRegistry:
     @staticmethod
-    def createBaseKey():
+    def createAllKeys():
         """
         This Method:
-        - Creates the Base Key "HKEY_CURRENT_USER\\Software\\TranslucentFylouts"
+        - Creates the Base Key at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts"
+        - Creates the DropDown Key at  "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\DropDown"
+        - Creates the Menu Key at  "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu"
+        - Creates the Menu Subkeys:
+            - Animation at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\Animation"
+            - Hot at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\Hot"
+            - DisabledHot at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\DisabledHot"
+            - Focusing at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\Focusing"
+            - Separator at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\Separator"
         """
-        base: HKEYType = OpenKeyEx(
-            key=Path.RegKeys.BaseKey,
-            sub_key=Path.RegPaths.Software,
-        )
-        tf: HKEYType = CreateKeyEx(
-            key=base,
-            sub_key=Path.RegPaths.TranslucentFlyouts,
-        )
-        if base:
-            CloseKey(base)
-        if tf:
-            CloseKey(tf)
+        menuPath = Path.RegPaths.BasePath + Path.RegPaths.Menu
+        EditRegistry.createKey(basePath=Path.RegPaths.Software, keyName=Path.RegKeys.TranslucentFlyouts)
+        EditRegistry.createKey(basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.DropDown)
+        EditRegistry.createKey(basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.Menu)
+        EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Animation)
+        EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Hot)
+        EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.DisabledHot)
+        EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Focusing)
+        EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Separator)
 
     @staticmethod
     def createKey(
         basePath: str,
-        key: Path.RegKeys,
+        keyName: str,
     ):
         """
         This method:
@@ -38,7 +43,7 @@ class EditRegistry:
         - key: is the name of the key to be created
         """
         base: HKEYType = OpenKeyEx(Path.RegKeys.BaseKey, basePath)
-        main: HKEYType = CreateKeyEx(base, str(key))
+        main: HKEYType = CreateKeyEx(base, str(keyName))
         if base:
             CloseKey(base)
         if main:
@@ -51,12 +56,15 @@ class EditRegistry:
         - Deletes a key in the provided base path
         - keyPath: is the r-string path to the key
         """
-        DeleteKeyEx(
-            key=Path.RegKeys.BaseKey,
-            sub_key=str(Path.RegPaths.BasePath + str(keyPath)),
-            reserved=0,
-            access=KEY_SET_VALUE,
-        )
+        try:
+            DeleteKeyEx(
+                key=Path.RegKeys.BaseKey,
+                sub_key=str(Path.RegPaths.BasePath + str(keyPath)),
+                reserved=0,
+                access=KEY_SET_VALUE,
+            )
+        except:
+            pass
 
     @staticmethod
     def setValue(
@@ -98,12 +106,15 @@ class EditRegistry:
         - keyPath: is the path to the key under which the subkey lies, which will contain the value
         - subKey: is the key which needs to be removed
         """
-        base: HKEYType = OpenKeyEx(
-            key=Path.RegKeys.BaseKey,
-            sub_key=str(Path.RegPaths.BasePath + str(keyPath)),
-            reserved=0,
-            access=KEY_SET_VALUE,
-        )
-        DeleteValue(base, valueName)
-        if base:
-            CloseKey(base)
+        try:
+            base: HKEYType = OpenKeyEx(
+                key=Path.RegKeys.BaseKey,
+                sub_key=str(Path.RegPaths.BasePath + str(keyPath)),
+                reserved=0,
+                access=KEY_SET_VALUE,
+            )
+            DeleteValue(base, valueName)
+            if base:
+                CloseKey(base)
+        except:
+            pass

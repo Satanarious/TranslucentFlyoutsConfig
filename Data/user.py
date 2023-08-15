@@ -1,5 +1,10 @@
 # Library Imports
+from __future__ import annotations
+from typing import TYPE_CHECKING
 import json
+
+if TYPE_CHECKING:
+    from main import Main
 
 
 rawDefaults: dict = dict(json.load(open("user_settings.json", "r")))
@@ -10,7 +15,7 @@ class ClassVar:
     def joinVars(*vars: str) -> str:
         return "Saved." + ".".join(vars)
 
-    general: str = "General"
+    _global: str = "Global"
     dropdown: str = "DropDown"
     menu: str = "Menu"
     animation: str = "Animation"
@@ -46,7 +51,7 @@ class ClassVar:
 
 # Keys from JSON file
 class Key:
-    general: str = "General"
+    _global: str = "Global"
     dropdown: str = "DropDown"
     menu: str = "Menu"
     animation: str = "Animation"
@@ -87,30 +92,110 @@ class Saved:
         with open("user_Settings.json", "w") as json_file:
             json.dump(rawDefaults, json_file)
 
-    class General:
-        effectType: int = rawDefaults[Key.general][Key.effectType]
-        cornerType: int = rawDefaults[Key.general][Key.cornerType]
-        enableDropShadow: int = rawDefaults[Key.general][Key.enableDropShadow]
-        noBorderColor: int = rawDefaults[Key.general][Key.noBorderColor]
-        enableThemeColorization: int = rawDefaults[Key.general][Key.enableThemeColorization]
-        darkModeBorderColor: str = rawDefaults[Key.general][Key.darkModeBorderColor]
-        lightModeBorderColor: str = rawDefaults[Key.general][Key.lightModeBorderColor]
-        darkModeGradientColor: str = rawDefaults[Key.general][Key.darkModeGradientColor]
-        lightModeGradientColor: str = rawDefaults[Key.general][Key.lightModeGradientColor]
-        disabled: int = rawDefaults[Key.general][Key.disabled]
+    @staticmethod
+    def updateUI(window: Main):
+        # Global
+        window.effectType1.setCurrentIndex(Saved.Global.effectType)
+        window.cornerType1.setCurrentIndex(Saved.Global.cornerType)
+        window.enableDropShadow1.setCurrentIndex(Saved.Global.enableDropShadow)
+        window.noBorderColor1.setCurrentIndex(Saved.Global.noBorderColor)
+        window.enableThemeColorization1.setCurrentIndex(Saved.Global.enableThemeColorization)
+        window.darkModeBorderColor1.setText(Saved.Global.darkModeBorderColor)
+        window.lightModeBorderColor1.setText(Saved.Global.lightModeBorderColor)
+        window.darkModeGradientColor1.setText(Saved.Global.darkModeGradientColor)
+        window.lightModeGradientColor1.setText(Saved.Global.lightModeGradientColor)
+        window.disabledEffect1.setCurrentIndex(Saved.Global.disabled)
+
+        # DropDown
+        window.effectType2.setCurrentIndex(Saved.DropDown.effectType)
+        window.cornerType2.setCurrentIndex(Saved.DropDown.cornerType)
+        window.enableDropShadow2.setCurrentIndex(Saved.DropDown.enableDropShadow)
+        window.noBorderColor2.setCurrentIndex(Saved.DropDown.noBorderColor)
+        window.enableThemeColorization2.setCurrentIndex(Saved.DropDown.enableThemeColorization)
+        window.darkModeBorderColor2.setText(Saved.DropDown.darkModeBorderColor)
+        window.lightModeBorderColor2.setText(Saved.DropDown.lightModeBorderColor)
+        window.darkModeGradientColor2.setText(Saved.DropDown.darkModeGradientColor)
+        window.lightModeGradientColor2.setText(Saved.DropDown.lightModeGradientColor)
+        window.disabledEffect2.setCurrentIndex(Saved.DropDown.disabled)
+
+        # Menu-General
+        window.noSystemDropShadow.setCurrentIndex(Saved.Menu.noSystemDropShadow)
+        window.enableImmersiveStyle.setCurrentIndex(Saved.Menu.enableImmersiveStyle)
+        window.enableCustomRendering.setCurrentIndex(Saved.Menu.enableCustomRendering)
+        window.enableFluentAnimation.setCurrentIndex(Saved.Menu.enableFluentAnimation)
+        window.effectType3.setCurrentIndex(Saved.Menu.effectType)
+        window.cornerType3.setCurrentIndex(Saved.Menu.cornerType)
+        window.enableDropShadow3.setCurrentIndex(Saved.Menu.enableDropShadow)
+        window.noBorderColor3.setCurrentIndex(Saved.Menu.noBorderColor)
+        window.enableThemeColorization3_1.setCurrentIndex(Saved.Menu.enableThemeColorization)
+        window.darkModeBorderColor3.setText(Saved.Menu.darkModeBorderColor)
+        window.lightModeBorderColor3.setText(Saved.Menu.lightModeBorderColor)
+        window.darkModeGradientColor3.setText(Saved.Menu.darkModeGradientColor)
+        window.lightModeGradientColor3.setText(Saved.Menu.lightModeGradientColor)
+        window.disabledEffect3_1.setCurrentIndex(Saved.Menu.disabled)
+
+        # Menu-Animation
+        window.fadeOutTime.setValue(Saved.Menu.Animation.fadeOutTime)
+        window.popInTime.setValue(Saved.Menu.Animation.popInTime)
+        window.fadeInTime.setValue(Saved.Menu.Animation.fadeInTime)
+        window.popInStyle.setCurrentIndex(Saved.Menu.Animation.popInStyle)
+        window.startRatio.setValue(Saved.Menu.Animation.startRatio)
+        window.enableImmediateInterupting.setCurrentIndex(Saved.Menu.Animation.enableImmediateInterupting)
+
+        # Menu-Hot
+        window.darkModeColor1_1.setText(Saved.Menu.Hot.darkModeColor)
+        window.lightModeColor1_1.setText(Saved.Menu.Hot.lightModeColor)
+        window.disabledEffect3_2.setCurrentIndex(Saved.Menu.Hot.disabled)
+        window.cornerRadius1_1.setValue(Saved.Menu.Hot.cornerRadius)
+        window.enableThemeColorization3_2.setCurrentIndex(Saved.Menu.Hot.enableThemeColorization)
+
+        # Menu-Disabled Hot
+        window.darkModeColor1_2.setText(Saved.Menu.DisabledHot.darkModeColor)
+        window.lightModeColor1_2.setText(Saved.Menu.DisabledHot.lightModeColor)
+        window.disabledEffect3_3.setCurrentIndex(Saved.Menu.DisabledHot.disabled)
+        window.cornerRadius1_2.setValue(Saved.Menu.DisabledHot.cornerRadius)
+        window.enableThemeColorization3_3.setCurrentIndex(Saved.Menu.DisabledHot.enableThemeColorization)
+
+        # Menu-Focusing
+        window.width1_1.setValue(Saved.Menu.Focusing.width)
+        window.darkModeColor1_3.setText(Saved.Menu.Focusing.darkModeColor)
+        window.lightModeColor1_3.setText(Saved.Menu.Focusing.lightModeColor)
+        window.disabledEffect3_4.setCurrentIndex(Saved.Menu.Focusing.disabled)
+        window.cornerRadius1_3.setValue(Saved.Menu.Focusing.cornerRadius)
+        window.enableThemeColorization3_4.setCurrentIndex(Saved.Menu.Focusing.enableThemeColorization)
+
+        # Menu-Separator
+        window.width1_2.setValue(Saved.Menu.Separator.width)
+        window.darkModeColor1_4.setText(Saved.Menu.Separator.darkModeColor)
+        window.lightModeColor1_4.setText(Saved.Menu.Separator.lightModeColor)
+        window.disabledEffect3_5.setCurrentIndex(Saved.Menu.Separator.disabled)
+        window.cornerRadius1_4.setValue(Saved.Menu.Separator.cornerRadius)
+        window.enableThemeColorization3_5.setCurrentIndex(Saved.Menu.Separator.enableThemeColorization)
+
+    class Global:
+        effectType: int = rawDefaults[Key._global][Key.effectType]
+        cornerType: int = rawDefaults[Key._global][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key._global][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key._global][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key._global][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key._global][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key._global][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key._global][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key._global][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key._global][Key.disabled]
 
         @staticmethod
         def updateDict():
-            rawDefaults[Key.general][Key.effectType] = Saved.General.effectType
-            rawDefaults[Key.general][Key.cornerType] = Saved.General.cornerType
-            rawDefaults[Key.general][Key.enableDropShadow] = Saved.General.enableDropShadow
-            rawDefaults[Key.general][Key.noBorderColor] = Saved.General.noBorderColor
-            rawDefaults[Key.general][Key.enableThemeColorization] = Saved.General.enableThemeColorization
-            rawDefaults[Key.general][Key.darkModeBorderColor] = Saved.General.darkModeBorderColor
-            rawDefaults[Key.general][Key.lightModeBorderColor] = Saved.General.lightModeBorderColor
-            rawDefaults[Key.general][Key.darkModeGradientColor] = Saved.General.darkModeGradientColor
-            rawDefaults[Key.general][Key.lightModeGradientColor] = Saved.General.lightModeGradientColor
-            rawDefaults[Key.general][Key.disabled] = Saved.General.disabled
+            rawDefaults[Key._global][Key.effectType] = Saved.Global.effectType
+            rawDefaults[Key._global][Key.cornerType] = Saved.Global.cornerType
+            rawDefaults[Key._global][Key.enableDropShadow] = Saved.Global.enableDropShadow
+            rawDefaults[Key._global][Key.noBorderColor] = Saved.Global.noBorderColor
+            rawDefaults[Key._global][Key.enableThemeColorization] = Saved.Global.enableThemeColorization
+            rawDefaults[Key._global][Key.darkModeBorderColor] = Saved.Global.darkModeBorderColor
+            rawDefaults[Key._global][Key.lightModeBorderColor] = Saved.Global.lightModeBorderColor
+            rawDefaults[Key._global][Key.darkModeGradientColor] = Saved.Global.darkModeGradientColor
+            rawDefaults[Key._global][Key.lightModeGradientColor] = Saved.Global.lightModeGradientColor
+            rawDefaults[Key._global][Key.disabled] = Saved.Global.disabled
 
     class DropDown:
         effectType: int = rawDefaults[Key.dropdown][Key.effectType]

@@ -10,7 +10,7 @@ class Path:
         BasePath: str = r"Software\\TranslucentFlyouts\\"
         Software: str = r"Software\\"
         TranslucentFlyouts: str = r"TranslucentFlyouts\\"
-        General: str = ""
+        Global: str = ""
         DropDown: str = r"DropDown\\"
         Menu: str = r"Menu\\"
         Animation: str = r"Animation\\"
@@ -21,6 +21,14 @@ class Path:
 
     class RegKeys:
         BaseKey: int = HKEY_CURRENT_USER
+        TranslucentFlyouts: str = "TranslucentFlyouts"
+        DropDown: str = "DropDown"
+        Menu: str = "Menu"
+        Animation: str = "Animation"
+        Hot: str = "Hot"
+        DisabledHot: str = "DisabledHot"
+        Focusing: str = "Focusing"
+        Separator: str = "Separator"
         EffectType: str = "EffectType"
         EnableDropShadow: str = "EnableDropShadow"
         DarkModeBorderColor: str = "DarkMode_BorderColor"
