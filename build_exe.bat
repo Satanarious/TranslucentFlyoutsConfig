@@ -1,0 +1,1 @@
+pyinstaller --onefile --clean --noconsole -n "TranslucentFlyoutsConfig" main.py
