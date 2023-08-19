@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>471</width>
-    <height>536</height>
+    <height>476</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1604,6 +1604,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_10">
             <item>
              <widget class="QScrollArea" name="scrollArea">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>310</height>
+               </size>
+              </property>
               <property name="widgetResizable">
                <bool>true</bool>
               </property>
@@ -1615,6 +1621,12 @@
                  <width>386</width>
                  <height>476</height>
                 </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_11">
                 <property name="leftMargin">

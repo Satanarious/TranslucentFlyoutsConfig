@@ -1,5 +1,23 @@
 class StyleSheet:
     @staticmethod
+    def main() -> str:
+        return """
+        QMainWindow{
+        background-color:black;
+        }
+        QWidget#tab_1,QWidget#tab_2,QWidget#tab_4{
+        background-color:black;
+        }
+        QLabel{
+        color:white;
+        }
+        """
+
+    @staticmethod
+    def frame():
+        return "QWidget#scrollAreaWidgetContents{background-color:white;}"
+
+    @staticmethod
     def buttonColorStylesheet(rgba: tuple | str) -> str:
         if type(rgba) == str:
             return "QPushButton{background-color:" + rgba + ";width:20px}"
