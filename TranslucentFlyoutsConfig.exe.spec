@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='TranslucentFlyoutsConfig',
+    name='TranslucentFlyoutsConfig.exe',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
