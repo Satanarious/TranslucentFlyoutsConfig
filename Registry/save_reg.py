@@ -254,9 +254,9 @@ class Apply:
                         valueName=Path.RegKeys.NoSystemDropShadow,
                     )
                 else:
-                    EditSettings.changeEffectType(
+                    EditSettings.changeNoSystemDropShadow(
                         keyPath=keyPath,
-                        effectType=Saved.Menu.noSystemDropShadow,
+                        isEnabled=Saved.Menu.noSystemDropShadow,
                     )
                 if Saved.Menu.enableImmersiveStyle == Defaults.Menu.enableImmersiveStyle:
                     EditRegistry.removeValue(
@@ -264,9 +264,9 @@ class Apply:
                         valueName=Path.RegKeys.EnableImmersiveStyle,
                     )
                 else:
-                    EditSettings.changeEffectType(
+                    EditSettings.changeEnableImmersiveStyle(
                         keyPath=keyPath,
-                        effectType=Saved.Menu.enableImmersiveStyle,
+                        isEnabled=Saved.Menu.enableImmersiveStyle,
                     )
                 if Saved.Menu.enableCustomRendering == Defaults.Menu.enableCustomRendering:
                     EditRegistry.removeValue(
@@ -274,9 +274,9 @@ class Apply:
                         valueName=Path.RegKeys.EnableCustomRendering,
                     )
                 else:
-                    EditSettings.changeEffectType(
+                    EditSettings.changeEnableCustomRendering(
                         keyPath=keyPath,
-                        effectType=Saved.Menu.enableCustomRendering,
+                        isEnabled=Saved.Menu.enableCustomRendering,
                     )
                 if Saved.Menu.enableFluentAnimation == Defaults.Menu.enableFluentAnimation:
                     EditRegistry.removeValue(
@@ -284,9 +284,9 @@ class Apply:
                         valueName=Path.RegKeys.EnableFluentAnimation,
                     )
                 else:
-                    EditSettings.changeEffectType(
+                    EditSettings.changeEnableFluentAnimation(
                         keyPath=keyPath,
-                        effectType=Saved.Menu.enableFluentAnimation,
+                        isEnabled=Saved.Menu.enableFluentAnimation,
                     )
                 if Saved.Menu.effectType == Settings.EffectType.UseGlobalSetting:
                     EditRegistry.removeValue(
@@ -359,7 +359,10 @@ class Apply:
                         color=Saved.Menu.lightModeBorderColor,
                     )
                 if Saved.Menu.darkModeGradientColor == Defaults.Menu.darkModeGradientColor:
-                    EditRegistry.removeValue(keyPath=keyPath, valueName=Path.RegKeys.DarkModeGradientColor)
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.DarkModeGradientColor,
+                    )
                 else:
                     EditSettings.changeDarkModeGradientColor(
                         keyPath=keyPath,
@@ -416,7 +419,7 @@ class Apply:
                             valueName=Path.RegKeys.PopInTime,
                         )
                     else:
-                        EditSettings.changeFadeOutTime(
+                        EditSettings.changePopInTime(
                             keyPath=keyPath,
                             time=Saved.Menu.Animation.popInTime,
                         )
@@ -426,7 +429,7 @@ class Apply:
                             valueName=Path.RegKeys.FadeInTime,
                         )
                     else:
-                        EditSettings.changeFadeOutTime(
+                        EditSettings.changeFadeInTime(
                             keyPath=keyPath,
                             time=Saved.Menu.Animation.fadeInTime,
                         )
@@ -436,9 +439,9 @@ class Apply:
                             valueName=Path.RegKeys.PopInStyle,
                         )
                     else:
-                        EditSettings.changeFadeOutTime(
+                        EditSettings.changePopInStyle(
                             keyPath=keyPath,
-                            time=Saved.Menu.Animation.popInStyle,
+                            style=Saved.Menu.Animation.popInStyle,
                         )
                     if Saved.Menu.Animation.startRatio == Defaults.Menu.Animation.startRatio:
                         EditRegistry.removeValue(
@@ -446,9 +449,9 @@ class Apply:
                             valueName=Path.RegKeys.StartRatio,
                         )
                     else:
-                        EditSettings.changeFadeOutTime(
+                        EditSettings.changeStartRatio(
                             keyPath=keyPath,
-                            time=Saved.Menu.Animation.startRatio,
+                            percent=Saved.Menu.Animation.startRatio,
                         )
                     if Saved.Menu.Animation.enableImmediateInterupting == Defaults.Menu.Animation.enableImmediateInterupting:
                         EditRegistry.removeValue(
@@ -456,9 +459,9 @@ class Apply:
                             valueName=Path.RegKeys.EnableImmediateInterupting,
                         )
                     else:
-                        EditSettings.changeFadeOutTime(
+                        EditSettings.changeEnableImmediateInterupting(
                             keyPath=keyPath,
-                            time=Saved.Menu.Animation.enableImmediateInterupting,
+                            isEnabled=Saved.Menu.Animation.enableImmediateInterupting,
                         )
                 except:
                     return False
@@ -491,7 +494,7 @@ class Apply:
                             valueName=Path.RegKeys.LightModeColor,
                         )
                     else:
-                        EditSettings.changeDarkModeColor(
+                        EditSettings.changeLightModeColor(
                             keyPath=keyPath,
                             color=Saved.Menu.Hot.lightModeColor,
                         )
@@ -504,6 +507,26 @@ class Apply:
                         EditSettings.changeDisabled(
                             keyPath=keyPath,
                             isDisabled=Saved.Menu.Hot.disabled,
+                        )
+                    if Saved.Menu.Hot.cornerRadius == Defaults.Menu.Hot.cornerRadius:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.CornerRadius,
+                        )
+                    else:
+                        EditSettings.changeCornerRadius(
+                            keyPath=keyPath,
+                            radius=Saved.Menu.Hot.cornerRadius,
+                        )
+                    if Saved.Menu.Hot.enableThemeColorization == Defaults.Menu.Hot.enableThemeColorization:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.EnableThemeColorization,
+                        )
+                    else:
+                        EditSettings.changeEnableThemeColorization(
+                            keyPath=keyPath,
+                            isEnabled=Saved.Menu.Hot.enableThemeColorization,
                         )
 
                 except:
@@ -537,7 +560,7 @@ class Apply:
                             valueName=Path.RegKeys.LightModeColor,
                         )
                     else:
-                        EditSettings.changeDarkModeColor(
+                        EditSettings.changeLightModeColor(
                             keyPath=keyPath,
                             color=Saved.Menu.DisabledHot.lightModeColor,
                         )
@@ -550,6 +573,26 @@ class Apply:
                         EditSettings.changeDisabled(
                             keyPath=keyPath,
                             isDisabled=Saved.Menu.DisabledHot.disabled,
+                        )
+                    if Saved.Menu.DisabledHot.cornerRadius == Defaults.Menu.DisabledHot.cornerRadius:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.CornerRadius,
+                        )
+                    else:
+                        EditSettings.changeCornerRadius(
+                            keyPath=keyPath,
+                            radius=Saved.Menu.DisabledHot.cornerRadius,
+                        )
+                    if Saved.Menu.DisabledHot.enableThemeColorization == Defaults.Menu.DisabledHot.enableThemeColorization:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.EnableThemeColorization,
+                        )
+                    else:
+                        EditSettings.changeEnableThemeColorization(
+                            keyPath=keyPath,
+                            isEnabled=Saved.Menu.DisabledHot.enableThemeColorization,
                         )
 
                 except:
@@ -593,7 +636,7 @@ class Apply:
                             valueName=Path.RegKeys.LightModeColor,
                         )
                     else:
-                        EditSettings.changeDarkModeColor(
+                        EditSettings.changeLightModeColor(
                             keyPath=keyPath,
                             color=Saved.Menu.Focusing.lightModeColor,
                         )
@@ -606,6 +649,26 @@ class Apply:
                         EditSettings.changeDisabled(
                             keyPath=keyPath,
                             isDisabled=Saved.Menu.Focusing.disabled,
+                        )
+                    if Saved.Menu.Focusing.cornerRadius == Defaults.Menu.Focusing.cornerRadius:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.CornerRadius,
+                        )
+                    else:
+                        EditSettings.changeCornerRadius(
+                            keyPath=keyPath,
+                            radius=Saved.Menu.Focusing.cornerRadius,
+                        )
+                    if Saved.Menu.Focusing.enableThemeColorization == Defaults.Menu.Focusing.enableThemeColorization:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.EnableThemeColorization,
+                        )
+                    else:
+                        EditSettings.changeEnableThemeColorization(
+                            keyPath=keyPath,
+                            isEnabled=Saved.Menu.Focusing.enableThemeColorization,
                         )
 
                 except:
@@ -649,7 +712,7 @@ class Apply:
                             valueName=Path.RegKeys.LightModeColor,
                         )
                     else:
-                        EditSettings.changeDarkModeColor(
+                        EditSettings.changeLightModeColor(
                             keyPath=keyPath,
                             color=Saved.Menu.Separator.lightModeColor,
                         )
@@ -662,6 +725,26 @@ class Apply:
                         EditSettings.changeDisabled(
                             keyPath=keyPath,
                             isDisabled=Saved.Menu.Separator.disabled,
+                        )
+                    if Saved.Menu.Separator.cornerRadius == Defaults.Menu.Separator.cornerRadius:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.CornerRadius,
+                        )
+                    else:
+                        EditSettings.changeCornerRadius(
+                            keyPath=keyPath,
+                            radius=Saved.Menu.Separator.cornerRadius,
+                        )
+                    if Saved.Menu.Separator.enableThemeColorization == Defaults.Menu.Separator.enableThemeColorization:
+                        EditRegistry.removeValue(
+                            keyPath=keyPath,
+                            valueName=Path.RegKeys.EnableThemeColorization,
+                        )
+                    else:
+                        EditSettings.changeEnableThemeColorization(
+                            keyPath=keyPath,
+                            isEnabled=Saved.Menu.Separator.enableThemeColorization,
                         )
 
                 except:

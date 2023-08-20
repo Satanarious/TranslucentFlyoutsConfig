@@ -63,6 +63,10 @@ class SaveSettings:
             - Fetch values from their respective fields
             - Save values to the user_settings.json file
             """
+            Saved.Menu.noSystemDropShadow = window.noSystemDropShadow.currentIndex()
+            Saved.Menu.enableImmersiveStyle = window.enableImmersiveStyle.currentIndex()
+            Saved.Menu.enableFluentAnimation = window.enableFluentAnimation.currentIndex()
+            Saved.Menu.enableCustomRendering = window.enableCustomRendering.currentIndex()
             Saved.Menu.effectType = window.effectType3.currentIndex()
             Saved.Menu.cornerType = window.cornerType3.currentIndex()
             Saved.Menu.enableDropShadow = window.enableDropShadow3.currentIndex()
