@@ -1,80 +1,80 @@
 {
   "Global": {
-    "Effect Type": 5,
-    "Corner Type": 3,
-    "Enable Drop Shadow": 0,
-    "No Border Color": 0,
-    "Enable Theme Colorization": 0,
-    "Dark Mode Border Color": "",
-    "Light Mode Border Color": "",
-    "Dark Mode Gradient Color": "",
-    "Light Mode Gradient Color": "",
-    "Disabled": 0
+    "Effekt Typ": 5,
+    "Ecken-Typ": 3,
+    "Aktiviere Schattenerzeugung": 0,
+    "Keine Randfarbe": 0,
+    "Aktiviere Theme einfärbung": 0,
+    "Dunkler Modus Rand Farbe": "",
+    "Heller Modus Rand Farbe": "",
+    "Dunkler Modus Farbverlauf Farbe": "",
+    "Licht Modus Farbverlauf Farbe": "",
+    "Deaktiviert": 0
   },
   "DropDown": {
-    "Effect Type": 9,
-    "Corner Type": 4,
-    "Enable Drop Shadow": 2,
-    "No Border Color": 2,
-    "Enable Theme Colorization": 2,
-    "Dark Mode Border Color": "",
-    "Light Mode Border Color": "",
-    "Dark Mode Gradient Color": "",
-    "Light Mode Gradient Color": "",
-    "Disabled": 2
+    "Effekt Typ": 9,
+    "Ecken-Typ": 4,
+    "Aktiviere Schattenerzeugung": 2,
+    "Keine Randfarbe": 2,
+    "Aktiviere Theme einfärbung": 2,
+    "Dunkler Modus Rand Farbe": "",
+    "Heller Modus Rand Farbe": "",
+    "Dunkler Modus Farbverlauf Farbe": "",
+    "Licht Modus Farbverlauf Farbe": "",
+    "Deaktiviert": 2
   },
   "Menu": {
-    "No System Drop Shadow": 0,
-    "Enable Immersive Style": 1,
-    "Enable Custom Rendering": 0,
-    "Enable Fluent Animation": 0,
-    "Effect Type": 9,
-    "Corner Type": 4,
-    "Enable Drop Shadow": 2,
-    "No Border Color": 2,
-    "Enable Theme Colorization": 2,
-    "Dark Mode Border Color": "",
-    "Light Mode Border Color": "",
-    "Dark Mode Gradient Color": "",
-    "Light Mode Gradient Color": "",
-    "Disabled": 2,
+    "Deaktiviere System-Schattenerzeugung": 0,
+    "Aktiviere Immersiv-Stil": 1,
+    "Aktiviere Benutzerdefiniertes Rendering": 0,
+    "Aktiviere Fluent Animation": 0,
+    "Effekt Typ": 9,
+    "Ecken-Typ": 4,
+    "Aktiviere Schattenerzeugung": 2,
+    "Keine Randfarbe": 2,
+    "Aktiviere Theme einfärbung": 2,
+    "Dunkler Modus Rand Farbe": "",
+    "Heller Modus Rand Farbe": "",
+    "Dunkler Modus Farbverlauf Farbe": "",
+    "Licht Modus Farbverlauf Farbe": "",
+    "Deaktiviert": 2,
     "Animation": {
-      "Fade Out Time": 350,
-      "Pop In Time": 250,
-      "Fade In Time": 87,
-      "Pop In Style": 0,
-      "Start Ratio": 50,
-      "Enable Immediate Interupting": 0
+      "Verblassen Aus Zeit": 350,
+      "Pop In Zeit": 250,
+      "Verblassen In Zeit": 87,
+      "Pop In Stil": 0,
+      "Start Verhältnis": 50,
+      "Aktiviere sofortige Unterbrechung": 0
     },
-    "Disabled Hot": {
-      "Corner Radius": 8,
-      "Dark Mode Color": "0",
-      "Light Mode Color": "0",
-      "Enable Theme Colorization": 0,
-      "Disabled": 0
+    "Deaktiviert Aktiv": {
+      "Ecken-Radius": 8,
+      "Dunkler Modus Farbe": "0",
+      "Heller Modus Farbe": "0",
+      "Aktiviere Theme einfärbung": 0,
+      "Deaktiviert": 0
     },
-    "Focusing": {
-      "Width": 1000,
-      "Corner Radius": 8,
-      "Dark Mode Color": "",
-      "Light Mode Color": "",
-      "Enable Theme Colorization": 0,
-      "Disabled": 0
+    "Fokussieren": {
+      "Breite": 1000,
+      "Ecken-Radius": 8,
+      "Dunkler Modus Farbe": "",
+      "Heller Modus Farbe": "",
+      "Aktiviere Theme einfärbung": 0,
+      "Deaktiviert": 0
     },
-    "Hot": {
-      "Corner Radius": 8,
-      "Dark Mode Color": "",
-      "Light Mode Color": "",
-      "Enable Theme Colorization": 0,
-      "Disabled": 0
+    "Aktiv": {
+      "Ecken-Radius": 8,
+      "Dunkler Modus Farbe": "",
+      "Heller Modus Farbe": "",
+      "Aktiviere Theme einfärbung": 0,
+      "Deaktiviert": 0
     },
     "Separator": {
-      "Width": 1000,
-      "Corner Radius": 8,
-      "Dark Mode Color": "",
-      "Light Mode Color": "",
-      "Enable Theme Colorization": 0,
-      "Disabled": 0
+      "Breite": 1000,
+      "Ecken-Radius": 8,
+      "Dunkler Modus Farbe": "",
+      "Heller Modus Farbe": "",
+      "Aktiviere Theme einfärbung": 0,
+      "Deaktiviert": 0
     }
   }
 }
