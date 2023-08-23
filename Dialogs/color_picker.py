@@ -36,6 +36,15 @@ class ColorPicker:
         return aarrggbb.upper()
 
     @staticmethod
+    def aarrggbb_to_rgba(color: str) -> list[int]:
+        return [
+            int(color[2:4], 16),
+            int(color[4:6], 16),
+            int(color[6:8], 16),
+            int(color[:2], 16),
+        ]
+
+    @staticmethod
     def connectColorDialog(lineEdit: QLineEdit, pushButton: QPushButton) -> None:
         def connectWidgets() -> None:
             """
@@ -45,7 +54,14 @@ class ColorPicker:
             """
             colorPicker: QColorDialog = QColorDialog()
             colorPicker.setWindowIcon(QIcon(Path.IconPaths.ColorPicker))
-            color: QColor = colorPicker.getColor(options=QColorDialog.ColorDialogOption.ShowAlphaChannel)
+            aarrggbb: str = lineEdit.text()
+            if aarrggbb:
+                color: QColor = colorPicker.getColor(
+                    initial=QColor(*ColorPicker.aarrggbb_to_rgba(aarrggbb)),
+                    options=QColorDialog.ColorDialogOption.ShowAlphaChannel,
+                )
+            else:
+                color: QColor = colorPicker.getColor(options=QColorDialog.ColorDialogOption.ShowAlphaChannel)
             if color.isValid():
                 lineEdit.setText(ColorPicker.rgba_to_aarrggbb(tuple(color.getRgb())))
                 ColorPicker.changeButtonColor(
