@@ -73,6 +73,13 @@ class Settings:
         SmoothZoom = 3
 
 
+class Languages(IntEnum):
+    Default = 0
+    Hindi = 1
+    German = 2
+    Chinese = 3
+
+
 class Presets(IntEnum):
     """
     Preset Enums have presets for various combinations of settings that modify

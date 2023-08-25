@@ -2,6 +2,9 @@ from winreg import HKEY_CURRENT_USER
 
 
 class Path:
+    class Translations:
+        Hindi: str = "Translations/hi-in.json"
+
     class IconPaths:
         ResetIcon: str = "Assets/View-refresh.svg.png"
         ColorPicker: str = "Assets/2867978.png"
