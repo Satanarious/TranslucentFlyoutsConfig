@@ -41,6 +41,10 @@ class Settings:
         No = 0
         Yes = 1
 
+    class NoModernAppBackgroundColor(IntEnum):
+        No = 0
+        Yes = 1
+
     class EnableCustomRendering(IntEnum):
         No = 0
         Yes = 1

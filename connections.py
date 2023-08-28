@@ -33,6 +33,7 @@ class Connectors:
         window.applyButton3_4.clicked.connect(lambda a: SaveSettings.Menu.DisabledHot.save(window))
         window.applyButton3_5.clicked.connect(lambda a: SaveSettings.Menu.Focusing.save(window))
         window.applyButton3_6.clicked.connect(lambda a: SaveSettings.Menu.Separator.save(window))
+        window.applyButton3_6.clicked.connect(lambda a: SaveSettings.Tooltip.save(window))
 
     @staticmethod
     def connectResetButtons(window: Main) -> None:
@@ -250,6 +251,27 @@ class Connectors:
             valueWidget=window.enableFluentAnimation,
             defaultValue=Defaults.Menu.enableFluentAnimation,
             savedValue=ClassVar.joinVars(ClassVar.menu, ClassVar.enableFluentAnimation),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_modern_app_background_color,
+            valueWidget=window.noModernAppBackgroundColor,
+            defaultValue=Defaults.Menu.noModernAppBackgroundColor,
+            savedValue=ClassVar.joinVars(ClassVar.menu, ClassVar.noModernAppBackgroundColor),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_color_treat_as_transparent,
+            valueWidget=window.colorTreatAsTransparent,
+            defaultValue=Defaults.Menu.colorTreatAsTransparent,
+            savedValue=ClassVar.joinVars(ClassVar.menu, ClassVar.colorTreatAsTransparent),
+            colorPickerButton=window.color_treat_as_transparent_color_picker,
+        )
+        configureResetButton(
+            resetButton=window.reset_color_treat_as_transparent_threshold,
+            valueWidget=window.colorTreatAsTransparentThreshold,
+            defaultValue=Defaults.Menu.colorTreatAsTransparentThreshold,
+            savedValue=ClassVar.joinVars(ClassVar.menu, ClassVar.colorTreatAsTransparentThreshold),
             colorPickerButton=None,
         )
         configureResetButton(
@@ -528,6 +550,78 @@ class Connectors:
             colorPickerButton=None,
         )
 
+        # Tooltip
+        configureResetButton(
+            resetButton=window.reset_effect_type4,
+            valueWidget=window.effectType4,
+            defaultValue=Defaults.Tooltip.effectType,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.effectType),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_corner_type4,
+            valueWidget=window.cornerType4,
+            defaultValue=Defaults.Tooltip.cornerType,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.cornerType),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_drop_shadow4,
+            valueWidget=window.enableDropShadow4,
+            defaultValue=Defaults.Tooltip.enableDropShadow,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.enableDropShadow),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_theme_colorization4,
+            valueWidget=window.enableThemeColorization4,
+            defaultValue=Defaults.Tooltip.enableThemeColorization,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.enableThemeColorization),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_border_color4,
+            valueWidget=window.noBorderColor4,
+            defaultValue=Defaults.Tooltip.noBorderColor,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.noBorderColor),
+            colorPickerButton=None,
+        )
+        configureResetButton(
+            resetButton=window.reset_dark_mode_border_color4,
+            valueWidget=window.darkModeBorderColor4,
+            defaultValue=Defaults.Tooltip.darkModeBorderColor,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.darkModeBorderColor),
+            colorPickerButton=window.dark_mode_border_color_picker4,
+        )
+        configureResetButton(
+            resetButton=window.reset_light_mode_border_color4,
+            valueWidget=window.lightModeBorderColor4,
+            defaultValue=Defaults.Tooltip.lightModeBorderColor,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.lightModeBorderColor),
+            colorPickerButton=window.light_mode_border_color_picker4,
+        )
+        configureResetButton(
+            resetButton=window.reset_dark_mode_gradient_color4,
+            valueWidget=window.darkModeGradientColor4,
+            defaultValue=Defaults.Tooltip.darkModeGradientColor,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.darkModeGradientColor),
+            colorPickerButton=window.dark_mode_gradient_color_picker4,
+        )
+        configureResetButton(
+            resetButton=window.reset_light_mode_gradient_color4,
+            valueWidget=window.lightModeGradientColor4,
+            defaultValue=Defaults.Tooltip.lightModeGradientColor,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.lightModeGradientColor),
+            colorPickerButton=window.light_mode_gradient_color_picker4,
+        )
+        configureResetButton(
+            resetButton=window.reset_disabled4,
+            valueWidget=window.disabledEffect4,
+            defaultValue=Defaults.Tooltip.disabled,
+            savedValue=ClassVar.joinVars(ClassVar.tooltip, ClassVar.disabled),
+            colorPickerButton=None,
+        )
+
     @staticmethod
     def connectColorPickers(window: Main) -> None:
         """
@@ -574,6 +668,10 @@ class Connectors:
             pushButton=window.light_mode_gradient_color_picker2,
         )
         # Menu-General
+        ColorPicker.connectColorDialog(
+            lineEdit=window.colorTreatAsTransparent,
+            pushButton=window.color_treat_as_transparent_color_picker,
+        )
         ColorPicker.connectColorDialog(
             lineEdit=window.darkModeBorderColor3,
             pushButton=window.dark_mode_border_color_picker3,
@@ -630,4 +728,22 @@ class Connectors:
         ColorPicker.connectColorDialog(
             lineEdit=window.lightModeColor1_4,
             pushButton=window.light_mode_color_picker1_4,
+        )
+        # Tooltip
+        ColorPicker.connectColorDialog(
+            lineEdit=window.darkModeBorderColor4,
+            pushButton=window.dark_mode_border_color_picker4,
+        )
+        ColorPicker.connectColorDialog(
+            lineEdit=window.lightModeBorderColor4,
+            pushButton=window.light_mode_border_color_picker4,
+        )
+
+        ColorPicker.connectColorDialog(
+            lineEdit=window.darkModeGradientColor4,
+            pushButton=window.dark_mode_gradient_color_picker4,
+        )
+        ColorPicker.connectColorDialog(
+            lineEdit=window.lightModeGradientColor4,
+            pushButton=window.light_mode_gradient_color_picker4,
         )

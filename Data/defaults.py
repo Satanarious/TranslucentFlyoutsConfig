@@ -14,6 +14,7 @@ class Key:
     focusing: str = "Focusing"
     hot: str = "Hot"
     separator: str = "Separator"
+    tooltip: str = "Tooltip"
     effectType: str = "Effect Type"
     cornerType: str = "Corner Type"
     enableDropShadow: str = "Enable Drop Shadow"
@@ -27,6 +28,9 @@ class Key:
     enableImmersiveStyle: str = "Enable Immersive Style"
     enableCustomRendering: str = "Enable Custom Rendering"
     enableFluentAnimation: str = "Enable Fluent Animation"
+    noModernAppBackgroundColor: str = "No Modern App Background Color"
+    colorTreatAsTransparent: str = "Color Treat As Transparent"
+    colorTreatAsTransparentThreshold: str = "Color Treat As Transparent Threshold"
     fadeOutTime: str = "Fade Out Time"
     popInTime: str = "Pop In Time"
     fadeInTime: str = "Fade In Time"
@@ -71,6 +75,9 @@ class Defaults:
         enableImmersiveStyle: int = rawDefaults[Key.menu][Key.enableImmersiveStyle]
         enableCustomRendering: int = rawDefaults[Key.menu][Key.enableCustomRendering]
         enableFluentAnimation: int = rawDefaults[Key.menu][Key.enableFluentAnimation]
+        noModernAppBackgroundColor: int = rawDefaults[Key.menu][Key.noModernAppBackgroundColor]
+        colorTreatAsTransparent: str = rawDefaults[Key.menu][Key.colorTreatAsTransparent]
+        colorTreatAsTransparentThreshold: int = rawDefaults[Key.menu][Key.colorTreatAsTransparentThreshold]
         effectType: int = rawDefaults[Key.menu][Key.effectType]
         cornerType: int = rawDefaults[Key.menu][Key.cornerType]
         enableDropShadow: int = rawDefaults[Key.menu][Key.enableDropShadow]
@@ -119,3 +126,15 @@ class Defaults:
             lightModeColor: str = rawDefaults[Key.menu][Key.separator][Key.lightModeColor]
             enableThemeColorization: int = rawDefaults[Key.menu][Key.separator][Key.enableThemeColorization]
             disabled: int = rawDefaults[Key.menu][Key.separator][Key.disabled]
+
+    class Tooltip:
+        effectType: int = rawDefaults[Key.tooltip][Key.effectType]
+        cornerType: int = rawDefaults[Key.tooltip][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key.tooltip][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key.tooltip][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key.tooltip][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key.tooltip][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key.tooltip][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key.tooltip][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key.tooltip][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key.tooltip][Key.disabled]

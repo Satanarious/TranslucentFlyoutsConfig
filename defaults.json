@@ -28,6 +28,9 @@
     "Enable Immersive Style": 1,
     "Enable Custom Rendering": 0,
     "Enable Fluent Animation": 0,
+    "No Modern App Background Color": 1,
+    "Color Treat As Transparent": "",
+    "Color Treat As Transparent Threshold": 50,
     "Effect Type": 9,
     "Corner Type": 4,
     "Enable Drop Shadow": 2,
@@ -76,5 +79,17 @@
       "Enable Theme Colorization": 0,
       "Disabled": 0
     }
+  },
+  "Tooltip": {
+    "Effect Type": 9,
+    "Corner Type": 4,
+    "Enable Drop Shadow": 2,
+    "No Border Color": 2,
+    "Enable Theme Colorization": 2,
+    "Dark Mode Border Color": "",
+    "Light Mode Border Color": "",
+    "Dark Mode Gradient Color": "",
+    "Light Mode Gradient Color": "",
+    "Disabled": 2
   }
 }

@@ -20,6 +20,7 @@ class EditRegistry:
             - DisabledHot at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\DisabledHot"
             - Focusing at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\Focusing"
             - Separator at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Menu\\Separator"
+        - Creates the Tooltip Key at "HKEY_CURRENT_USER\\Software\\TranslucentFylouts\\Tooltip"
         """
         menuPath = Path.RegPaths.BasePath + Path.RegPaths.Menu
         EditRegistry.createKey(basePath=Path.RegPaths.Software, keyName=Path.RegKeys.TranslucentFlyouts)
@@ -30,6 +31,7 @@ class EditRegistry:
         EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.DisabledHot)
         EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Focusing)
         EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Separator)
+        EditRegistry.createKey(basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.Tooltip)
 
     @staticmethod
     def createKey(

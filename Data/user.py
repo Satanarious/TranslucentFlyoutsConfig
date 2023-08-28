@@ -19,46 +19,11 @@ class ClassVar:
     dropdown: str = "DropDown"
     menu: str = "Menu"
     animation: str = "Animation"
-    disabledHot: str = "DisabledHot"
-    focusing: str = "Focusing"
-    hot: str = "Hot"
-    separator: str = "Separator"
-    effectType: str = "effectType"
-    cornerType: str = "cornerType"
-    enableDropShadow: str = "enableDropShadow"
-    noBorderColor: str = "noBorderColor"
-    darkModeBorderColor: str = "darkModeBorderColor"
-    lightModeBorderColor: str = "lightModeBorderColor"
-    darkModeGradientColor: str = "darkModeGradientColor"
-    lightModeGradientColor: str = "lightModeGradientColor"
-    disabled: str = "disabled"
-    noSystemDropShadow: str = "noSystemDropShadow"
-    enableImmersiveStyle: str = "enableImmersiveStyle"
-    enableCustomRendering: str = "enableCustomRendering"
-    enableFluentAnimation: str = "enableFluentAnimation"
-    fadeOutTime: str = "fadeOutTime"
-    popInTime: str = "popInTime"
-    fadeInTime: str = "fadeInTime"
-    popInStyle: str = "popInStyle"
-    startRatio: str = "startRatio"
-    enableImmediateInterupting: str = "enableImmediateInterupting"
-    cornerRadius: str = "cornerRadius"
-    darkModeColor: str = "darkModeColor"
-    lightModeColor: str = "lightModeColor"
-    enableThemeColorization: str = "enableThemeColorization"
-    width: str = "width"
-
-
-# Keys from JSON file
-class Key:
-    _global: str = "Global"
-    dropdown: str = "DropDown"
-    menu: str = "Menu"
-    animation: str = "Animation"
     disabledHot: str = "Disabled Hot"
     focusing: str = "Focusing"
     hot: str = "Hot"
     separator: str = "Separator"
+    tooltip: str = "Tooltip"
     effectType: str = "Effect Type"
     cornerType: str = "Corner Type"
     enableDropShadow: str = "Enable Drop Shadow"
@@ -72,6 +37,49 @@ class Key:
     enableImmersiveStyle: str = "Enable Immersive Style"
     enableCustomRendering: str = "Enable Custom Rendering"
     enableFluentAnimation: str = "Enable Fluent Animation"
+    noModernAppBackgroundColor: str = "No Modern App Background Color"
+    colorTreatAsTransparent: str = "Color Treat As Transparent"
+    colorTreatAsTransparentThreshold: str = "Color Treat As Transparent Threshold"
+    fadeOutTime: str = "Fade Out Time"
+    popInTime: str = "Pop In Time"
+    fadeInTime: str = "Fade In Time"
+    popInStyle: str = "Pop In Style"
+    startRatio: str = "Start Ratio"
+    enableImmediateInterupting: str = "Enable Immediate Interupting"
+    cornerRadius: str = "Corner Radius"
+    darkModeColor: str = "Dark Mode Color"
+    lightModeColor: str = "Light Mode Color"
+    enableThemeColorization: str = "Enable Theme Colorization"
+    width: str = "Width"
+
+
+# Keys from JSON file
+class Key:
+    _global: str = "Global"
+    dropdown: str = "DropDown"
+    menu: str = "Menu"
+    animation: str = "Animation"
+    disabledHot: str = "Disabled Hot"
+    focusing: str = "Focusing"
+    hot: str = "Hot"
+    separator: str = "Separator"
+    tooltip: str = "Tooltip"
+    effectType: str = "Effect Type"
+    cornerType: str = "Corner Type"
+    enableDropShadow: str = "Enable Drop Shadow"
+    noBorderColor: str = "No Border Color"
+    darkModeBorderColor: str = "Dark Mode Border Color"
+    lightModeBorderColor: str = "Light Mode Border Color"
+    darkModeGradientColor: str = "Dark Mode Gradient Color"
+    lightModeGradientColor: str = "Light Mode Gradient Color"
+    disabled: str = "Disabled"
+    noSystemDropShadow: str = "No System Drop Shadow"
+    enableImmersiveStyle: str = "Enable Immersive Style"
+    enableCustomRendering: str = "Enable Custom Rendering"
+    enableFluentAnimation: str = "Enable Fluent Animation"
+    noModernAppBackgroundColor: str = "No Modern App Background Color"
+    colorTreatAsTransparent: str = "Color Treat As Transparent"
+    colorTreatAsTransparentThreshold: str = "Color Treat As Transparent Threshold"
     fadeOutTime: str = "Fade Out Time"
     popInTime: str = "Pop In Time"
     fadeInTime: str = "Fade In Time"
@@ -227,6 +235,9 @@ class Saved:
         enableImmersiveStyle: int = rawDefaults[Key.menu][Key.enableImmersiveStyle]
         enableCustomRendering: int = rawDefaults[Key.menu][Key.enableCustomRendering]
         enableFluentAnimation: int = rawDefaults[Key.menu][Key.enableFluentAnimation]
+        noModernAppBackgroundColor: int = rawDefaults[Key.menu][Key.noModernAppBackgroundColor]
+        colorTreatAsTransparent: str = rawDefaults[Key.menu][Key.colorTreatAsTransparent]
+        colorTreatAsTransparentThreshold: int = rawDefaults[Key.menu][Key.colorTreatAsTransparentThreshold]
         effectType: int = rawDefaults[Key.menu][Key.effectType]
         cornerType: int = rawDefaults[Key.menu][Key.cornerType]
         enableDropShadow: int = rawDefaults[Key.menu][Key.enableDropShadow]
@@ -244,6 +255,9 @@ class Saved:
             rawDefaults[Key.menu][Key.enableImmersiveStyle] = Saved.Menu.enableImmersiveStyle
             rawDefaults[Key.menu][Key.enableCustomRendering] = Saved.Menu.enableCustomRendering
             rawDefaults[Key.menu][Key.enableFluentAnimation] = Saved.Menu.enableFluentAnimation
+            rawDefaults[Key.menu][Key.noModernAppBackgroundColor] = Saved.Menu.noModernAppBackgroundColor
+            rawDefaults[Key.menu][Key.colorTreatAsTransparent] = Saved.Menu.colorTreatAsTransparent
+            rawDefaults[Key.menu][Key.colorTreatAsTransparentThreshold] = Saved.Menu.colorTreatAsTransparentThreshold
             rawDefaults[Key.menu][Key.effectType] = Saved.Menu.effectType
             rawDefaults[Key.menu][Key.cornerType] = Saved.Menu.cornerType
             rawDefaults[Key.menu][Key.enableDropShadow] = Saved.Menu.enableDropShadow
@@ -335,3 +349,28 @@ class Saved:
                 rawDefaults[Key.menu][Key.separator][Key.lightModeColor] = Saved.Menu.Separator.lightModeColor
                 rawDefaults[Key.menu][Key.separator][Key.enableThemeColorization] = Saved.Menu.Separator.enableThemeColorization
                 rawDefaults[Key.menu][Key.separator][Key.disabled] = Saved.Menu.Separator.disabled
+
+    class Tooltip:
+        effectType: int = rawDefaults[Key.tooltip][Key.effectType]
+        cornerType: int = rawDefaults[Key.tooltip][Key.cornerType]
+        enableDropShadow: int = rawDefaults[Key.tooltip][Key.enableDropShadow]
+        noBorderColor: int = rawDefaults[Key.tooltip][Key.noBorderColor]
+        enableThemeColorization: int = rawDefaults[Key.tooltip][Key.enableThemeColorization]
+        darkModeBorderColor: str = rawDefaults[Key.tooltip][Key.darkModeBorderColor]
+        lightModeBorderColor: str = rawDefaults[Key.tooltip][Key.lightModeBorderColor]
+        darkModeGradientColor: str = rawDefaults[Key.tooltip][Key.darkModeGradientColor]
+        lightModeGradientColor: str = rawDefaults[Key.tooltip][Key.lightModeGradientColor]
+        disabled: int = rawDefaults[Key.tooltip][Key.disabled]
+
+        @staticmethod
+        def updateDict():
+            rawDefaults[Key.tooltip][Key.effectType] = Saved.Tooltip.effectType
+            rawDefaults[Key.tooltip][Key.cornerType] = Saved.Tooltip.cornerType
+            rawDefaults[Key.tooltip][Key.enableDropShadow] = Saved.Tooltip.enableDropShadow
+            rawDefaults[Key.tooltip][Key.noBorderColor] = Saved.Tooltip.noBorderColor
+            rawDefaults[Key.tooltip][Key.enableThemeColorization] = Saved.Tooltip.enableThemeColorization
+            rawDefaults[Key.tooltip][Key.darkModeBorderColor] = Saved.Tooltip.darkModeBorderColor
+            rawDefaults[Key.tooltip][Key.lightModeBorderColor] = Saved.Tooltip.lightModeBorderColor
+            rawDefaults[Key.tooltip][Key.darkModeGradientColor] = Saved.Tooltip.darkModeGradientColor
+            rawDefaults[Key.tooltip][Key.lightModeGradientColor] = Saved.Tooltip.lightModeGradientColor
+            rawDefaults[Key.tooltip][Key.disabled] = Saved.Tooltip.disabled

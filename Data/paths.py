@@ -18,6 +18,7 @@ class Path:
         DisabledHot: str = r"DisabledHot\\"
         Focusing: str = r"Focusing\\"
         Separator: str = r"Separator\\"
+        Tooltip: str = r"Tooltip\\"
 
     class RegKeys:
         BaseKey: int = HKEY_CURRENT_USER
@@ -29,6 +30,7 @@ class Path:
         DisabledHot: str = "DisabledHot"
         Focusing: str = "Focusing"
         Separator: str = "Separator"
+        Tooltip: str = "Tooltip"
         EffectType: str = "EffectType"
         EnableDropShadow: str = "EnableDropShadow"
         DarkModeBorderColor: str = "DarkMode_BorderColor"
@@ -42,6 +44,9 @@ class Path:
         EnableImmersiveStyle: str = "EnableImmersiveStyle"
         EnableCustomRendering: str = "EnableCustomRendering"
         EnableFluentAnimation: str = "EnableFluentAnimation"
+        NoModernAppBackgroundColor: str = "NoModernAppBackgroundColor"
+        ColorTreatAsTransparent: str = "ColorTreatAsTransparent"
+        ColorTreatAsTransparentThreshold: str = "ColorTreatAsTransparentThreshold"
         FadeOutTime: str = "FadeOutTime"
         PopInTime: str = "PopInTime"
         FadeInTime: str = "FadeInTime"
