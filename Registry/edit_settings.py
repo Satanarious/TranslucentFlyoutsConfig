@@ -62,9 +62,9 @@ class EditSettings:
     ):
         """
         Method to:
-        Change the color of various menu-items.
+        Change the color of various menu-items in dark-mode.
         - keyPath: path of the Key which needs to be changed
-        - color: color in the form of AARRGGBB
+        - color: 32-bit color in the form of AARRGGBB
         """
         EditRegistry.setValue(
             keyPath=keyPath,
@@ -79,7 +79,7 @@ class EditSettings:
     ):
         """
         Method to:
-        Change the color of various menu-items.
+        Change the color of various menu-items in light-mode.
         - keyPath: path of the Key which needs to be changed
         - color: 32-bit color in the form of AARRGGBB
         """
@@ -96,7 +96,7 @@ class EditSettings:
     ):
         """
         Method to:
-        Change the border color of flyouts.
+        Change the border color of flyouts in dark-mode.
         - keyPath: path of the Key which needs to be changed
         - color: 32-bit color in the form of AARRGGBB
         """
@@ -113,7 +113,7 @@ class EditSettings:
     ):
         """
         Method to:
-        Change the border color of flyouts.
+        Change the border color of flyouts in light-mode.
         - keyPath: path of the Key which needs to be changed
         - color: 32-bit color in the form of AARRGGBB
         """
@@ -130,7 +130,7 @@ class EditSettings:
     ):
         """
         Method to:
-        Change the gradient color of various flyout elements in dark mode.
+        Change the gradient color of various flyout elements in dark-mode.
         - keyPath: path of the Key which needs to be changed
         - color: 32-bit color in the form of AARRGGBB
         """
@@ -147,7 +147,7 @@ class EditSettings:
     ):
         """
         Method to:
-        Change the gradient color of various flyout elements in light mode.
+        Change the gradient color of various flyout elements in light-mode.
         - keyPath: path of the Key which needs to be changed
         - color: 32-bit color in the form of AARRGGBB
         """
@@ -198,7 +198,7 @@ class EditSettings:
     ):
         """
         Method to:
-        Change whether to enable modern Fluent pop-up animation for menus.
+        Change whether to enable modern and fluent pop-up animation for menus.
         - keyPath: path of the Key which needs to be changed
         - isEnabled: mention whether to enable this property or not
         """
@@ -206,6 +206,57 @@ class EditSettings:
             keyPath=keyPath,
             valueName=Path.RegKeys.EnableFluentAnimation,
             value=isEnabled,
+        )
+
+    @staticmethod
+    def changeNoModernAppBackgroundColor(
+        keyPath: Path.RegPaths | str,
+        isDisabled: int,
+    ):
+        """
+        Method to:
+        Change whether to remove the background color of UWP icons.
+        - keyPath: path of the Key which needs to be changed
+        - isDisabled: mention whether to disable this property or not
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.NoModernAppBackgroundColor,
+            value=isDisabled,
+        )
+
+    @staticmethod
+    def changeColorTreatAsTransparent(
+        keyPath: Path.RegPaths | str,
+        color: str,
+    ):
+        """
+        Method to:
+        Removes specific background colors (0xAARRGGBB) of certain icons when this item exists.
+        - keyPath: path of the Key which needs to be changed
+        - color: color to be removed
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.ColorTreatAsTransparent,
+            value=int(color, 16),
+        )
+
+    @staticmethod
+    def changeColorTreatAsTransparentThreshold(
+        keyPath: Path.RegPaths | str,
+        threshold: int,
+    ):
+        """
+        Method to The color difference threshold between the pixel and the background color to be removed.
+        When the color difference between pixels is less than this color difference threshold, the pixel will be made transparent.
+        - keyPath: path of thekey which needs to be changed
+        - threshold: color threshold
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.ColorTreatAsTransparentThreshold,
+            value=threshold,
         )
 
     @staticmethod
@@ -394,7 +445,7 @@ class EditSettings:
         """
         EditRegistry.setValue(
             keyPath=keyPath,
-            valueName=Path.RegKeys.PopInTime,
+            valueName=Path.RegKeys.StartRatio,
             value=percent,
         )
 
@@ -407,7 +458,7 @@ class EditSettings:
         Method to:
         Change the width of various menu-items
         - keyPath: path of the key which needs to be changed
-        - width: percent of the start animation
+        - width: width of the menu items
         """
         EditRegistry.setValue(
             keyPath=keyPath,
