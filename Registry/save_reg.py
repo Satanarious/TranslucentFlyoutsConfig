@@ -304,7 +304,7 @@ class Apply:
                         valueName=Path.RegKeys.ColorTreatAsTransparent,
                     )
                 else:
-                    EditSettings.changecolorTreatAsTransparent(
+                    EditSettings.changeColorTreatAsTransparent(
                         keyPath=keyPath,
                         color=Saved.Menu.colorTreatAsTransparent,
                     )
@@ -314,7 +314,7 @@ class Apply:
                         valueName=Path.RegKeys.ColorTreatAsTransparentThreshold,
                     )
                 else:
-                    EditSettings.changecolorTreatAsTransparentThreshold(
+                    EditSettings.changeColorTreatAsTransparentThreshold(
                         keyPath=keyPath,
                         threshold=Saved.Menu.colorTreatAsTransparentThreshold,
                     )

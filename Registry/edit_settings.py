@@ -226,7 +226,7 @@ class EditSettings:
         )
 
     @staticmethod
-    def changecolorTreatAsTransparent(
+    def changeColorTreatAsTransparent(
         keyPath: Path.RegPaths | str,
         color: str,
     ):
@@ -239,11 +239,11 @@ class EditSettings:
         EditRegistry.setValue(
             keyPath=keyPath,
             valueName=Path.RegKeys.ColorTreatAsTransparent,
-            value=color,
+            value=int(color, 16),
         )
 
     @staticmethod
-    def changecolorTreatAsTransparentThreshold(
+    def changeColorTreatAsTransparentThreshold(
         keyPath: Path.RegPaths | str,
         threshold: int,
     ):

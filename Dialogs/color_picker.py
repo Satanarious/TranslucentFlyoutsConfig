@@ -9,14 +9,18 @@ from Data.stylesheet import StyleSheet
 
 class ColorPicker:
     @staticmethod
-    def changeButtonColor(rgba: tuple[int], pushButton: QPushButton) -> None:
+    def changeButtonColor(rgba: tuple[int] | str, pushButton: QPushButton) -> None:
         """
         Method to:
         - Change the color of the QPushButton provided
         - Remove any icon from the QPushButton
         """
         pushButton.setIcon(QIcon(""))
-        pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
+        if type(rgba) == str:
+            rgba = tuple(ColorPicker.aarrggbb_to_rgba(rgba))
+            pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
+        elif type(rgba) == tuple:
+            pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
 
     @staticmethod
     def rgba_to_aarrggbb(rgba: tuple[int]) -> str:

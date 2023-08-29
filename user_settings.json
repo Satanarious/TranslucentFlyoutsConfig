@@ -51,8 +51,8 @@
     },
     "Disabled Hot": {
       "Corner Radius": 8,
-      "Dark Mode Color": "0",
-      "Light Mode Color": "0",
+      "Dark Mode Color": "",
+      "Light Mode Color": "",
       "Enable Theme Colorization": 0,
       "Disabled": 0
     },
