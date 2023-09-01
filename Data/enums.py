@@ -77,6 +77,15 @@ class Settings:
         SmoothZoom = 3
 
 
+class RegistryReturnType(IntEnum):
+    """
+    Return Type Enum for Registry value fetching
+    """
+
+    Hexadecimal = 0
+    Decimal = 1
+
+
 class Presets(IntEnum):
     """
     Preset Enums have presets for various combinations of settings that modify

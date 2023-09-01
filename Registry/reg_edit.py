@@ -5,6 +5,7 @@ from winreg import OpenKeyEx, CreateKeyEx, CloseKey, SetValueEx, DeleteKeyEx, De
 # Relative Imports
 from Data.paths import Path
 from Data.defaults import Defaults
+from Data.enums import RegistryReturnType
 
 
 class EditRegistry:
@@ -43,40 +44,35 @@ class EditRegistry:
         """
         return {
             "Global": {
-                "Effect Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Global,
-                        valueName=Path.RegKeys.EffectType,
-                        defaultValue=Defaults.Global.effectType,
-                    )
+                "Effect Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Global,
+                    valueName=Path.RegKeys.EffectType,
+                    defaultValue=Defaults.Global.effectType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Corner Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Global,
-                        valueName=Path.RegKeys.CornerType,
-                        defaultValue=Defaults.Global.cornerType,
-                    )
+                "Corner Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Global,
+                    valueName=Path.RegKeys.CornerType,
+                    defaultValue=Defaults.Global.cornerType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Drop Shadow": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Global,
-                        valueName=Path.RegKeys.EnableDropShadow,
-                        defaultValue=Defaults.Global.enableDropShadow,
-                    )
+                "Enable Drop Shadow": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Global,
+                    valueName=Path.RegKeys.EnableDropShadow,
+                    defaultValue=Defaults.Global.enableDropShadow,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "No Border Color": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Global,
-                        valueName=Path.RegKeys.NoBorderColor,
-                        defaultValue=Defaults.Global.noBorderColor,
-                    )
+                "No Border Color": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Global,
+                    valueName=Path.RegKeys.NoBorderColor,
+                    defaultValue=Defaults.Global.noBorderColor,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Theme Colorization": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Global,
-                        valueName=Path.RegKeys.EnableThemeColorization,
-                        defaultValue=Defaults.Global.enableThemeColorization,
-                    )
+                "Enable Theme Colorization": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Global,
+                    valueName=Path.RegKeys.EnableThemeColorization,
+                    defaultValue=Defaults.Global.enableThemeColorization,
+                    returnType=RegistryReturnType.Decimal,
                 ),
                 "Dark Mode Border Color": EditRegistry.readValue(
                     keyPath=Path.RegPaths.Global,
@@ -98,49 +94,43 @@ class EditRegistry:
                     valueName=Path.RegKeys.LightModeGradientColor,
                     defaultValue=Defaults.Global.lightModeGradientColor,
                 ),
-                "Disabled": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Global,
-                        valueName=Path.RegKeys.Disabled,
-                        defaultValue=Defaults.Global.disabled,
-                    )
+                "Disabled": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Global,
+                    valueName=Path.RegKeys.Disabled,
+                    defaultValue=Defaults.Global.disabled,
+                    returnType=RegistryReturnType.Decimal,
                 ),
             },
             "DropDown": {
-                "Effect Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.DropDown,
-                        valueName=Path.RegKeys.EffectType,
-                        defaultValue=Defaults.DropDown.effectType,
-                    )
+                "Effect Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.DropDown,
+                    valueName=Path.RegKeys.EffectType,
+                    defaultValue=Defaults.DropDown.effectType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Corner Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.DropDown,
-                        valueName=Path.RegKeys.CornerType,
-                        defaultValue=Defaults.DropDown.cornerType,
-                    )
+                "Corner Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.DropDown,
+                    valueName=Path.RegKeys.CornerType,
+                    defaultValue=Defaults.DropDown.cornerType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Drop Shadow": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.DropDown,
-                        valueName=Path.RegKeys.EnableDropShadow,
-                        defaultValue=Defaults.DropDown.enableDropShadow,
-                    )
+                "Enable Drop Shadow": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.DropDown,
+                    valueName=Path.RegKeys.EnableDropShadow,
+                    defaultValue=Defaults.DropDown.enableDropShadow,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "No Border Color": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.DropDown,
-                        valueName=Path.RegKeys.NoBorderColor,
-                        defaultValue=Defaults.DropDown.noBorderColor,
-                    )
+                "No Border Color": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.DropDown,
+                    valueName=Path.RegKeys.NoBorderColor,
+                    defaultValue=Defaults.DropDown.noBorderColor,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Theme Colorization": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.DropDown,
-                        valueName=Path.RegKeys.EnableThemeColorization,
-                        defaultValue=Defaults.DropDown.enableThemeColorization,
-                    )
+                "Enable Theme Colorization": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.DropDown,
+                    valueName=Path.RegKeys.EnableThemeColorization,
+                    defaultValue=Defaults.DropDown.enableThemeColorization,
+                    returnType=RegistryReturnType.Decimal,
                 ),
                 "Dark Mode Border Color": EditRegistry.readValue(
                     keyPath=Path.RegPaths.DropDown,
@@ -162,96 +152,84 @@ class EditRegistry:
                     valueName=Path.RegKeys.LightModeGradientColor,
                     defaultValue=Defaults.DropDown.lightModeGradientColor,
                 ),
-                "Disabled": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.DropDown,
-                        valueName=Path.RegKeys.Disabled,
-                        defaultValue=Defaults.DropDown.disabled,
-                    )
+                "Disabled": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.DropDown,
+                    valueName=Path.RegKeys.Disabled,
+                    defaultValue=Defaults.DropDown.disabled,
+                    returnType=RegistryReturnType.Decimal,
                 ),
             },
             "Menu": {
-                "No System Drop Shadow": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.NoSystemDropShadow,
-                        defaultValue=Defaults.Menu.noSystemDropShadow,
-                    )
+                "No System Drop Shadow": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.NoSystemDropShadow,
+                    defaultValue=Defaults.Menu.noSystemDropShadow,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Immersive Style": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.EnableImmersiveStyle,
-                        defaultValue=Defaults.Menu.enableImmersiveStyle,
-                    )
+                "Enable Immersive Style": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.EnableImmersiveStyle,
+                    defaultValue=Defaults.Menu.enableImmersiveStyle,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Custom Rendering": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.EnableCustomRendering,
-                        defaultValue=Defaults.Menu.enableCustomRendering,
-                    )
+                "Enable Custom Rendering": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.EnableCustomRendering,
+                    defaultValue=Defaults.Menu.enableCustomRendering,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Fluent Animation": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.EnableFluentAnimation,
-                        defaultValue=Defaults.Menu.enableFluentAnimation,
-                    )
+                "Enable Fluent Animation": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.EnableFluentAnimation,
+                    defaultValue=Defaults.Menu.enableFluentAnimation,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "No Modern App Background Color": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.NoModernAppBackgroundColor,
-                        defaultValue=Defaults.Menu.noModernAppBackgroundColor,
-                    )
+                "No Modern App Background Color": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.NoModernAppBackgroundColor,
+                    defaultValue=Defaults.Menu.noModernAppBackgroundColor,
+                    returnType=RegistryReturnType.Decimal,
                 ),
                 "Color Treat As Transparent": EditRegistry.readValue(
                     keyPath=Path.RegPaths.Menu,
                     valueName=Path.RegKeys.ColorTreatAsTransparent,
                     defaultValue=Defaults.Menu.colorTreatAsTransparent,
                 ),
-                "Color Treat As Transparent Threshold": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.ColorTreatAsTransparentThreshold,
-                        defaultValue=Defaults.Menu.colorTreatAsTransparentThreshold,
-                    )
+                "Color Treat As Transparent Threshold": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.ColorTreatAsTransparentThreshold,
+                    defaultValue=Defaults.Menu.colorTreatAsTransparentThreshold,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Effect Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.EffectType,
-                        defaultValue=Defaults.Menu.effectType,
-                    )
+                "Effect Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.EffectType,
+                    defaultValue=Defaults.Menu.effectType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Corner Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.CornerType,
-                        defaultValue=Defaults.Menu.cornerType,
-                    )
+                "Corner Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.CornerType,
+                    defaultValue=Defaults.Menu.cornerType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Drop Shadow": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.EnableDropShadow,
-                        defaultValue=Defaults.Menu.enableDropShadow,
-                    )
+                "Enable Drop Shadow": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.EnableDropShadow,
+                    defaultValue=Defaults.Menu.enableDropShadow,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "No Border Color": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.NoBorderColor,
-                        defaultValue=Defaults.Menu.noBorderColor,
-                    )
+                "No Border Color": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.NoBorderColor,
+                    defaultValue=Defaults.Menu.noBorderColor,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Theme Colorization": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.EnableThemeColorization,
-                        defaultValue=Defaults.Menu.enableThemeColorization,
-                    )
+                "Enable Theme Colorization": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.EnableThemeColorization,
+                    defaultValue=Defaults.Menu.enableThemeColorization,
+                    returnType=RegistryReturnType.Decimal,
                 ),
                 "Dark Mode Border Color": EditRegistry.readValue(
                     keyPath=Path.RegPaths.Menu,
@@ -273,64 +251,56 @@ class EditRegistry:
                     valueName=Path.RegKeys.LightModeGradientColor,
                     defaultValue=Defaults.Menu.lightModeGradientColor,
                 ),
-                "Disabled": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Menu,
-                        valueName=Path.RegKeys.Disabled,
-                        defaultValue=Defaults.Menu.disabled,
-                    )
+                "Disabled": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Menu,
+                    valueName=Path.RegKeys.Disabled,
+                    defaultValue=Defaults.Menu.disabled,
+                    returnType=RegistryReturnType.Decimal,
                 ),
                 "Animation": {
-                    "Fade Out Time": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
-                            valueName=Path.RegKeys.FadeOutTime,
-                            defaultValue=Defaults.Menu.Animation.fadeOutTime,
-                        )
+                    "Fade Out Time": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
+                        valueName=Path.RegKeys.FadeOutTime,
+                        defaultValue=Defaults.Menu.Animation.fadeOutTime,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Pop In Time": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
-                            valueName=Path.RegKeys.PopInTime,
-                            defaultValue=Defaults.Menu.Animation.popInTime,
-                        )
+                    "Pop In Time": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
+                        valueName=Path.RegKeys.PopInTime,
+                        defaultValue=Defaults.Menu.Animation.popInTime,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Fade In Time": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
-                            valueName=Path.RegKeys.FadeInTime,
-                            defaultValue=Defaults.Menu.Animation.fadeInTime,
-                        )
+                    "Fade In Time": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
+                        valueName=Path.RegKeys.FadeInTime,
+                        defaultValue=Defaults.Menu.Animation.fadeInTime,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Pop In Style": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
-                            valueName=Path.RegKeys.PopInStyle,
-                            defaultValue=Defaults.Menu.Animation.popInStyle,
-                        )
+                    "Pop In Style": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
+                        valueName=Path.RegKeys.PopInStyle,
+                        defaultValue=Defaults.Menu.Animation.popInStyle,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Start Ratio": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
-                            valueName=Path.RegKeys.StartRatio,
-                            defaultValue=Defaults.Menu.Animation.startRatio,
-                        )
+                    "Start Ratio": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
+                        valueName=Path.RegKeys.StartRatio,
+                        defaultValue=Defaults.Menu.Animation.startRatio,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Enable Immediate Interupting": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
-                            valueName=Path.RegKeys.EnableImmediateInterupting,
-                            defaultValue=Defaults.Menu.Animation.enableImmediateInterupting,
-                        )
+                    "Enable Immediate Interupting": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Animation,
+                        valueName=Path.RegKeys.EnableImmediateInterupting,
+                        defaultValue=Defaults.Menu.Animation.enableImmediateInterupting,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                 },
                 "Disabled Hot": {
-                    "Corner Radius": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
-                            valueName=Path.RegKeys.CornerRadius,
-                            defaultValue=Defaults.Menu.DisabledHot.cornerRadius,
-                        )
+                    "Corner Radius": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
+                        valueName=Path.RegKeys.CornerRadius,
+                        defaultValue=Defaults.Menu.DisabledHot.cornerRadius,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                     "Dark Mode Color": EditRegistry.readValue(
                         keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
@@ -342,35 +312,31 @@ class EditRegistry:
                         valueName=Path.RegKeys.LightModeColor,
                         defaultValue=Defaults.Menu.DisabledHot.lightModeColor,
                     ),
-                    "Enable Theme Colorization": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
-                            valueName=Path.RegKeys.EnableThemeColorization,
-                            defaultValue=Defaults.Menu.DisabledHot.enableThemeColorization,
-                        )
+                    "Enable Theme Colorization": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
+                        valueName=Path.RegKeys.EnableThemeColorization,
+                        defaultValue=Defaults.Menu.DisabledHot.enableThemeColorization,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Disabled": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
-                            valueName=Path.RegKeys.Disabled,
-                            defaultValue=Defaults.Menu.DisabledHot.disabled,
-                        )
+                    "Disabled": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.DisabledHot,
+                        valueName=Path.RegKeys.Disabled,
+                        defaultValue=Defaults.Menu.DisabledHot.disabled,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                 },
                 "Focusing": {
-                    "Width": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
-                            valueName=Path.RegKeys.Width,
-                            defaultValue=Defaults.Menu.Focusing.width,
-                        )
+                    "Width": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
+                        valueName=Path.RegKeys.Width,
+                        defaultValue=Defaults.Menu.Focusing.width,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Corner Radius": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
-                            valueName=Path.RegKeys.CornerRadius,
-                            defaultValue=Defaults.Menu.Focusing.cornerRadius,
-                        )
+                    "Corner Radius": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
+                        valueName=Path.RegKeys.CornerRadius,
+                        defaultValue=Defaults.Menu.Focusing.cornerRadius,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                     "Dark Mode Color": EditRegistry.readValue(
                         keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
@@ -382,28 +348,25 @@ class EditRegistry:
                         valueName=Path.RegKeys.LightModeColor,
                         defaultValue=Defaults.Menu.Focusing.lightModeColor,
                     ),
-                    "Enable Theme Colorization": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
-                            valueName=Path.RegKeys.EnableThemeColorization,
-                            defaultValue=Defaults.Menu.Focusing.enableThemeColorization,
-                        )
+                    "Enable Theme Colorization": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
+                        valueName=Path.RegKeys.EnableThemeColorization,
+                        defaultValue=Defaults.Menu.Focusing.enableThemeColorization,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Disabled": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
-                            valueName=Path.RegKeys.Disabled,
-                            defaultValue=Defaults.Menu.Focusing.disabled,
-                        )
+                    "Disabled": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Focusing,
+                        valueName=Path.RegKeys.Disabled,
+                        defaultValue=Defaults.Menu.Focusing.disabled,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                 },
                 "Hot": {
-                    "Corner Radius": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
-                            valueName=Path.RegKeys.CornerRadius,
-                            defaultValue=Defaults.Menu.Hot.cornerRadius,
-                        )
+                    "Corner Radius": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
+                        valueName=Path.RegKeys.CornerRadius,
+                        defaultValue=Defaults.Menu.Hot.cornerRadius,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                     "Dark Mode Color": EditRegistry.readValue(
                         keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
@@ -415,35 +378,31 @@ class EditRegistry:
                         valueName=Path.RegKeys.LightModeColor,
                         defaultValue=Defaults.Menu.Hot.lightModeColor,
                     ),
-                    "Enable Theme Colorization": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
-                            valueName=Path.RegKeys.EnableThemeColorization,
-                            defaultValue=Defaults.Menu.Hot.enableThemeColorization,
-                        )
+                    "Enable Theme Colorization": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
+                        valueName=Path.RegKeys.EnableThemeColorization,
+                        defaultValue=Defaults.Menu.Hot.enableThemeColorization,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Disabled": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
-                            valueName=Path.RegKeys.Disabled,
-                            defaultValue=Defaults.Menu.Hot.disabled,
-                        )
+                    "Disabled": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Hot,
+                        valueName=Path.RegKeys.Disabled,
+                        defaultValue=Defaults.Menu.Hot.disabled,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                 },
                 "Separator": {
-                    "Width": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
-                            valueName=Path.RegKeys.Width,
-                            defaultValue=Defaults.Menu.Separator.width,
-                        )
+                    "Width": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
+                        valueName=Path.RegKeys.Width,
+                        defaultValue=Defaults.Menu.Separator.width,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Corner Radius": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
-                            valueName=Path.RegKeys.CornerRadius,
-                            defaultValue=Defaults.Menu.Separator.cornerRadius,
-                        )
+                    "Corner Radius": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
+                        valueName=Path.RegKeys.CornerRadius,
+                        defaultValue=Defaults.Menu.Separator.cornerRadius,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                     "Dark Mode Color": EditRegistry.readValue(
                         keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
@@ -455,57 +414,50 @@ class EditRegistry:
                         valueName=Path.RegKeys.LightModeColor,
                         defaultValue=Defaults.Menu.Separator.lightModeColor,
                     ),
-                    "Enable Theme Colorization": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
-                            valueName=Path.RegKeys.EnableThemeColorization,
-                            defaultValue=Defaults.Menu.Separator.enableThemeColorization,
-                        )
+                    "Enable Theme Colorization": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
+                        valueName=Path.RegKeys.EnableThemeColorization,
+                        defaultValue=Defaults.Menu.Separator.enableThemeColorization,
+                        returnType=RegistryReturnType.Decimal,
                     ),
-                    "Disabled": int(
-                        EditRegistry.readValue(
-                            keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
-                            valueName=Path.RegKeys.Disabled,
-                            defaultValue=Defaults.Menu.Separator.disabled,
-                        )
+                    "Disabled": EditRegistry.readValue(
+                        keyPath=Path.RegPaths.Menu + Path.RegPaths.Separator,
+                        valueName=Path.RegKeys.Disabled,
+                        defaultValue=Defaults.Menu.Separator.disabled,
+                        returnType=RegistryReturnType.Decimal,
                     ),
                 },
             },
             "Tooltip": {
-                "Effect Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Tooltip,
-                        valueName=Path.RegKeys.EffectType,
-                        defaultValue=Defaults.Tooltip.effectType,
-                    )
+                "Effect Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Tooltip,
+                    valueName=Path.RegKeys.EffectType,
+                    defaultValue=Defaults.Tooltip.effectType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Corner Type": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Tooltip,
-                        valueName=Path.RegKeys.CornerType,
-                        defaultValue=Defaults.Tooltip.cornerType,
-                    )
+                "Corner Type": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Tooltip,
+                    valueName=Path.RegKeys.CornerType,
+                    defaultValue=Defaults.Tooltip.cornerType,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Drop Shadow": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Tooltip,
-                        valueName=Path.RegKeys.EnableDropShadow,
-                        defaultValue=Defaults.Tooltip.enableDropShadow,
-                    )
+                "Enable Drop Shadow": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Tooltip,
+                    valueName=Path.RegKeys.EnableDropShadow,
+                    defaultValue=Defaults.Tooltip.enableDropShadow,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "No Border Color": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Tooltip,
-                        valueName=Path.RegKeys.NoBorderColor,
-                        defaultValue=Defaults.Tooltip.noBorderColor,
-                    )
+                "No Border Color": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Tooltip,
+                    valueName=Path.RegKeys.NoBorderColor,
+                    defaultValue=Defaults.Tooltip.noBorderColor,
+                    returnType=RegistryReturnType.Decimal,
                 ),
-                "Enable Theme Colorization": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Tooltip,
-                        valueName=Path.RegKeys.EnableThemeColorization,
-                        defaultValue=Defaults.Tooltip.enableThemeColorization,
-                    )
+                "Enable Theme Colorization": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Tooltip,
+                    valueName=Path.RegKeys.EnableThemeColorization,
+                    defaultValue=Defaults.Tooltip.enableThemeColorization,
+                    returnType=RegistryReturnType.Decimal,
                 ),
                 "Dark Mode Border Color": EditRegistry.readValue(
                     keyPath=Path.RegPaths.Tooltip,
@@ -527,12 +479,11 @@ class EditRegistry:
                     valueName=Path.RegKeys.LightModeGradientColor,
                     defaultValue=Defaults.Tooltip.lightModeGradientColor,
                 ),
-                "Disabled": int(
-                    EditRegistry.readValue(
-                        keyPath=Path.RegPaths.Tooltip,
-                        valueName=Path.RegKeys.Disabled,
-                        defaultValue=Defaults.Tooltip.disabled,
-                    )
+                "Disabled": EditRegistry.readValue(
+                    keyPath=Path.RegPaths.Tooltip,
+                    valueName=Path.RegKeys.Disabled,
+                    defaultValue=Defaults.Tooltip.disabled,
+                    returnType=RegistryReturnType.Decimal,
                 ),
             },
         }
@@ -630,6 +581,7 @@ class EditRegistry:
         keyPath: Path.RegPaths | str,
         valueName: str,
         defaultValue: str | int,
+        returnType: RegistryReturnType = RegistryReturnType.Hexadecimal,
     ) -> str | int:
         """
         Reads a value from the registry.
@@ -647,6 +599,9 @@ class EditRegistry:
             value, _ = QueryValueEx(key, valueName)
             if key:
                 CloseKey(key)
-            return hex(value)[2:].upper()
+            if returnType == RegistryReturnType.Hexadecimal:
+                return hex(value)[2:].upper()
+            else:
+                return int(value)
         except WindowsError:
             return defaultValue
