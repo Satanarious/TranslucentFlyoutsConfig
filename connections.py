@@ -20,6 +20,111 @@ if TYPE_CHECKING:
 
 class Connectors:
     @staticmethod
+    def connectStyleSheets(
+        window: Main,
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "white",
+        textColor: str = "#7A7A7A",
+    ):
+        """
+        Method to:
+        - Add Styling apply styling to the UI elements
+        """
+        # Global
+        window.mainWindow.setStyleSheet(
+            StyleSheet.main(
+                backgroundColor=backgroundColor,
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+
+        # TabBar
+        window.mainTabWidget.tabBar().setStyleSheet(
+            StyleSheet.mainTabbar(
+                backgroundColor=backgroundColor,
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.menuTabWidget.tabBar().setStyleSheet(
+            StyleSheet.menuTabBar(
+                backgroundColor=backgroundColor,
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+
+        # Apply Button
+        window.applyButton1.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton2.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton3_1.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton3_2.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton3_3.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton3_4.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton3_5.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton3_6.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.applyButton4.setStyleSheet(
+            StyleSheet.applyButton(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+
+    @staticmethod
     def connectApplyButtons(window: Main) -> None:
         """
         Method to:
