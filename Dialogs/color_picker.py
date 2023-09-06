@@ -1,9 +1,9 @@
 # Library Imports
-from PyQt6.QtWidgets import QColorDialog, QLineEdit, QPushButton
+from PyQt6.QtWidgets import QLineEdit, QPushButton
 from PyQt6.QtGui import QColor, QIcon
+import vcolorpicker as VColorPicker
 
 # Relative Imports
-from Data.paths import Path
 from Data.stylesheet import StyleSheet
 
 
@@ -56,16 +56,12 @@ class ColorPicker:
             - Open QColorDialog and choose the color
             - Set the color in the QLineEdit provided
             """
-            colorPicker: QColorDialog = QColorDialog()
-            colorPicker.setWindowIcon(QIcon(Path.IconPaths.ColorPicker))
+            VColorPicker.useAlpha(True)
             aarrggbb: str = lineEdit.text()
             if aarrggbb:
-                color: QColor = colorPicker.getColor(
-                    initial=QColor(*ColorPicker.aarrggbb_to_rgba(aarrggbb)),
-                    options=QColorDialog.ColorDialogOption.ShowAlphaChannel,
-                )
+                color: QColor = QColor(*map(int, VColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(aarrggbb)))))
             else:
-                color: QColor = colorPicker.getColor(options=QColorDialog.ColorDialogOption.ShowAlphaChannel)
+                color: QColor = QColor(*map(int, VColorPicker.getColor((0, 0, 0, 255))))
             if color.isValid():
                 lineEdit.setText(ColorPicker.rgba_to_aarrggbb(tuple(color.getRgb())))
                 ColorPicker.changeButtonColor(

@@ -3,8 +3,17 @@ from winreg import HKEY_CURRENT_USER
 
 class Path:
     class IconPaths:
-        ResetIcon: str = "Assets/View-refresh.svg.png"
-        ColorPicker: str = "Assets/2867978.png"
+        ResetIcon: str = "Assets/icons/reset_icon.png"
+        ColorPicker: str = "Assets/icons/color_picker_icon.png"
+        Logo: str = "Assets/icons/logo.png"
+        MinimizeIcon: str = "Assets/icons/minimize_icon.png"
+        UpArrow: str = "Assets/icons/up-arrow.png"
+        DownArrow: str = "Assets/icons/down-arrow.png"
+        CloseIcon: str = "Assets/icons/close_icon.png"
+
+    class FontPaths:
+        NunitoSans: str = "Assets/fonts/NunitoSans_10pt_Condensed-Regular.ttf"
+        AndikaRegular: str = "Assets/fonts/Andika-Regular.ttf"
 
     class RegPaths:
         BasePath: str = r"Software\\TranslucentFlyouts\\"
