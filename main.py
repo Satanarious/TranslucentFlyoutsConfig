@@ -22,6 +22,9 @@ class Main(Ui_MainWindow):
         self.title.mouseMoveEvent = self.myMouseMoveEvent  # type: ignore
         self.title.mouseReleaseEvent = self.myMouseReleaseEvent  # type: ignore
         self.title.setMouseTracking(True)
+        self.closeButton.clicked.connect(self.mainWindow.close)  # type: ignore
+        self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
+        self.logo.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.callConnectors()
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
@@ -35,7 +38,7 @@ class Main(Ui_MainWindow):
         Connectors.connectApplyButtons(self)
         Connectors.connectStyleSheets(self)  # Dark Theme
         # Connectors.connectStyleSheets(self, "white", "lightgray", "black", "#222222")  # Light Theme
-        # Connectors.connectStyleSheets(self, "hotpink", "cyan", "white", "#222222")  # Pink-Cyan Theme
+        # Connectors.connectStyleSheets(self, "hotpink", "skyblue", "white", "#222222")  # Pink-Blue Theme
 
     def myMousePressEvent(self, event: QMouseEvent):
         if event.buttons() == Qt.MouseButton.LeftButton:

@@ -154,6 +154,17 @@ class StyleSheet:
             + secondaryBackgroundColor
             + """;
         }
+        QToolButton#minimizeButton{
+            padding:5px;
+        }
+        QToolButton#minimizeButton::hover{
+            background-color:none;
+            
+        }
+        QToolButton#closeButton::hover{
+            background-color:red;
+            border-top-right-radius:8px;
+        }
         QScrollBar:vertical {
             border: none;
             background:"""
@@ -179,6 +190,9 @@ class StyleSheet:
         return (
             """
         QPushButton{
+            border:1px solid """
+            + labelColor
+            + """;
             border-radius:5px;
             color:"""
             + labelColor
@@ -248,7 +262,7 @@ class StyleSheet:
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
         labelColor: str = "white",
-        textColor: str = "white",
+        textColor: str = "#7A7A7A",
     ) -> str:
         return (
             """
