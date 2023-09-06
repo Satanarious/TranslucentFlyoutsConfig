@@ -2870,7 +2870,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.mainTabWidget.setCurrentIndex(1)
+        self.mainTabWidget.setCurrentIndex(0)
         self.effectType1.setCurrentIndex(5)
         self.cornerType1.setCurrentIndex(3)
         self.effectType2.setCurrentIndex(9)
