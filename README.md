@@ -6,12 +6,12 @@
 
 <table>
 <tr>
-<td><img src="Screenshots/global.png">
-<td><img src="Screenshots/dropdown.png">
+<td><img src="Screenshots/global_dark.png">
+<td><img src="Screenshots/dropdown_dark.png">
 </tr>
 <tr>
-<td><img src="Screenshots/menu.png">
-<td><img src="Screenshots/tooltip.png">
+<td><img src="Screenshots/menu_dark.png">
+<td><img src="Screenshots/tooltip_dark.png">
 </tr>
 </table>
 
