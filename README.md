@@ -16,7 +16,7 @@
 </table>
 
 ## Installation Instructions
-
+> Assuming you have the latest release of [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest) Installed.
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
 - Extract all files in a directory/folder.
 - Run the `TranslucentFlyoutsConfig.exe` file.
