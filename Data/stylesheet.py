@@ -29,7 +29,8 @@ class StyleSheet:
             + """;
         }
         QWidget#centralwidget{
-            border-radius:8px;
+            border-top-left-radius:8px;
+            border-top-right-radius:8px;
             background-color:"""
             + backgroundColor
             + """;
@@ -41,6 +42,7 @@ class StyleSheet:
         }
         QLabel#title{
             font-size:14px;
+            font-weight:bold;
         }
         QWidget#tab1,
         QWidget#tab2,
@@ -72,6 +74,11 @@ class StyleSheet:
             + textColor
             + """;
         }
+        QComboBox::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
         QComboBox::drop-down {
             border-left-width: 1px;
             border-left-color: """
@@ -93,6 +100,17 @@ class StyleSheet:
             color:"""
             + textColor
             + """;
+            border-left:1px solid """
+            + labelColor
+            + """;
+            border-right:1px solid """
+            + labelColor
+            + """;
+            border-bottom:1px solid """
+            + labelColor
+            + """;
+            border-bottom-left-radius:8px;
+            border-bottom-right-radius:8px;
             selection-background-color:"""
             + backgroundColor
             + """;
@@ -134,9 +152,19 @@ class StyleSheet:
             + textColor
             + """;
         }
+        QSpinBox::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QSpinBox::focus{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
         QSpinBox::up-button, QSpinBox::down-button {
             border: none;
-            background-color: transparent;
+            background-color: none;
             margin-right:4px;
             width:10px;
         }
@@ -154,6 +182,11 @@ class StyleSheet:
             + secondaryBackgroundColor
             + """;
         }
+        QPushButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
         QToolButton#minimizeButton{
             padding:5px;
         }
@@ -166,27 +199,103 @@ class StyleSheet:
             border-top-right-radius:8px;
         }
         QScrollBar:vertical {
-            border: none;
+            border: 0px solid """
+            + labelColor
+            + """;
             background:"""
             + secondaryBackgroundColor
             + """;
-            width: 10px;
+            width: 8px;
+            margin: 0px;
         }
         QScrollBar::handle:vertical{
-            background: """
-            + textColor
+            background-color: """
+            + backgroundColor
+            + """;
+            border:0px solid """
+            + secondaryBackgroundColor
             + """;
             border-radius:4px;
-            margin:1px;
+            min-height: 0px;
         }
-        QTabWidget::pane {
-            border-top: 2px solid #C2C7CB;
+         QScrollBar::add-line:vertical {       
+            height: 0px;
+            subcontrol-position: bottom;
+            subcontrol-origin: margin;
+        }
+        QScrollBar::sub-line:vertical {
+            height: 0 px;
+            subcontrol-position: top;
+            subcontrol-origin: margin;
+        }
+        QTabWidget::pane{
+            border:none;
+        }
+        QTabBar::pane {
+            border: none;
+        }
+        QToolTip{
+            color:"""
+            + backgroundColor
+            + """;
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
         }
         """
         )
 
     @staticmethod
-    def applyButton(secondaryBackgroundColor: str = "#313131", labelColor: str = "white", textColor: str = "#7A7A7A") -> str:
+    def infoWidget(
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "white",
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+        QFrame#titleFrame{
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+            border-top-left-radius:8px;
+            border-top-right-radius:8px;
+            border-top:1px solid """
+            + labelColor
+            + """;
+            border-left:1px solid """
+            + labelColor
+            + """;
+            border-right:1px solid """
+            + labelColor
+            + """;
+        }
+        QLabel#title{
+            font-family: Nunito Sans 10pt Condensed;
+            font-size:14px;
+            font-weight:bold;
+        }
+        QLabel#description{
+            font-family: Andika;
+        }
+        QScrollArea{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QToolButton#closeButton::hover{
+            background-color:red;
+            border-top-right-radius:8px;
+        }
+        """
+        )
+
+    @staticmethod
+    def applyButton(
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "white",
+        textColor: str = "#7A7A7A",
+    ) -> str:
         return (
             """
         QPushButton{
@@ -215,7 +324,7 @@ class StyleSheet:
         )
 
     @staticmethod
-    def mainTabbar(
+    def mainTabBar(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
         labelColor: str = "white",
@@ -227,18 +336,20 @@ class StyleSheet:
             background-color: """
             + secondaryBackgroundColor
             + """;
-            color:#7A7A7A;
+            color:"""
+            + textColor
+            + """;
             padding-left:38px;
             padding-right:38px;
             padding-top:5px;
             padding-bottom:5px;
-            border:1px solid """
-            + secondaryBackgroundColor
-            + """;
-            margin-left:4px;
-            margin-right:4px;
-            border-radius: 0px;
+            margin-left:10px;
          }
+        QTabBar::tab:hover{
+            color:"""
+            + labelColor
+            + """;
+        }
         QTabBar::tab:selected {
             color: """
             + labelColor
@@ -270,13 +381,19 @@ class StyleSheet:
             background-color: """
             + secondaryBackgroundColor
             + """;
-            color:#7A7A7A;
+            color:"""
+            + textColor
+            + """;
             padding-left:17px;
             padding-right:17px;
             padding-top:5px;
             padding-bottom:5px;
-            border-radius: 0px;
          }
+        QTabBar::tab:hover{
+            color:"""
+            + labelColor
+            + """;
+        }
         QTabBar::tab:selected {
             color: """
             + labelColor
