@@ -2,6 +2,10 @@ from winreg import HKEY_CURRENT_USER
 
 
 class Path:
+    class DBPaths:
+        Defaults = "Assets/db/defaults.json"
+        UserSettings = "Assets/db/user_settings.json"
+
     class IconPaths:
         ResetIcon: str = "Assets/icons/reset_icon.png"
         ColorPicker: str = "Assets/icons/color_picker_icon.png"
