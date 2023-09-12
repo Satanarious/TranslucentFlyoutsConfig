@@ -66,6 +66,9 @@ class SaveSettings:
             Saved.Menu.noSystemDropShadow = window.noSystemDropShadow.currentIndex()
             Saved.Menu.enableImmersiveStyle = window.enableImmersiveStyle.currentIndex()
             Saved.Menu.enableFluentAnimation = window.enableFluentAnimation.currentIndex()
+            Saved.Menu.noModernAppBackgroundColor = window.noModernAppBackgroundColor.currentIndex()
+            Saved.Menu.colorTreatAsTransparent = window.colorTreatAsTransparent.text()
+            Saved.Menu.colorTreatAsTransparentThreshold = window.colorTreatAsTransparentThreshold.value()
             Saved.Menu.enableCustomRendering = window.enableCustomRendering.currentIndex()
             Saved.Menu.effectType = window.effectType3.currentIndex()
             Saved.Menu.cornerType = window.cornerType3.currentIndex()
@@ -168,3 +171,25 @@ class SaveSettings:
                 Saved.Menu.Separator.updateDict()
                 Saved.updateJSON()
                 applied = Apply.Menu.Separator.apply()
+
+    class Tooltip:
+        @staticmethod
+        def save(window: Main):
+            """
+            This funtion will:
+            - Fetch values from their respective fields
+            - Save values to the user_settings.json file
+            """
+            Saved.Tooltip.effectType = window.effectType4.currentIndex()
+            Saved.Tooltip.cornerType = window.cornerType4.currentIndex()
+            Saved.Tooltip.enableDropShadow = window.enableDropShadow4.currentIndex()
+            Saved.Tooltip.noBorderColor = window.noBorderColor4.currentIndex()
+            Saved.Tooltip.enableThemeColorization = window.enableThemeColorization4.currentIndex()
+            Saved.Tooltip.darkModeBorderColor = window.darkModeBorderColor4.text()
+            Saved.Tooltip.lightModeBorderColor = window.lightModeBorderColor4.text()
+            Saved.Tooltip.darkModeGradientColor = window.darkModeGradientColor4.text()
+            Saved.Tooltip.lightModeGradientColor = window.lightModeGradientColor4.text()
+            Saved.Tooltip.disabled = window.disabledEffect4.currentIndex()
+            Saved.Tooltip.updateDict()
+            Saved.updateJSON()
+            applied = Apply.Tooltip.apply()

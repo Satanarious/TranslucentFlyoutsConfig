@@ -288,6 +288,36 @@ class Apply:
                         keyPath=keyPath,
                         isEnabled=Saved.Menu.enableFluentAnimation,
                     )
+                if Saved.Menu.noModernAppBackgroundColor == Defaults.Menu.noModernAppBackgroundColor:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.NoModernAppBackgroundColor,
+                    )
+                else:
+                    EditSettings.changeNoModernAppBackgroundColor(
+                        keyPath=keyPath,
+                        isDisabled=Saved.Menu.noModernAppBackgroundColor,
+                    )
+                if Saved.Menu.colorTreatAsTransparent == Defaults.Menu.colorTreatAsTransparent:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.ColorTreatAsTransparent,
+                    )
+                else:
+                    EditSettings.changeColorTreatAsTransparent(
+                        keyPath=keyPath,
+                        color=Saved.Menu.colorTreatAsTransparent,
+                    )
+                if Saved.Menu.colorTreatAsTransparentThreshold == Defaults.Menu.colorTreatAsTransparentThreshold:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.ColorTreatAsTransparentThreshold,
+                    )
+                else:
+                    EditSettings.changeColorTreatAsTransparentThreshold(
+                        keyPath=keyPath,
+                        threshold=Saved.Menu.colorTreatAsTransparentThreshold,
+                    )
                 if Saved.Menu.effectType == Settings.EffectType.UseGlobalSetting:
                     EditRegistry.removeValue(
                         keyPath=keyPath,
@@ -751,3 +781,118 @@ class Apply:
                     return False
                 else:
                     return True
+
+    class Tooltip:
+        @staticmethod
+        def apply() -> bool:
+            """
+            Method to:
+            - Remove a value if it is being set to its default value
+            - Update the value
+            """
+            keyPath = Path.RegPaths.Tooltip
+            try:
+                if Saved.Tooltip.effectType == Settings.EffectType.UseGlobalSetting:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.EffectType,
+                    )
+                else:
+                    EditSettings.changeEffectType(
+                        keyPath=keyPath,
+                        effectType=Saved.Tooltip.effectType,
+                    )
+                if Saved.Tooltip.cornerType == Defaults.Tooltip.cornerType:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.CornerType,
+                    )
+                else:
+                    EditSettings.changeCornerType(
+                        keyPath=keyPath,
+                        cornerType=Saved.Tooltip.cornerType,
+                    )
+                if Saved.Tooltip.enableDropShadow == Settings.EnableDropShadow.UseGlobalSetting:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.EnableDropShadow,
+                    )
+                else:
+                    EditSettings.changeEnableDropShadow(
+                        keyPath=keyPath,
+                        isEnabled=Saved.Tooltip.enableDropShadow,
+                    )
+                if Saved.Tooltip.noBorderColor == Settings.NoBorderColor.UseGlobalSetting:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.NoBorderColor,
+                    )
+                else:
+                    EditSettings.changeNoBorderColor(
+                        keyPath=keyPath,
+                        isEnabled=Saved.Tooltip.noBorderColor,
+                    )
+                if Saved.Tooltip.enableThemeColorization == Settings.EnableThemeColorization.UseGlobalSetting:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.EnableThemeColorization,
+                    )
+                else:
+                    EditSettings.changeEnableThemeColorization(
+                        keyPath=keyPath,
+                        isEnabled=Saved.Tooltip.enableThemeColorization,
+                    )
+                if Saved.Tooltip.darkModeBorderColor == Defaults.Tooltip.darkModeBorderColor:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.DarkModeBorderColor,
+                    )
+                else:
+                    EditSettings.changeDarkModeBorderColor(
+                        keyPath=keyPath,
+                        color=Saved.Tooltip.darkModeBorderColor,
+                    )
+                if Saved.Tooltip.lightModeBorderColor == Defaults.Tooltip.lightModeBorderColor:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.LightModeBorderColor,
+                    )
+                else:
+                    EditSettings.changeLightModeBorderColor(
+                        keyPath=keyPath,
+                        color=Saved.Tooltip.lightModeBorderColor,
+                    )
+                if Saved.Tooltip.darkModeGradientColor == Defaults.Tooltip.darkModeGradientColor:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.DarkModeGradientColor,
+                    )
+                else:
+                    EditSettings.changeDarkModeGradientColor(
+                        keyPath=keyPath,
+                        color=Saved.Tooltip.darkModeGradientColor,
+                    )
+                if Saved.Tooltip.lightModeGradientColor == Defaults.Tooltip.lightModeGradientColor:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.LightModeGradientColor,
+                    )
+                else:
+                    EditSettings.changeLightModeGradientColor(
+                        keyPath=keyPath,
+                        color=Saved.Tooltip.lightModeGradientColor,
+                    )
+                if Saved.Tooltip.disabled == Settings.Disabled.UseGlobalSetting:
+                    EditRegistry.removeValue(
+                        keyPath=keyPath,
+                        valueName=Path.RegKeys.Disabled,
+                    )
+                else:
+                    EditSettings.changeDisabled(
+                        keyPath=keyPath,
+                        isDisabled=Saved.Tooltip.disabled,
+                    )
+            except:
+                return False
+            else:
+                return True

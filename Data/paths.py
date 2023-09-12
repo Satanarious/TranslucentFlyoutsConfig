@@ -5,9 +5,22 @@ class Path:
     class Translations:
         Hindi: str = "Translations/hi-in.json"
 
+    class DBPaths:
+        Defaults = "Assets/db/defaults.json"
+        UserSettings = "Assets/db/user_settings.json"
+
     class IconPaths:
-        ResetIcon: str = "Assets/View-refresh.svg.png"
-        ColorPicker: str = "Assets/2867978.png"
+        ResetIcon: str = "Assets/icons/reset_icon.png"
+        ColorPicker: str = "Assets/icons/color_picker_icon.png"
+        Logo: str = "Assets/icons/logo.png"
+        MinimizeIcon: str = "Assets/icons/minimize_icon.png"
+        UpArrow: str = "Assets/icons/up-arrow.png"
+        DownArrow: str = "Assets/icons/down-arrow.png"
+        CloseIcon: str = "Assets/icons/close_icon.png"
+
+    class FontPaths:
+        NunitoSans: str = "Assets/fonts/NunitoSans_10pt_Condensed-Regular.ttf"
+        AndikaRegular: str = "Assets/fonts/Andika-Regular.ttf"
 
     class RegPaths:
         BasePath: str = r"Software\\TranslucentFlyouts\\"
@@ -21,6 +34,7 @@ class Path:
         DisabledHot: str = r"DisabledHot\\"
         Focusing: str = r"Focusing\\"
         Separator: str = r"Separator\\"
+        Tooltip: str = r"Tooltip\\"
 
     class RegKeys:
         BaseKey: int = HKEY_CURRENT_USER
@@ -32,6 +46,7 @@ class Path:
         DisabledHot: str = "DisabledHot"
         Focusing: str = "Focusing"
         Separator: str = "Separator"
+        Tooltip: str = "Tooltip"
         EffectType: str = "EffectType"
         EnableDropShadow: str = "EnableDropShadow"
         DarkModeBorderColor: str = "DarkMode_BorderColor"
@@ -45,6 +60,9 @@ class Path:
         EnableImmersiveStyle: str = "EnableImmersiveStyle"
         EnableCustomRendering: str = "EnableCustomRendering"
         EnableFluentAnimation: str = "EnableFluentAnimation"
+        NoModernAppBackgroundColor: str = "NoModernAppBackgroundColor"
+        ColorTreatAsTransparent: str = "ColorTreatAsTransparent"
+        ColorTreatAsTransparentThreshold: str = "ColorTreatAsTransparentThreshold"
         FadeOutTime: str = "FadeOutTime"
         PopInTime: str = "PopInTime"
         FadeInTime: str = "FadeInTime"

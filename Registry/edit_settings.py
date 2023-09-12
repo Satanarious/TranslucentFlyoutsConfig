@@ -209,6 +209,57 @@ class EditSettings:
         )
 
     @staticmethod
+    def changeNoModernAppBackgroundColor(
+        keyPath: Path.RegPaths | str,
+        isDisabled: int,
+    ):
+        """
+        Method to:
+        Change whether to remove the background color of UWP icons.
+        - keyPath: path of the Key which needs to be changed
+        - isDisabled: mention whether to disable this property or not
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.NoModernAppBackgroundColor,
+            value=isDisabled,
+        )
+
+    @staticmethod
+    def changeColorTreatAsTransparent(
+        keyPath: Path.RegPaths | str,
+        color: str,
+    ):
+        """
+        Method to:
+        Removes specific background colors (0xAARRGGBB) of certain icons when this item exists.
+        - keyPath: path of the Key which needs to be changed
+        - color: color to be removed
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.ColorTreatAsTransparent,
+            value=int(color, 16),
+        )
+
+    @staticmethod
+    def changeColorTreatAsTransparentThreshold(
+        keyPath: Path.RegPaths | str,
+        threshold: int,
+    ):
+        """
+        Method to The color difference threshold between the pixel and the background color to be removed.
+        When the color difference between pixels is less than this color difference threshold, the pixel will be made transparent.
+        - keyPath: path of thekey which needs to be changed
+        - threshold: color threshold
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.ColorTreatAsTransparentThreshold,
+            value=threshold,
+        )
+
+    @staticmethod
     def changeEnableCustomRendering(
         keyPath: Path.RegPaths | str,
         isEnabled: int,

@@ -1,25 +1,29 @@
 # Library Imports
-from PyQt6.QtWidgets import QColorDialog, QLineEdit, QPushButton
+from PyQt6.QtWidgets import QLineEdit, QPushButton
 from PyQt6.QtGui import QColor, QIcon
+import vcolorpicker as VColorPicker
 
 # Relative Imports
-from Data.paths import Path
 from Data.stylesheet import StyleSheet
 
 
 class ColorPicker:
     @staticmethod
-    def changeButtonColor(rgba: tuple[int], pushButton: QPushButton) -> None:
+    def changeButtonColor(rgba: tuple | str, pushButton: QPushButton) -> None:
         """
         Method to:
         - Change the color of the QPushButton provided
         - Remove any icon from the QPushButton
         """
         pushButton.setIcon(QIcon(""))
-        pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
+        if type(rgba) == str:
+            rgba = tuple(ColorPicker.aarrggbb_to_rgba(rgba))
+            pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
+        elif type(rgba) == tuple:
+            pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
 
     @staticmethod
-    def rgba_to_aarrggbb(rgba: tuple[int]) -> str:
+    def rgba_to_aarrggbb(rgba: tuple) -> str:
         """
         Method to:
         - Convert RGBA color to 32-bit AARRGGBB format String
@@ -52,18 +56,14 @@ class ColorPicker:
             - Open QColorDialog and choose the color
             - Set the color in the QLineEdit provided
             """
-            colorPicker: QColorDialog = QColorDialog()
-            colorPicker.setWindowIcon(QIcon(Path.IconPaths.ColorPicker))
+            VColorPicker.useAlpha(True)
             aarrggbb: str = lineEdit.text()
             if aarrggbb:
-                color: QColor = colorPicker.getColor(
-                    initial=QColor(*ColorPicker.aarrggbb_to_rgba(aarrggbb)),
-                    options=QColorDialog.ColorDialogOption.ShowAlphaChannel,
-                )
+                color: QColor = QColor(*map(int, VColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(aarrggbb)))))
             else:
-                color: QColor = colorPicker.getColor(options=QColorDialog.ColorDialogOption.ShowAlphaChannel)
+                color: QColor = QColor(*map(int, VColorPicker.getColor((0, 0, 0, 255))))
             if color.isValid():
-                lineEdit.setText(ColorPicker.rgba_to_aarrggbb(tuple(color.getRgb())))
+                lineEdit.setText(ColorPicker.rgba_to_aarrggbb(color.getRgb()))
                 ColorPicker.changeButtonColor(
                     rgba=tuple(color.getRgb()),
                     pushButton=pushButton,
