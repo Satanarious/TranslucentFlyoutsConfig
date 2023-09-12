@@ -5,29 +5,39 @@ from PyQt6.QtGui import QMouseEvent, QFontDatabase
 import sys
 
 # Relative Imports
-from ui import Ui_MainWindow
+from Generated.ui import Ui_MainWindow
 from connections import Connectors
 from Registry.reg_edit import EditRegistry
 from Data.user import Saved
 from Data.paths import Path
+from info_widget import InfoWidget
 
 
 class Main(Ui_MainWindow):
     def __init__(self):
+        # Setup Window
         self.mainWindow: QMainWindow = QMainWindow()
         self.setupUi(self.mainWindow)
         self.mainWindow.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         self.mainWindow.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+
+        # Handle Events
         self.title.mousePressEvent = self.myMousePressEvent  # type: ignore
         self.title.mouseMoveEvent = self.myMouseMoveEvent  # type: ignore
         self.title.mouseReleaseEvent = self.myMouseReleaseEvent  # type: ignore
         self.title.setMouseTracking(True)
         self.closeButton.clicked.connect(self.mainWindow.close)  # type: ignore
         self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
-        self.logo.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+
+        # Add Info Widget
+        self.infoWidget = InfoWidget(self.mainWindow, self.mainFrame)
+
+        # Call UI Methods
         self.callConnectors()
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
+
+        # Further Customization
 
     def callConnectors(self):
         """
@@ -36,6 +46,7 @@ class Main(Ui_MainWindow):
         Connectors.connectColorPickers(self)
         Connectors.connectResetButtons(self)
         Connectors.connectApplyButtons(self)
+        Connectors.connectMouseEvent(self)
         Connectors.connectStyleSheets(self)  # Dark Theme
         # Connectors.connectStyleSheets(self, "white", "lightgray", "black", "#222222")  # Light Theme
         # Connectors.connectStyleSheets(self, "hotpink", "skyblue", "white", "#222222")  # Pink-Blue Theme

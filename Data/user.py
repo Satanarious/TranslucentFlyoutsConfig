@@ -6,16 +6,17 @@ import json
 # Relative Imports
 from Registry.reg_edit import EditRegistry
 from Data.defaults import Defaults
-from Dialogs.color_picker import ColorPicker
+from color_picker import ColorPicker
+from Data.paths import Path
 
 if TYPE_CHECKING:
     from main import Main
 
 # Dump Residue or Previously Present Parameters
-with open("user_Settings.json", "w") as json_file:
+with open(Path.DBPaths.UserSettings, "w") as json_file:
     json.dump(EditRegistry.fetchAllValues(), json_file)
 
-rawDefaults: dict = dict(json.load(open("user_settings.json", "r")))
+rawDefaults: dict = dict(json.load(open(Path.DBPaths.UserSettings, "r")))
 
 
 class ClassVar:
@@ -105,7 +106,7 @@ class Key:
 class Saved:
     @staticmethod
     def updateJSON():
-        with open("user_Settings.json", "w") as json_file:
+        with open(Path.DBPaths.UserSettings, "w") as json_file:
             json.dump(rawDefaults, json_file)
 
     @staticmethod

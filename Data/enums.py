@@ -77,6 +77,37 @@ class Settings:
         SmoothZoom = 3
 
 
+class MainTab(IntEnum):
+    """
+    Returns the tab indices in the main tab
+    """
+
+    Global = 0
+    DropDown = 1
+    Menu = 2
+    Tooltip = 3
+
+
+class MenuTab(IntEnum):
+    """
+    Returns the tab indices in the menu tab
+    """
+
+    General = 0
+    Animation = 1
+    Hot = 2
+    DisabledHot = 3
+    Focusing = 4
+    Separator = 5
+
+
+class InfoWidgetHeight(IntEnum):
+    FiveItems = 320
+    FourItems = 220
+    TwoItems = 200
+    TextShort = 120
+
+
 class RegistryReturnType(IntEnum):
     """
     Return Type Enum for Registry value fetching

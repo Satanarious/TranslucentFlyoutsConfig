@@ -71,7 +71,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>Assets/icons/logo.png</pixmap>
+          <pixmap>../Assets/icons/logo.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -100,7 +100,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>Assets/icons/minimize_icon.png</normaloff>Assets/icons/minimize_icon.png</iconset>
+           <normaloff>../Assets/icons/minimize_icon.png</normaloff>../Assets/icons/minimize_icon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -120,7 +120,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>Assets/icons/close_icon.png</normaloff>Assets/icons/close_icon.png</iconset>
+           <normaloff>../Assets/icons/close_icon.png</normaloff>../Assets/icons/close_icon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -187,7 +187,7 @@
           <bool>true</bool>
          </property>
          <property name="documentMode">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <widget class="QWidget" name="tab1">
           <attribute name="title">
@@ -245,7 +245,7 @@
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <widget class="QLabel" name="label_6">
+              <widget class="QLabel" name="lbl_effectType1">
                <property name="text">
                 <string>Effect Type</string>
                </property>
@@ -330,14 +330,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="label_63">
+              <widget class="QLabel" name="lbl_cornerType1">
                <property name="text">
                 <string>Corner Type</string>
                </property>
@@ -394,14 +394,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_7">
+              <widget class="QLabel" name="lbl_enableDropShadow1">
                <property name="text">
                 <string>Enable Drop Shadow</string>
                </property>
@@ -448,14 +448,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="3" column="0">
-              <widget class="QLabel" name="label_59">
+              <widget class="QLabel" name="lbl_noBorderColor1">
                <property name="text">
                 <string>No Border Color</string>
                </property>
@@ -499,14 +499,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="7" column="0">
-              <widget class="QLabel" name="label_8">
+              <widget class="QLabel" name="lbl_darkModeGradientColor1">
                <property name="text">
                 <string>Dark Mode Gradient Color</string>
                </property>
@@ -555,7 +555,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -575,14 +575,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="8" column="0">
-              <widget class="QLabel" name="label_9">
+              <widget class="QLabel" name="lbl_lightModeGradientColor1">
                <property name="text">
                 <string>Light Mode Gradient Color</string>
                </property>
@@ -631,7 +631,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -651,14 +651,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="9" column="0">
-              <widget class="QLabel" name="label_12">
+              <widget class="QLabel" name="lbl_disabledEffect1">
                <property name="text">
                 <string>Disabled</string>
                </property>
@@ -705,14 +705,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="4" column="0">
-              <widget class="QLabel" name="label_58">
+              <widget class="QLabel" name="lbl_enableThemeColorization1">
                <property name="text">
                 <string>Enable Theme Colorization</string>
                </property>
@@ -756,14 +756,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="5" column="0">
-              <widget class="QLabel" name="label_10">
+              <widget class="QLabel" name="lbl_darkModeBorderColor1">
                <property name="text">
                 <string>Dark Mode Border Color</string>
                </property>
@@ -812,7 +812,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -832,14 +832,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="6" column="0">
-              <widget class="QLabel" name="label_11">
+              <widget class="QLabel" name="lbl_lightModeBorderColor1">
                <property name="text">
                 <string>Light Mode Border Color</string>
                </property>
@@ -888,7 +888,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -908,7 +908,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -983,7 +983,7 @@
             <number>12</number>
            </property>
            <item>
-            <widget class="QLabel" name="description1_2">
+            <widget class="QLabel" name="description2">
              <property name="font">
               <font>
                <pointsize>10</pointsize>
@@ -1009,7 +1009,7 @@
               <number>15</number>
              </property>
              <item row="0" column="0">
-              <widget class="QLabel" name="label_20">
+              <widget class="QLabel" name="lbl_effectType2">
                <property name="text">
                 <string>Effect Type</string>
                </property>
@@ -1099,14 +1099,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="label_70">
+              <widget class="QLabel" name="lbl_cornerType2">
                <property name="text">
                 <string>Corner Type</string>
                </property>
@@ -1168,14 +1168,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_21">
+              <widget class="QLabel" name="lbl_enableDropShadow2">
                <property name="text">
                 <string>Enable Drop Shadow</string>
                </property>
@@ -1230,14 +1230,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="3" column="0">
-              <widget class="QLabel" name="label_71">
+              <widget class="QLabel" name="lbl_noBorderColor2">
                <property name="text">
                 <string>No Border Color</string>
                </property>
@@ -1289,14 +1289,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="7" column="0">
-              <widget class="QLabel" name="label_22">
+              <widget class="QLabel" name="lbl_darkModeGradientColor2">
                <property name="text">
                 <string>Dark Mode Gradient Color</string>
                </property>
@@ -1345,7 +1345,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1365,14 +1365,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="8" column="0">
-              <widget class="QLabel" name="label_23">
+              <widget class="QLabel" name="lbl_lightModeGradientColor2">
                <property name="text">
                 <string>Light Mode Gradient Color</string>
                </property>
@@ -1421,7 +1421,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1441,14 +1441,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="9" column="0">
-              <widget class="QLabel" name="label_24">
+              <widget class="QLabel" name="lbl_disabledEffect2">
                <property name="text">
                 <string>Disabled</string>
                </property>
@@ -1503,14 +1503,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="4" column="0">
-              <widget class="QLabel" name="label_72">
+              <widget class="QLabel" name="lbl_enableThemeColorization2">
                <property name="text">
                 <string>Enable Theme Colorization</string>
                </property>
@@ -1562,14 +1562,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="5" column="0">
-              <widget class="QLabel" name="label_25">
+              <widget class="QLabel" name="lbl_darkModeBorderColor2">
                <property name="text">
                 <string>Dark Mode Border Color</string>
                </property>
@@ -1618,7 +1618,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1638,14 +1638,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="6" column="0">
-              <widget class="QLabel" name="label_26">
+              <widget class="QLabel" name="lbl_lightModeBorderColor2">
                <property name="text">
                 <string>Light Mode Border Color</string>
                </property>
@@ -1694,7 +1694,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1714,7 +1714,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -1773,7 +1773,7 @@
             <number>10</number>
            </property>
            <item>
-            <widget class="QLabel" name="description4">
+            <widget class="QLabel" name="description3">
              <property name="text">
               <string>Modify the overall appearance of various menu items and their animations  including: Focused, Hot, Disabled Hot &amp; Separator</string>
              </property>
@@ -1806,7 +1806,7 @@
               <number>0</number>
              </property>
              <property name="documentMode">
-              <bool>true</bool>
+              <bool>false</bool>
              </property>
              <widget class="QWidget" name="tab3_1">
               <attribute name="title">
@@ -1843,8 +1843,8 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>0</y>
-                    <width>478</width>
+                    <y>-224</y>
+                    <width>466</width>
                     <height>686</height>
                    </rect>
                   </property>
@@ -1888,7 +1888,7 @@
                       <number>10</number>
                      </property>
                      <item row="7" column="0">
-                      <widget class="QLabel" name="label_27">
+                      <widget class="QLabel" name="lbl_effectType3">
                        <property name="text">
                         <string>Effect Type</string>
                        </property>
@@ -1978,14 +1978,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="8" column="0">
-                      <widget class="QLabel" name="label_73">
+                      <widget class="QLabel" name="lbl_cornerType3">
                        <property name="text">
                         <string>Corner Type</string>
                        </property>
@@ -2047,14 +2047,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="9" column="0">
-                      <widget class="QLabel" name="label_28">
+                      <widget class="QLabel" name="lbl_enableDropShadow3">
                        <property name="text">
                         <string>Enable Drop Shadow</string>
                        </property>
@@ -2109,14 +2109,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="10" column="0">
-                      <widget class="QLabel" name="label_74">
+                      <widget class="QLabel" name="lbl_noBorderColor3">
                        <property name="text">
                         <string>No Border Color</string>
                        </property>
@@ -2168,14 +2168,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="14" column="0">
-                      <widget class="QLabel" name="label_29">
+                      <widget class="QLabel" name="lbl_darkModeGradientColor3">
                        <property name="text">
                         <string>Dark Mode Gradient Color</string>
                        </property>
@@ -2224,7 +2224,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                           <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2244,14 +2244,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="15" column="0">
-                      <widget class="QLabel" name="label_30">
+                      <widget class="QLabel" name="lbl_lightModeGradientColor3">
                        <property name="text">
                         <string>Light Mode Gradient Color</string>
                        </property>
@@ -2300,7 +2300,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                           <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2320,14 +2320,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="16" column="0">
-                      <widget class="QLabel" name="label_36">
+                      <widget class="QLabel" name="lbl_disabledEffect3_1">
                        <property name="text">
                         <string>Disabled</string>
                        </property>
@@ -2382,14 +2382,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="11" column="0">
-                      <widget class="QLabel" name="label_75">
+                      <widget class="QLabel" name="lbl_enableThemeColorization3_1">
                        <property name="text">
                         <string>Enable Theme Colorization</string>
                        </property>
@@ -2441,14 +2441,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="12" column="0">
-                      <widget class="QLabel" name="label_40">
+                      <widget class="QLabel" name="lbl_darkModeBorderColor3">
                        <property name="text">
                         <string>Dark Mode Border Color</string>
                        </property>
@@ -2497,7 +2497,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                           <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2517,14 +2517,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="13" column="0">
-                      <widget class="QLabel" name="label_41">
+                      <widget class="QLabel" name="lbl_lightModeBorderColor3">
                        <property name="text">
                         <string>Light Mode Border Color</string>
                        </property>
@@ -2573,7 +2573,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                           <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2593,28 +2593,28 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="label">
+                      <widget class="QLabel" name="lbl_noSystemDropShadow">
                        <property name="text">
                         <string>No System Drop Shadow</string>
                        </property>
                       </widget>
                      </item>
                      <item row="1" column="0">
-                      <widget class="QLabel" name="label_2">
+                      <widget class="QLabel" name="lbl_enableImmersiveStyle">
                        <property name="text">
                         <string>Enable Immersive Style</string>
                        </property>
                       </widget>
                      </item>
                      <item row="3" column="0">
-                      <widget class="QLabel" name="label_3">
+                      <widget class="QLabel" name="lbl_enableFluentAnimation">
                        <property name="text">
                         <string>Enable Fluent Animation</string>
                        </property>
@@ -2661,7 +2661,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2711,7 +2711,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2758,14 +2758,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="2" column="0">
-                      <widget class="QLabel" name="label_4">
+                      <widget class="QLabel" name="lbl_enableCustomRendering">
                        <property name="text">
                         <string>Enable Custom Rendering</string>
                        </property>
@@ -2812,14 +2812,14 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="4" column="0">
-                      <widget class="QLabel" name="label_5">
+                      <widget class="QLabel" name="lbl_noModernAppBackgroundColor">
                        <property name="text">
                         <string>No Modern App Background Color</string>
                        </property>
@@ -2869,21 +2869,21 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
                       </layout>
                      </item>
                      <item row="5" column="0">
-                      <widget class="QLabel" name="label_13">
+                      <widget class="QLabel" name="lbl_colorTreatAsTransparent">
                        <property name="text">
                         <string>Color Treat As Transparent</string>
                        </property>
                       </widget>
                      </item>
                      <item row="6" column="0">
-                      <widget class="QLabel" name="label_14">
+                      <widget class="QLabel" name="lbl_colorTreatAsTransparentThreshold">
                        <property name="text">
                         <string>Color Treat As Transparent Threshold</string>
                        </property>
@@ -2923,7 +2923,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2969,7 +2969,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/2867978.png</normaloff>Assets/icons/2867978.png</iconset>
+                           <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -2986,7 +2986,7 @@
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                           <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                          </property>
                         </widget>
                        </item>
@@ -3101,7 +3101,7 @@
                   <number>6</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_54">
+                  <widget class="QLabel" name="lbl_fadeOutTime">
                    <property name="text">
                     <string>Fade Out Time</string>
                    </property>
@@ -3144,14 +3144,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QLabel" name="label_55">
+                  <widget class="QLabel" name="lbl_popInTime">
                    <property name="text">
                     <string>Pop In Time</string>
                    </property>
@@ -3194,14 +3194,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_56">
+                  <widget class="QLabel" name="lbl_fadeInTime">
                    <property name="text">
                     <string>Fade In Time</string>
                    </property>
@@ -3244,14 +3244,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_57">
+                  <widget class="QLabel" name="lbl_popInStyle">
                    <property name="text">
                     <string>Pop In Style</string>
                    </property>
@@ -3305,14 +3305,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_60">
+                  <widget class="QLabel" name="lbl_startRatio">
                    <property name="text">
                     <string>Start Ratio</string>
                    </property>
@@ -3355,14 +3355,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="5" column="0">
-                  <widget class="QLabel" name="label_35">
+                  <widget class="QLabel" name="lbl_enableImmediateInterupting">
                    <property name="text">
                     <string>Enable Immediate Interupting</string>
                    </property>
@@ -3406,7 +3406,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -3485,7 +3485,7 @@
                   <number>6</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_33">
+                  <widget class="QLabel" name="lbl_darkModeColor1_1">
                    <property name="text">
                     <string>Dark Mode Color</string>
                    </property>
@@ -3531,7 +3531,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -3548,14 +3548,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QLabel" name="label_34">
+                  <widget class="QLabel" name="lbl_lightModeColor1_1">
                    <property name="text">
                     <string>Light Mode Color</string>
                    </property>
@@ -3601,7 +3601,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -3618,14 +3618,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_37">
+                  <widget class="QLabel" name="lbl_disabledEffect3_2">
                    <property name="text">
                     <string>Disabled</string>
                    </property>
@@ -3669,14 +3669,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_31">
+                  <widget class="QLabel" name="lbl_cornerRadius1_1">
                    <property name="text">
                     <string>Corner Radius</string>
                    </property>
@@ -3716,14 +3716,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_32">
+                  <widget class="QLabel" name="lbl_enableThemeColorization3_2">
                    <property name="text">
                     <string>Enable Theme Colorization</string>
                    </property>
@@ -3767,7 +3767,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -3846,7 +3846,7 @@
                   <number>6</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_38">
+                  <widget class="QLabel" name="lbl_darkModeColor1_2">
                    <property name="text">
                     <string>Dark Mode Color</string>
                    </property>
@@ -3892,7 +3892,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -3909,14 +3909,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QLabel" name="label_39">
+                  <widget class="QLabel" name="lbl_lightModeColor1_2">
                    <property name="text">
                     <string>Light Mode Color</string>
                    </property>
@@ -3962,7 +3962,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -3979,14 +3979,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_42">
+                  <widget class="QLabel" name="lbl_disabledEffect3_3">
                    <property name="text">
                     <string>Disabled</string>
                    </property>
@@ -4030,14 +4030,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_43">
+                  <widget class="QLabel" name="lbl_cornerRadius1_2">
                    <property name="text">
                     <string>Corner Radius</string>
                    </property>
@@ -4077,14 +4077,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_44">
+                  <widget class="QLabel" name="lbl_enableThemeColorization3_3">
                    <property name="text">
                     <string>Enable Theme Colorization</string>
                    </property>
@@ -4128,7 +4128,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -4207,7 +4207,7 @@
                   <number>6</number>
                  </property>
                  <item row="1" column="0">
-                  <widget class="QLabel" name="label_45">
+                  <widget class="QLabel" name="lbl_darkModeColor1_3">
                    <property name="text">
                     <string>Dark Mode Color</string>
                    </property>
@@ -4253,7 +4253,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -4270,14 +4270,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_46">
+                  <widget class="QLabel" name="lbl_lightModeColor1_3">
                    <property name="text">
                     <string>Light Mode Color</string>
                    </property>
@@ -4323,7 +4323,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -4340,14 +4340,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_49">
+                  <widget class="QLabel" name="lbl_disabledEffect3_4">
                    <property name="text">
                     <string>Disabled</string>
                    </property>
@@ -4391,14 +4391,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_50">
+                  <widget class="QLabel" name="lbl_cornerRadius1_3">
                    <property name="text">
                     <string>Corner Radius</string>
                    </property>
@@ -4438,14 +4438,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="5" column="0">
-                  <widget class="QLabel" name="label_51">
+                  <widget class="QLabel" name="lbl_enableThemeColorization3_4">
                    <property name="text">
                     <string>Enable Theme Colorization</string>
                    </property>
@@ -4489,14 +4489,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_52">
+                  <widget class="QLabel" name="lbl_width1_1">
                    <property name="text">
                     <string>Width</string>
                    </property>
@@ -4539,7 +4539,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -4618,7 +4618,7 @@
                   <number>6</number>
                  </property>
                  <item row="1" column="0">
-                  <widget class="QLabel" name="label_61">
+                  <widget class="QLabel" name="lbl_darkModeColor1_4">
                    <property name="text">
                     <string>Dark Mode Color</string>
                    </property>
@@ -4664,7 +4664,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -4681,14 +4681,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_62">
+                  <widget class="QLabel" name="lbl_lightModeColor1_4">
                    <property name="text">
                     <string>Light Mode Color</string>
                    </property>
@@ -4734,7 +4734,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                       <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -4751,14 +4751,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_65">
+                  <widget class="QLabel" name="lbl_disabledEffect3_5">
                    <property name="text">
                     <string>Disabled</string>
                    </property>
@@ -4802,14 +4802,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_66">
+                  <widget class="QLabel" name="lbl_cornerRadius1_4">
                    <property name="text">
                     <string>Corner Radius</string>
                    </property>
@@ -4849,14 +4849,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="5" column="0">
-                  <widget class="QLabel" name="label_67">
+                  <widget class="QLabel" name="lbl_enableThemeColorization3_5">
                    <property name="text">
                     <string>Enable Theme Colorization</string>
                    </property>
@@ -4900,14 +4900,14 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
                   </layout>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_53">
+                  <widget class="QLabel" name="lbl_width1_2">
                    <property name="text">
                     <string>Width</string>
                    </property>
@@ -4950,7 +4950,7 @@
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                       <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -5019,7 +5019,7 @@
             <number>12</number>
            </property>
            <item>
-            <widget class="QLabel" name="description1_3">
+            <widget class="QLabel" name="description4">
              <property name="font">
               <font>
                <pointsize>10</pointsize>
@@ -5057,7 +5057,7 @@
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <widget class="QLabel" name="label_47">
+              <widget class="QLabel" name="lbl_effectType4">
                <property name="text">
                 <string>Effect Type</string>
                </property>
@@ -5147,14 +5147,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="label_76">
+              <widget class="QLabel" name="lbl_cornerType4">
                <property name="text">
                 <string>Corner Type</string>
                </property>
@@ -5216,14 +5216,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="2" column="0">
-              <widget class="QLabel" name="label_48">
+              <widget class="QLabel" name="lbl_enableDropShadow4">
                <property name="text">
                 <string>Enable Drop Shadow</string>
                </property>
@@ -5278,14 +5278,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="3" column="0">
-              <widget class="QLabel" name="label_77">
+              <widget class="QLabel" name="lbl_noBorderColor4">
                <property name="text">
                 <string>No Border Color</string>
                </property>
@@ -5337,14 +5337,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="7" column="0">
-              <widget class="QLabel" name="label_64">
+              <widget class="QLabel" name="lbl_darkModeGradientColor4">
                <property name="text">
                 <string>Dark Mode Gradient Color</string>
                </property>
@@ -5393,7 +5393,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -5413,14 +5413,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="8" column="0">
-              <widget class="QLabel" name="label_68">
+              <widget class="QLabel" name="lbl_lightModeGradientColor4">
                <property name="text">
                 <string>Light Mode Gradient Color</string>
                </property>
@@ -5469,7 +5469,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -5489,14 +5489,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="9" column="0">
-              <widget class="QLabel" name="label_69">
+              <widget class="QLabel" name="lbl_disabledEffect4">
                <property name="text">
                 <string>Disabled</string>
                </property>
@@ -5551,14 +5551,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="4" column="0">
-              <widget class="QLabel" name="label_78">
+              <widget class="QLabel" name="lbl_enableThemeColorization4">
                <property name="text">
                 <string>Enable Theme Colorization</string>
                </property>
@@ -5610,14 +5610,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="5" column="0">
-              <widget class="QLabel" name="label_79">
+              <widget class="QLabel" name="lbl_darkModeBorderColor4">
                <property name="text">
                 <string>Dark Mode Border Color</string>
                </property>
@@ -5666,7 +5666,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -5686,14 +5686,14 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item row="6" column="0">
-              <widget class="QLabel" name="label_80">
+              <widget class="QLabel" name="lbl_lightModeBorderColor4">
                <property name="text">
                 <string>Light Mode Border Color</string>
                </property>
@@ -5742,7 +5742,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/color_picker_icon.png</normaloff>Assets/icons/color_picker_icon.png</iconset>
+                   <normaloff>../Assets/icons/color_picker_icon.png</normaloff>../Assets/icons/color_picker_icon.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -5762,7 +5762,7 @@
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>Assets/icons/reset_icon.png</normaloff>Assets/icons/reset_icon.png</iconset>
+                   <normaloff>../Assets/icons/reset_icon.png</normaloff>../Assets/icons/reset_icon.png</iconset>
                  </property>
                 </widget>
                </item>

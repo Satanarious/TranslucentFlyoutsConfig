@@ -2,16 +2,18 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox
-from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect
+from PyQt6.QtGui import QIcon, QMouseEvent
 
 
 # Relative Imports
-from Dialogs.color_picker import ColorPicker
-from Data.defaults import Defaults
+from color_picker import ColorPicker
+from Data.defaults import Defaults, Key
 from Data.stylesheet import StyleSheet
 from Data.paths import Path
-from Data.user import ClassVar, Saved
+from Data.user import ClassVar
+from Data.descriptions import Description
+from Data.enums import MainTab, MenuTab, InfoWidgetHeight
 from save_settings import SaveSettings
 
 if TYPE_CHECKING:
@@ -43,7 +45,7 @@ class Connectors:
 
         # TabBar
         window.mainTabWidget.tabBar().setStyleSheet(
-            StyleSheet.mainTabbar(
+            StyleSheet.mainTabBar(
                 backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
@@ -856,3 +858,265 @@ class Connectors:
             lineEdit=window.lightModeGradientColor4,
             pushButton=window.light_mode_gradient_color_picker4,
         )
+
+    @staticmethod
+    def connectMouseEvent(window: Main) -> None:
+        """
+        Method to handle mouse hover and clicks on parameters
+        - Handles mouse enter event
+        - Handles mouse leave event
+        - Handles mouse press event
+        Arguments:
+        - window: Main window of the whole application.
+        """
+
+        def labelEnterEvent(label: QLabel) -> None:
+            font = label.font()
+            font.setUnderline(True)
+            label.setFont(font)
+
+        def labelLeaveEvent(label: QLabel) -> None:
+            font = label.font()
+            font.setUnderline(False)
+            label.setFont(font)
+
+        def labelMousePressEvent(event: QMouseEvent, parameterType: str, height: int) -> None:
+            if event.buttons() == Qt.MouseButton.LeftButton:
+                window.infoWidget.title.setText(parameterType)
+                if parameterType == Key.effectType:
+                    if window.mainTabWidget.currentIndex() == MainTab.Global:
+                        window.infoWidget.description.setText(Description.effectType())
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    else:
+                        window.infoWidget.description.setText(Description.effectType(True))
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 40, window.mainFrame.width(), height + 10)
+
+                elif parameterType == Key.cornerType:
+                    if window.mainTabWidget.currentIndex() == MainTab.Global:
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                        window.infoWidget.description.setText(Description.cornerType())
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    else:
+                        window.infoWidget.description.setText(Description.cornerType(True))
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 40, window.mainFrame.width(), height + 10)
+
+                elif parameterType == Key.enableDropShadow:
+                    if window.mainTabWidget.currentIndex() == MainTab.Global:
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                        window.infoWidget.description.setText(Description.enableDropShadow())
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    else:
+                        window.infoWidget.description.setText(Description.enableDropShadow(True))
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 40, window.mainFrame.width(), height + 10)
+
+                elif parameterType == Key.noBorderColor:
+                    if window.mainTabWidget.currentIndex() == MainTab.Global:
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                        window.infoWidget.description.setText(Description.noBorderColor())
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    else:
+                        window.infoWidget.description.setText(Description.noBorderColor(True))
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 40, window.mainFrame.width(), height + 10)
+
+                elif parameterType == Key.enableThemeColorization:
+                    if window.mainTabWidget.currentIndex() == MainTab.Global:
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                        window.infoWidget.description.setText(Description.enableThemeColorization())
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    else:
+                        window.infoWidget.description.setText(Description.enableThemeColorization(True))
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 40, window.mainFrame.width(), height + 10)
+
+                elif parameterType == Key.darkModeBorderColor:
+                    window.infoWidget.description.setText(Description.darkModeBorderColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.lightModeBorderColor:
+                    window.infoWidget.description.setText(Description.lightModeBorderColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.darkModeGradientColor:
+                    window.infoWidget.description.setText(Description.darkModeGradientColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.lightModeGradientColor:
+                    window.infoWidget.description.setText(Description.lightModeGradientColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.disabled:
+                    if window.mainTabWidget.currentIndex() == MainTab.Global:
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                        window.infoWidget.description.setText(Description.disabled())
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    else:
+                        window.infoWidget.description.setText(Description.disabled(True))
+                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 40, window.mainFrame.width(), height + 10)
+
+                elif parameterType == Key.noSystemDropShadow:
+                    window.infoWidget.description.setText(Description.noSystemDropShadow())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.enableImmersiveStyle:
+                    window.infoWidget.description.setText(Description.enableImmersiveStyle())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.enableCustomRendering:
+                    window.infoWidget.description.setText(Description.enableCustomRendering())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.enableFluentAnimation:
+                    window.infoWidget.description.setText(Description.enableFluentAnimation())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.noModernAppBackgroundColor:
+                    window.infoWidget.description.setText(Description.noModernAppBackgroundColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.colorTreatAsTransparent:
+                    window.infoWidget.description.setText(Description.colorTreatAsTransparent())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.colorTreatAsTransparentThreshold:
+                    window.infoWidget.description.setText(Description.colorTreatAsTransparentThreshold())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.fadeOutTime:
+                    window.infoWidget.description.setText(Description.fadeOutTime())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.fadeInTime:
+                    window.infoWidget.description.setText(Description.fadeInTime())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.startRatio:
+                    window.infoWidget.description.setText(Description.startRatio())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.enableImmediateInterupting:
+                    window.infoWidget.description.setText(Description.enableImmediateInterupting())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.popInStyle:
+                    window.infoWidget.description.setText(Description.popInStyle())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.width:
+                    isFocusing = window.menuTabWidget.currentIndex() == MenuTab.Focusing
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+                    window.infoWidget.description.setText(Description.width(isFocusing))
+
+                elif parameterType == Key.cornerRadius:
+                    window.infoWidget.description.setText(Description.cornerRadius())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.darkModeColor:
+                    window.infoWidget.description.setText(Description.darkModeColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                elif parameterType == Key.lightModeColor:
+                    window.infoWidget.description.setText(Description.lightModeColor())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
+                window.infoWidget.widget.show()
+                window.mainFrame.setGraphicsEffect(QGraphicsBlurEffect())
+                window.mainFrame.setDisabled(True)
+                window.infoWidget.scrollArea.verticalScrollBar().setValue(0)
+
+        def setMouseEvents(label: QLabel, parameterType: str, height: int):
+            label.enterEvent = lambda event: labelEnterEvent(label)  # type: ignore
+            label.leaveEvent = lambda event: labelLeaveEvent(label)  # type: ignore
+            label.mousePressEvent = lambda event: labelMousePressEvent(event, parameterType, height)  # type: ignore
+            label.setCursor(Qt.CursorShape.PointingHandCursor)
+
+        # Global
+        setMouseEvents(window.lbl_effectType1, Key.effectType, InfoWidgetHeight.FiveItems)
+        setMouseEvents(window.lbl_cornerType1, Key.cornerType, InfoWidgetHeight.FourItems)
+        setMouseEvents(window.lbl_enableDropShadow1, Key.enableDropShadow, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_noBorderColor1, Key.noBorderColor, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableThemeColorization1, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_darkModeBorderColor1, Key.darkModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeBorderColor1, Key.lightModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_darkModeGradientColor1, Key.darkModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeGradientColor1, Key.lightModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect1, Key.disabled, InfoWidgetHeight.TwoItems)
+
+        # DropDown
+        setMouseEvents(window.lbl_effectType2, Key.effectType, InfoWidgetHeight.FiveItems)
+        setMouseEvents(window.lbl_cornerType2, Key.cornerType, InfoWidgetHeight.FourItems)
+        setMouseEvents(window.lbl_enableDropShadow2, Key.enableDropShadow, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_noBorderColor2, Key.noBorderColor, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableThemeColorization2, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_darkModeBorderColor2, Key.darkModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeBorderColor2, Key.lightModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_darkModeGradientColor2, Key.darkModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeGradientColor2, Key.lightModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect2, Key.disabled, InfoWidgetHeight.TwoItems)
+
+        # Menu-General
+        setMouseEvents(window.lbl_noSystemDropShadow, Key.noSystemDropShadow, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableImmersiveStyle, Key.enableImmersiveStyle, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableCustomRendering, Key.enableCustomRendering, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableFluentAnimation, Key.enableFluentAnimation, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_noModernAppBackgroundColor, Key.noModernAppBackgroundColor, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_colorTreatAsTransparent, Key.colorTreatAsTransparent, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_colorTreatAsTransparentThreshold, Key.colorTreatAsTransparentThreshold, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_effectType3, Key.effectType, InfoWidgetHeight.FiveItems)
+        setMouseEvents(window.lbl_cornerType3, Key.cornerType, InfoWidgetHeight.FourItems)
+        setMouseEvents(window.lbl_enableDropShadow3, Key.enableDropShadow, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_noBorderColor3, Key.noBorderColor, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableThemeColorization3_1, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_darkModeBorderColor3, Key.darkModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeBorderColor3, Key.lightModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_darkModeGradientColor3, Key.darkModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeGradientColor3, Key.lightModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_1, Key.disabled, InfoWidgetHeight.TwoItems)
+
+        # Menu-Animation
+        setMouseEvents(window.lbl_fadeOutTime, Key.fadeOutTime, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_fadeInTime, Key.fadeInTime, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_popInTime, Key.popInTime, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_popInStyle, Key.popInStyle, InfoWidgetHeight.FourItems)
+        setMouseEvents(window.lbl_startRatio, Key.startRatio, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableImmediateInterupting, Key.enableImmediateInterupting, InfoWidgetHeight.TwoItems)
+
+        # Menu-Hot
+        setMouseEvents(window.lbl_darkModeColor1_1, Key.darkModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeColor1_1, Key.lightModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_2, Key.disabled, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_cornerRadius1_1, Key.cornerRadius, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableThemeColorization3_2, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+
+        # Menu-DisabledHot
+        setMouseEvents(window.lbl_darkModeColor1_2, Key.darkModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeColor1_2, Key.lightModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_3, Key.disabled, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_cornerRadius1_2, Key.cornerRadius, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableThemeColorization3_3, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+
+        # Menu-Focusing
+        setMouseEvents(window.lbl_width1_1, Key.width, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_darkModeColor1_3, Key.darkModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeColor1_3, Key.lightModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_4, Key.disabled, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_cornerRadius1_3, Key.cornerRadius, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableThemeColorization3_4, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+
+        # Menu-Separator
+        setMouseEvents(window.lbl_width1_2, Key.width, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_darkModeColor1_3, Key.darkModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeColor1_3, Key.lightModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_4, Key.disabled, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_cornerRadius1_3, Key.cornerRadius, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableThemeColorization3_4, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+
+        # Tooltip
+        setMouseEvents(window.lbl_effectType4, Key.effectType, InfoWidgetHeight.FiveItems)
+        setMouseEvents(window.lbl_cornerType4, Key.cornerType, InfoWidgetHeight.FourItems)
+        setMouseEvents(window.lbl_enableDropShadow4, Key.enableDropShadow, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_noBorderColor4, Key.noBorderColor, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_enableThemeColorization4, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_darkModeBorderColor4, Key.darkModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeBorderColor4, Key.lightModeBorderColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_darkModeGradientColor4, Key.darkModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeGradientColor4, Key.lightModeGradientColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect4, Key.disabled, InfoWidgetHeight.TwoItems)

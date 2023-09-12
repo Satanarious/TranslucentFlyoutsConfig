@@ -9,7 +9,7 @@ from Data.stylesheet import StyleSheet
 
 class ColorPicker:
     @staticmethod
-    def changeButtonColor(rgba: tuple[int] | str, pushButton: QPushButton) -> None:
+    def changeButtonColor(rgba: tuple | str, pushButton: QPushButton) -> None:
         """
         Method to:
         - Change the color of the QPushButton provided
@@ -23,7 +23,7 @@ class ColorPicker:
             pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba))
 
     @staticmethod
-    def rgba_to_aarrggbb(rgba: tuple[int]) -> str:
+    def rgba_to_aarrggbb(rgba: tuple) -> str:
         """
         Method to:
         - Convert RGBA color to 32-bit AARRGGBB format String
@@ -63,7 +63,7 @@ class ColorPicker:
             else:
                 color: QColor = QColor(*map(int, VColorPicker.getColor((0, 0, 0, 255))))
             if color.isValid():
-                lineEdit.setText(ColorPicker.rgba_to_aarrggbb(tuple(color.getRgb())))
+                lineEdit.setText(ColorPicker.rgba_to_aarrggbb(color.getRgb()))
                 ColorPicker.changeButtonColor(
                     rgba=tuple(color.getRgb()),
                     pushButton=pushButton,
