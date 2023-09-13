@@ -1,5 +1,6 @@
 # Library Imports
-from PyQt6.QtWidgets import QWidget, QMainWindow, QFrame
+from PyQt6.QtWidgets import QWidget, QMainWindow, QFrame, QGraphicsDropShadowEffect
+from PyQt6.QtGui import QColor
 
 # Relative Imports
 from Generated.info import Ui_Form
@@ -21,6 +22,11 @@ class InfoWidget(Ui_Form):
         )
         self.widget.hide()
         self.closeButton.clicked.connect(self.closeInfo)
+        effect = QGraphicsDropShadowEffect()
+        effect.setColor(QColor(0, 0, 0))
+        effect.setBlurRadius(12)
+        effect.setOffset(0, -3)
+        self.widget.setGraphicsEffect(effect)
         self.widget.setStyleSheet(StyleSheet.infoWidget())
 
     def closeInfo(self):

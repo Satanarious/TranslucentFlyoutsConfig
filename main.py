@@ -10,7 +10,8 @@ from connections import Connectors
 from Registry.reg_edit import EditRegistry
 from Data.user import Saved
 from Data.paths import Path
-from info_widget import InfoWidget
+from Widgets.info_widget import InfoWidget
+from Widgets.applied_widget import AppliedWidget
 
 
 class Main(Ui_MainWindow):
@@ -29,8 +30,9 @@ class Main(Ui_MainWindow):
         self.closeButton.clicked.connect(self.mainWindow.close)  # type: ignore
         self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
 
-        # Add Info Widget
+        # Add Widgets
         self.infoWidget = InfoWidget(self.mainWindow, self.mainFrame)
+        self.appliedWidget = AppliedWidget(self.mainWindow, self.mainFrame)
 
         # Call UI Methods
         self.callConnectors()

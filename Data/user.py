@@ -6,7 +6,7 @@ import json
 # Relative Imports
 from Registry.reg_edit import EditRegistry
 from Data.defaults import Defaults
-from color_picker import ColorPicker
+from Widgets.color_picker import ColorPicker
 from Data.paths import Path
 
 if TYPE_CHECKING:
