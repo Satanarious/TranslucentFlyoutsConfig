@@ -246,6 +246,49 @@ class StyleSheet:
         )
 
     @staticmethod
+    def appliedWidget(
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "white",
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+        QFrame#applied_frame{
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+            border:1px solid """
+            + labelColor
+            + """;
+            border-radius:8px;
+        }
+        QLabel#applied_text{
+            font-family: Andika;
+            font-size: 12;
+            font-weight:bold;
+        }
+        QPushButton#ok_button{
+            font-family: Nunito Sans 10pt Condensed;
+            font-size:10;
+            font-weight:bold;
+            background-color:"""
+            + textColor
+            + """;
+            color:"""
+            + labelColor
+            + """;
+            width:50px;
+        }
+        QPushButton#ok_button::hover{
+            background-color:"""
+            + backgroundColor
+            + """;
+        }
+        """
+        )
+
+    @staticmethod
     def infoWidget(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",

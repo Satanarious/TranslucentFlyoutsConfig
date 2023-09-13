@@ -14,6 +14,7 @@ class Path:
         UpArrow: str = "Assets/icons/up-arrow.png"
         DownArrow: str = "Assets/icons/down-arrow.png"
         CloseIcon: str = "Assets/icons/close_icon.png"
+        AppliedGif = "Assets/icons/applied.gif"
 
     class FontPaths:
         NunitoSans: str = "Assets/fonts/NunitoSans_10pt_Condensed-Regular.ttf"
