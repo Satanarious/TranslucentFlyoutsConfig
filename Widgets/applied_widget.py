@@ -1,12 +1,9 @@
 # Library Imports
 from PyQt6.QtWidgets import QMainWindow, QWidget, QFrame, QGraphicsBlurEffect, QGraphicsDropShadowEffect
-from PyQt6.QtGui import QMovie, QColor
-import asyncio
-import time
+from PyQt6.QtGui import QColor
 
 # Relative Imports
 from Generated.applied import Ui_Form
-from Data.paths import Path
 
 
 class AppliedWidget(Ui_Form):
@@ -31,15 +28,11 @@ class AppliedWidget(Ui_Form):
         self.widget.hide()
 
     def start(self):
-        self.movie = QMovie(Path.IconPaths.AppliedGif)
-        self.gif.setMovie(self.movie)
-        self.movie.start()
         self.widget.show()
         self.frame.setGraphicsEffect(QGraphicsBlurEffect())
         self.frame.setDisabled(True)
 
     def stop(self):
-        self.movie.stop()
         self.widget.hide()
         self.frame.setGraphicsEffect(None)  # type:ignore
         self.frame.setDisabled(False)
