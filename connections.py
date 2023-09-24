@@ -1,13 +1,14 @@
 # Library Imports
 from __future__ import annotations
 from typing import TYPE_CHECKING
+import asyncio
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect
 from PyQt6.QtGui import QIcon, QMouseEvent
 
 
 # Relative Imports
-from color_picker import ColorPicker
+from Widgets.color_picker import ColorPicker
 from Data.defaults import Defaults, Key
 from Data.stylesheet import StyleSheet
 from Data.paths import Path
@@ -125,6 +126,7 @@ class Connectors:
                 textColor=textColor,
             )
         )
+        window.appliedWidget.widget.setStyleSheet(StyleSheet.appliedWidget())
 
     @staticmethod
     def connectApplyButtons(window: Main) -> None:
@@ -133,14 +135,23 @@ class Connectors:
         - Connect Apply Button to its respective functions
         """
         window.applyButton1.clicked.connect(lambda a: SaveSettings.Global.save(window))
+        window.applyButton1.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton2.clicked.connect(lambda a: SaveSettings.DropDown.save(window))
+        window.applyButton2.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton3_1.clicked.connect(lambda a: SaveSettings.Menu.save(window))
+        window.applyButton3_1.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton3_2.clicked.connect(lambda a: SaveSettings.Menu.Animation.save(window))
+        window.applyButton3_2.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton3_3.clicked.connect(lambda a: SaveSettings.Menu.Hot.save(window))
+        window.applyButton3_3.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton3_4.clicked.connect(lambda a: SaveSettings.Menu.DisabledHot.save(window))
+        window.applyButton3_4.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton3_5.clicked.connect(lambda a: SaveSettings.Menu.Focusing.save(window))
+        window.applyButton3_5.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton3_6.clicked.connect(lambda a: SaveSettings.Menu.Separator.save(window))
+        window.applyButton3_6.clicked.connect(lambda a: window.appliedWidget.start())
         window.applyButton4.clicked.connect(lambda a: SaveSettings.Tooltip.save(window))
+        window.applyButton4.clicked.connect(lambda a: window.appliedWidget.start())
 
     @staticmethod
     def connectResetButtons(window: Main) -> None:

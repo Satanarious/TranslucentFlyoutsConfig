@@ -16,7 +16,9 @@
 </table>
 
 ## Installation Instructions
+
 > Assuming you have the latest release of [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest) Installed.
+
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
 - Extract all files in a directory/folder.
 - Run the `TranslucentFlyoutsConfig.exe` file.
@@ -63,6 +65,10 @@ PyInstaller bundles a Python application and all its dependencies into a single 
 ### [VColorPicker](https://github.com/nlfmt/pyqt-colorpicker)
 
 VColorPicker is a simple visual Color Picker with a modern UI created with Qt to easily get color input from the user.
+
+### [Tick icon by Freepik - Flaticon](https://www.flaticon.com/free-icons/tick)
+
+The Tick icon included in the application, which appears when the user clicks the apply button is designed by Freepik - Flaticon
 
 ## Disclaimer
 
