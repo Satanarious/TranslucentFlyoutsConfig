@@ -1,7 +1,6 @@
 # Library Imports
 from __future__ import annotations
-from typing import TYPE_CHECKING
-import asyncio
+from typing import TYPE_CHECKING, Callable
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect
 from PyQt6.QtGui import QIcon, QMouseEvent
@@ -871,7 +870,7 @@ class Connectors:
         )
 
     @staticmethod
-    def connectMouseEvent(window: Main) -> None:
+    def connectMouseEvent(window: Main, _translate: Callable[[str], str]) -> None:
         """
         Method to handle mouse hover and clicks on parameters
         - Handles mouse enter event
@@ -893,7 +892,7 @@ class Connectors:
 
         def labelMousePressEvent(event: QMouseEvent, parameterType: str, height: int) -> None:
             if event.buttons() == Qt.MouseButton.LeftButton:
-                window.infoWidget.title.setText(parameterType)
+                window.infoWidget.title.setText(_translate(parameterType))
                 if parameterType == Key.effectType:
                     if window.mainTabWidget.currentIndex() == MainTab.Global:
                         window.infoWidget.description.setText(Description.effectType())
@@ -904,7 +903,6 @@ class Connectors:
 
                 elif parameterType == Key.cornerType:
                     if window.mainTabWidget.currentIndex() == MainTab.Global:
-                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
                         window.infoWidget.description.setText(Description.cornerType())
                         window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
                     else:

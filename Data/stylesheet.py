@@ -457,3 +457,72 @@ class StyleSheet:
     @staticmethod
     def buttoResetStyleSheet(resetColor: str = "#313131") -> str:
         return """QPushButton{background-color:""" + resetColor + """;width:25px;height:25px;}"""
+
+    class ColorPicker:
+        @staticmethod
+        def titleBar(
+            backgroundColor: str = "#202020",
+            secondaryBackgroundColor: str = "#313131",
+            labelColor: str = "white",
+            textColor: str = "#7A7A7A",
+        ) -> str:
+            return (
+                """
+                    QFrame{
+                    background-color:"""
+                + secondaryBackgroundColor
+                + """;
+                    border-bottom-left-radius:0px;
+                    border-bottom-right-radius:0px;
+                    }
+
+                    """
+            )
+
+        @staticmethod
+        def windowTitle(
+            backgroundColor: str = "#202020",
+            secondaryBackgroundColor: str = "#313131",
+            labelColor: str = "white",
+            textColor: str = "#7A7A7A",
+        ) -> str:
+            return (
+                """
+                    QLabel{
+                    font-size:13px;
+                    color:"""
+                + labelColor
+                + """;
+                    font-weight:bold;
+                    }
+
+                    """
+            )
+
+        @staticmethod
+        def buttonTextStyle() -> str:
+            return """
+                QDialogButtonBox QPushButton{
+                font-size:12px;
+                font-weight:normal;
+                }
+                """
+
+        @staticmethod
+        def labelStyle(
+            backgroundColor: str = "#202020",
+            secondaryBackgroundColor: str = "#313131",
+            labelColor: str = "white",
+            textColor: str = "#7A7A7A",
+        ) -> str:
+            return (
+                """
+                QLabel{
+                color:"""
+                + labelColor
+                + """;
+                font-size:12px;
+                font-weight:normal;
+                }
+                """
+            )

@@ -1,10 +1,11 @@
 # Library Imports
-from PyQt6.QtWidgets import QLineEdit, QPushButton
+from PyQt6.QtWidgets import QLineEdit, QPushButton, QDialogButtonBox
 from PyQt6.QtGui import QColor, QIcon
-import vcolorpicker as VColorPicker
+import vcolorpicker
 
 # Relative Imports
 from Data.stylesheet import StyleSheet
+from Data.translations import translationVar
 
 
 class ColorPicker:
@@ -56,12 +57,29 @@ class ColorPicker:
             - Open QColorDialog and choose the color
             - Set the color in the QLineEdit provided
             """
-            VColorPicker.useAlpha(True)
+            vColorPicker = vcolorpicker.ColorPicker(useAlpha=True)
+            _translate = translationVar.translateFrom
+            vColorPicker.ui.window_title.setText(_translate("Color Picker"))
+            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setText(_translate("OK"))
+            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setText(_translate("Cancel"))
+
+            # Stylesheets
+            vColorPicker.ui.title_bar.setStyleSheet(StyleSheet.ColorPicker.titleBar())
+            vColorPicker.ui.window_title.setStyleSheet(StyleSheet.ColorPicker.windowTitle())
+            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setStyleSheet(StyleSheet.ColorPicker.buttonTextStyle())
+            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setStyleSheet(StyleSheet.ColorPicker.buttonTextStyle())
+            vColorPicker.ui.lbl_red.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+            vColorPicker.ui.lbl_green.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+            vColorPicker.ui.lbl_blue.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+            vColorPicker.ui.editfields.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+            vColorPicker.ui.lbl_hex.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+
+            # Color Extract
             aarrggbb: str = lineEdit.text()
             if aarrggbb:
-                color: QColor = QColor(*map(int, VColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(aarrggbb)))))
+                color: QColor = QColor(*map(int, vColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(aarrggbb)))))
             else:
-                color: QColor = QColor(*map(int, VColorPicker.getColor((0, 0, 0, 255))))
+                color: QColor = QColor(*map(int, vColorPicker.getColor((0, 0, 0, 255))))
             if color.isValid():
                 lineEdit.setText(ColorPicker.rgba_to_aarrggbb(color.getRgb()))
                 ColorPicker.changeButtonColor(

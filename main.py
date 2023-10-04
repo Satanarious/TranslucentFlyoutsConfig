@@ -7,9 +7,11 @@ import sys
 # Relative Imports
 from Generated.ui import Ui_MainWindow
 from connections import Connectors
+from translate import Translate
 from Registry.reg_edit import EditRegistry
 from Data.user import Saved
 from Data.paths import Path
+from Data.enums import Languages
 from Widgets.info_widget import InfoWidget
 from Widgets.applied_widget import AppliedWidget
 
@@ -36,6 +38,7 @@ class Main(Ui_MainWindow):
 
         # Call UI Methods
         self.callConnectors()
+        Translate.translate(self, Languages.Hindi)
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
 
@@ -47,8 +50,8 @@ class Main(Ui_MainWindow):
         """
         Connectors.connectColorPickers(self)
         Connectors.connectResetButtons(self)
+        # Connectors.connectMouseEvent(self)
         Connectors.connectApplyButtons(self)
-        Connectors.connectMouseEvent(self)
         Connectors.connectStyleSheets(self)  # Dark Theme
         # Connectors.connectStyleSheets(self, "white", "lightgray", "black", "#222222")  # Light Theme
         # Connectors.connectStyleSheets(self, "hotpink", "skyblue", "white", "#222222")  # Pink-Blue Theme
