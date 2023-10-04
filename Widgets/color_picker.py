@@ -73,14 +73,15 @@ class ColorPicker:
             vColorPicker.ui.lbl_blue.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
             vColorPicker.ui.editfields.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
             vColorPicker.ui.lbl_hex.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-
+            cancelled = False
+            vColorPicker.rejected.connect(lambda: exec("cancelled=True"))
             # Color Extract
             aarrggbb: str = lineEdit.text()
             if aarrggbb:
                 color: QColor = QColor(*map(int, vColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(aarrggbb)))))
             else:
                 color: QColor = QColor(*map(int, vColorPicker.getColor((0, 0, 0, 255))))
-            if color.isValid():
+            if color.isValid() and cancelled:
                 lineEdit.setText(ColorPicker.rgba_to_aarrggbb(color.getRgb()))
                 ColorPicker.changeButtonColor(
                     rgba=tuple(color.getRgb()),
