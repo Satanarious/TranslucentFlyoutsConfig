@@ -7,13 +7,14 @@ import sys
 # Relative Imports
 from Generated.ui import Ui_MainWindow
 from connections import Connectors
-from translate import Translate
 from Registry.reg_edit import EditRegistry
 from Data.user import Saved
 from Data.paths import Path
-from Data.enums import Languages
 from Widgets.info_widget import InfoWidget
 from Widgets.applied_widget import AppliedWidget
+from Widgets.settings_widget import SettingsWidget
+from Data.app_settings import AppSettings
+from translate import Translate
 
 
 class Main(Ui_MainWindow):
@@ -32,17 +33,18 @@ class Main(Ui_MainWindow):
         self.closeButton.clicked.connect(self.mainWindow.close)  # type: ignore
         self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
 
-        # Add Widgets
+        # Add Overlay-Widgets
         self.infoWidget = InfoWidget(self.mainWindow, self.mainFrame)
         self.appliedWidget = AppliedWidget(self.mainWindow, self.mainFrame)
+        self.settingsWidget = SettingsWidget(self, self.mainFrame)
 
         # Call UI Methods
         self.callConnectors()
-        Translate.translate(self, Languages.Hindi)
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
-
-        # Further Customization
+        self.settingsButton.clicked.connect(self.settingsWidget.start)
+        print(Translate.findLanguageFromInt(AppSettings.language))
+        Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
 
     def callConnectors(self):
         """

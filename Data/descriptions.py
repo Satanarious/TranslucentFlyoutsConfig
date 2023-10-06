@@ -1070,7 +1070,7 @@ class Description:
             <tr>
             <th>"""
             + translationVar.translateFrom(Key.TableHeading.acceptedValues)
-            + """/th>
+            + """</th>
             <th>"""
             + translationVar.translateFrom(Key.TableHeading.description)
             + """</th>

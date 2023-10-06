@@ -8,6 +8,7 @@ class Path:
     class DBPaths:
         Defaults = "Assets/db/defaults.json"
         UserSettings = "Assets/db/user_settings.json"
+        AppSettings = "Assets/db/app_settings.json"
 
     class IconPaths:
         ResetIcon: str = "Assets/icons/reset_icon.png"

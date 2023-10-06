@@ -187,6 +187,14 @@ class StyleSheet:
             + labelColor
             + """;
         }
+        QPushButton::pressed{
+            color:"""
+            + labelColor
+            + """;
+            background-color:"""
+            + textColor
+            + """;
+        }
         QToolButton#minimizeButton{
             padding:5px;
         }
@@ -281,8 +289,16 @@ class StyleSheet:
             width:50px;
         }
         QPushButton#ok_button::hover{
+            color:"""
+            + labelColor
+            + """;
+        }
+        QPushButton#ok_button::pressed{
+            color:"""
+            + labelColor
+            + """;
             background-color:"""
-            + backgroundColor
+            + textColor
             + """;
         }
         """
@@ -342,9 +358,6 @@ class StyleSheet:
         return (
             """
         QPushButton{
-            border:1px solid """
-            + labelColor
-            + """;
             border-radius:5px;
             color:"""
             + labelColor
@@ -356,6 +369,11 @@ class StyleSheet:
             + """;
         }
         QPushButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QPushButton::pressed{
             color:"""
             + labelColor
             + """;
@@ -452,7 +470,7 @@ class StyleSheet:
     @staticmethod
     def buttonColorStylesheet(rgba: tuple) -> str:
         colorString: str = f"rgb({rgba[0]},{rgba[1]},{rgba[2]})"
-        return "QPushButton{background-color:" + colorString + ";width:25px;height:25px;}"
+        return """QPushButton{background-color:""" + colorString + """;width:25px;height:25px;}"""
 
     @staticmethod
     def buttoResetStyleSheet(resetColor: str = "#313131") -> str:
@@ -500,13 +518,33 @@ class StyleSheet:
             )
 
         @staticmethod
-        def buttonTextStyle() -> str:
-            return """
+        def buttonTextStyle(
+            backgroundColor: str = "#202020",
+            secondaryBackgroundColor: str = "#313131",
+            labelColor: str = "white",
+            textColor: str = "#7A7A7A",
+        ) -> str:
+            return (
+                """
                 QDialogButtonBox QPushButton{
                 font-size:12px;
                 font-weight:normal;
                 }
+                QDialogButtonBox QPushButton::hover{
+                    border:1px solid """
+                + labelColor
+                + """;
+                }
+                QDialogButtonBox QPushButton::pressed{
+                    color:"""
+                + labelColor
+                + """;
+                    background-color:"""
+                + textColor
+                + """;
+                }
                 """
+            )
 
         @staticmethod
         def labelStyle(
@@ -526,3 +564,26 @@ class StyleSheet:
                 }
                 """
             )
+
+    @staticmethod
+    def settingsWidget(
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "white",
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+            QFrame{background-color:"""
+            + backgroundColor
+            + """; border-radius:8px;}
+            QLabel{color:"""
+            + labelColor
+            + """;}
+            QPushButton{color:"""
+            + labelColor
+            + """;background-color:"""
+            + secondaryBackgroundColor
+            + """;width:70px;}
+            """
+        )

@@ -80,8 +80,6 @@ class Settings:
 class Languages(IntEnum):
     Default = 0
     Hindi = 1
-    German = 2
-    Chinese = 3
 
 
 class MainTab(IntEnum):

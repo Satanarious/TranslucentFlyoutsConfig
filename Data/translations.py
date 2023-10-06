@@ -12,14 +12,6 @@ class Key:
     changesApplied: str = "Changes Applied"
     ok: str = "OK"
 
-    @staticmethod
-    def language(language: Languages) -> str:
-        return {
-            Languages.Hindi: "Hindi",
-            Languages.Chinese: "Chinese",
-            Languages.German: "German",
-        }[language]
-
     class Tab:
         _global: str = "Global"
         dropDown: str = "DropDown"
@@ -129,6 +121,8 @@ class TranslationModel:
         self.translations: dict[str, str] = {}
 
     def setLanguage(self, language: Languages) -> None:
+        if self.language == language:
+            return
         self.language = language
         self._fetch()
 
@@ -136,7 +130,9 @@ class TranslationModel:
         if self.language == Languages.Default:
             return
 
-        translationPath: str = {Languages.Hindi: Path.Translations.Hindi}[self.language]
+        translationPath: str = {
+            Languages.Hindi: Path.Translations.Hindi,
+        }[self.language]
         self.translations: dict[str, str] = dict(json.load(open(translationPath, "r", encoding="utf-8")))
 
     def translateFrom(self, incomingString: str) -> str:

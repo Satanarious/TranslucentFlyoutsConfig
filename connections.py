@@ -1,6 +1,6 @@
 # Library Imports
 from __future__ import annotations
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect
 from PyQt6.QtGui import QIcon, QMouseEvent
@@ -14,6 +14,7 @@ from Data.paths import Path
 from Data.user import ClassVar
 from Data.descriptions import Description
 from Data.enums import MainTab, MenuTab, InfoWidgetHeight
+from Data.translations import translationVar
 from save_settings import SaveSettings
 
 if TYPE_CHECKING:
@@ -870,7 +871,7 @@ class Connectors:
         )
 
     @staticmethod
-    def connectMouseEvent(window: Main, _translate: Callable[[str], str]) -> None:
+    def connectMouseEvent(window: Main) -> None:
         """
         Method to handle mouse hover and clicks on parameters
         - Handles mouse enter event
@@ -891,6 +892,7 @@ class Connectors:
             label.setFont(font)
 
         def labelMousePressEvent(event: QMouseEvent, parameterType: str, height: int) -> None:
+            _translate = translationVar.translateFrom
             if event.buttons() == Qt.MouseButton.LeftButton:
                 window.infoWidget.title.setText(_translate(parameterType))
                 if parameterType == Key.effectType:
@@ -1112,11 +1114,11 @@ class Connectors:
 
         # Menu-Separator
         setMouseEvents(window.lbl_width1_2, Key.width, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_darkModeColor1_3, Key.darkModeColor, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_lightModeColor1_3, Key.lightModeColor, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_disabledEffect3_4, Key.disabled, InfoWidgetHeight.TwoItems)
-        setMouseEvents(window.lbl_cornerRadius1_3, Key.cornerRadius, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_enableThemeColorization3_4, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_darkModeColor1_4, Key.darkModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeColor1_4, Key.lightModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_5, Key.disabled, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_cornerRadius1_4, Key.cornerRadius, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableThemeColorization3_5, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
 
         # Tooltip
         setMouseEvents(window.lbl_effectType4, Key.effectType, InfoWidgetHeight.FiveItems)

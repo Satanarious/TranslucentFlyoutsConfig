@@ -13,6 +13,13 @@ if TYPE_CHECKING:
 
 class Translate:
     @staticmethod
+    def findLanguageFromInt(inputLangauge: int) -> Languages:
+        for language in Languages:
+            if language.value == inputLangauge:
+                return language
+        return Languages.Default
+
+    @staticmethod
     def translate(window: Main, language: Languages) -> None:
         translationVar.setLanguage(language)
         _translate = translationVar.translateFrom
@@ -343,6 +350,6 @@ class Translate:
         window.enableImmediateInterupting.setItemText(Settings.EnableImmediateInterupting.Yes, _translate(Key.Value.Bool.yes))
 
         ######### Others #########
-        Connectors.connectMouseEvent(window, _translate)
+        Connectors.connectMouseEvent(window)
         window.appliedWidget.applied_text.setText(_translate(Key.changesApplied))
         window.appliedWidget.ok_button.setText(_translate(Key.ok))
