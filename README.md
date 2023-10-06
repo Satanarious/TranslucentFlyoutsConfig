@@ -1,19 +1,17 @@
-# Translucent Flyouts Config GUI
-
-> Note: This software is in its early stages of development. Bugs are likely to occur but nothing app-breaking.
+<img src="Screenshots/banner.png">
+<img src="Screenshots/language_and_description_spread.png" align="right" width=450>
 
 **Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts) for Windows 10/11, which allows various customizations for windows32 style context menus.
 
-<table>
-<tr>
-<td><img src="Screenshots/global_dark.png">
-<td><img src="Screenshots/dropdown_dark.png">
-</tr>
-<tr>
-<td><img src="Screenshots/menu_dark.png">
-<td><img src="Screenshots/tooltip_dark.png">
-</tr>
-</table>
+Catalog:
+
+- [Installation Instructions](#installation-instructions)
+- [Usage Instructions](#usage-instructions)
+- [Translation Contribution](#translation-contribution)
+- [Planned Features](#planned-features)
+- [Dependencies](#dependencies)
+- [Disclaimer](#disclaimer)
+- [License](#license)
 
 ## Installation Instructions
 
@@ -25,28 +23,60 @@
 
 ## Usage Instructions
 
+<img src="Screenshots/all_tabs_spread.png" align="right" width=300>
+
 - Left-clicking on the reset button on the far right of any setting resets the value to its default value.
 - Right-clicking on the reset button on the far right of any setting resets the value to its last-saved value.
 - Use the color-picker to choose the color including the alpha(Opacity) value.
 - Any changes are immediately applied on pressing the apply button in the respective section.
+- Change the language using the settings icon on the top-right, next to the close button.
+
+## Translation Contribution
+
+You can contribute to the language of your choice that you are confident in contributing to for this project. You may wanna look at [this](Translations/hi-in.json) translation file before proceeding to contribute.
+
+For first time contributors use the following Steps:
+
+- Fork the Repository.
+- Create a file in the [Translations directory](Translations/) using the name convention `LanguageCode-CountryCode.json`, all in lowercase.
+- Copy everything from [hi-in.json](Translations/hi-in.json) and paste it into you new file.
+- Remove Hindi translations for each corresponding English ones and replace with translation for your respective language.
+
+> Note: There's a translations where a line ends with `<code>` and another that starts with `</code>`, pay close attention and keep it that way in you translation as well, else it will break the code.
+> Here are the lines:
+>
+> - `"Uses the corresponding value in the global tab as the <code>"`
+> - `"</code> value."`
+
+If you wanna go a few steps further and edit python, you might as well follow these:
+
+- Open [Data/enum.py](Data/enums.py) and add an additional value to the class ` Languages`.
+- Open [Data/paths.py](Data/paths.py) and under class `Translations` add the path to you translation path in the exact as mentioned there for the previously mentioned language(s).
+- Open [Data/translations.py](Data/translations.py) and under class `TranslationModel`, under method `_fetch()`, find a dictionary `translationPath` and add another pair in the format `LanguageEnum:LanguageJSONPathVariable`
+- Open [Widget/settings_widget.py](Widget/settings_widget.py) and under method `__init__` you will find a line which says `self.languageComboBox.addItems` with a list of language names in their own languages. Add one for the one you are adding.
+
+> Note 1: If you just wanna do the first part, I'll accept PR for the same as well and do the 2nd part myself. But the 2nd part would be appreciated.
+
+> Note 2: I'm leaving the font as it is for the unsupported languages for the current fonts. I'll add more fonts later.
 
 ## Planned Features
 
 Checkout the [tracker](https://github.com/users/Satanarious/projects/2/views/2) for more details on this.
-<img src="Screenshots/themeing.png" align=right width=50%>
+<img src="Screenshots/theme_tease.png" align=right width=50%>
 
-- Translation Support.
-- Better Parameter Explanations.
-- In-App Themeing Support.
-- Translucent Flyouts Internal Function support:
-  - Restart
-  - Stop
-  - Install
-  - Uninstall
-- UI Animations
-- Preview Pane for Instant changes preview before applying
-- Download Latest Version of Translucent Flyouts and updates
-- Addition to Microsoft Store and/or Winget
+- [x] Translation Support.
+- [x] Better Parameter Explanations.
+- [ ] Add fonts for unsupported languages.
+- [ ] In-App Themeing Support.
+- [ ] Translucent Flyouts Internal Function support:
+  - [ ] Restart
+  - [ ] Stop
+  - [ ] Install
+  - [ ] Uninstall
+- [ ] UI Animations
+- [ ] Preview Pane for Instant changes preview before applying
+- [ ] Download Latest Version of Translucent Flyouts and updates
+- [ ] Addition to Microsoft Store and/or Winget
 
 ## Dependencies
 
