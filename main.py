@@ -1,5 +1,6 @@
 # Library Imports
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QMouseEvent, QFontDatabase
 import sys
@@ -24,6 +25,9 @@ class Main(Ui_MainWindow):
         self.setupUi(self.mainWindow)
         self.mainWindow.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         self.mainWindow.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.mainWindow.setWindowTitle("TFC")
+        self.mainWindow.setWindowIcon(QIcon("Assets/app_icon.ico"))
+        self.mainWindow.setWindowIconText("Translucent")
 
         # Handle Events
         self.title.mousePressEvent = self.myMousePressEvent  # type: ignore
