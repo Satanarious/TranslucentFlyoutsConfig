@@ -398,7 +398,7 @@ class Description:
         <table border=0.5>
         <tr>
         <th>"""
-            + translationVar.translateFrom("Booelan")
+            + translationVar.translateFrom(Key.TableHeading.boolean)
             + """</th>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.description)
@@ -408,7 +408,9 @@ class Description:
             + """</th>
         </tr>
         <tr>
-        <td>No</td>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.Bool.no)
+            + """</td>
         <td>"""
             + translationVar.translateFrom("Choose not to use the current theme color as system border")
             + """</td>

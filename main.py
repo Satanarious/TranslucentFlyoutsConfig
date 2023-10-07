@@ -43,7 +43,6 @@ class Main(Ui_MainWindow):
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
         self.settingsButton.clicked.connect(self.settingsWidget.start)
-        print(Translate.findLanguageFromInt(AppSettings.language))
         Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
 
     def callConnectors(self):
