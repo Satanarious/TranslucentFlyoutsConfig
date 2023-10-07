@@ -114,6 +114,20 @@
         </widget>
        </item>
        <item>
+        <widget class="QToolButton" name="settingsButton">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../Assets/icons/settings_icon.png</normaloff>../Assets/icons/settings_icon.png</iconset>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QToolButton" name="closeButton">
          <property name="text">
           <string>...</string>
@@ -1843,7 +1857,7 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-224</y>
+                    <y>0</y>
                     <width>466</width>
                     <height>686</height>
                    </rect>

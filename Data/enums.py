@@ -77,6 +77,11 @@ class Settings:
         SmoothZoom = 3
 
 
+class Languages(IntEnum):
+    Default = 0
+    Hindi = 1
+
+
 class MainTab(IntEnum):
     """
     Returns the tab indices in the main tab

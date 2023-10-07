@@ -1,5 +1,6 @@
 # Library Imports
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QMouseEvent, QFontDatabase
 import sys
@@ -12,6 +13,9 @@ from Data.user import Saved
 from Data.paths import Path
 from Widgets.info_widget import InfoWidget
 from Widgets.applied_widget import AppliedWidget
+from Widgets.settings_widget import SettingsWidget
+from Data.app_settings import AppSettings
+from translate import Translate
 
 
 class Main(Ui_MainWindow):
@@ -21,6 +25,9 @@ class Main(Ui_MainWindow):
         self.setupUi(self.mainWindow)
         self.mainWindow.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         self.mainWindow.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.mainWindow.setWindowTitle("TFC")
+        self.mainWindow.setWindowIcon(QIcon("Assets/app_icon.ico"))
+        self.mainWindow.setWindowIconText("Translucent")
 
         # Handle Events
         self.title.mousePressEvent = self.myMousePressEvent  # type: ignore
@@ -30,16 +37,17 @@ class Main(Ui_MainWindow):
         self.closeButton.clicked.connect(self.mainWindow.close)  # type: ignore
         self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
 
-        # Add Widgets
+        # Add Overlay-Widgets
         self.infoWidget = InfoWidget(self.mainWindow, self.mainFrame)
         self.appliedWidget = AppliedWidget(self.mainWindow, self.mainFrame)
+        self.settingsWidget = SettingsWidget(self, self.mainFrame)
 
         # Call UI Methods
         self.callConnectors()
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
-
-        # Further Customization
+        self.settingsButton.clicked.connect(self.settingsWidget.start)
+        Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
 
     def callConnectors(self):
         """
@@ -47,8 +55,8 @@ class Main(Ui_MainWindow):
         """
         Connectors.connectColorPickers(self)
         Connectors.connectResetButtons(self)
+        # Connectors.connectMouseEvent(self)
         Connectors.connectApplyButtons(self)
-        Connectors.connectMouseEvent(self)
         Connectors.connectStyleSheets(self)  # Dark Theme
         # Connectors.connectStyleSheets(self, "white", "lightgray", "black", "#222222")  # Light Theme
         # Connectors.connectStyleSheets(self, "hotpink", "skyblue", "white", "#222222")  # Pink-Blue Theme

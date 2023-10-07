@@ -1,7 +1,6 @@
 # Library Imports
 from __future__ import annotations
 from typing import TYPE_CHECKING
-import asyncio
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect
 from PyQt6.QtGui import QIcon, QMouseEvent
@@ -15,6 +14,8 @@ from Data.paths import Path
 from Data.user import ClassVar
 from Data.descriptions import Description
 from Data.enums import MainTab, MenuTab, InfoWidgetHeight
+from Data.translations import translationVar
+from Data.user import Saved
 from save_settings import SaveSettings
 
 if TYPE_CHECKING:
@@ -892,8 +893,9 @@ class Connectors:
             label.setFont(font)
 
         def labelMousePressEvent(event: QMouseEvent, parameterType: str, height: int) -> None:
+            _translate = translationVar.translateFrom
             if event.buttons() == Qt.MouseButton.LeftButton:
-                window.infoWidget.title.setText(parameterType)
+                window.infoWidget.title.setText(_translate(parameterType))
                 if parameterType == Key.effectType:
                     if window.mainTabWidget.currentIndex() == MainTab.Global:
                         window.infoWidget.description.setText(Description.effectType())
@@ -904,7 +906,6 @@ class Connectors:
 
                 elif parameterType == Key.cornerType:
                     if window.mainTabWidget.currentIndex() == MainTab.Global:
-                        window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
                         window.infoWidget.description.setText(Description.cornerType())
                         window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
                     else:
@@ -1114,11 +1115,11 @@ class Connectors:
 
         # Menu-Separator
         setMouseEvents(window.lbl_width1_2, Key.width, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_darkModeColor1_3, Key.darkModeColor, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_lightModeColor1_3, Key.lightModeColor, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_disabledEffect3_4, Key.disabled, InfoWidgetHeight.TwoItems)
-        setMouseEvents(window.lbl_cornerRadius1_3, Key.cornerRadius, InfoWidgetHeight.TextShort)
-        setMouseEvents(window.lbl_enableThemeColorization3_4, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_darkModeColor1_4, Key.darkModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_lightModeColor1_4, Key.lightModeColor, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_disabledEffect3_5, Key.disabled, InfoWidgetHeight.TwoItems)
+        setMouseEvents(window.lbl_cornerRadius1_4, Key.cornerRadius, InfoWidgetHeight.TextShort)
+        setMouseEvents(window.lbl_enableThemeColorization3_5, Key.enableThemeColorization, InfoWidgetHeight.TwoItems)
 
         # Tooltip
         setMouseEvents(window.lbl_effectType4, Key.effectType, InfoWidgetHeight.FiveItems)

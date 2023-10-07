@@ -2,9 +2,13 @@ from winreg import HKEY_CURRENT_USER
 
 
 class Path:
+    class Translations:
+        Hindi: str = "Translations/hi-in.json"
+
     class DBPaths:
         Defaults = "Assets/db/defaults.json"
         UserSettings = "Assets/db/user_settings.json"
+        AppSettings = "Assets/db/app_settings.json"
 
     class IconPaths:
         ResetIcon: str = "Assets/icons/reset_icon.png"
