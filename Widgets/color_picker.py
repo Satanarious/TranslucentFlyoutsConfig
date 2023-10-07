@@ -57,8 +57,34 @@ class ColorPicker:
             - Open QColorDialog and choose the color
             - Set the color in the QLineEdit provided
             """
+
+            def alphaChanged(vColorPicker: vcolorpicker.ColorPicker):
+                alpha = vColorPicker.i(vColorPicker.ui.alpha.text())  # type:ignore
+                oldalpha = alpha
+                if alpha < 0:
+                    alpha = 0
+                if alpha > 255:
+                    alpha = 255
+                if alpha != oldalpha or alpha == 0:
+                    vColorPicker.ui.alpha.setText(str(alpha))  # type:ignore
+                    vColorPicker.ui.alpha.selectAll()  # type:ignore
+                vColorPicker.alpha = alpha
+
+            global cancelled
+            cancelled = False  # type:ignore
+
+            def cancel():
+                global cancelled
+                cancelled = True  # type:ignore
+
+            def ok():
+                global cancelled
+                cancelled = False  # type:ignore
+
             vColorPicker = vcolorpicker.ColorPicker(useAlpha=True)
             _translate = translationVar.translateFrom
+            vColorPicker.ui.alpha.textEdited.disconnect()  # type:ignore
+            vColorPicker.ui.alpha.textEdited.connect(lambda: alphaChanged(vColorPicker))  # type:ignore
             vColorPicker.ui.window_title.setText(_translate("Color Picker"))
             vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setText(_translate("OK"))
             vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setText(_translate("Cancel"))
@@ -73,16 +99,6 @@ class ColorPicker:
             vColorPicker.ui.lbl_blue.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
             vColorPicker.ui.editfields.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
             vColorPicker.ui.lbl_hex.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-            global cancelled
-            cancelled = False  # type:ignore
-
-            def cancel():
-                global cancelled
-                cancelled = True  # type:ignore
-
-            def ok():
-                global cancelled
-                cancelled = False  # type:ignore
 
             vColorPicker.rejected.connect(cancel)  # type:ignore
             vColorPicker.accepted.connect(ok)  # type:ignore
