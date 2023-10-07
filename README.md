@@ -28,6 +28,7 @@ Catalog:
 - Left-clicking on the reset button on the far right of any setting resets the value to its default value.
 - Right-clicking on the reset button on the far right of any setting resets the value to its last-saved value.
 - Use the color-picker to choose the color including the alpha(Opacity) value.
+- See the avaiable values and their descriptions by click on any parameter label.
 - Any changes are immediately applied on pressing the apply button in the respective section.
 - Change the language using the settings icon on the top-right, next to the close button.
 
