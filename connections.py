@@ -15,6 +15,7 @@ from Data.user import ClassVar
 from Data.descriptions import Description
 from Data.enums import MainTab, MenuTab, InfoWidgetHeight
 from Data.translations import translationVar
+from Data.user import Saved
 from save_settings import SaveSettings
 
 if TYPE_CHECKING:
