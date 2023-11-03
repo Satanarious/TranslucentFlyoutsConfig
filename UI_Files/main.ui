@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>533</width>
-    <height>532</height>
+    <height>548</height>
    </rect>
   </property>
   <property name="font">
@@ -177,7 +177,7 @@
        <item>
         <widget class="QStackedWidget" name="mainStackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="config_page">
           <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -2000,7 +2000,7 @@
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>428</width>
+                        <width>484</width>
                         <height>686</height>
                        </rect>
                       </property>
@@ -6332,7 +6332,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="label">
+               <widget class="QLabel" name="settingsHeading">
                 <property name="text">
                  <string>Settings</string>
                 </property>
@@ -6362,13 +6362,13 @@
              <property name="currentIndex">
               <number>0</number>
              </property>
-             <widget class="QWidget" name="page_3">
+             <widget class="QWidget" name="general_page">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
                 <width>483</width>
-                <height>322</height>
+                <height>342</height>
                </rect>
               </property>
               <attribute name="icon">
@@ -6392,9 +6392,22 @@
                 <number>10</number>
                </property>
                <item>
-                <widget class="QLabel" name="label_2">
+                <widget class="QLabel" name="lbl_general_1">
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Choose Language:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -6412,9 +6425,22 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_3">
+                <widget class="QLabel" name="lbl_general_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Installation Location:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -6461,7 +6487,7 @@
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>20</height>
+                   <height>10</height>
                   </size>
                  </property>
                 </spacer>
@@ -6469,7 +6495,7 @@
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_16">
                  <property name="bottomMargin">
-                  <number>20</number>
+                  <number>10</number>
                  </property>
                  <item>
                   <spacer name="horizontalSpacer_21">
@@ -6511,13 +6537,13 @@
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="page">
+             <widget class="QWidget" name="appearance_page">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
                 <width>483</width>
-                <height>322</height>
+                <height>342</height>
                </rect>
               </property>
               <attribute name="icon">
@@ -6531,9 +6557,35 @@
                <property name="leftMargin">
                 <number>20</number>
                </property>
+               <property name="topMargin">
+                <number>8</number>
+               </property>
                <property name="rightMargin">
                 <number>20</number>
                </property>
+               <property name="bottomMargin">
+                <number>8</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="lbl_appearance_1">
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Manual:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="Line" name="line_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
                <item>
                 <layout class="QFormLayout" name="formLayout_2">
                  <property name="horizontalSpacing">
@@ -6546,16 +6598,16 @@
                   <number>0</number>
                  </property>
                  <property name="topMargin">
-                  <number>15</number>
+                  <number>5</number>
                  </property>
                  <property name="rightMargin">
                   <number>0</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>15</number>
+                  <number>5</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_5">
+                  <widget class="QLabel" name="lbl_background_color">
                    <property name="text">
                     <string>Background Color</string>
                    </property>
@@ -6614,7 +6666,7 @@
                   </layout>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QLabel" name="label_6">
+                  <widget class="QLabel" name="lbl_secondary_background_color">
                    <property name="text">
                     <string>Secondary Background Color</string>
                    </property>
@@ -6673,7 +6725,7 @@
                   </layout>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_7">
+                  <widget class="QLabel" name="lbl_label_color">
                    <property name="text">
                     <string>Label Color</string>
                    </property>
@@ -6732,7 +6784,7 @@
                   </layout>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_8">
+                  <widget class="QLabel" name="lbl_text_color">
                    <property name="text">
                     <string>Text Color</string>
                    </property>
@@ -6766,7 +6818,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="label_color_picker_2">
+                    <widget class="QPushButton" name="text_color_picker">
                      <property name="enabled">
                       <bool>true</bool>
                      </property>
@@ -6791,14 +6843,14 @@
                   </layout>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_9">
+                  <widget class="QLabel" name="lbl_icon_color_mode">
                    <property name="text">
                     <string>Icon Color Mode</string>
                    </property>
                   </widget>
                  </item>
                  <item row="4" column="1">
-                  <widget class="QComboBox" name="enableDropShadow1_2">
+                  <widget class="QComboBox" name="iconColorMode">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                      <horstretch>0</horstretch>
@@ -6823,38 +6875,61 @@
                 </layout>
                </item>
                <item>
-                <widget class="QLabel" name="label_10">
+                <widget class="QLabel" name="lbl_appearance_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>Note: Changes will only take place on the next launch of the application. Make sure to save and reopen the application to have the changes take effect.</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="wordWrap">
-                  <bool>true</bool>
+                  <string>Presets:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <spacer name="verticalSpacer_4">
+                <widget class="Line" name="line">
                  <property name="orientation">
-                  <enum>Qt::Vertical</enum>
+                  <enum>Qt::Horizontal</enum>
                  </property>
-                 <property name="sizeType">
-                  <enum>QSizePolicy::Fixed</enum>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_98">
+                 <property name="spacing">
+                  <number>6</number>
                  </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>25</height>
-                  </size>
+                 <property name="topMargin">
+                  <number>0</number>
                  </property>
-                </spacer>
+                 <item>
+                  <widget class="QLabel" name="lbl_preset">
+                   <property name="text">
+                    <string>Select Preset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="preset">
+                   <property name="minimumSize">
+                    <size>
+                     <width>257</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Manual</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
                </item>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_95">
                  <property name="bottomMargin">
-                  <number>20</number>
+                  <number>0</number>
                  </property>
                  <item>
                   <spacer name="horizontalSpacer_23">
@@ -6896,13 +6971,13 @@
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="page_5">
+             <widget class="QWidget" name="external_page">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
                 <width>483</width>
-                <height>322</height>
+                <height>342</height>
                </rect>
               </property>
               <attribute name="icon">
@@ -7053,9 +7128,9 @@
                 </layout>
                </item>
                <item>
-                <widget class="QLabel" name="label_4">
+                <widget class="QLabel" name="location_note">
                  <property name="text">
-                  <string>Note: This section will only work if Translucent Flyouts' location is specified in the previous section. i.e. General Settings</string>
+                  <string>Note: This section will only work if Translucent Flyouts' location is specified in the General Settings.</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -7067,13 +7142,13 @@
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="page_4">
+             <widget class="QWidget" name="internal_page">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
                 <width>483</width>
-                <height>322</height>
+                <height>342</height>
                </rect>
               </property>
               <attribute name="icon">
@@ -7106,7 +7181,7 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_11">
+                  <widget class="QLabel" name="download_icon_label">
                    <property name="maximumSize">
                     <size>
                      <width>180</width>
@@ -7143,9 +7218,9 @@
                 </layout>
                </item>
                <item>
-                <widget class="QLabel" name="label_12">
+                <widget class="QLabel" name="download_note">
                  <property name="text">
-                  <string>Note: Pressing the button below will download and install Translucent Flyouts and set the path in the application so you can usethe internal functions as well as all the other functionality included in the application.</string>
+                  <string>Note: Pressing the button below will download and install Translucent Flyouts and set the path in the application so you can use the internal functions as well as all the other functionality included in the application.</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>

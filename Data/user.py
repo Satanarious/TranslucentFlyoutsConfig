@@ -2,21 +2,22 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 import json
+from Data.app_settings import DBPath
 
 # Relative Imports
 from Registry.reg_edit import EditRegistry
 from Data.defaults import Defaults
 from Widgets.color_picker import ColorPicker
-from Data.paths import Path
 
 if TYPE_CHECKING:
     from main import Main
 
+DBPath = "./Assets/db/user_settings.json"
 # Dump Residue or Previously Present Parameters
-with open(Path.DBPaths.UserSettings, "w") as json_file:
+with open(DBPath, "w") as json_file:
     json.dump(EditRegistry.fetchAllValues(), json_file)
 
-rawDefaults: dict = dict(json.load(open(Path.DBPaths.UserSettings, "r")))
+rawDefaults: dict = dict(json.load(open(DBPath, "r")))
 
 
 class ClassVar:
@@ -106,7 +107,7 @@ class Key:
 class Saved:
     @staticmethod
     def updateJSON():
-        with open(Path.DBPaths.UserSettings, "w") as json_file:
+        with open(DBPath, "w") as json_file:
             json.dump(rawDefaults, json_file)
 
     @staticmethod

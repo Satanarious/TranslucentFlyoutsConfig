@@ -1,0 +1,51 @@
+{
+  "Black-Grey": {
+    "Background Color": "#202020",
+    "Secondary Background Color": "#313131",
+    "Label Color": "#FFFFFF",
+    "Text Color": "#7A7A7A",
+    "Icon Mode": 0
+  },
+  "White-Grey": {
+    "Background Color": "#FFFFFF",
+    "Secondary Background Color": "#7A7A7A",
+    "Label Color": "#000000",
+    "Text Color": "#313131",
+    "Icon Mode": 1
+  },
+  "Pink-Purple": {
+    "Background Color": "#FF96EE",
+    "Secondary Background Color": "#693C8A",
+    "Label Color": "#000000",
+    "Text Color": "#2D0442",
+    "Icon Mode": 1
+  },
+  "Green-Chocolate": {
+    "Background Color": "#4FDC63",
+    "Secondary Background Color": "#C67A55",
+    "Label Color": "#000000",
+    "Text Color": "#FFFFFF",
+    "Icon Mode": 1
+  },
+  "Cyan-PaleYellow": {
+    "Background Color": "#66E7EE",
+    "Secondary Background Color": "#B1A449",
+    "Label Color": "#000000",
+    "Text Color": "#FFFFFF",
+    "Icon Mode": 1
+  },
+  "Orange-Brown": {
+    "Background Color": "#F2A654",
+    "Secondary Background Color": "#A5603A",
+    "Label Color": "#000000",
+    "Text Color": "#FFFFFF",
+    "Icon Mode": 1
+  },
+  "Wine-PaleYellow": {
+    "Background Color": "#7A1C2E",
+    "Secondary Background Color": "#A59E28",
+    "Label Color": "#FFFFFF",
+    "Text Color": "#000000",
+    "Icon Mode": 0
+  }
+}

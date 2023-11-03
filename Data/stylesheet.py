@@ -1,3 +1,6 @@
+from Data.app_settings import AppSettings
+
+
 class StyleSheet:
     @staticmethod
     def main(
@@ -94,7 +97,6 @@ class StyleSheet:
         }
         QComboBox::down-arrow {
             width: 20px;
-            image: url("Assets/icons/down-arrow.png");
         }
         QComboBox QAbstractItemView{
             border: none;
@@ -169,12 +171,6 @@ class StyleSheet:
             background-color: none;
             margin-right:4px;
             width:10px;
-        }
-        QSpinBox::up-button{
-            image: url("Assets/icons/up-arrow.png");
-        }
-        QSpinBox::down-button{
-            image: url("Assets/icons/down-arrow.png");
         }
         QPushButton{
             border-radius:5px;
@@ -257,7 +253,9 @@ class StyleSheet:
             + backgroundColor
             + """;
             border-radius: 5px;
-            color: darkgray;
+            color: """
+            + labelColor
+            + """;
         }
         QToolBox{
             icon-size:18px;
@@ -561,13 +559,13 @@ class StyleSheet:
         )
 
     @staticmethod
-    def buttonColorStylesheet(rgba: tuple) -> str:
+    def buttonColorStylesheet(rgba: tuple | list, secondaryBackgroundColor: str) -> str:
         colorString: str = f"rgb({rgba[0]},{rgba[1]},{rgba[2]})"
-        return """QPushButton{background-color:""" + colorString + """;width:25px;height:25px;}"""
+        return """QPushButton{background-color:""" + colorString + """;width:25px;height:25px;border:1px solid """ + secondaryBackgroundColor + """;}"""
 
     @staticmethod
     def buttoResetStyleSheet(resetColor: str = "#313131") -> str:
-        return """QPushButton{background-color:""" + resetColor + """;width:25px;height:25px;}"""
+        return """QPushButton{background-color:""" + resetColor + """;width:25px;height:25px;border:0px;}"""
 
     class ColorPicker:
         @staticmethod
