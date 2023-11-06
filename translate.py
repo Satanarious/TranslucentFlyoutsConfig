@@ -1,10 +1,12 @@
 # Library Imports
 from __future__ import annotations
 from typing import TYPE_CHECKING
+from PyQt6.QtWidgets import QDialogButtonBox
 
 # Relative Imports
 from Data.translations import translationVar, Key
 from Data.enums import Languages, MainTab, MenuTab, Settings
+from Widgets.color_picker import ColorPicker
 
 if TYPE_CHECKING:
     from main import Main
@@ -352,6 +354,9 @@ class Translate:
         # Connectors.connectMouseEvent(window)
         window.appliedWidget.applied_text.setText(_translate(Key.changesApplied))
         window.appliedWidget.ok_button.setText(_translate(Key.ok))
+        ColorPicker.vColorPicker.ui.window_title.setText(_translate("Color Picker"))
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setText(_translate("OK"))
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setText(_translate("Cancel"))
 
         # Settings
         window.settingsHeading.setText(_translate(Key.Settings.settingsHeading))

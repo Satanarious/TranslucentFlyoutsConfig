@@ -1,15 +1,16 @@
 # Library Imports
-from PyQt6.QtWidgets import QLineEdit, QPushButton, QDialogButtonBox
+from PyQt6.QtWidgets import QLineEdit, QPushButton
 from PyQt6.QtGui import QColor, QIcon
 import vcolorpicker
 from Data.app_settings import AppSettings
 
 # Relative Imports
 from Data.stylesheet import StyleSheet
-from Data.translations import translationVar
 
 
 class ColorPicker:
+    vColorPicker = vcolorpicker.ColorPicker(useAlpha=True)
+
     @staticmethod
     def changeButtonColor(color: tuple | str, pushButton: QPushButton) -> None:
         """
@@ -100,34 +101,18 @@ class ColorPicker:
                 global cancelled
                 cancelled = False  # type:ignore
 
-            vColorPicker = vcolorpicker.ColorPicker(useAlpha=True)
-            _translate = translationVar.translateFrom
-            vColorPicker.ui.alpha.textEdited.connect(lambda: alphaChanged(vColorPicker))  # type:ignore
-            vColorPicker.ui.alpha.textEdited.disconnect()  # type:ignore
-            vColorPicker.ui.window_title.setText(_translate("Color Picker"))
-            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setText(_translate("OK"))
-            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setText(_translate("Cancel"))
+            ColorPicker.vColorPicker.ui.alpha.textEdited.connect(lambda: alphaChanged(ColorPicker.vColorPicker))  # type:ignore
+            ColorPicker.vColorPicker.ui.alpha.textEdited.disconnect()  # type:ignore
 
-            # Stylesheets
-            vColorPicker.ui.title_bar.setStyleSheet(StyleSheet.ColorPicker.titleBar())
-            vColorPicker.ui.window_title.setStyleSheet(StyleSheet.ColorPicker.windowTitle())
-            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setStyleSheet(StyleSheet.ColorPicker.buttonTextStyle())
-            vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setStyleSheet(StyleSheet.ColorPicker.buttonTextStyle())
-            vColorPicker.ui.lbl_red.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-            vColorPicker.ui.lbl_green.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-            vColorPicker.ui.lbl_blue.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-            vColorPicker.ui.editfields.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-            vColorPicker.ui.lbl_hex.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
-
-            vColorPicker.rejected.connect(cancel)  # type:ignore
-            vColorPicker.accepted.connect(ok)  # type:ignore
+            ColorPicker.vColorPicker.rejected.connect(cancel)  # type:ignore
+            ColorPicker.vColorPicker.accepted.connect(ok)  # type:ignore
 
             # Color Extract
             extractedColor: str = lineEdit.text()
             if extractedColor:
-                color: QColor = QColor(*map(int, vColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(extractedColor)))))
+                color: QColor = QColor(*map(int, ColorPicker.vColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(extractedColor)))))
             else:
-                color: QColor = QColor(*map(int, vColorPicker.getColor((0, 0, 0, 255))))
+                color: QColor = QColor(*map(int, ColorPicker.vColorPicker.getColor((0, 0, 0, 255))))
 
             if color.isValid() and not cancelled:
                 lineEdit.setText(ColorPicker.rgba_to_aarrggbb(color.getRgb()))

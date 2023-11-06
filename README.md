@@ -67,17 +67,18 @@ Checkout the [tracker](https://github.com/users/Satanarious/projects/2/views/2) 
 
 - [x] Translation Support.
 - [x] Better Parameter Explanations.
-- [ ] Add fonts for unsupported languages.
-- [ ] In-App Themeing Support.
-- [ ] Translucent Flyouts Internal Function support:
-  - [ ] Restart
-  - [ ] Stop
-  - [ ] Install
-  - [ ] Uninstall
+- [x] In-App Themeing Support.
+- [x] Translucent Flyouts Internal Function support:
+  - [x] Restart
+  - [x] Stop
+  - [x] Install
+  - [x] Uninstall
+- [x] Download Latest Version of Translucent Flyouts.
+- [ ] Update to the Latest Version of Translucent Flyouts.
+- [ ] Add fonts for supported languages.
 - [ ] UI Animations
-- [ ] Preview Pane for Instant changes preview before applying
-- [ ] Download Latest Version of Translucent Flyouts and updates
-- [ ] Addition to Microsoft Store and/or Winget
+- [ ] Preview Pane for Instant changes preview before applying.
+- [ ] Addition to Microsoft Store and/or Winget.
 
 ## Dependencies
 
@@ -96,6 +97,10 @@ PyInstaller bundles a Python application and all its dependencies into a single 
 ### [VColorPicker](https://github.com/nlfmt/pyqt-colorpicker)
 
 VColorPicker is a simple visual Color Picker with a modern UI created with Qt to easily get color input from the user.
+
+### [Winrar]()
+
+Unrar.exe used in the project is taken from winrar and used to uncompress the files downloaded from TranslucentFlyouts.
 
 ### [Tick icon by Freepik - Flaticon](https://www.flaticon.com/free-icons/tick)
 

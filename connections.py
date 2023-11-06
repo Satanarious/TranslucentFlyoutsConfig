@@ -2,7 +2,7 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect, QFileDialog
+from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect, QFileDialog, QDialogButtonBox
 from PyQt6.QtGui import QIcon, QMouseEvent, QPixmap
 import os
 from ctypes import windll
@@ -72,6 +72,7 @@ class Connectors:
         # Apply Button
         window.applyButton1.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -79,6 +80,7 @@ class Connectors:
         )
         window.applyButton2.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -86,6 +88,7 @@ class Connectors:
         )
         window.applyButton3_1.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -93,6 +96,7 @@ class Connectors:
         )
         window.applyButton3_2.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -100,6 +104,7 @@ class Connectors:
         )
         window.applyButton3_3.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -107,6 +112,7 @@ class Connectors:
         )
         window.applyButton3_4.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -114,6 +120,7 @@ class Connectors:
         )
         window.applyButton3_5.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -121,6 +128,7 @@ class Connectors:
         )
         window.applyButton3_6.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -128,12 +136,57 @@ class Connectors:
         )
         window.applyButton4.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
             )
         )
-        window.appliedWidget.widget.setStyleSheet(StyleSheet.appliedWidget())
+        window.appliedWidget.widget.setStyleSheet(
+            StyleSheet.appliedWidget(
+                backgroundColor=backgroundColor,
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.infoWidget.widget.setStyleSheet(
+            StyleSheet.infoWidget(
+                backgroundColor=AppSettings.backgroundColor,
+                secondaryBackgroundColor=AppSettings.secondaryBackgroundColor,
+                labelColor=AppSettings.labelColor,
+                textColor=AppSettings.textColor,
+            )
+        )
+
+        # ColorPicker Widget
+        ColorPicker.vColorPicker.ui.title_bar.setStyleSheet(
+            StyleSheet.ColorPicker.titleBar(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.window_title.setStyleSheet(
+            StyleSheet.ColorPicker.windowTitle(
+                labelColor=labelColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setStyleSheet(
+            StyleSheet.ColorPicker.buttonTextStyle(
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setStyleSheet(
+            StyleSheet.ColorPicker.buttonTextStyle(
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.lbl_red.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.lbl_green.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.lbl_blue.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.editfields.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.lbl_hex.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
 
     @staticmethod
     def setIcons(window: Main, iconType: IconType | int) -> None:

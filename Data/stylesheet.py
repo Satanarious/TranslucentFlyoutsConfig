@@ -1,6 +1,3 @@
-from Data.app_settings import AppSettings
-
-
 class StyleSheet:
     @staticmethod
     def main(
@@ -372,7 +369,7 @@ class StyleSheet:
             font-size:10;
             font-weight:bold;
             background-color:"""
-            + textColor
+            + backgroundColor
             + """;
             color:"""
             + labelColor
@@ -380,16 +377,16 @@ class StyleSheet:
             width:50px;
         }
         QPushButton#ok_button::hover{
-            color:"""
+            border:1px solid """
             + labelColor
             + """;
         }
         QPushButton#ok_button::pressed{
-            color:"""
+            background-color:"""
             + labelColor
             + """;
-            background-color:"""
-            + textColor
+            color:"""
+            + backgroundColor
             + """;
         }
         """
@@ -442,6 +439,7 @@ class StyleSheet:
 
     @staticmethod
     def applyButton(
+        backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
         labelColor: str = "white",
         textColor: str = "#7A7A7A",
