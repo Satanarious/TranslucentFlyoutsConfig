@@ -1,10 +1,9 @@
 # Library Imports
 import json
 
-# Relative Imports
-from Data.paths import Path
 
-rawDefaults: dict = dict(json.load(open(Path.DBPaths.Defaults, "r")))
+DBPath = "./Assets/db/defaults.json"
+rawDefaults: dict = dict(json.load(open(DBPath, "r")))
 
 
 # Keys from JSON file

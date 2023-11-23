@@ -5,20 +5,48 @@ class Path:
     class Translations:
         Hindi: str = "Translations/hi-in.json"
 
-    class DBPaths:
-        Defaults = "Assets/db/defaults.json"
-        UserSettings = "Assets/db/user_settings.json"
-        AppSettings = "Assets/db/app_settings.json"
-
     class IconPaths:
-        ResetIcon: str = "Assets/icons/reset_icon.png"
-        ColorPicker: str = "Assets/icons/color_picker_icon.png"
-        Logo: str = "Assets/icons/logo.png"
-        MinimizeIcon: str = "Assets/icons/minimize_icon.png"
-        UpArrow: str = "Assets/icons/up-arrow.png"
-        DownArrow: str = "Assets/icons/down-arrow.png"
-        CloseIcon: str = "Assets/icons/close_icon.png"
         AppliedIcon = "Assets/icons/applied.png"
+
+        class Light:
+            ResetIcon: str = "Assets/icons/light/reset_icon.png"
+            ColorPicker: str = "Assets/icons/light/color_picker_icon.png"
+            Logo: str = "Assets/icons/light/logo.png"
+            MinimizeIcon: str = "Assets/icons/light/minimize_icon.png"
+            UpArrow: str = "Assets/icons/light/up-arrow.png"
+            DownArrow: str = "Assets/icons/light/down-arrow.png"
+            CloseIcon: str = "Assets/icons/light/close_icon.png"
+            BackIcon: str = "Assets/icons/light/back_icon.png"
+            DownloadIcon: str = "Assets/icons/light/download_icon.png"
+            ExternalIcon: str = "Assets/icons/light/external_icon.png"
+            InternalIcon: str = "Assets/icons/light/internal_icon.png"
+            FolderIcon: str = "Assets/icons/light/folder_icon.png"
+            InstallIcon: str = "Assets/icons/light/install_icon.png"
+            UninstallIcon: str = "Assets/icons/light/uninstall_icon.png"
+            Logo: str = "Assets/icons/light/logo.png"
+            RunIcon: str = "Assets/icons/light/run_icon.png"
+            StopIcon: str = "Assets/icons/light/stop_icon.png"
+            SettingsIcon: str = "Assets/icons/light/settings_icon.png"
+
+        class Dark:
+            ResetIcon: str = "Assets/icons/dark/reset_icon.png"
+            ColorPicker: str = "Assets/icons/dark/color_picker_icon.png"
+            Logo: str = "Assets/icons/dark/logo.png"
+            MinimizeIcon: str = "Assets/icons/dark/minimize_icon.png"
+            UpArrow: str = "Assets/icons/dark/up-arrow.png"
+            DownArrow: str = "Assets/icons/dark/down-arrow.png"
+            CloseIcon: str = "Assets/icons/dark/close_icon.png"
+            BackIcon: str = "Assets/icons/dark/back_icon.png"
+            DownloadIcon: str = "Assets/icons/dark/download_icon.png"
+            ExternalIcon: str = "Assets/icons/dark/external_icon.png"
+            InternalIcon: str = "Assets/icons/dark/internal_icon.png"
+            FolderIcon: str = "Assets/icons/dark/folder_icon.png"
+            InstallIcon: str = "Assets/icons/dark/install_icon.png"
+            UninstallIcon: str = "Assets/icons/dark/uninstall_icon.png"
+            Logo: str = "Assets/icons/dark/logo.png"
+            RunIcon: str = "Assets/icons/dark/run_icon.png"
+            StopIcon: str = "Assets/icons/dark/stop_icon.png"
+            SettingsIcon: str = "Assets/icons/dark/settings_icon.png"
 
     class FontPaths:
         NunitoSans: str = "Assets/fonts/NunitoSans_10pt_Condensed-Regular.ttf"

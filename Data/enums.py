@@ -82,6 +82,11 @@ class Languages(IntEnum):
     Hindi = 1
 
 
+class IconType(IntEnum):
+    Light = 0
+    Dark = 1
+
+
 class MainTab(IntEnum):
     """
     Returns the tab indices in the main tab

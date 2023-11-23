@@ -1,11 +1,12 @@
 # Library Imports
 from __future__ import annotations
 from typing import TYPE_CHECKING
+from PyQt6.QtWidgets import QDialogButtonBox
 
 # Relative Imports
 from Data.translations import translationVar, Key
 from Data.enums import Languages, MainTab, MenuTab, Settings
-from connections import Connectors
+from Widgets.color_picker import ColorPicker
 
 if TYPE_CHECKING:
     from main import Main
@@ -349,7 +350,40 @@ class Translate:
         window.enableImmediateInterupting.setItemText(Settings.EnableImmediateInterupting.No, _translate(Key.Value.Bool.no))
         window.enableImmediateInterupting.setItemText(Settings.EnableImmediateInterupting.Yes, _translate(Key.Value.Bool.yes))
 
-        ######### Others #########
-        Connectors.connectMouseEvent(window)
+        # Others
+        # Connectors.connectMouseEvent(window)
         window.appliedWidget.applied_text.setText(_translate(Key.changesApplied))
         window.appliedWidget.ok_button.setText(_translate(Key.ok))
+        ColorPicker.vColorPicker.ui.window_title.setText(_translate("Color Picker"))
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setText(_translate("OK"))
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setText(_translate("Cancel"))
+
+        # Settings
+        window.settingsHeading.setText(_translate(Key.Settings.settingsHeading))
+        window.toolBox.setItemText(0, _translate(Key.Settings.ToolBox.general))
+        window.toolBox.setItemText(1, _translate(Key.Settings.ToolBox.appearance))
+        window.toolBox.setItemText(2, _translate(Key.Settings.ToolBox.internalFunctions))
+        window.toolBox.setItemText(3, _translate(Key.Settings.ToolBox.externalFunctions))
+        window.lbl_general_1.setText(_translate(Key.Settings.General.chooseLangauge))
+        window.lbl_general_2.setText(_translate(Key.Settings.General.installationLocation))
+        window.location_error_text.setText(_translate(Key.Settings.locationError))
+        window.chooseButton.setText(_translate(Key.Settings.General.chooseFolders))
+        window.saveButton.setText(_translate(Key.save))
+        window.lbl_appearance_1.setText(_translate(Key.Settings.Appearance.manual))
+        window.lbl_appearance_2.setText(_translate(Key.Settings.Appearance.presets))
+        window.lbl_background_color.setText(_translate(Key.Settings.Appearance.backgroundColor))
+        window.lbl_secondary_background_color.setText(_translate(Key.Settings.Appearance.secondaryBackgroundColor))
+        window.lbl_label_color.setText(_translate(Key.Settings.Appearance.labelColor))
+        window.lbl_text_color.setText(_translate(Key.Settings.Appearance.textColor))
+        window.lbl_icon_color_mode.setText(_translate(Key.Settings.Appearance.iconColorMode))
+        window.iconColorMode.setItemText(0, _translate(Key.Settings.Appearance.IconColorMode.lightMode))
+        window.iconColorMode.setItemText(1, _translate(Key.Settings.Appearance.IconColorMode.darkMode))
+        window.lbl_preset.setText(_translate(Key.Settings.Appearance.selectPreset))
+        window.saveButton_2.setText(_translate(Key.save))
+        window.installButton.setText(_translate(Key.Settings.InternalFunctions.install))
+        window.uninstallButton.setText(_translate(Key.Settings.InternalFunctions.uninstall))
+        window.runButton.setText(_translate(Key.Settings.InternalFunctions.run))
+        window.stopButton.setText(_translate(Key.Settings.InternalFunctions.stop))
+        window.location_note.setText(_translate(Key.Settings.InternalFunctions.locationNote))
+        window.download_note.setText(_translate(Key.Settings.ExternalFunctions.downloadNote))
+        window.downloadButton.setText(_translate(Key.Settings.ExternalFunctions.downloadAndInstall))

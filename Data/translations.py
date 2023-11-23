@@ -11,6 +11,7 @@ class Key:
     TranslucentFlyoutsConfig: str = "Translucent Flyouts Config"
     changesApplied: str = "Changes Applied"
     ok: str = "OK"
+    save: str = "Save"
 
     class Tab:
         _global: str = "Global"
@@ -113,6 +114,46 @@ class Key:
         windows10AndWin11Build: str = "Windows 10,<br>Windows 11(Before Build 22000)"
         windows11: str = "Windows 11"
         windows1122H2Plus: str = "Windows 11 22H2+"
+
+    class Settings:
+        locationError: str = "!! Error: TFMain64.dll not found !!"
+        settingsHeading: str = "Settings"
+
+        class ToolBox:
+            general: str = "General"
+            appearance: str = "Appearance"
+            internalFunctions: str = "Internal Functions"
+            externalFunctions: str = "External Functions"
+
+        class General:
+            chooseLangauge: str = "Choose Language:"
+            installationLocation: str = "Installation Location:"
+            chooseFolders: str = "Choose Folder"
+
+        class Appearance:
+            manual: str = "Manual:"
+            backgroundColor: str = "Background Color"
+            secondaryBackgroundColor: str = "Secondary Background Color"
+            labelColor: str = "Label Color"
+            textColor: str = "Text Color"
+            iconColorMode: str = "Icon Color Mode"
+            presets: str = "Presets:"
+            selectPreset: str = "Select Preset"
+
+            class IconColorMode:
+                lightMode: str = "Light Mode"
+                darkMode: str = "Dark Mode"
+
+        class InternalFunctions:
+            install: str = "Install"
+            uninstall: str = "Uninstall"
+            run: str = "Run"
+            stop: str = "Stop"
+            locationNote: str = "Note: This section will only work if Translucent Flyouts' location is specified in the General Settings."
+
+        class ExternalFunctions:
+            downloadNote: str = "Note: Pressing the button below will download and install Translucent Flyouts and set the path in the application so you can use the internal functions as well as all the other functionality included in the application."
+            downloadAndInstall: str = "Download and Install"
 
 
 class TranslationModel:

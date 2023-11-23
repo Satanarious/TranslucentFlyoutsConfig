@@ -64,6 +64,7 @@ class StyleSheet:
             + """;
         }
         QComboBox{
+            height:24px;
             padding-left:10px;
             font-family: Andika;
             background-color:"""
@@ -93,7 +94,6 @@ class StyleSheet:
         }
         QComboBox::down-arrow {
             width: 20px;
-            image: url("Assets/icons/down-arrow.png");
         }
         QComboBox QAbstractItemView{
             border: none;
@@ -121,10 +121,11 @@ class StyleSheet:
         }
         QComboBox QAbstractItemView::item:hover{
             background-color:"""
-            + backgroundColor
+            + labelColor
             + """;
         }
         QLineEdit{
+            height:24px;
             padding-left:10px;
             font-family: Andika;
             background-color:"""
@@ -167,12 +168,6 @@ class StyleSheet:
             background-color: none;
             margin-right:4px;
             width:10px;
-        }
-        QSpinBox::up-button{
-            image: url("Assets/icons/up-arrow.png");
-        }
-        QSpinBox::down-button{
-            image: url("Assets/icons/down-arrow.png");
         }
         QPushButton{
             border-radius:5px;
@@ -250,6 +245,99 @@ class StyleSheet:
             + secondaryBackgroundColor
             + """;
         }
+        QToolBox::tab {
+            background-color:"""
+            + backgroundColor
+            + """;
+            border-radius: 5px;
+            color: """
+            + labelColor
+            + """;
+        }
+        QToolBox{
+            icon-size:18px;
+        }
+        QToolBox > QScrollArea{
+            border-radius: 5px;
+        }
+        QToolBox > QScrollArea > #qt_scrollarea_viewport > QWidget{
+            border-radius: 5px;
+            background-color: """
+            + backgroundColor
+            + """;
+        }
+        QPushButton#saveButton,QPushButton#saveButton_2{
+            color:"""
+            + labelColor
+            + """;
+            width:70px;
+        }
+        QPushButton#chooseButton{
+            width: 120px;
+            color:"""
+            + labelColor
+            + """;
+        }
+        QPushButton#downloadButton{
+            width: 140px;
+            color:"""
+            + labelColor
+            + """;
+        }
+        QToolButton#installButton,QToolButton#uninstallButton,QToolButton#runButton,QToolButton#stopButton{
+            color:"""
+            + labelColor
+            + """;
+            font-size:14px;
+            background-color: """
+            + secondaryBackgroundColor
+            + """;
+            border-radius:10px;
+            width:150px;
+            height:50px;
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+        QToolButton#installButton::hover,QToolButton#uninstallButton::hover,QToolButton#runButton::hover,QToolButton#stopButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QToolButton#installButton::pressed,QToolButton#uninstallButton::pressed,QToolButton#runButton::pressed,QToolButton#stopButton::pressed{
+            color:"""
+            + labelColor
+            + """;
+            background-color:"""
+            + textColor
+            + """;
+        }
+        QListView{
+            
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+            border-radius: 5px;
+        }
+        QListView::item{
+            color:"""
+            + labelColor
+            + """;
+        }
+        QListView::item:selected {
+            background-color:"""
+            + labelColor
+            + """;
+            color:"""
+            + backgroundColor
+            + """;
+            border-radius:5px;
+            font-weight:bold;
+
+        }
+        QLabel#label{
+            font-size:14px;
+            font-weight:bold;
+        }
         """
         )
 
@@ -281,7 +369,7 @@ class StyleSheet:
             font-size:10;
             font-weight:bold;
             background-color:"""
-            + textColor
+            + backgroundColor
             + """;
             color:"""
             + labelColor
@@ -289,16 +377,16 @@ class StyleSheet:
             width:50px;
         }
         QPushButton#ok_button::hover{
-            color:"""
+            border:1px solid """
             + labelColor
             + """;
         }
         QPushButton#ok_button::pressed{
-            color:"""
+            background-color:"""
             + labelColor
             + """;
-            background-color:"""
-            + textColor
+            color:"""
+            + backgroundColor
             + """;
         }
         """
@@ -351,6 +439,7 @@ class StyleSheet:
 
     @staticmethod
     def applyButton(
+        backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
         labelColor: str = "white",
         textColor: str = "#7A7A7A",
@@ -468,13 +557,13 @@ class StyleSheet:
         )
 
     @staticmethod
-    def buttonColorStylesheet(rgba: tuple) -> str:
+    def buttonColorStylesheet(rgba: tuple | list, secondaryBackgroundColor: str) -> str:
         colorString: str = f"rgb({rgba[0]},{rgba[1]},{rgba[2]})"
-        return """QPushButton{background-color:""" + colorString + """;width:25px;height:25px;}"""
+        return """QPushButton{background-color:""" + colorString + """;width:25px;height:25px;border:1px solid """ + secondaryBackgroundColor + """;}"""
 
     @staticmethod
     def buttoResetStyleSheet(resetColor: str = "#313131") -> str:
-        return """QPushButton{background-color:""" + resetColor + """;width:25px;height:25px;}"""
+        return """QPushButton{background-color:""" + resetColor + """;width:25px;height:25px;border:0px;}"""
 
     class ColorPicker:
         @staticmethod
@@ -564,26 +653,3 @@ class StyleSheet:
                 }
                 """
             )
-
-    @staticmethod
-    def settingsWidget(
-        backgroundColor: str = "#202020",
-        secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
-        textColor: str = "#7A7A7A",
-    ) -> str:
-        return (
-            """
-            QFrame{background-color:"""
-            + backgroundColor
-            + """; border-radius:8px;}
-            QLabel{color:"""
-            + labelColor
-            + """;}
-            QPushButton{color:"""
-            + labelColor
-            + """;background-color:"""
-            + secondaryBackgroundColor
-            + """;width:70px;}
-            """
-        )

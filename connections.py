@@ -2,8 +2,11 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect
-from PyQt6.QtGui import QIcon, QMouseEvent
+from PyQt6.QtWidgets import QPushButton, QLineEdit, QComboBox, QSpinBox, QLabel, QGraphicsBlurEffect, QFileDialog, QDialogButtonBox
+from PyQt6.QtGui import QIcon, QMouseEvent, QPixmap
+import os
+from ctypes import windll
+import wget
 
 
 # Relative Imports
@@ -13,9 +16,12 @@ from Data.stylesheet import StyleSheet
 from Data.paths import Path
 from Data.user import ClassVar
 from Data.descriptions import Description
-from Data.enums import MainTab, MenuTab, InfoWidgetHeight
+from Data.enums import IconType, MainTab, MenuTab, InfoWidgetHeight
 from Data.translations import translationVar
-from Data.user import Saved
+from Data.user import Saved  # !!Dont Remove!! Needed for exec() command
+from Data.color_presets import ColorPresets
+from Data.app_settings import AppSettings
+from translate import Translate
 from save_settings import SaveSettings
 
 if TYPE_CHECKING:
@@ -66,6 +72,7 @@ class Connectors:
         # Apply Button
         window.applyButton1.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -73,6 +80,7 @@ class Connectors:
         )
         window.applyButton2.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -80,6 +88,7 @@ class Connectors:
         )
         window.applyButton3_1.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -87,6 +96,7 @@ class Connectors:
         )
         window.applyButton3_2.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -94,6 +104,7 @@ class Connectors:
         )
         window.applyButton3_3.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -101,6 +112,7 @@ class Connectors:
         )
         window.applyButton3_4.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -108,6 +120,7 @@ class Connectors:
         )
         window.applyButton3_5.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -115,6 +128,7 @@ class Connectors:
         )
         window.applyButton3_6.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
@@ -122,12 +136,262 @@ class Connectors:
         )
         window.applyButton4.setStyleSheet(
             StyleSheet.applyButton(
+                backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
                 labelColor=labelColor,
                 textColor=textColor,
             )
         )
-        window.appliedWidget.widget.setStyleSheet(StyleSheet.appliedWidget())
+        window.appliedWidget.widget.setStyleSheet(
+            StyleSheet.appliedWidget(
+                backgroundColor=backgroundColor,
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        window.infoWidget.widget.setStyleSheet(
+            StyleSheet.infoWidget(
+                backgroundColor=AppSettings.backgroundColor,
+                secondaryBackgroundColor=AppSettings.secondaryBackgroundColor,
+                labelColor=AppSettings.labelColor,
+                textColor=AppSettings.textColor,
+            )
+        )
+
+        # ColorPicker Widget
+        ColorPicker.vColorPicker.ui.title_bar.setStyleSheet(
+            StyleSheet.ColorPicker.titleBar(
+                secondaryBackgroundColor=secondaryBackgroundColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.window_title.setStyleSheet(
+            StyleSheet.ColorPicker.windowTitle(
+                labelColor=labelColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setStyleSheet(
+            StyleSheet.ColorPicker.buttonTextStyle(
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setStyleSheet(
+            StyleSheet.ColorPicker.buttonTextStyle(
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+        )
+        ColorPicker.vColorPicker.ui.lbl_red.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.lbl_green.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.lbl_blue.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.editfields.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+        ColorPicker.vColorPicker.ui.lbl_hex.setStyleSheet(StyleSheet.ColorPicker.labelStyle())
+
+    @staticmethod
+    def setIcons(window: Main, iconType: IconType | int) -> None:
+        """
+        Method to:
+        - Set Icons for buttons,labels and more
+
+        Args:
+        - window (Main): Needs the Main class as the argument to access the parameters
+        - iconType (IconType | int): IconType to determine to show light or dark icons.
+        """
+
+        if type(iconType) == int:
+            if iconType == 0:
+                iconType = IconType.Light
+            else:
+                iconType = IconType.Dark
+
+        def colorPickerIcon() -> QIcon:
+            return QIcon(Path.IconPaths.Light.ColorPicker if iconType == IconType.Light else Path.IconPaths.Dark.ColorPicker)
+
+        if len(window.darkModeBorderColor1.text()) < 1:
+            window.dark_mode_border_color_picker1.setIcon(colorPickerIcon())
+        if len(window.darkModeBorderColor2.text()) < 1:
+            window.dark_mode_border_color_picker2.setIcon(colorPickerIcon())
+        if len(window.darkModeBorderColor3.text()) < 1:
+            window.dark_mode_border_color_picker3.setIcon(colorPickerIcon())
+        if len(window.darkModeBorderColor4.text()) < 1:
+            window.dark_mode_border_color_picker4.setIcon(colorPickerIcon())
+        if len(window.lightModeBorderColor1.text()) < 1:
+            window.light_mode_border_color_picker1.setIcon(colorPickerIcon())
+        if len(window.lightModeBorderColor2.text()) < 1:
+            window.light_mode_border_color_picker2.setIcon(colorPickerIcon())
+        if len(window.lightModeBorderColor3.text()) < 1:
+            window.light_mode_border_color_picker3.setIcon(colorPickerIcon())
+        if len(window.lightModeBorderColor4.text()) < 1:
+            window.light_mode_border_color_picker4.setIcon(colorPickerIcon())
+        if len(window.darkModeGradientColor1.text()) < 1:
+            window.dark_mode_gradient_color_picker1.setIcon(colorPickerIcon())
+        if len(window.darkModeGradientColor2.text()) < 1:
+            window.dark_mode_gradient_color_picker2.setIcon(colorPickerIcon())
+        if len(window.darkModeGradientColor3.text()) < 1:
+            window.dark_mode_gradient_color_picker3.setIcon(colorPickerIcon())
+        if len(window.darkModeGradientColor4.text()) < 1:
+            window.dark_mode_gradient_color_picker4.setIcon(colorPickerIcon())
+        if len(window.lightModeGradientColor1.text()) < 1:
+            window.light_mode_gradient_color_picker1.setIcon(colorPickerIcon())
+        if len(window.lightModeGradientColor2.text()) < 1:
+            window.light_mode_gradient_color_picker2.setIcon(colorPickerIcon())
+        if len(window.lightModeGradientColor3.text()) < 1:
+            window.light_mode_gradient_color_picker3.setIcon(colorPickerIcon())
+        if len(window.lightModeGradientColor4.text()) < 1:
+            window.light_mode_gradient_color_picker4.setIcon(colorPickerIcon())
+        if len(window.darkModeColor1_1.text()) < 1:
+            window.dark_mode_color_picker1_1.setIcon(colorPickerIcon())
+        if len(window.darkModeColor1_2.text()) < 1:
+            window.dark_mode_color_picker1_2.setIcon(colorPickerIcon())
+        if len(window.darkModeColor1_3.text()) < 1:
+            window.dark_mode_color_picker1_3.setIcon(colorPickerIcon())
+        if len(window.darkModeColor1_4.text()) < 1:
+            window.dark_mode_color_picker1_4.setIcon(colorPickerIcon())
+        if len(window.lightModeColor1_1.text()) < 1:
+            window.light_mode_color_picker1_1.setIcon(colorPickerIcon())
+        if len(window.lightModeColor1_2.text()) < 1:
+            window.light_mode_color_picker1_2.setIcon(colorPickerIcon())
+        if len(window.lightModeColor1_3.text()) < 1:
+            window.light_mode_color_picker1_3.setIcon(colorPickerIcon())
+        if len(window.lightModeColor1_4.text()) < 1:
+            window.light_mode_color_picker1_4.setIcon(colorPickerIcon())
+        if len(window.backgroundColor.text()) < 1:
+            window.background_color_picker.setIcon(colorPickerIcon())
+        if len(window.secondaryBackgroundColor.text()) < 1:
+            window.secondary_background_color_picker.setIcon(colorPickerIcon())
+        if len(window.labelColor.text()) < 1:
+            window.label_color_picker.setIcon(colorPickerIcon())
+        if len(window.textColor.text()) < 1:
+            window.text_color_picker.setIcon(colorPickerIcon())
+
+        def resetIcon() -> QIcon:
+            return QIcon(Path.IconPaths.Light.ResetIcon if iconType == IconType.Light else Path.IconPaths.Dark.ResetIcon)
+
+        window.reset_effect_type1.setIcon(resetIcon())
+        window.reset_effect_type2.setIcon(resetIcon())
+        window.reset_effect_type3.setIcon(resetIcon())
+        window.reset_effect_type4.setIcon(resetIcon())
+        window.reset_corner_type1.setIcon(resetIcon())
+        window.reset_corner_type2.setIcon(resetIcon())
+        window.reset_corner_type3.setIcon(resetIcon())
+        window.reset_corner_type4.setIcon(resetIcon())
+        window.reset_drop_shadow1.setIcon(resetIcon())
+        window.reset_drop_shadow2.setIcon(resetIcon())
+        window.reset_drop_shadow3.setIcon(resetIcon())
+        window.reset_drop_shadow4.setIcon(resetIcon())
+        window.reset_border_color1.setIcon(resetIcon())
+        window.reset_border_color2.setIcon(resetIcon())
+        window.reset_border_color3.setIcon(resetIcon())
+        window.reset_border_color4.setIcon(resetIcon())
+        window.reset_theme_colorization1.setIcon(resetIcon())
+        window.reset_theme_colorization2.setIcon(resetIcon())
+        window.reset_theme_colorization3_1.setIcon(resetIcon())
+        window.reset_theme_colorization3_2.setIcon(resetIcon())
+        window.reset_theme_colorization3_3.setIcon(resetIcon())
+        window.reset_theme_colorization3_4.setIcon(resetIcon())
+        window.reset_theme_colorization3_5.setIcon(resetIcon())
+        window.reset_theme_colorization4.setIcon(resetIcon())
+        window.reset_dark_mode_border_color1.setIcon(resetIcon())
+        window.reset_dark_mode_border_color2.setIcon(resetIcon())
+        window.reset_dark_mode_border_color3.setIcon(resetIcon())
+        window.reset_dark_mode_border_color4.setIcon(resetIcon())
+        window.reset_light_mode_border_color1.setIcon(resetIcon())
+        window.reset_light_mode_border_color2.setIcon(resetIcon())
+        window.reset_light_mode_border_color3.setIcon(resetIcon())
+        window.reset_light_mode_border_color4.setIcon(resetIcon())
+        window.reset_dark_mode_gradient_color1.setIcon(resetIcon())
+        window.reset_dark_mode_gradient_color2.setIcon(resetIcon())
+        window.reset_dark_mode_gradient_color3.setIcon(resetIcon())
+        window.reset_dark_mode_gradient_color4.setIcon(resetIcon())
+        window.reset_light_mode_gradient_color1.setIcon(resetIcon())
+        window.reset_light_mode_gradient_color2.setIcon(resetIcon())
+        window.reset_light_mode_gradient_color3.setIcon(resetIcon())
+        window.reset_light_mode_gradient_color4.setIcon(resetIcon())
+        window.reset_dark_mode_color1_1.setIcon(resetIcon())
+        window.reset_dark_mode_color1_2.setIcon(resetIcon())
+        window.reset_dark_mode_color1_3.setIcon(resetIcon())
+        window.reset_dark_mode_color1_4.setIcon(resetIcon())
+        window.reset_light_mode_color1_1.setIcon(resetIcon())
+        window.reset_light_mode_color1_2.setIcon(resetIcon())
+        window.reset_light_mode_color1_3.setIcon(resetIcon())
+        window.reset_light_mode_color1_4.setIcon(resetIcon())
+        window.reset_disabled1.setIcon(resetIcon())
+        window.reset_disabled2.setIcon(resetIcon())
+        window.reset_disabled3_1.setIcon(resetIcon())
+        window.reset_disabled3_2.setIcon(resetIcon())
+        window.reset_disabled3_3.setIcon(resetIcon())
+        window.reset_disabled3_4.setIcon(resetIcon())
+        window.reset_disabled3_5.setIcon(resetIcon())
+        window.reset_disabled4.setIcon(resetIcon())
+        window.reset_system_drop_shadow.setIcon(resetIcon())
+        window.reset_immersive_style.setIcon(resetIcon())
+        window.reset_custom_rendering.setIcon(resetIcon())
+        window.reset_fluent_animation.setIcon(resetIcon())
+        window.reset_modern_app_background_color.setIcon(resetIcon())
+        window.reset_color_treat_as_transparent.setIcon(resetIcon())
+        window.reset_color_treat_as_transparent_threshold.setIcon(resetIcon())
+        window.reset_pop_in_style.setIcon(resetIcon())
+        window.reset_pop_in_time.setIcon(resetIcon())
+        window.reset_fade_in_time.setIcon(resetIcon())
+        window.reset_fade_out_time.setIcon(resetIcon())
+        window.reset_start_ratio.setIcon(resetIcon())
+        window.reset_immediate_interupting.setIcon(resetIcon())
+        window.reset_corner_radius1_1.setIcon(resetIcon())
+        window.reset_corner_radius1_2.setIcon(resetIcon())
+        window.reset_corner_radius1_3.setIcon(resetIcon())
+        window.reset_corner_radius1_4.setIcon(resetIcon())
+        window.reset_width1_1.setIcon(resetIcon())
+        window.reset_width1_2.setIcon(resetIcon())
+
+        # Titlebar
+        window.logo.setPixmap(QPixmap(Path.IconPaths.Light.Logo if iconType == IconType.Light else Path.IconPaths.Dark.Logo))
+        window.minimizeButton.setIcon(QIcon(Path.IconPaths.Light.MinimizeIcon if iconType == IconType.Light else Path.IconPaths.Dark.MinimizeIcon))
+        window.closeButton.setIcon(QIcon(Path.IconPaths.Light.CloseIcon if iconType == IconType.Light else Path.IconPaths.Dark.CloseIcon))
+        window.settingsButton.setIcon(QIcon(Path.IconPaths.Light.SettingsIcon if iconType == IconType.Light else Path.IconPaths.Dark.SettingsIcon))
+
+        # Settings
+        window.toolBox.setItemIcon(0, QIcon(Path.IconPaths.Light.SettingsIcon if iconType == IconType.Light else Path.IconPaths.Dark.SettingsIcon))
+        window.toolBox.setItemIcon(1, QIcon(Path.IconPaths.Light.ColorPicker if iconType == IconType.Light else Path.IconPaths.Dark.ColorPicker))
+        window.toolBox.setItemIcon(2, QIcon(Path.IconPaths.Light.InternalIcon if iconType == IconType.Light else Path.IconPaths.Dark.InternalIcon))
+        window.toolBox.setItemIcon(3, QIcon(Path.IconPaths.Light.ExternalIcon if iconType == IconType.Light else Path.IconPaths.Dark.ExternalIcon))
+        window.chooseButton.setIcon(QIcon(Path.IconPaths.Light.FolderIcon if iconType == IconType.Light else Path.IconPaths.Dark.FolderIcon))
+        window.installButton.setIcon(QIcon(Path.IconPaths.Light.InstallIcon if iconType == IconType.Light else Path.IconPaths.Dark.InstallIcon))
+        window.uninstallButton.setIcon(QIcon(Path.IconPaths.Light.UninstallIcon if iconType == IconType.Light else Path.IconPaths.Dark.UninstallIcon))
+        window.runButton.setIcon(QIcon(Path.IconPaths.Light.RunIcon if iconType == IconType.Light else Path.IconPaths.Dark.RunIcon))
+        window.stopButton.setIcon(QIcon(Path.IconPaths.Light.StopIcon if iconType == IconType.Light else Path.IconPaths.Dark.StopIcon))
+        window.download_icon_label.setPixmap(QPixmap(Path.IconPaths.Light.DownloadIcon if iconType == IconType.Light else Path.IconPaths.Dark.DownloadIcon))
+        window.backButton.setIcon(QIcon(Path.IconPaths.Light.BackIcon if iconType == IconType.Light else Path.IconPaths.Dark.BackIcon))
+
+        # Stylesheet
+        if iconType == IconType.Light:
+            window.mainFrame.setStyleSheet(
+                """
+                QComboBox::down-arrow {
+                    image: url("Assets/icons/light/down-arrow.png");
+                }
+                QSpinBox::up-button{
+                    image: url("Assets/icons/light/up-arrow.png");
+                }
+                QSpinBox::down-button{
+                    image: url("Assets/icons/light/down-arrow.png");
+                }
+            """
+            )
+        else:
+            window.mainFrame.setStyleSheet(
+                """
+                QComboBox::down-arrow {
+                    image: url("Assets/icons/dark/down-arrow.png");
+                }
+                QSpinBox::up-button{
+                    image: url("Assets/icons/dark/up-arrow.png");
+                }
+                QSpinBox::down-button{
+                    image: url("Assets/icons/dark/down-arrow.png");
+                }
+            """
+            )
 
     @staticmethod
     def connectApplyButtons(window: Main) -> None:
@@ -183,7 +447,7 @@ class Connectors:
                 if colorPickerButton and type(defaultValue) == str:
                     resetButton.clicked.connect(lambda a: valueWidget.setText(defaultValue))
                     resetButton.clicked.connect(lambda a: colorPickerButton.setStyleSheet(StyleSheet.buttoResetStyleSheet()))
-                    resetButton.clicked.connect(lambda a: colorPickerButton.setIcon(QIcon(Path.IconPaths.ColorPicker)))
+                    resetButton.clicked.connect(lambda a: colorPickerButton.setIcon(QIcon(Path.IconPaths.Light.ColorPicker)))
 
                     resetButton.customContextMenuRequested.connect(lambda a: valueWidget.setText(getSavedValue(savedValueName)))
                     resetButton.customContextMenuRequested.connect(
@@ -192,7 +456,7 @@ class Connectors:
                         else ColorPicker.changeButtonColor(getSavedValue(savedValueName), colorPickerButton)
                     )
                     resetButton.customContextMenuRequested.connect(
-                        lambda a: colorPickerButton.setIcon(QIcon(Path.IconPaths.ColorPicker) if (getSavedValue(savedValueName) == "") else QIcon(""))
+                        lambda a: colorPickerButton.setIcon(QIcon(Path.IconPaths.Light.ColorPicker) if (getSavedValue(savedValueName) == "") else QIcon(""))
                     )
             elif isinstance(valueWidget, QComboBox):
                 if type(defaultValue) == int:
@@ -871,6 +1135,24 @@ class Connectors:
             pushButton=window.light_mode_gradient_color_picker4,
         )
 
+        # Appearance Settings
+        ColorPicker.connectColorDialog(
+            lineEdit=window.backgroundColor,
+            pushButton=window.background_color_picker,
+        )
+        ColorPicker.connectColorDialog(
+            lineEdit=window.secondaryBackgroundColor,
+            pushButton=window.secondary_background_color_picker,
+        )
+        ColorPicker.connectColorDialog(
+            lineEdit=window.labelColor,
+            pushButton=window.label_color_picker,
+        )
+        ColorPicker.connectColorDialog(
+            lineEdit=window.textColor,
+            pushButton=window.text_color_picker,
+        )
+
     @staticmethod
     def connectMouseEvent(window: Main) -> None:
         """
@@ -1132,3 +1414,134 @@ class Connectors:
         setMouseEvents(window.lbl_darkModeGradientColor4, Key.darkModeGradientColor, InfoWidgetHeight.TextShort)
         setMouseEvents(window.lbl_lightModeGradientColor4, Key.lightModeGradientColor, InfoWidgetHeight.TextShort)
         setMouseEvents(window.lbl_disabledEffect4, Key.disabled, InfoWidgetHeight.TwoItems)
+
+    @staticmethod
+    def connectSettings(window: Main):
+        def isValidTFPath() -> bool:
+            if AppSettings.path in ("", None):
+                return False
+            elif not os.path.isfile(AppSettings.path + "/" + "TFMain64.dll"):
+                return False
+            return True
+
+        def run():
+            if not isValidTFPath():
+                window.toolBox.setCurrentIndex(0)
+                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                return
+            os.system(AppSettings.path + "/" + "start.bat")
+
+        def stop():
+            if not isValidTFPath():
+                window.toolBox.setCurrentIndex(0)
+                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                return
+            os.system(AppSettings.path + "/" + "stop.bat")
+
+        def install():
+            if not isValidTFPath():
+                window.toolBox.setCurrentIndex(0)
+                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                return
+            windll.shell32.ShellExecuteW(
+                None,
+                "runas",
+                "cmd.exe",
+                " ".join(["/c", AppSettings.path + "/" + "install.bat"]),
+                None,
+                1,
+            )
+
+        def uninstall():
+            if not isValidTFPath():
+                window.toolBox.setCurrentIndex(0)
+                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                return
+            windll.shell32.ShellExecuteW(
+                None,
+                "runas",
+                "cmd.exe",
+                " ".join(["/c", AppSettings.path + "/" + "uninstall.bat"]),
+                None,
+                1,
+            )
+
+        def downloadAndInstall():
+            url = "https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest/download/TranslucentFlyoutsV2.x64.rar"
+            wget.download(url)
+            os.system(r".\\Assets\\unrar.exe -idp -y e .\\TranslucentFlyoutsV2.x64.rar .\\TranslucentFlyouts\\")
+            os.remove(".\\TranslucentFlyoutsV2.x64.rar")
+            path = os.path.abspath(".\\TranslucentFlyouts")
+            window.locationLineEdit.setText(path)
+            window.saveButton.click()
+            window.installButton.click()
+
+        def chooseFolder():
+            dialog = QFileDialog()
+            dialog.setOptions(QFileDialog.Option.ShowDirsOnly)
+            dialog.setOptions(QFileDialog.Option.ReadOnly)
+            dialog.setOptions(QFileDialog.Option.DontUseNativeDialog)
+            dialog.setAcceptMode(QFileDialog.AcceptMode.AcceptSave)
+            directory = dialog.getExistingDirectory(caption="Choose Installation Folder")
+            if directory:
+                window.locationLineEdit.setText(directory)
+
+        def saveGeneral():
+            # Language
+            languageIndex = window.languageList.currentIndex().row()
+            if languageIndex < 0:
+                languageIndex = AppSettings.language
+            language = Translate.findLanguageFromInt(languageIndex)
+            Translate.translate(window, language)
+            AppSettings.language = languageIndex
+
+            # Path
+            path = window.locationLineEdit.text()
+            if path in ["", None] or not os.path.isfile(r"{}/{}".format(path, "TFMain64.dll")):
+                AppSettings.path = ""
+                window.locationLineEdit.setText(AppSettings.path)
+                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+            else:
+                AppSettings.path = path
+                window.location_error_text.setText("")
+
+            AppSettings.updateDict()
+            AppSettings.updateJSON()
+
+        def saveAppearance():
+            backgroundColor: str = window.backgroundColor.text()
+            secondaryBackgroundColor: str = window.secondaryBackgroundColor.text()
+            labelColor: str = window.labelColor.text()
+            textColor: str = window.textColor.text()
+            iconType: int = window.iconColorMode.currentIndex()
+
+            if not all((backgroundColor, secondaryBackgroundColor, labelColor, textColor)):
+                return
+
+            backgroundColor = AppSettings.backgroundColor = "#" + backgroundColor[2:]
+            secondaryBackgroundColor = AppSettings.secondaryBackgroundColor = "#" + secondaryBackgroundColor[2:]
+            labelColor = AppSettings.labelColor = "#" + labelColor[2:]
+            textColor = AppSettings.textColor = "#" + textColor[2:]
+            AppSettings.iconType = iconType
+
+            Connectors.connectStyleSheets(
+                window=window,
+                backgroundColor=backgroundColor,
+                secondaryBackgroundColor=secondaryBackgroundColor,
+                labelColor=labelColor,
+                textColor=textColor,
+            )
+            Connectors.setIcons(window, iconType)
+            AppSettings.updateDict()
+            AppSettings.updateJSON()
+
+        window.chooseButton.clicked.connect(chooseFolder)
+        window.downloadButton.clicked.connect(downloadAndInstall)
+        window.runButton.clicked.connect(run)
+        window.stopButton.clicked.connect(stop)
+        window.installButton.clicked.connect(install)
+        window.uninstallButton.clicked.connect(uninstall)
+        window.saveButton.clicked.connect(saveGeneral)
+        window.saveButton_2.clicked.connect(saveAppearance)
+        window.preset.addItems(ColorPresets.getPresets())
+        window.preset.currentIndexChanged.connect(lambda: ColorPresets.presetChanged(window))

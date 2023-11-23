@@ -3,8 +3,8 @@
 <img src="https://img.shields.io/github/v/release/Satanarious/TransparentFlyoutsConfig?include_prereleases">
 <img src="https://img.shields.io/github/downloads/Satanarious/TransparentFlyoutsConfig/total?color=pink">
 <img src="https://img.shields.io/github/issues/Satanarious/TransparentFlyoutsConfig?color=green">
-  <img src="https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=purple">
-<img src="https://img.shields.io/badge/Python-v3.10-yellow">
+<img src="https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=purple">
+<img src="https://img.shields.io/badge/Python-v3.10.11-yellow">
 <img src="https://img.shields.io/badge/OS-Windows_10+-skyblue">
 </p>
 <img src="Screenshots/language_and_description_spread.png" align="right" width=450>
@@ -62,7 +62,7 @@ If you wanna go a few steps further and edit python, you might as well follow th
 - Open [Data/enum.py](Data/enums.py) and add an additional value to the class ` Languages`.
 - Open [Data/paths.py](Data/paths.py) and under class `Translations` add the path to you translation path in the exact as mentioned there for the previously mentioned language(s).
 - Open [Data/translations.py](Data/translations.py) and under class `TranslationModel`, under method `_fetch()`, find a dictionary `translationPath` and add another pair in the format `LanguageEnum:LanguageJSONPathVariable`
-- Open [Widget/settings_widget.py](Widget/settings_widget.py) and under method `__init__` you will find a line which says `self.languageComboBox.addItems` with a list of language names in their own languages. Add one for the one you are adding.
+- Open [main.py](main.py) and under method `__init__` you will find a line which says `self.language` with a list of language names in their own languages. Add one for the one you are adding.
 
 > Note 1: If you just wanna do the first part, I'll accept PR for the same as well and do the 2nd part myself. But the 2nd part would be appreciated.
 
@@ -75,17 +75,18 @@ Checkout the [tracker](https://github.com/users/Satanarious/projects/2/views/2) 
 
 - [x] Translation Support.
 - [x] Better Parameter Explanations.
-- [ ] Add fonts for unsupported languages.
-- [ ] In-App Themeing Support.
-- [ ] Translucent Flyouts Internal Function support:
-  - [ ] Restart
-  - [ ] Stop
-  - [ ] Install
-  - [ ] Uninstall
+- [x] In-App Themeing Support.
+- [x] Translucent Flyouts Internal Function support:
+  - [x] Restart
+  - [x] Stop
+  - [x] Install
+  - [x] Uninstall
+- [x] Download Latest Version of Translucent Flyouts.
+- [ ] Update to the Latest Version of Translucent Flyouts.
+- [ ] Add fonts for supported languages.
 - [ ] UI Animations
-- [ ] Preview Pane for Instant changes preview before applying
-- [ ] Download Latest Version of Translucent Flyouts and updates
-- [ ] Addition to Microsoft Store and/or Winget
+- [ ] Preview Pane for Instant changes preview before applying.
+- [ ] Addition to Microsoft Store and/or Winget.
 
 ## Dependencies
 
@@ -104,6 +105,10 @@ PyInstaller bundles a Python application and all its dependencies into a single 
 ### [VColorPicker](https://github.com/nlfmt/pyqt-colorpicker)
 
 VColorPicker is a simple visual Color Picker with a modern UI created with Qt to easily get color input from the user.
+
+### [Winrar]()
+
+Unrar.exe used in the project is taken from winrar and used to uncompress the files downloaded from TranslucentFlyouts.
 
 ### [Tick icon by Freepik - Flaticon](https://www.flaticon.com/free-icons/tick)
 
