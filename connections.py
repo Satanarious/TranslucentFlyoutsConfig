@@ -1472,9 +1472,8 @@ class Connectors:
             os.system(r".\\Assets\\unrar.exe -idp -y e .\\TranslucentFlyoutsV2.x64.rar .\\TranslucentFlyouts\\")
             os.remove(".\\TranslucentFlyoutsV2.x64.rar")
             path = os.path.abspath(".\\TranslucentFlyouts")
-            AppSettings.path = path
-            AppSettings.updateDict()
-            AppSettings.updateJSON()
+            window.locationLineEdit.setText(path)
+            window.saveButton.click()
             window.installButton.click()
 
         def chooseFolder():
