@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/github/v/release/Satanarious/TransparentFlyoutsConfig?include_prereleases">
 <img src="https://img.shields.io/github/downloads/Satanarious/TransparentFlyoutsConfig/total?color=pink">
 <img src="https://img.shields.io/github/issues/Satanarious/TransparentFlyoutsConfig?color=green">
-  <img src="https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=purple">
+<img src="https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=purple">
 <img src="https://img.shields.io/badge/Python-v3.10.11-yellow">
 <img src="https://img.shields.io/badge/OS-Windows_10+-skyblue">
 </p>
