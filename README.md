@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/Python-v3.10.11-yellow">
 <img src="https://img.shields.io/badge/OS-Windows_10+-skyblue">
 </p>
-<img src="Screenshots/language_and_description_spread.png" align="right" width=450>
+<img src="Screenshots/language_and_description_spread.png" align="right" width=550>
 
 **Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts) for Windows 10/11, which allows various customizations for windows32 style context menus.
 
@@ -23,22 +23,37 @@ Catalog:
 
 ## Installation Instructions
 
+### 1. 1-Click Install (★ Recommended)
+> Note: For old Translucent Flyout users, uninstall the manually installed version of Translucent Flyouts and then follow the underlying steps.
+<img src="Screenshots/all_tabs_spread.png" align="right" width=500>
+
+- Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
+- Extract all files in a directory/folder.
+- Run the `TranslucentFlyoutsConfig.exe` file.
+- Go to Settings.
+- Under External Functions, click the `Download and Install` button
+
+### 2. Manual Install
 > Assuming you have the latest release of [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest) Installed.
 
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
 - Extract all files in a directory/folder.
 - Run the `TranslucentFlyoutsConfig.exe` file.
+- Go to Settings.
+- Under General settings, set the path to the installation location of Translucent Flyouts.
 
 ## Usage Instructions
-
-<img src="Screenshots/all_tabs_spread.png" align="right" width=300>
 
 - Left-clicking on the reset button on the far right of any setting resets the value to its default value.
 - Right-clicking on the reset button on the far right of any setting resets the value to its last-saved value.
 - Use the color-picker to choose the color including the alpha(Opacity) value.
 - See the avaiable values and their descriptions by click on any parameter label.
-- Any changes are immediately applied on pressing the apply button in the respective section.
-- Change the language using the settings icon on the top-right, next to the close button.
+- Any changes are immediately applied on pressing the `Apply` or `Save` button in the respective section.
+- In the Settings section:
+  - Change the app-language in the `General Section` by selecting the language.
+  - Change the theme of the application in the `Appearance Section` by selection colors for respective items/backgrounds and more. You can also select from a list of predefined theme presets available just below the color selection.
+  - Access functions such as Run, Stop, Install and Uninstall in the `Internal Functions` section.
+  - Finally, Download and Install Translucent Flyouts with one click of a button present in the `External Functions` section.
 
 ## Translation Contribution
 
