@@ -80,6 +80,7 @@ class Settings:
 class Languages(IntEnum):
     Default = 0
     Hindi = 1
+    SimplifiedChinese = 2
 
 
 class IconType(IntEnum):
