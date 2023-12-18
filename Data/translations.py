@@ -173,6 +173,7 @@ class TranslationModel:
 
         translationPath: str = {
             Languages.Hindi: Path.Translations.Hindi,
+            Languages.SimplifiedChinese: Path.Translations.SimplifiedChinese,
         }[self.language]
         self.translations: dict[str, str] = dict(json.load(open(translationPath, "r", encoding="utf-8")))
 

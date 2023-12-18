@@ -4,6 +4,7 @@ from winreg import HKEY_CURRENT_USER
 class Path:
     class Translations:
         Hindi: str = "Translations/hi-in.json"
+        SimplifiedChinese: str = "Translations/zh-cn.json"
 
     class IconPaths:
         AppliedIcon = "Assets/icons/applied.png"
