@@ -42,10 +42,7 @@ class Main(Ui_MainWindow):
         self.languages: list[str] = [
             "English",
             "हिंदी",
-            "简体中文(Simplified Chinese)"
-            # Note: zh-cn_v1.0. 本翻译可能存在部分不合理的地方欢迎指出. 在翻译的过程中发现 菜单控件>动画>弹出时间(ms) 这个项目的描述部分存在描述文本无效的bug, 但我认为这和我的翻译无关故没有修复. 此外在 "禁用" 这个属性中 "布尔" 被误拼为 "Booelan".
-            # Note: zh-cn_v1.0. There may be some unreasonable aspects in this translation, welcome to point out. During the translation process, I found that there was an invalid text bug in the description part of the Menu > Animation > Pop In Time, but I think this has nothing to do with my translation so I  has not been fixed. Additionally, "Boolean" is misspelled as "Booelan" in the "disabled" attribute.
-
+            "简体中文(Simplified Chinese)",
         ]
 
         # Add Overlay-Widgets

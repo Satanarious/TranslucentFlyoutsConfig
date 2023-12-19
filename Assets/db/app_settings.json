@@ -1,1 +1,9 @@
-{"Language": 0, "TFPath": "", "IconType": 0, "BackgroundColor": "#202020", "SecondaryBackgroundColor": "#313131", "LabelColor": "#FFFFFF", "TextColor": "#7A7A7A"}
+{
+  "Language": 0,
+  "TFPath": "",
+  "IconType": 0,
+  "BackgroundColor": "#202020",
+  "SecondaryBackgroundColor": "#313131",
+  "LabelColor": "#FFFFFF",
+  "TextColor": "#7A7A7A"
+}

@@ -1282,6 +1282,10 @@ class Connectors:
                     window.infoWidget.description.setText(Description.fadeInTime())
                     window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
 
+                elif parameterType == Key.popInTime:
+                    window.infoWidget.description.setText(Description.popInTime())
+                    window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
+
                 elif parameterType == Key.startRatio:
                     window.infoWidget.description.setText(Description.startRatio())
                     window.infoWidget.widget.setGeometry(0, window.mainFrame.height() - height + 50, window.mainFrame.width(), height)
