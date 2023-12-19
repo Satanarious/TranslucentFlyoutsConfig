@@ -186,5 +186,6 @@
   "Note: This section will only work if Translucent Flyouts' location is specified in the General Settings.": "注意: 仅当在 总体配置 中指定了 \"半透明浮出控件(Translucent Flyouts)\" 的位置时, 此部分才有效.",
   "External Functions": "外部功能",
   "Note: Pressing the button below will download and install Translucent Flyouts and set the path in the application so you can use the internal functions as well as all the other functionality included in the application.": "说明: 使用下面的按钮将下载并安装 \"半透明浮出控件(Translucent Flyouts)\" 并配置路径, 以便您可以使用 内部功能 以及应用程序中包含的所有其他功能.",
-  "Download and Install": "下载并安装"
+  "Download and Install": "下载并安装",
+  "Pop in time allows you to choose a value in milliseconds to serve as the duration of the pop-in animation of when the menu appears.": "弹出时间允许您选择一个以毫秒为单位的值，作为菜单出现时弹出动画的持续时间."
 }

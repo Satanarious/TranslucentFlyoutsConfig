@@ -916,6 +916,23 @@ class Description:
         )
 
     @staticmethod
+    def popInTime() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Pop in time allows you to choose a value in milliseconds to serve as the duration of the pop-in animation of when the menu appears."
+            )
+            + """
+        <h4>"""
+            + translationVar.translateFrom(Key.Notes.enableCustomRendering)
+            + """</h4>
+        </body>
+        """
+        )
+
+    @staticmethod
     def startRatio() -> str:
         return (
             """
