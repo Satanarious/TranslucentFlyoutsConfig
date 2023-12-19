@@ -1,4 +1,4 @@
-<img src="Screenshots/banner.png">
+<img src="../Screenshots/banner.png">
 <p align=center>
 <img src="https://img.shields.io/github/v/release/Satanarious/TransparentFlyoutsConfig?include_prereleases">
 <img src="https://img.shields.io/github/downloads/Satanarious/TransparentFlyoutsConfig/total?color=pink">
@@ -7,25 +7,21 @@
 <img src="https://img.shields.io/badge/Python-v3.10.11-yellow">
 <img src="https://img.shields.io/badge/OS-Windows_10+-skyblue">
 </p>
-<img src="Screenshots/language_and_description_spread.png" align="right" width=550>
+<img src="../Screenshots/language_and_description_spread.png" align="right" width=550>
 
 **半透明浮出控件配置(Translucent Flyouts Config) GUI** 是适用于 Windows 10/11 平台[半透明浮出控件](https://github.com/ALTaleX531/TranslucentFlyouts)(Translucent Flyouts, 一种用于对系统中 win32 样式上下文菜单等各种控件进行自定义的软件) 的配套 GUI 应用程序.
+
+### 其他语言
+
+- [English](../README.md)
 
 目录:
 
 - [安装方式](#安装方式)
-  - [1. 一步到位的一键安装 (★ 推荐! )](#1-一步到位的一键安装--推荐-)
-  - [2. 手动安装](#2-手动安装)
 - [使用说明](#使用说明)
 - [贡献其他语言的翻译](#贡献其他语言的翻译)
 - [计划实现的特性](#计划实现的特性)
 - [依赖项](#依赖项)
-  - [半透明浮出控件(Translucent Flyouts)](#半透明浮出控件translucent-flyouts)
-  - [PyQT6](#pyqt6)
-  - [PyInstaller](#pyinstaller)
-  - [VColorPicker](#vcolorpicker)
-  - [Winrar](#winrar)
-  - [由 Freepik - Flaticon 提供的勾号图标](#由-freepik---flaticon-提供的勾号图标)
 - [声明](#声明)
 - [许可证信息](#许可证信息)
 
@@ -35,7 +31,7 @@
 
 > 提示：对于旧的 半透明浮出控件(Translucent Flyouts) 用户, 请卸载手动安装的 半透明浮出控件(Translucent Flyouts) 版本, 然后按照基本步骤操作.
 
-<img src="Screenshots/all_tabs_spread.png" align="right" width=500 alt="img1">
+<img src="../Screenshots/all_tabs_spread.png" align="right" width=500 alt="img1">
 
 - 下载[最新发行版](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest).
 - 解压所有文件到你想安装的文件夹.
@@ -90,15 +86,15 @@
 - 打开 [Data/translations.py](Data/translations.py) 并在 `TranslationModel` 类的 `_fetch()` 方法中找到 字典 `translationPath` , 随后按照 `LanguageEnum:LanguageJSONPathVariable` 的格式添加一个键值对.
 - 最后打开 [main.py](main.py) 并找到 `__init__` 方法, 在 `self.language` 这个字符串列表中按照顺序加入你所翻译的语言的名字, 这个名字是供用户选取语言时使用的.
 
-> 注1：如果你只想完成第一部分, 我也会接受推送请求(PR, Push request) 并自己完成第二部分. 但若你也完成了第二部分我(指原作者)将不胜感激.
+> 注 1：如果你只想完成第一部分, 我也会接受推送请求(PR, Push request) 并自己完成第二部分. 但若你也完成了第二部分我(指原作者)将不胜感激.
 
-> 注2：我将保留当前字体不支持的语言的字体, 并将于未来添加更多字体.
+> 注 2：我将保留当前字体不支持的语言的字体, 并将于未来添加更多字体.
 
 ## 计划实现的特性
 
 查看 [跟踪器](https://github.com/users/Satanarious/projects/2/views/2) 以获取更多详细信息.
 
-<img src="Screenshots/theme_tease.png" align=right width=50%>
+<img src="../Screenshots/theme_tease.png" align=right width=50%>
 
 - [x] 多语言翻译支持.
 - [x] 更好的参数说明.
@@ -127,7 +123,7 @@ PyQt 是 Qt 公司 Qt 应用程序框架的一套 Python 封装, 可在 Qt 支�
 
 ### [PyInstaller](https://pyinstaller.org/en/stable/)
 
-PyInstaller 将 Python 应用程序及其所有依赖项捆绑到一个包中.用户无需安装Python解释器或任何模块即可运行打包的应用程序. PyInstaller 支持 Python 3.7 及更高版本, 并正确集成许多主要的 Python 包, 例如 numpy、matplotlib、PyQt、wxPython 等.
+PyInstaller 将 Python 应用程序及其所有依赖项捆绑到一个包中.用户无需安装 Python 解释器或任何模块即可运行打包的应用程序. PyInstaller 支持 Python 3.7 及更高版本, 并正确集成许多主要的 Python 包, 例如 numpy、matplotlib、PyQt、wxPython 等.
 
 ### [VColorPicker](https://github.com/nlfmt/pyqt-colorpicker)
 

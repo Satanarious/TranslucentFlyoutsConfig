@@ -548,7 +548,7 @@ class Description:
         <table border=0.5>
         <tr>
         <th>"""
-            + translationVar.translateFrom("Booelan")
+            + translationVar.translateFrom("Boolean")
             + """</th>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.description)

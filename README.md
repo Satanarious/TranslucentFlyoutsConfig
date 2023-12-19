@@ -11,6 +11,10 @@
 
 **Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts) for Windows 10/11, which allows various customizations for windows32 style context menus.
 
+### Other Languages
+
+- [简体中文](Readme/README-zh_cn.md)
+
 Catalog:
 
 - [Installation Instructions](#installation-instructions)
@@ -24,8 +28,9 @@ Catalog:
 ## Installation Instructions
 
 ### 1. 1-Click Install (★ Recommended)
+
 > Note: For old Translucent Flyout users, uninstall the manually installed version of Translucent Flyouts and then follow the underlying steps.
-<img src="Screenshots/all_tabs_spread.png" align="right" width=500>
+> <img src="Screenshots/all_tabs_spread.png" align="right" width=500>
 
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
 - Extract all files in a directory/folder.
@@ -34,6 +39,7 @@ Catalog:
 - Under External Functions, click the `Download and Install` button
 
 ### 2. Manual Install
+
 > Assuming you have the latest release of [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest) Installed.
 
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)

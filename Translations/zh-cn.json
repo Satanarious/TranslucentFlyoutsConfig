@@ -79,7 +79,6 @@
   "Accepted Values": "应用值",
   "Notes": "说明",
   "Boolean": "布尔值",
-  "Booelan": "布尔值",
   "Uses the corresponding value in the global tab as the <code>": "使用全局配置的 <code>\"",
   "</code> value.": "\"</code> 作为值.",
   "Adds a fully transparent effect as the background for pop-ups.": "将控件背景设置为完全透明效果",
