@@ -10,6 +10,21 @@ from Data.stylesheet import StyleSheet
 
 class ColorPicker:
     vColorPicker = vcolorpicker.ColorPicker(useAlpha=True)
+    vColorPicker.ui.alpha.textEdited.disconnect()  # type:ignore
+    vColorPicker.ui.alpha.textEdited.connect(lambda: ColorPicker.alphaChanged())  # type:ignore
+
+    @staticmethod
+    def alphaChanged() -> None:
+        alpha = ColorPicker.vColorPicker.i(ColorPicker.vColorPicker.ui.alpha.text())  # type:ignore
+        oldalpha = alpha
+        if alpha < 0:
+            alpha = 0
+        if alpha > 255:
+            alpha = 255
+        if alpha != oldalpha or alpha == 0:
+            ColorPicker.vColorPicker.ui.alpha.setText(str(alpha))  # type:ignore
+            ColorPicker.vColorPicker.ui.alpha.selectAll()  # type:ignore
+        ColorPicker.vColorPicker.alpha = alpha
 
     @staticmethod
     def changeButtonColor(color: tuple | str, pushButton: QPushButton) -> None:
@@ -77,19 +92,6 @@ class ColorPicker:
             - Open QColorDialog and choose the color
             - Set the color in the QLineEdit provided
             """
-
-            def alphaChanged(vColorPicker: vcolorpicker.ColorPicker):
-                alpha = vColorPicker.i(vColorPicker.ui.alpha.text())  # type:ignore
-                oldalpha = alpha
-                if alpha < 0:
-                    alpha = 0
-                if alpha > 255:
-                    alpha = 255
-                if alpha != oldalpha or alpha == 0:
-                    vColorPicker.ui.alpha.setText(str(alpha))  # type:ignore
-                    vColorPicker.ui.alpha.selectAll()  # type:ignore
-                vColorPicker.alpha = alpha
-
             global cancelled
             cancelled = False  # type:ignore
 
@@ -100,9 +102,6 @@ class ColorPicker:
             def ok():
                 global cancelled
                 cancelled = False  # type:ignore
-
-            ColorPicker.vColorPicker.ui.alpha.textEdited.connect(lambda: alphaChanged(ColorPicker.vColorPicker))  # type:ignore
-            ColorPicker.vColorPicker.ui.alpha.textEdited.disconnect()  # type:ignore
 
             ColorPicker.vColorPicker.rejected.connect(cancel)  # type:ignore
             ColorPicker.vColorPicker.accepted.connect(ok)  # type:ignore
