@@ -9,6 +9,8 @@
 </p>
 <img src="../Screenshots/language_and_description_spread.png" align="right" width=550>
 
+> This translation is contributed by [zzqzzqzzq2002](https://www.github.com/zzqzzqzzq2002)
+
 **半透明浮出控件配置(Translucent Flyouts Config) GUI** 是适用于 Windows 10/11 平台[半透明浮出控件](https://github.com/ALTaleX531/TranslucentFlyouts)(Translucent Flyouts, 一种用于对系统中 win32 样式上下文菜单等各种控件进行自定义的软件) 的配套 GUI 应用程序.
 
 ### 其他语言
