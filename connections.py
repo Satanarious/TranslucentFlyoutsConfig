@@ -1421,37 +1421,42 @@ class Connectors:
 
     @staticmethod
     def connectSettings(window: Main):
+        _translate = translationVar.translateFrom
+
         def isValidTFPath() -> bool:
             if AppSettings.path in ("", None):
                 return False
-            elif not os.path.isfile(AppSettings.path + "/" + "TFMain64.dll"):
+            elif not os.path.isfile(AppSettings.path + "\\" + "TFMain64.dll"):
                 return False
             return True
 
         def run():
             if not isValidTFPath():
                 window.toolBox.setCurrentIndex(0)
-                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                window.location_error_text.setText(_translate("!! Error: TFMain64.dll not found !!"))
                 return
-            os.system(AppSettings.path + "/" + "start.bat")
+
+            os.system(rf'"{AppSettings.path}\\start.bat"')
 
         def stop():
             if not isValidTFPath():
                 window.toolBox.setCurrentIndex(0)
-                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                window.location_error_text.setText(_translate("!! Error: TFMain64.dll not found !!"))
                 return
-            os.system(AppSettings.path + "/" + "stop.bat")
+
+            os.system(rf'"{AppSettings.path}\\stop.bat"')
 
         def install():
             if not isValidTFPath():
                 window.toolBox.setCurrentIndex(0)
-                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                window.location_error_text.setText(_translate("!! Error: TFMain64.dll not found !!"))
                 return
+
             windll.shell32.ShellExecuteW(
                 None,
                 "runas",
                 "cmd.exe",
-                " ".join(["/c", AppSettings.path + "/" + "install.bat"]),
+                " ".join(["/c", rf'"{AppSettings.path}\\install.bat"']),
                 None,
                 1,
             )
@@ -1459,13 +1464,14 @@ class Connectors:
         def uninstall():
             if not isValidTFPath():
                 window.toolBox.setCurrentIndex(0)
-                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                window.location_error_text.setText(_translate("!! Error: TFMain64.dll not found !!"))
                 return
+
             windll.shell32.ShellExecuteW(
                 None,
                 "runas",
                 "cmd.exe",
-                " ".join(["/c", AppSettings.path + "/" + "uninstall.bat"]),
+                " ".join(["/c", rf'"{AppSettings.path}\\uninstall.bat"']),
                 None,
                 1,
             )
@@ -1504,7 +1510,7 @@ class Connectors:
             if path in ["", None] or not os.path.isfile(r"{}/{}".format(path, "TFMain64.dll")):
                 AppSettings.path = ""
                 window.locationLineEdit.setText(AppSettings.path)
-                window.location_error_text.setText("!! Error: TFMain64.dll not found !!")
+                window.location_error_text.setText(_translate("!! Error: TFMain64.dll not found !!"))
             else:
                 AppSettings.path = path
                 window.location_error_text.setText("")
