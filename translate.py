@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import QDialogButtonBox
 
 # Relative Imports
 from Data.translations import translationVar, Key
+from Data.app_settings import AppSettings
 from Data.enums import Languages, MainTab, MenuTab, Settings
 from Widgets.color_picker import ColorPicker
 
@@ -366,7 +367,11 @@ class Translate:
         window.toolBox.setItemText(3, _translate(Key.Settings.ToolBox.externalFunctions))
         window.lbl_general_1.setText(_translate(Key.Settings.General.chooseLangauge))
         window.lbl_general_2.setText(_translate(Key.Settings.General.installationLocation))
-        window.location_error_text.setText(_translate(Key.Settings.locationError))
+        if not AppSettings.isValidTFPath():
+            window.location_error_text.setText(_translate(Key.Settings.locationError))
+        else:
+            window.location_error_text.setText("")
+
         window.chooseButton.setText(_translate(Key.Settings.General.chooseFolders))
         window.saveButton.setText(_translate(Key.save))
         window.lbl_appearance_1.setText(_translate(Key.Settings.Appearance.manual))

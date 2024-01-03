@@ -1,8 +1,6 @@
 # Library Imports
 import json
-
-# Relative Imports
-from Data.paths import Path
+import os
 
 
 DBPath = "./Assets/db/app_settings.json"
@@ -26,6 +24,14 @@ class AppSettings:
     secondaryBackgroundColor: str = rawDefaults[Key.secondaryBackgroundColor]
     labelColor: str = rawDefaults[Key.labelColor]
     textColor: str = rawDefaults[Key.textColor]
+
+    @staticmethod
+    def isValidTFPath() -> bool:
+        if AppSettings.path in ("", None):
+            return False
+        elif not os.path.isfile(AppSettings.path + "\\" + "TFMain64.dll"):
+            return False
+        return True
 
     @staticmethod
     def updateDict():
