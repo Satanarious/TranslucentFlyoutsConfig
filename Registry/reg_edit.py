@@ -603,5 +603,5 @@ class EditRegistry:
                 return hex(value)[2:].upper()
             else:
                 return int(value)
-        except WindowsError:
+        except:
             return defaultValue
