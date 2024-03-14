@@ -56,7 +56,9 @@ class Main(Ui_MainWindow):
         self.languageList.setModel(model)
         for i in self.languages:
             model.appendRow(QStandardItem(i))
-        self.languageList.selectionModel().select(self.languageList.model().createIndex(AppSettings.language, 0), QItemSelectionModel.SelectionFlag.Select)
+        self.languageList.selectionModel().select(  # type:ignore
+            self.languageList.model().createIndex(AppSettings.language, 0), QItemSelectionModel.SelectionFlag.Select  # type:ignore
+        )
         Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
         self.callConnectors()
         self.UpdateSettingsUI()
