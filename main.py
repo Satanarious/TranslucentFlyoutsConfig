@@ -1,9 +1,11 @@
 # Library Imports
+import ctypes
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt6.QtGui import QIcon, QStandardItemModel, QStandardItem
 from PyQt6.QtCore import Qt, QItemSelectionModel
 from PyQt6.QtGui import QMouseEvent, QFontDatabase
 import sys
+import ctypes
 
 # Relative Imports
 from Generated.ui import Ui_MainWindow
@@ -34,7 +36,7 @@ class Main(Ui_MainWindow):
         self.title.mouseMoveEvent = self.myMouseMoveEvent  # type: ignore
         self.title.mouseReleaseEvent = self.myMouseReleaseEvent  # type: ignore
         self.title.setMouseTracking(True)
-        self.closeButton.clicked.connect(self.mainWindow.close)  # type: ignore
+        self.closeButton.clicked.connect(ctypes.windll.kernel32.ExitProcess)  # type: ignore
         self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
         self.settingsButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(1))
         self.backButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(0))
