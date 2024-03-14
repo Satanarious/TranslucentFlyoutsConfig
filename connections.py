@@ -53,7 +53,7 @@ class Connectors:
         )
 
         # TabBar
-        window.mainTabWidget.tabBar().setStyleSheet(
+        window.mainTabWidget.tabBar().setStyleSheet(  # type: ignore
             StyleSheet.mainTabBar(
                 backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
@@ -61,7 +61,7 @@ class Connectors:
                 textColor=textColor,
             )
         )
-        window.menuTabWidget.tabBar().setStyleSheet(
+        window.menuTabWidget.tabBar().setStyleSheet(  # type: ignore
             StyleSheet.menuTabBar(
                 backgroundColor=backgroundColor,
                 secondaryBackgroundColor=secondaryBackgroundColor,
@@ -171,13 +171,13 @@ class Connectors:
                 labelColor=labelColor,
             )
         )
-        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setStyleSheet(
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).setStyleSheet(  # type: ignore
             StyleSheet.ColorPicker.buttonTextStyle(
                 labelColor=labelColor,
                 textColor=textColor,
             )
         )
-        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setStyleSheet(
+        ColorPicker.vColorPicker.ui.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).setStyleSheet(  # type: ignore
             StyleSheet.ColorPicker.buttonTextStyle(
                 labelColor=labelColor,
                 textColor=textColor,
@@ -452,9 +452,11 @@ class Connectors:
 
                     resetButton.customContextMenuRequested.connect(lambda a: valueWidget.setText(getSavedValue(savedValueName)))
                     resetButton.customContextMenuRequested.connect(
-                        lambda a: colorPickerButton.setStyleSheet(StyleSheet.buttoResetStyleSheet())
-                        if (getSavedValue(savedValueName) == "")
-                        else ColorPicker.changeButtonColor(getSavedValue(savedValueName), colorPickerButton)
+                        lambda a: (
+                            colorPickerButton.setStyleSheet(StyleSheet.buttoResetStyleSheet())
+                            if (getSavedValue(savedValueName) == "")
+                            else ColorPicker.changeButtonColor(getSavedValue(savedValueName), colorPickerButton)
+                        )
                     )
                     resetButton.customContextMenuRequested.connect(
                         lambda a: colorPickerButton.setIcon(QIcon(Path.IconPaths.Light.ColorPicker) if (getSavedValue(savedValueName) == "") else QIcon(""))
@@ -1319,7 +1321,7 @@ class Connectors:
                 window.infoWidget.widget.show()
                 window.mainFrame.setGraphicsEffect(QGraphicsBlurEffect())
                 window.mainFrame.setDisabled(True)
-                window.infoWidget.scrollArea.verticalScrollBar().setValue(0)
+                window.infoWidget.scrollArea.verticalScrollBar().setValue(0)  # type: ignore
 
         def setMouseEvents(label: QLabel, parameterType: str, height: int):
             label.enterEvent = lambda event: labelEnterEvent(label)  # type: ignore
@@ -1430,7 +1432,8 @@ class Connectors:
                 window.location_error_text.setText(_translate(TranslationKey.Settings.locationError))
                 return
 
-            os.system(rf'""{AppSettings.path}/start.bat""')
+            path: str = rf'start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /start'
+            os.system(path)
 
         def stop():
             if not AppSettings.isValidTFPath():
@@ -1438,7 +1441,8 @@ class Connectors:
                 window.location_error_text.setText(_translate(TranslationKey.Settings.locationError))
                 return
 
-            os.system(rf'""{AppSettings.path}/stop.bat""')
+            path: str = rf'start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /stop'
+            os.system(path)
 
         def install():
             if not AppSettings.isValidTFPath():
@@ -1446,11 +1450,12 @@ class Connectors:
                 window.location_error_text.setText(_translate(TranslationKey.Settings.locationError))
                 return
 
+            path: str = rf'/c start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /install'
             windll.shell32.ShellExecuteW(
                 None,
                 "runas",
                 "cmd.exe",
-                rf' /c ""{AppSettings.path}/install.bat""',
+                path,
                 None,
                 1,
             )
@@ -1461,11 +1466,12 @@ class Connectors:
                 window.location_error_text.setText(_translate(TranslationKey.Settings.locationError))
                 return
 
+            path: str = rf'/c start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /uninstall'
             windll.shell32.ShellExecuteW(
                 None,
                 "runas",
                 "cmd.exe",
-                rf' /c ""{AppSettings.path}/uninstall.bat""',
+                path,
                 None,
                 1,
             )

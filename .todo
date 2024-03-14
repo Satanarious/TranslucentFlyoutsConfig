@@ -1,0 +1,11 @@
+TODO:
+    Support TF v3.0:
+        ☐ Add new registry keys to UI
+        ☐ Update default values for new registry keys
+        ☐ Update saved values for new registry keys
+        ☐ Add descriptors for new registry keys
+        ☐ Add new translations
+        ✔ Update logic for internal functions @done(24-03-14 21:25)
+
+FIXME:
+    ☐ Closing the application causes it to crash
