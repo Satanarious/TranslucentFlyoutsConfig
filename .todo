@@ -6,6 +6,9 @@ TODO:
         ☐ Add descriptors for new registry keys
         ☐ Add new translations
         ✔ Update logic for internal functions @done(24-03-14 21:25)
+    Fonts:
+        ☐ Simplified-Chinese
+        ☐ Hindi
 
 FIXME:
-    ☐ Closing the application causes it to crash
+    ✔ Closing the application causes it to crash @done(24-03-14 21:44)
