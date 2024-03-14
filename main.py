@@ -1,5 +1,5 @@
 # Library Imports
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QGraphicsOpacityEffect
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt6.QtGui import QIcon, QStandardItemModel, QStandardItem
 from PyQt6.QtCore import Qt, QItemSelectionModel
 from PyQt6.QtGui import QMouseEvent, QFontDatabase
@@ -63,10 +63,6 @@ class Main(Ui_MainWindow):
         self.callConnectors()
         self.UpdateSettingsUI()
         self.locationLineEdit.setText(AppSettings.path)
-        self.runButton.setDisabled(True)
-        disabledButtonEffect = QGraphicsOpacityEffect()
-        disabledButtonEffect.setOpacity(0.3)
-        self.runButton.setGraphicsEffect(disabledButtonEffect)
 
     def callConnectors(self):
         """
