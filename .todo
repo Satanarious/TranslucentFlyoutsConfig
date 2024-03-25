@@ -1,11 +1,17 @@
-TODO:
-    Support TF v3.0:
-        ☐ Add new registry keys to UI
-        ☐ Update default values for new registry keys
-        ☐ Update saved values for new registry keys
-        ☐ Add descriptors for new registry keys
-        ☐ Add new translations
-        ✔ Update logic for internal functions @done(24-03-14 21:25)
-
-FIXME:
-    ☐ Closing the application causes it to crash
+NEW VALUE ADDITION PROCESS:
+    ☐ Add value name and value widget to UI -> UI_Files/main.ui
+    ☐ Update default values for new registry keys -> Assets/db/defaults.json & Data/defaults.py
+    ☐ Add default value in -> CONTRIBUTIon.md
+    ☐ Update UI & Saved Values for new registry keys -> Assets/db/user_settings.json & Data/user.py & save_settings.py
+    ☐ Add RegValue name -> Data\paths.py
+    ☐ Add registry editing methods for new values -> Registry/edit_settings.py
+    ☐ Add apply logic for applying changes in registry -> Registry/save_reg.py
+    ☐ Fetch value from registry -> Registry/reg_edit.py
+    ☐ Connect translations for new value names -> translate.py
+    ☐ Add parameter name for translation -> Data/translations.py & Translations/
+    ☐ Configure Reset Buttons -> connections.py
+    ☐ Configure Color Picker Buttons -> connections.py
+    ☐ Configure Label mouse event -> connections.py
+    ☐ Configure Info widget for new values -> connections.py
+    ☐ Add value description -> Data/descriptions.py
+                

@@ -5,11 +5,16 @@
     "Enable Drop Shadow": 0,
     "No Border Color": 0,
     "Enable Theme Colorization": 0,
+    "Dark Mode Theme Colorization Type": 1,
+    "Light Mode Theme Colorization Type": 1,
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
     "Dark Mode Gradient Color": "",
     "Light Mode Gradient Color": "",
-    "Disabled": 0
+    "Enable Mini Dump": 1,
+    "Disabled": 0,
+    "Disabled List": [],
+    "Block List": []
   },
   "DropDown": {
     "Effect Type": 9,
@@ -17,17 +22,28 @@
     "Enable Drop Shadow": 2,
     "No Border Color": 2,
     "Enable Theme Colorization": 2,
+    "Enable Fluent Animation": 0,
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
     "Dark Mode Gradient Color": "",
     "Light Mode Gradient Color": "",
-    "Disabled": 2
+    "Disabled": 2,
+    "Disabled List": [],
+    "Animation": {
+      "Fade Out Time": 350,
+      "Pop In Time": 250,
+      "Fade In Time": 87,
+      "Pop In Style": 0,
+      "Start Ratio": 50,
+      "Enable Immediate Interupting": 0
+    }
   },
   "Menu": {
     "No System Drop Shadow": 0,
     "Enable Immersive Style": 1,
     "Enable Custom Rendering": 0,
     "Enable Fluent Animation": 0,
+    "Enable Compatibility Mode": 0,
     "No Modern App Background Color": 1,
     "Color Treat As Transparent": "",
     "Color Treat As Transparent Threshold": 50,
@@ -36,11 +52,14 @@
     "Enable Drop Shadow": 2,
     "No Border Color": 2,
     "Enable Theme Colorization": 2,
+    "Dark Mode Theme Colorization Type": 1,
+    "Light Mode Theme Colorization Type": 1,
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
     "Dark Mode Gradient Color": "",
     "Light Mode Gradient Color": "",
     "Disabled": 2,
+    "Disabled List": [],
     "Animation": {
       "Fade Out Time": 350,
       "Pop In Time": 250,
@@ -86,10 +105,18 @@
     "Enable Drop Shadow": 2,
     "No Border Color": 2,
     "Enable Theme Colorization": 2,
+    "Margins Type": 0,
+    "Margin Left": 6,
+    "Margin Right": 6,
+    "Margin Top": 6,
+    "Margin Bottom": 6,
+    "Dark Mode Color": "",
+    "Light Mode Color": "",
     "Dark Mode Border Color": "",
     "Light Mode Border Color": "",
     "Dark Mode Gradient Color": "",
     "Light Mode Gradient Color": "",
-    "Disabled": 2
+    "Disabled": 2,
+    "Disabled List": []
   }
 }

@@ -1,6 +1,6 @@
-# Relative Imports
-from Registry.reg_edit import EditRegistry
+from Data.enums import EnumConvert
 from Data.paths import Path
+from Registry.reg_edit import EditRegistry
 
 
 class EditSettings:
@@ -39,6 +39,40 @@ class EditSettings:
         )
 
     @staticmethod
+    def changeEnableMiniDump(
+        keyPath: Path.RegPaths | str,
+        isEnabled: int,
+    ):
+        """
+        Method to:
+        Change whether to enable mini dump for Trasnlucent Flyouts.
+        - keyPath: path of the Key which needs to be changed
+        - isEnabled: mention whether to enable this property or not
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.EnableMiniDump,
+            value=isEnabled,
+        )
+
+    @staticmethod
+    def changeEnableCompatibilityMode(
+        keyPath: Path.RegPaths | str,
+        isEnabled: int,
+    ):
+        """
+        Method to:
+        Change whether to enable compatibility mode so as not to download symbols.
+        - keyPath: path of the Key which needs to be changed
+        - isEnabled: mention whether to enable this property or not
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.EnableCompatibilityMode,
+            value=isEnabled,
+        )
+
+    @staticmethod
     def changeNoSystemDropShadow(
         keyPath: Path.RegPaths | str,
         isEnabled: int,
@@ -53,6 +87,112 @@ class EditSettings:
             keyPath=keyPath,
             valueName=Path.RegKeys.NoSystemDropShadow,
             value=isEnabled,
+        )
+
+    @staticmethod
+    def changeDarkModeThemeColorizationType(
+        keyPath: Path.RegPaths | str,
+        colorIndex: int,
+    ):
+        """
+        Method to:
+        Change the color of theme colorization type in dark-mode.
+        - keyPath: path of the Key which needs to be changed
+        - colorIndex: comboBox Index of the selected Theme Colorization Type
+        """
+
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.DarkModeThemeColorizationType,
+            value=EnumConvert.themeColorizationTypeToName(colorIndex),
+        )
+
+    @staticmethod
+    def changeLightModeThemeColorizationType(
+        keyPath: Path.RegPaths | str,
+        colorIndex: int,
+    ):
+        """
+        Method to:
+        Change the color of theme colorization type in dark-mode.
+        - keyPath: path of the Key which needs to be changed
+        - colorIndex: ComboBox Index of the selected Theme Colorization Type
+        """
+
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.LightModeThemeColorizationType,
+            value=EnumConvert.themeColorizationTypeToName(colorIndex),
+        )
+
+    @staticmethod
+    def changeMarginsType(keyPath: Path.RegPaths | str, marginsType: int):
+        """
+        Method to:
+        Change the margin type to either stack or replace the existing margin
+        - keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+        - marginsType (int): ComboBox index of the selected marginType
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.MarginsType,
+            value=marginsType,
+        )
+
+    @staticmethod
+    def changeMarginLeft(keyPath: Path.RegPaths | str, margin: int):
+        """
+        Method to:
+        Change the left margin
+        - keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+        - margin (int): margin length
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.MarginLeft,
+            value=margin,
+        )
+
+    @staticmethod
+    def changeMarginRight(keyPath: Path.RegPaths | str, margin: int):
+        """
+        Method to:
+        Change the right margin
+        - keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+        - margin (int): margin length
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.MarginRight,
+            value=margin,
+        )
+
+    @staticmethod
+    def changeMarginTop(keyPath: Path.RegPaths | str, margin: int):
+        """
+        Method to:
+        Change the top margin
+        - keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+        - margin (int): margin length
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.MarginTop,
+            value=margin,
+        )
+
+    @staticmethod
+    def changeMarginBottom(keyPath: Path.RegPaths | str, margin: int):
+        """
+        Method to:
+        Change the bottom margin
+        - keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+        - margin (int): margin length
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.MarginBottom,
+            value=margin,
         )
 
     @staticmethod
@@ -155,6 +295,36 @@ class EditSettings:
             keyPath=keyPath,
             valueName=Path.RegKeys.LightModeGradientColor,
             value=int(color, 16),
+        )
+
+    @staticmethod
+    def changeDisabledList(keyPath: Path.RegPaths | str, disabledList: list):
+        """
+        Change the enteries in the disabledList Key
+
+        Args:
+            keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+            disabledList (list): List of processes to add to the disabledList
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.DisabledList,
+            value=disabledList,
+        )
+
+    @staticmethod
+    def changeBlockList(keyPath: Path.RegPaths | str, blockList: list):
+        """
+        Change the enteries in the blockList Key
+
+        Args:
+            keyPath (Path.RegPaths | str): path of the Key which needs to be changed
+            blockList (list): List of processes to add to the blockList
+        """
+        EditRegistry.setValue(
+            keyPath=keyPath,
+            valueName=Path.RegKeys.BlockList,
+            value=blockList,
         )
 
     @staticmethod

@@ -1,5 +1,4 @@
-# Relative Import
-from Data.translations import translationVar, Key
+from Data.translations import Key, translationVar
 
 
 class Description:
@@ -9,10 +8,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Effect type allows you to choose the background effect used in various flyouts and elements in Translucent Flyouts.")
+            + translationVar.translateFrom(
+                "Effect type allows you to choose the background effect used in various flyouts and elements in Translucent Flyouts."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.Parameter.effectType)
@@ -40,7 +41,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.transparent)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds a fully transparent effect as the background for pop-ups.")
+            + translationVar.translateFrom(
+                "Adds a fully transparent effect as the background for pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows10AndWin11Build)
@@ -51,7 +54,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.solid)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds a solid coloured background effect as the background for pop-ups.")
+            + translationVar.translateFrom(
+                "Adds a solid coloured background effect as the background for pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows10AndWin11Build)
@@ -62,7 +67,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.blur)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds a blurred effect as the background for pop-ups.")
+            + translationVar.translateFrom(
+                "Adds a blurred effect as the background for pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows10Plus)
@@ -73,7 +80,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.classicAcrylicBlur)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds a acrylic paint-textured blur effect as the background for pop-ups.")
+            + translationVar.translateFrom(
+                "Adds a acrylic paint-textured blur effect as the background for pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows10Plus)
@@ -84,7 +93,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.modernAcrylicBlur)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds the windows 11 styled acrylic paint-textured blur effect as background for pop-ups.")
+            + translationVar.translateFrom(
+                "Adds the windows 11 styled acrylic paint-textured blur effect as background for pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows11)
@@ -95,18 +106,22 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.acrylic)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds a acrylic paint-textured background layer as the background for the pop-ups.")
+            + translationVar.translateFrom(
+                "Adds a acrylic paint-textured background layer as the background for the pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows1122H2Plus)
             + """</td>
         </tr>
         <tr>
-        <td"""
+        <td>"""
             + translationVar.translateFrom(Key.Value.EffectType.mica)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds the signature mica-blur effect as the background for the pop-ups.")
+            + translationVar.translateFrom(
+                "Adds the signature mica-blur effect as the background for the pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows11)
@@ -117,7 +132,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.EffectType.micaAlt)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Adds the signature mica-blur, but as a background layer for the background for the pop-ups.")
+            + translationVar.translateFrom(
+                "Adds the signature mica-blur, but as a background layer for the background for the pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows1122H2Plus)
@@ -156,10 +173,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Corner type allows you to choose between differend shapes and sizes of corners used for the pop-ups.")
+            + translationVar.translateFrom(
+                "Corner type allows you to choose between differend shapes and sizes of corners used for the pop-ups."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.Parameter.cornerType)
@@ -176,7 +195,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.CornerType.dontChange)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Keeps the default corner type as supported by windows")
+            + translationVar.translateFrom(
+                "Keeps the default corner type as supported by windows"
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows11)
@@ -187,7 +208,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.CornerType.squareCorners)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Use sharp corners instead of round corners.")
+            + translationVar.translateFrom(
+                "Use sharp corners instead of round corners."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows11)
@@ -248,10 +271,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Enable Drop Shadow allows you to choose whether to enable the drop shadow effect for the pop-ups.")
+            + translationVar.translateFrom(
+                "Enable Drop Shadow allows you to choose whether to enable the drop shadow effect for the pop-ups."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -268,7 +293,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.no)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Disables the drop shadow visible behind the pop-ups.")
+            + translationVar.translateFrom(
+                "Disables the drop shadow visible behind the pop-ups."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Support.windows10Plus)
@@ -279,7 +306,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Enables an additional border with shadow bahind the pop-up")
+            + translationVar.translateFrom(
+                "Enables an additional border with shadow bahind the pop-up"
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(
@@ -320,10 +349,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("No Border Color allows you to choose whether to render system borders on the pop-ups.")
+            + translationVar.translateFrom(
+                "No Border Color allows you to choose whether to render system borders on the pop-ups."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -340,10 +371,14 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.no)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Choose to show the system borders on the pop-ups")
+            + translationVar.translateFrom(
+                "Choose to show the system borders on the pop-ups"
+            )
             + """</td>
         <td>"""
-            + translationVar.translateFrom("On Windows 10, Only supports removing the system borders of pop-up menus and fully supports Windows 11.")
+            + translationVar.translateFrom(
+                "On Windows 10, Only supports removing the system borders of pop-up menus and fully supports Windows 11."
+            )
             + """</td>
         </tr>
         <tr>
@@ -351,7 +386,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Choose to hide the system borders on the pop-ups")
+            + translationVar.translateFrom(
+                "Choose to hide the system borders on the pop-ups"
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -385,7 +422,9 @@ class Description:
         return mainString
 
     @staticmethod
-    def enableThemeColorization(isNotGlobal: bool = False, isInMenu: bool = False) -> str:
+    def enableThemeColorization(
+        isNotGlobal: bool = False, isInMenu: bool = False
+    ) -> str:
         mainString = (
             """
         <body>
@@ -395,7 +434,7 @@ class Description:
             )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -412,7 +451,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.no)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Choose not to use the current theme color as system border")
+            + translationVar.translateFrom(
+                "Choose not to use the current theme color as system border"
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -423,7 +464,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Choose to use the current theme color as system border")
+            + translationVar.translateFrom(
+                "Choose to use the current theme color as system border"
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(
@@ -469,6 +512,240 @@ class Description:
             </body>
             """
         return mainString
+
+    @staticmethod
+    def darkModeThemeColorizationType() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Dark Mode Theme Colorization Type is used to indicate which variant of your current theme color to use, which are usually darker or lighter, and are used in various parts of the UI in Dark Theme."
+            )
+            + """
+        </body>
+        """
+        )
+
+    @staticmethod
+    def lightModeThemeColorizationType() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Light Mode Theme Colorization Type is used to indicate which variant of your current theme color to use, which are usually darker or lighter, and are used in various parts of the UI in Light Theme."
+            )
+            + """
+        </body>
+        """
+        )
+
+    @staticmethod
+    def enableCompatibilityMode() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Enable Compatibility allows you to choose to enable a v1-like rendering procedure for your vanilla menus, so symbols are no longer needed for that section, but the rendering will be performed slightly more slowly."
+            )
+            + """
+         <center>
+        <table width=100% border=0.5>
+        <tr>
+        <th>"""
+            + translationVar.translateFrom(Key.TableHeading.boolean)
+            + """</th>
+        <th>"""
+            + translationVar.translateFrom(Key.TableHeading.description)
+            + """</th>
+        </tr>
+        <tr>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.Bool.no)
+            + """</td>
+        <td>"""
+            + translationVar.translateFrom(
+                "Use the latest rendering method and download symbols"
+            )
+            + """</td>
+        </tr>
+        <tr>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.Bool.yes)
+            + """</td>
+        <td>"""
+            + translationVar.translateFrom(
+                "Use the v1 rendering method and skip downloading symbols"
+            )
+            + """</td>
+        </tr>
+        </table>
+        </center>
+        <br>
+        <br>
+        <b>
+        """
+            + translationVar.translateFrom(Key.Notes.symbolSkipNote)
+            + """</b>
+        </body>
+        """
+        )
+
+    @staticmethod
+    def enableMiniDump() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Enable Mini Dump allows you to choose whether to enable creating a dump file in case of a crash."
+            )
+            + """
+        <center>
+        <table width=100% border=0.5>
+        <tr>
+        <th>"""
+            + translationVar.translateFrom(Key.TableHeading.boolean)
+            + """</th>
+        <th>"""
+            + translationVar.translateFrom(Key.TableHeading.description)
+            + """</th>
+        </tr>
+        <tr>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.Bool.no)
+            + """</td>
+        <td>"""
+            + translationVar.translateFrom(
+                "Choose to disable creation of a dump file in case of a crash"
+            )
+            + """</td>
+        </tr>
+        <tr>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.Bool.yes)
+            + """</td>
+        <td>"""
+            + translationVar.translateFrom(
+                "Choose to enable creation of a dump file in case of a crash"
+            )
+            + """</td>
+        </tr>
+        </table>
+        </center>
+        </body>
+        """
+        )
+
+    @staticmethod
+    def marginsType() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Margins Type defines how the underlying values of margin should be applied to the tooltip."
+            )
+            + """
+        <center>
+        <table width=100% border=0.5>
+        <tr>
+        <th>"""
+            + translationVar.translateFrom(Key.Parameter.marginsType)
+            + """</th>
+        <th>"""
+            + translationVar.translateFrom(Key.TableHeading.description)
+            + """</th>
+        </tr>
+        <tr>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.MarginsType.addToExisting)
+            + """</td>
+        <td>"""
+            + translationVar.translateFrom(
+                "Add margin values to the already existing ones."
+            )
+            + """</td>
+        </tr>
+        <tr>
+        <td>"""
+            + translationVar.translateFrom(Key.Value.MarginsType.replaceExisting)
+            + """</td>
+        <td>"""
+            + translationVar.translateFrom(
+                "Replace the currently used values of margin with the new ones"
+            )
+            + """</td>
+        </tr>
+        </table>
+        </center>
+        </body>
+        """
+        )
+
+    @staticmethod
+    def margin() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Margin helps you set margin for the tooltip corresponding to the directions: left, right, top, bottom. They are applied based on the Margins Type mentioned above."
+            )
+            + """
+        </body>
+        """
+        )
+
+    @staticmethod
+    def textColor() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Text color sets the color of the tooltip text in dark/light mode."
+            )
+            + """
+        </body>
+        """
+        )
+
+    @staticmethod
+    def borderColor() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Border color sets the color of the system border in dark/light mode. You can choose the color to your liking while also being able to choose the opacity with the help of the alpha value."
+            )
+            + """
+        """
+            + translationVar.translateFrom(Key.Notes.alphaValueNote)
+            + """
+        </body>
+        """
+        )
+
+    @staticmethod
+    def gradientColor() -> str:
+        return (
+            """
+        <body>
+        """
+            + translationVar.translateFrom(
+                "Gradient color sets the color of the background in dark/light mode. You can choose the color to your liking while also being able to choose the opacity with the help of the alpha value."
+            )
+            + """
+        """
+            + translationVar.translateFrom(Key.Notes.gradientColorNote)
+            + """
+        </body>
+        """
+        )
 
     @staticmethod
     def darkModeBorderColor() -> str:
@@ -542,10 +819,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Disabled allows you to choose to disable all effects for this pop-up type.")
+            + translationVar.translateFrom(
+                "Disabled allows you to choose to disable all effects for this pop-up type."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom("Boolean")
@@ -573,10 +852,14 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Choose to disable all effects for this pop-up type")
+            + translationVar.translateFrom(
+                "Choose to disable all effects for this pop-up type"
+            )
             + """</td>
         <td>"""
-            + translationVar.translateFrom("The translucent effects and animations for these pop-ups will be disabled.")
+            + translationVar.translateFrom(
+                "The translucent effects and animations for these pop-ups will be disabled."
+            )
             + """</td>
         </tr>
         """
@@ -612,10 +895,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("No system drop shadow allow you to choose to removes the old-style system shadow called <code>SysShadow</code>.")
+            + translationVar.translateFrom(
+                "No system drop shadow allow you to choose to removes the old-style system shadow called <code>SysShadow</code>."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -646,7 +931,9 @@ class Description:
             + translationVar.translateFrom("Keep the old-style system drop shadow.")
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Generally Windows 11 doesn't have these unless there are any menus with sharp corners.")
+            + translationVar.translateFrom(
+                "Generally Windows 11 doesn't have these unless there are any menus with sharp corners."
+            )
             + """</td>
         </tr>
         </table>
@@ -661,10 +948,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Enable immersive style allows you to choose to uniformly style pop-up menus as modern menus.")
+            + translationVar.translateFrom(
+                "Enable immersive style allows you to choose to uniformly style pop-up menus as modern menus."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -692,10 +981,14 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Enable the uniformly style pop-up menus as modern menus.")
+            + translationVar.translateFrom(
+                "Enable the uniformly style pop-up menus as modern menus."
+            )
             + """</td>
         <td>"""
-            + translationVar.translateFrom("It is strongly recommended to not to disable this option in Windows 11")
+            + translationVar.translateFrom(
+                "It is strongly recommended to not to disable this option in Windows 11"
+            )
             + """</td>
         </tr>
         </table>
@@ -715,10 +1008,12 @@ class Description:
             )
             + """
         <h4>"""
-            + translationVar.translateFrom("Note: Set this value to <code>Yes</code> for the parameters in the Menu section to work.")
+            + translationVar.translateFrom(
+                "Note: Set this value to <code>Yes</code> for the parameters in the Menu section to work."
+            )
             + """</h4>
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -743,7 +1038,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Enable the custom rendering for pop-up menus.")
+            + translationVar.translateFrom(
+                "Enable the custom rendering for pop-up menus."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -762,10 +1059,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Enable fluent animation allows you to choose to add fluent pop-up animations for menus.")
+            + translationVar.translateFrom(
+                "Enable fluent animation allows you to choose to add fluent pop-up animations for menus."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -813,7 +1112,7 @@ class Description:
             )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -830,7 +1129,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.no)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Do not remove the background colors of UWP icons")
+            + translationVar.translateFrom(
+                "Do not remove the background colors of UWP icons"
+            )
             + """</td>
         </tr>
         <tr>
@@ -838,7 +1139,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Enable the removal of background color of UWP icons.")
+            + translationVar.translateFrom(
+                "Enable the removal of background color of UWP icons."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -846,6 +1149,12 @@ class Description:
         </tr>
         </table>
         </center>
+        <br>
+        <br>
+        <b>
+        """
+            + translationVar.translateFrom(Key.Notes.symbolSkipNote)
+            + """</b>
         </body>
         """
         )
@@ -875,7 +1184,9 @@ class Description:
             )
             + """
         """
-            + translationVar.translateFrom("<p>Equation: √[(a1 - a2) ^ 2 + (r1 - r2) ^ 2 + (g1 - g2) ^ 2 + (b1 - b2) ^ 2]</p>")
+            + translationVar.translateFrom(
+                "<p>Equation: √[(a1 - a2) ^ 2 + (r1 - r2) ^ 2 + (g1 - g2) ^ 2 + (b1 - b2) ^ 2]</p>"
+            )
             + """
         </body>
         """
@@ -938,7 +1249,9 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Start ratio is the percentage of the pop-in animation between 0 and 100.")
+            + translationVar.translateFrom(
+                "Start ratio is the percentage of the pop-in animation between 0 and 100."
+            )
             + """
         """
             + translationVar.translateFrom(
@@ -958,7 +1271,9 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Enable immediate interupting allow users to immediately interrupt animations.")
+            + translationVar.translateFrom(
+                "Enable immediate interupting allow users to immediately interrupt animations."
+            )
             + """
         """
             + translationVar.translateFrom(
@@ -966,7 +1281,7 @@ class Description:
             )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.TableHeading.boolean)
@@ -983,7 +1298,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.no)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Do not enable immediate stoppage and end of fluent animation")
+            + translationVar.translateFrom(
+                "Do not enable immediate stoppage and end of fluent animation"
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -994,7 +1311,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.Bool.yes)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("Enable the immediate stoppage and end of fluent animation.")
+            + translationVar.translateFrom(
+                "Enable the immediate stoppage and end of fluent animation."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -1015,10 +1334,12 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Pop in style is the style of the pop-in animation.")
+            + translationVar.translateFrom(
+                "Pop in style is the style of the pop-in animation."
+            )
             + """
         <center>
-        <table border=0.5>
+        <table width=100% border=0.5>
         <tr>
         <th>"""
             + translationVar.translateFrom(Key.Parameter.popInStyle)
@@ -1046,7 +1367,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.PopInStyle.ripple)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("A ripple like animation wich seems like a paper unfold.")
+            + translationVar.translateFrom(
+                "A ripple like animation wich seems like a paper unfold."
+            )
             + """</td>
         </tr>
         <tr>
@@ -1054,7 +1377,9 @@ class Description:
             + translationVar.translateFrom(Key.Value.PopInStyle.smoothScroll)
             + """</td>
         <td>"""
-            + translationVar.translateFrom("A smooth scroll/expansion from top-left to bottom-right.")
+            + translationVar.translateFrom(
+                "A smooth scroll/expansion from top-left to bottom-right."
+            )
             + """</td>
         <td>"""
             + translationVar.translateFrom(Key.Notes.supportsWindows10Plus)
@@ -1080,12 +1405,16 @@ class Description:
     @staticmethod
     def width(isFocusing: bool = False) -> str:
         if isFocusing:
-            mainString = """<body>""" + translationVar.translateFrom("Width controls the border thickness of the focus rectangle for pop-up menus.")
+            mainString = """<body>""" + translationVar.translateFrom(
+                "Width controls the border thickness of the focus rectangle for pop-up menus."
+            )
         else:
-            mainString = """<body>""" + translationVar.translateFrom("Width controls the border thickness of the separator line in pop-up menus.")
+            mainString = """<body>""" + translationVar.translateFrom(
+                "Width controls the border thickness of the separator line in pop-up menus."
+            )
         mainString += (
             """
-            <table border=0.5>
+            <table width=100% border=0.5>
             <tr>
             <th>"""
             + translationVar.translateFrom(Key.TableHeading.acceptedValues)
@@ -1102,7 +1431,9 @@ class Description:
             + translationVar.translateFrom("Values are accepted in ms, 1000ms= 1s ")
             + """</td>
             <td>"""
-            + translationVar.translateFrom("This value is divided by 1000 as it is converted to DIP(Device Independent Pixels)")
+            + translationVar.translateFrom(
+                "This value is divided by 1000 as it is converted to DIP(Device Independent Pixels)"
+            )
             + """</td>
             <td>"""
             + translationVar.translateFrom(Key.Support.windows11)
@@ -1124,7 +1455,9 @@ class Description:
             """
         <body>
         """
-            + translationVar.translateFrom("Corner radius, as the name suggests is radius of corners for this menu item.")
+            + translationVar.translateFrom(
+                "Corner radius, as the name suggests is radius of corners for this menu item."
+            )
             + """
         <h4>"""
             + translationVar.translateFrom(Key.Notes.enableCustomRendering)

@@ -1,13 +1,14 @@
-# Library Import
 import json
 
-# Relative Import
 from Data.enums import Languages
 from Data.paths import Path
 
 
 class Key:
     apply: str = "Apply"
+    cancel: str = "Cancel"
+    disabledList: str = "Disabled List"
+    resetAll: str = "Reset All"
     TranslucentFlyoutsConfig: str = "Translucent Flyouts Config"
     changesApplied: str = "Changes Applied"
     ok: str = "OK"
@@ -30,7 +31,6 @@ class Key:
     class TabDescription:
         _global: str = "Modify the overall appearance of all flyouts"
         dropDown: str = "Modify the appearance of all Dropdown flyouts"
-        globalNote: str = "Note: If values in Menu or Dropdown are applied then the corresponsiding Global values will be ignored."
         menu: str = "Modify the overall appearance of various menu items and their animations  including: Focused, Hot, Disabled Hot & Separator"
         tooltip: str = "Modify the appearance of all Tooltips"
 
@@ -39,7 +39,16 @@ class Key:
         cornerType: str = "Corner Type"
         enableDropShadow: str = "Enable Drop Shadow"
         noBorderColor: str = "No Border Color"
+        textColor: str = "Text Color"
+        borderColor: str = "Border Color"
+        gradientColor: str = "Gradient Color"
         enableThemeColorization: str = "Enable Theme Colorization"
+        enableMiniDump: str = "Enable Mini Dump"
+        enableCompatibilityMode: str = "Enable Compatibility Mode"
+        darkModeThemeColorizationType: str = "Dark Mode Theme Colorization Type"
+        lightModeThemeColorizationType: str = "Light Mode Theme Colorization Type"
+        darkMode: str = "Dark Mode"
+        lightMode: str = "Light Mode"
         darkModeBorderColor: str = "Dark Mode Border Color"
         lightModeBorderColor: str = "Light Mode Border Color"
         darkModeGradientColor: str = "Dark Mode Gradient Color"
@@ -52,6 +61,8 @@ class Key:
         noModernAppBackgroundColor: str = "No Modern App Background Color"
         colorTreatAsTransparent: str = "Color Treat As Transparent"
         colorTreatAsTransparentThreshold: str = "Color Treat As Transparent Threshold"
+        marginsType: str = "Margins Type"
+        margin: str = "Margin"
         fadeOutTime: str = "Fade Out Time"
         popInTime: str = "Pop In Time"
         fadeInTime: str = "Fade In Time"
@@ -69,6 +80,27 @@ class Key:
         class Bool:
             yes: str = "Yes"
             no: str = "No"
+
+        class Margin:
+            left: str = "Left:"
+            right: str = "Right:"
+            top: str = "Top:"
+            bottom: str = "Bottom:"
+
+        class MarginsType:
+            addToExisting: str = "Add To Existing"
+            replaceExisting: str = "Replace Existing"
+
+        class ThemeColorizationType:
+            immersiveStartBackground: str = "ImmersiveStartBackground"
+            immersiveStartHoverBackground: str = "ImmersiveStartHoverBackground"
+            immersiveSystemAccent: str = "ImmersiveSystemAccent"
+            immersiveSystemAccentDark1: str = "ImmersiveSystemAccentDark1"
+            immersiveSystemAccentDark2: str = "ImmersiveSystemAccentDark2"
+            immersiveSystemAccentDark3: str = "ImmersiveSystemAccentDark3"
+            immersiveSystemAccentLight1: str = "ImmersiveSystemAccentLight1"
+            immersiveSystemAccentLight2: str = "ImmersiveSystemAccentLight2"
+            immersiveSystemAccentLight3: str = "ImmersiveSystemAccentLight3"
 
         class EffectType:
             disabled: str = "Disable"
@@ -102,12 +134,15 @@ class Key:
 
     class Notes:
         supportsWindows10Plus: str = "Supports Windows 10+"
-        correspondingValue: str = "Uses the corresponding value in the global tab as the <code>"
+        correspondingValue: str = (
+            "Uses the corresponding value in the global tab as the <code>"
+        )
         codeValue: str = "</code> value."
         alphaValueNote: str = "The alpha/opacity value will be ignored when using round corners in Windows 11."
         gradientColorNote: str = "This will be ignored when using <code>Effect Type</code> as <code>Acrylic</code>, <code>Mica</code> or <code>Mica Alt</code>."
         renderBorder: str = "This is used for renderig border or filling rectangles."
         enableCustomRendering: str = "Note: Values in this section require the <code>Enable Custom Rendering</code> property in the Menu->General section be set to <code>Yes</code> to function."
+        symbolSkipNote: str = "Note: To eliminate the need for symbols(download required otherwise), set <code>Compatibility Mode</code> and <code>No Modern App Background</code> to <code>Yes</code>"
 
     class Support:
         windows10Plus: str = "Windows 10+"
@@ -124,6 +159,7 @@ class Key:
             appearance: str = "Appearance"
             internalFunctions: str = "Internal Functions"
             externalFunctions: str = "External Functions"
+            advancedFunctions: str = "Advanced Functions"
 
         class General:
             chooseLangauge: str = "Choose Language:"
@@ -155,6 +191,10 @@ class Key:
             downloadNote: str = "Note: Pressing the button below will download and install Translucent Flyouts and set the path in the application so you can use the internal functions as well as all the other functionality included in the application."
             downloadAndInstall: str = "Download and Install"
 
+        class AdvancedFunctions:
+            advancedNote: str = "Warning: This section is only meant for the advanced user. Configuring the Block List needs a system restart and doesn't load Translucent Flyouts for that application at all. This may cause some serious problems if not used properly, resulting in high CPU usage."
+            configureBlockList: str = "Configure Block List"
+
 
 class TranslationModel:
     def __init__(self) -> None:
@@ -162,12 +202,21 @@ class TranslationModel:
         self.translations: dict[str, str] = {}
 
     def setLanguage(self, language: Languages) -> None:
+        """
+        Sets the current language to the provided language
+
+        Args:
+            language (Languages): The language to set as current
+        """
         if self.language == language:
             return
         self.language = language
         self._fetch()
 
     def _fetch(self) -> None:
+        """
+        Fetches the translations from the respective translation file according to the currently selected language
+        """
         if self.language == Languages.Default:
             return
 
@@ -175,10 +224,25 @@ class TranslationModel:
             Languages.Hindi: Path.Translations.Hindi,
             Languages.SimplifiedChinese: Path.Translations.SimplifiedChinese,
         }[self.language]
-        self.translations: dict[str, str] = dict(json.load(open(translationPath, "r", encoding="utf-8")))
+        self.translations: dict[str, str] = dict(
+            json.load(open(translationPath, "r", encoding="utf-8"))
+        )
 
     def translateFrom(self, incomingString: str) -> str:
-        if self.language == Languages.Default or not bool(self.translations) or incomingString not in self.translations:
+        """
+        Provides translations for the incoming String to the current language
+
+        Args:
+            incomingString (str): The string to translate
+
+        Returns:
+            str: Translated string
+        """
+        if (
+            self.language == Languages.Default
+            or not bool(self.translations)
+            or incomingString not in self.translations
+        ):
             return incomingString
         else:
             return self.translations[incomingString]

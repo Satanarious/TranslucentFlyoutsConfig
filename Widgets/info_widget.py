@@ -1,10 +1,8 @@
-# Library Imports
-from PyQt6.QtWidgets import QWidget, QMainWindow, QFrame, QGraphicsDropShadowEffect
 from PyQt6.QtGui import QColor, QIcon
+from PyQt6.QtWidgets import QFrame, QGraphicsDropShadowEffect, QMainWindow, QWidget
 
-# Relative Imports
-from Generated.info import Ui_Form
 from Data.paths import Path
+from Generated.info import Ui_Form
 
 
 class InfoWidget(Ui_Form):
@@ -31,7 +29,7 @@ class InfoWidget(Ui_Form):
 
     def closeInfo(self):
         self.widget.hide()
-        self.mainFrame.setGraphicsEffect(None)  # type: ignore
+        self.mainFrame.setGraphicsEffect(None)  # type:ignore
         self.mainFrame.setDisabled(False)
 
     def setTitle(self, titleText: str) -> None:

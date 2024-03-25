@@ -28,6 +28,7 @@ class Path:
             RunIcon: str = "Assets/icons/light/run_icon.png"
             StopIcon: str = "Assets/icons/light/stop_icon.png"
             SettingsIcon: str = "Assets/icons/light/settings_icon.png"
+            AdvancedIcon: str = "Assets/icons/light/advanced_icon.png"
 
         class Dark:
             ResetIcon: str = "Assets/icons/dark/reset_icon.png"
@@ -48,6 +49,7 @@ class Path:
             RunIcon: str = "Assets/icons/dark/run_icon.png"
             StopIcon: str = "Assets/icons/dark/stop_icon.png"
             SettingsIcon: str = "Assets/icons/dark/settings_icon.png"
+            AdvancedIcon: str = "Assets/icons/dark/advanced_icon.png"
 
     class FontPaths:
         NunitoSans: str = "Assets/fonts/NunitoSans_10pt_Condensed-Regular.ttf"
@@ -86,7 +88,11 @@ class Path:
         LightModeGradientColor: str = "LightMode_GradientColor"
         DarkModeColor: str = "DarkMode_Color"
         LightModeColor: str = "LightMode_Color"
+        EnableMiniDump: str = "EnableMiniDump"
+        BlockList: str = "BlockList"
+        DisabledList: str = "DisabledList"
         Disabled: str = "Disabled"
+        EnableCompatibilityMode: str = "EnableCompatibilityMode"
         NoSystemDropShadow: str = "NoSystemDropShadow"
         EnableImmersiveStyle: str = "EnableImmersiveStyle"
         EnableCustomRendering: str = "EnableCustomRendering"
@@ -94,6 +100,8 @@ class Path:
         NoModernAppBackgroundColor: str = "NoModernAppBackgroundColor"
         ColorTreatAsTransparent: str = "ColorTreatAsTransparent"
         ColorTreatAsTransparentThreshold: str = "ColorTreatAsTransparentThreshold"
+        DarkModeThemeColorizationType: str = "DarkMode_ThemeColorizationType"
+        LightModeThemeColorizationType: str = "LightMode_ThemeColorizationType"
         FadeOutTime: str = "FadeOutTime"
         PopInTime: str = "PopInTime"
         FadeInTime: str = "FadeInTime"
@@ -105,3 +113,8 @@ class Path:
         NoBorderColor: str = "NoBorderColor"
         CornerType: str = "CornerType"
         Width: str = "Width"
+        MarginsType: str = "MarginsType"
+        MarginLeft: str = "Margins_cxLeftWidth"
+        MarginRight: str = "Margins_cxRightWidth"
+        MarginTop: str = "Margins_cyTopHeight"
+        MarginBottom: str = "Margins_cyBottomHeight"

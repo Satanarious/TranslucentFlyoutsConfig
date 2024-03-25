@@ -25,7 +25,12 @@ class Ui_Form(object):
         self.horizontalLayout.setContentsMargins(4, 4, 4, 4)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem = QtWidgets.QSpacerItem(166, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(
+            166,
+            20,
+            QtWidgets.QSizePolicy.Policy.Expanding,
+            QtWidgets.QSizePolicy.Policy.Minimum,
+        )
         self.horizontalLayout.addItem(spacerItem)
         self.title = QtWidgets.QLabel(parent=self.titleFrame)
         font = QtGui.QFont()
@@ -33,12 +38,21 @@ class Ui_Form(object):
         self.title.setFont(font)
         self.title.setObjectName("title")
         self.horizontalLayout.addWidget(self.title)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem1 = QtWidgets.QSpacerItem(
+            40,
+            20,
+            QtWidgets.QSizePolicy.Policy.Expanding,
+            QtWidgets.QSizePolicy.Policy.Minimum,
+        )
         self.horizontalLayout.addItem(spacerItem1)
         self.closeButton = QtWidgets.QToolButton(parent=self.titleFrame)
         self.closeButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("UI_Files\\../Assets/icons/close_icon.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(
+            QtGui.QPixmap("UI_Files\\../Assets/icons/close_icon.png"),
+            QtGui.QIcon.Mode.Normal,
+            QtGui.QIcon.State.Off,
+        )
         self.closeButton.setIcon(icon)
         self.closeButton.setAutoRaise(True)
         self.closeButton.setObjectName("closeButton")

@@ -1,8 +1,12 @@
-# Library Imports
-from PyQt6.QtWidgets import QMainWindow, QWidget, QFrame, QGraphicsBlurEffect, QGraphicsDropShadowEffect
 from PyQt6.QtGui import QColor
+from PyQt6.QtWidgets import (
+    QFrame,
+    QGraphicsBlurEffect,
+    QGraphicsDropShadowEffect,
+    QMainWindow,
+    QWidget,
+)
 
-# Relative Imports
 from Generated.applied import Ui_Form
 
 
@@ -15,8 +19,8 @@ class AppliedWidget(Ui_Form):
         self.widget.setFixedWidth(200)
         self.widget.setFixedHeight(200)
         x, y = (
-            self.widget.width() - self.frame.width() + 60,
-            self.widget.height() - self.frame.height(),
+            self.widget.width() - self.frame.width() + 90,
+            self.widget.height() - self.frame.height() + 60,
         )
         self.widget.setGeometry(x, y, self.widget.width(), self.widget.height())
         self.ok_button.clicked.connect(self.stop)
