@@ -60,13 +60,17 @@ Catalog:
 - Left-clicking on the <img src="Assets/icons/light/reset_icon.png" width=13> reset button on the far right of any setting resets the value to its default value.
 - Right-clicking on the <img src="Assets/icons/light/reset_icon.png" width=13> reset button on the far right of any setting resets the value to its last-saved value.
 - Use the <img src="Assets/icons/light/color_picker_icon.png" width=15> color-picker to choose the color including the alpha(Opacity) value.
+- Left-clicking the  `Reset All` button on each page resets all parameters to default.
+- Right-clicking the  `Reset All` button on each page resets all parameters to their last values.
+- Use the `Disabled List` button for each category to add/remove processes and disable/enable Translucent Flyouts' features for a particular process for that category.
 - See the avaiable values and their descriptions by click on any parameter label.
 - Any changes are immediately applied on pressing the `Apply` or `Save` button in the respective section.
 - In the Settings section:
   - Change the app-language in the `General Section` by selecting the language.
   - Change the theme of the application in the `Appearance Section` by selection colors for respective items/backgrounds and more. You can also select from a list of predefined theme presets available just below the color selection.
   - Access functions such as Run, Stop, Install and Uninstall in the `Internal Functions` section.
-  - Finally, Download and Install Translucent Flyouts with one click of a button present in the `External Functions` section.
+  - Download and Install Translucent Flyouts with one click of a button present in the `External Functions` section.
+  - For Advanced User, use the `Advanced Functions` section to access the Block List and configure it.
 
 ## Contribution
 
