@@ -1,4 +1,3 @@
-# Library imports
 from enum import IntEnum
 
 
@@ -18,6 +17,29 @@ class Settings:
         MicaBackgroundLayer = 7
         MicaVariantBackgroundLayer = 8
         UseGlobalSetting = 9
+
+    class ThemeColorizationType(IntEnum):
+        ImmersiveStartBackground = 0
+        ImmersiveStartHoverBackground = 1
+        ImmersiveSystemAccent = 2
+        ImmersiveSystemAccentDark1 = 3
+        ImmersiveSystemAccentDark2 = 4
+        ImmersiveSystemAccentDark3 = 5
+        ImmersiveSystemAccentLight1 = 6
+        ImmersiveSystemAccentLight2 = 7
+        ImmersiveSystemAccentLight3 = 8
+
+    class EnableMiniDump(IntEnum):
+        No = 0
+        Yes = 1
+
+    class EnableCompatibilityMode(IntEnum):
+        No = 0
+        Yes = 1
+
+    class MarginsType(IntEnum):
+        AddToExisting = 0
+        ReplaceExisting = 1
 
     class EnableDropShadow(IntEnum):
         No = 0
@@ -99,6 +121,15 @@ class MainTab(IntEnum):
     Tooltip = 3
 
 
+class DropDownTab(IntEnum):
+    """
+    Returns the tab indices in the dropdown tab
+    """
+
+    General = 0
+    Animation = 1
+
+
 class MenuTab(IntEnum):
     """
     Returns the tab indices in the menu tab
@@ -126,6 +157,8 @@ class RegistryReturnType(IntEnum):
 
     Hexadecimal = 0
     Decimal = 1
+    String = 2
+    List = 3
 
 
 class Presets(IntEnum):
@@ -136,3 +169,51 @@ class Presets(IntEnum):
 
     Null = 0
     # Add More Presets
+
+
+class ListType(IntEnum):
+    GlobalDisabledList = 0
+    GlobalBlockList = 1
+    DropDownDisabledList = 2
+    MenuDisabledList = 3
+    TooltipDisabledList = 4
+
+
+class EnumConvert:
+    @staticmethod
+    def themeColorizationTypeToName(
+        colorIndex: Settings.ThemeColorizationType | int,
+    ) -> str:
+        """
+        Convert ThemeColorizationType to its name in string format
+
+        Args:
+            colorIndex (Settings.ThemeColorizationType | int): Enum or comboBox index
+
+        Returns:
+            str: Theme Colorization Type name as string
+        """
+        return list(Settings.ThemeColorizationType)[colorIndex].name
+
+    @staticmethod
+    def themeColorizationTypeStringToIndex(
+        value: str | int | list[str] | Settings.ThemeColorizationType,
+    ) -> int:
+        """
+        Convert Theme Colorization Type string to the index in the comboBox
+
+        Args:
+            value (str | int | list[str] | Settings.ThemeColorizationType): Theme Colorization type
+
+        Returns:
+            int: index of the Theme Colorization Type string in the corresponding comboBox
+        """
+        if isinstance(value, int):
+            return value
+
+        elif isinstance(value, str):
+            return list(
+                map(lambda typ: typ.name, Settings.ThemeColorizationType)
+            ).index(value)
+        else:
+            return 1

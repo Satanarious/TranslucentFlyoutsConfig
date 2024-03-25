@@ -1,29 +1,35 @@
-# Library Imports
-from PyQt6.QtWidgets import QLineEdit, QPushButton
-from PyQt6.QtGui import QColor, QIcon
 import vcolorpicker
-from Data.app_settings import AppSettings
+from vcolorpicker.ui_light_alpha import Ui_ColorPicker as lightColorPicker
+from vcolorpicker.ui_dark_alpha import Ui_ColorPicker as darkColorPicker
+from PyQt6.QtGui import QColor, QIcon
+from PyQt6.QtWidgets import QLineEdit, QPushButton
 
-# Relative Imports
+from Data.app_settings import AppSettings
 from Data.stylesheet import StyleSheet
 
 
 class ColorPicker:
     vColorPicker = vcolorpicker.ColorPicker(useAlpha=True)
-    vColorPicker.ui.alpha.textEdited.disconnect()  # type:ignore
-    vColorPicker.ui.alpha.textEdited.connect(lambda: ColorPicker.alphaChanged())  # type:ignore
+    if (colorPickerUi := vColorPicker.ui) is not None and isinstance(
+        colorPickerUi, (lightColorPicker, darkColorPicker)
+    ):
+        colorPickerUi.alpha.textEdited.disconnect()
+        colorPickerUi.alpha.textEdited.connect(lambda: ColorPicker.alphaChanged())
 
     @staticmethod
     def alphaChanged() -> None:
-        alpha = ColorPicker.vColorPicker.i(ColorPicker.vColorPicker.ui.alpha.text())  # type:ignore
-        oldalpha = alpha
-        if alpha < 0:
-            alpha = 0
-        if alpha > 255:
-            alpha = 255
-        if alpha != oldalpha or alpha == 0:
-            ColorPicker.vColorPicker.ui.alpha.setText(str(alpha))  # type:ignore
-            ColorPicker.vColorPicker.ui.alpha.selectAll()  # type:ignore
+        if (colorPickerUi := ColorPicker.vColorPicker.ui) is not None and isinstance(
+            colorPickerUi, (lightColorPicker, darkColorPicker)
+        ):
+            alpha = ColorPicker.vColorPicker.i(colorPickerUi.alpha.text())
+            oldalpha = alpha
+            if alpha < 0:
+                alpha = 0
+            if alpha > 255:
+                alpha = 255
+            if alpha != oldalpha or alpha == 0:
+                colorPickerUi.alpha.setText(str(alpha))
+                colorPickerUi.alpha.selectAll()
         ColorPicker.vColorPicker.alpha = alpha
 
     @staticmethod
@@ -34,11 +40,19 @@ class ColorPicker:
         - Remove any icon from the QPushButton
         """
         pushButton.setIcon(QIcon(""))
-        if type(color) == str:
+        if isinstance(color, str):
             rgba = tuple(ColorPicker.aarrggbb_to_rgba(color))
-            pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(rgba, AppSettings.secondaryBackgroundColor))
-        elif type(color) == tuple:
-            pushButton.setStyleSheet(StyleSheet.buttonColorStylesheet(color, AppSettings.secondaryBackgroundColor))
+            pushButton.setStyleSheet(
+                StyleSheet.buttonColorStylesheet(
+                    rgba, AppSettings.secondaryBackgroundColor
+                )
+            )
+        elif isinstance(color, tuple):
+            pushButton.setStyleSheet(
+                StyleSheet.buttonColorStylesheet(
+                    color, AppSettings.secondaryBackgroundColor
+                )
+            )
 
     @staticmethod
     def rgba_to_aarrggbb(rgba: tuple) -> str:
@@ -93,25 +107,34 @@ class ColorPicker:
             - Set the color in the QLineEdit provided
             """
             global cancelled
-            cancelled = False  # type:ignore
+            cancelled = False
 
             def cancel():
                 global cancelled
-                cancelled = True  # type:ignore
+                cancelled = True
 
             def ok():
                 global cancelled
-                cancelled = False  # type:ignore
+                cancelled = False
 
-            ColorPicker.vColorPicker.rejected.connect(cancel)  # type:ignore
-            ColorPicker.vColorPicker.accepted.connect(ok)  # type:ignore
+            ColorPicker.vColorPicker.rejected.connect(cancel)
+            ColorPicker.vColorPicker.accepted.connect(ok)
 
             # Color Extract
             extractedColor: str = lineEdit.text()
             if extractedColor:
-                color: QColor = QColor(*map(int, ColorPicker.vColorPicker.getColor(tuple(ColorPicker.aarrggbb_to_rgba(extractedColor)))))
+                color: QColor = QColor(
+                    *map(
+                        int,
+                        ColorPicker.vColorPicker.getColor(
+                            tuple(ColorPicker.aarrggbb_to_rgba(extractedColor))
+                        ),
+                    )
+                )
             else:
-                color: QColor = QColor(*map(int, ColorPicker.vColorPicker.getColor((0, 0, 0, 255))))
+                color: QColor = QColor(
+                    *map(int, ColorPicker.vColorPicker.getColor((0, 0, 0, 255)))
+                )
 
             if color.isValid() and not cancelled:
                 lineEdit.setText(ColorPicker.rgba_to_aarrggbb(color.getRgb()))

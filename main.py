@@ -1,23 +1,27 @@
-# Library Imports
 import ctypes
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt6.QtGui import QIcon, QStandardItemModel, QStandardItem
-from PyQt6.QtCore import Qt, QItemSelectionModel
-from PyQt6.QtGui import QMouseEvent, QFontDatabase
 import sys
-import ctypes
 
-# Relative Imports
-from Generated.ui import Ui_MainWindow
-from Widgets.color_picker import ColorPicker
-from connections import Connectors
-from Registry.reg_edit import EditRegistry
-from Data.user import Saved
-from Data.paths import Path
+from PyQt6.QtCore import QItemSelectionModel, Qt
+from PyQt6.QtGui import (
+    QFontDatabase,
+    QIcon,
+    QMouseEvent,
+    QStandardItem,
+    QStandardItemModel,
+)
+from PyQt6.QtWidgets import QApplication, QLabel, QMainWindow
+
 from Data.app_settings import AppSettings
-from Widgets.info_widget import InfoWidget
+from Data.paths import Path
+from Data.user import Saved
+from Generated.ui import Ui_MainWindow
+from Global.connections import Connectors
+from Global.translate import Translate
+from Registry.reg_edit import EditRegistry
 from Widgets.applied_widget import AppliedWidget
-from translate import Translate
+from Widgets.color_picker import ColorPicker
+from Widgets.disabled_widget import DisabledListWidget
+from Widgets.info_widget import InfoWidget
 
 
 class Main(Ui_MainWindow):
@@ -32,14 +36,18 @@ class Main(Ui_MainWindow):
         self.mainWindow.setWindowIconText("Translucent")
 
         # Handle Events
-        self.title.mousePressEvent = self.myMousePressEvent  # type: ignore
-        self.title.mouseMoveEvent = self.myMouseMoveEvent  # type: ignore
-        self.title.mouseReleaseEvent = self.myMouseReleaseEvent  # type: ignore
+        self.title.mousePressEvent = self.myMousePressEvent
+        self.title.mouseMoveEvent = self.myMouseMoveEvent
+        self.title.mouseReleaseEvent = self.myMouseReleaseEvent
         self.title.setMouseTracking(True)
-        self.closeButton.clicked.connect(ctypes.windll.kernel32.ExitProcess)  # type: ignore
-        self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)  # type: ignore
-        self.settingsButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(1))
-        self.backButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(0))
+        self.closeButton.clicked.connect(ctypes.windll.kernel32.ExitProcess)
+        self.minimizeButton.clicked.connect(self.mainWindow.showMinimized)
+        self.settingsButton.clicked.connect(
+            lambda: self.mainStackedWidget.setCurrentIndex(1)
+        )
+        self.backButton.clicked.connect(
+            lambda: self.mainStackedWidget.setCurrentIndex(0)
+        )
         # Set Languages
         self.languages: list[str] = [
             "English",
@@ -50,17 +58,12 @@ class Main(Ui_MainWindow):
         # Add Overlay-Widgets
         self.infoWidget = InfoWidget(self.mainWindow, self.mainFrame)
         self.appliedWidget = AppliedWidget(self.mainWindow, self.mainFrame)
+        self.disabledListWidget = DisabledListWidget(self.mainWindow, self.mainFrame)
 
         # Initial Processes
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
-        model = QStandardItemModel()
-        self.languageList.setModel(model)
-        for i in self.languages:
-            model.appendRow(QStandardItem(i))
-        self.languageList.selectionModel().select(  # type:ignore
-            self.languageList.model().createIndex(AppSettings.language, 0), QItemSelectionModel.SelectionFlag.Select  # type:ignore
-        )
+        self.setCurrentLanguage()
         Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
         self.callConnectors()
         self.UpdateSettingsUI()
@@ -72,6 +75,8 @@ class Main(Ui_MainWindow):
         """
         Connectors.connectColorPickers(self)
         Connectors.connectResetButtons(self)
+        Connectors.connectResetAllButtons(self)
+        Connectors.connectDisabledListButtons(self)
         Connectors.connectMouseEvent(self)
         Connectors.connectApplyButtons(self)
         Connectors.connectSettings(self)
@@ -88,31 +93,65 @@ class Main(Ui_MainWindow):
             textColor=AppSettings.textColor,
         )
 
+    def setCurrentLanguage(self):
+        """
+        Set the current language in settings and add languages to list
+        """
+        model = QStandardItemModel()
+        self.languageList.setModel(model)
+        for i in self.languages:
+            model.appendRow(QStandardItem(i))
+        if (
+            languageListSelectionModel := self.languageList.selectionModel()
+        ) is not None and (languageListModel := self.languageList.model()) is not None:
+            languageListSelectionModel.select(
+                languageListModel.createIndex(AppSettings.language, 0),
+                QItemSelectionModel.SelectionFlag.Select,
+            )
+
     def UpdateSettingsUI(self):
-        self.backgroundColor.setText(AppSettings.backgroundColor[1:])
-        self.secondaryBackgroundColor.setText(AppSettings.secondaryBackgroundColor[1:])
-        self.labelColor.setText(AppSettings.labelColor[1:])
-        self.textColor.setText(AppSettings.textColor[1:])
-        ColorPicker.changeButtonColor("FF" + AppSettings.backgroundColor[1:], self.background_color_picker)
-        ColorPicker.changeButtonColor("FF" + AppSettings.secondaryBackgroundColor[1:], self.secondary_background_color_picker)
-        ColorPicker.changeButtonColor("FF" + AppSettings.labelColor[1:], self.label_color_picker)
-        ColorPicker.changeButtonColor("FF" + AppSettings.textColor[1:], self.text_color_picker)
+        """
+        Update Appearance Settings UI
+        """
 
-    def myMousePressEvent(self, event: QMouseEvent):
-        if event.buttons() == Qt.MouseButton.LeftButton:
-            self.dragPos = event.globalPosition().toPoint()
+        self.backgroundColor.setText("FF" + AppSettings.backgroundColor[1:])
+        self.secondaryBackgroundColor.setText(
+            "FF" + AppSettings.secondaryBackgroundColor[1:]
+        )
+        self.labelColor.setText("FF" + AppSettings.labelColor[1:])
+        self.textColor.setText("FF" + AppSettings.textColor[1:])
+        ColorPicker.changeButtonColor(
+            "FF" + AppSettings.backgroundColor[1:], self.background_color_picker
+        )
+        ColorPicker.changeButtonColor(
+            "FF" + AppSettings.secondaryBackgroundColor[1:],
+            self.secondary_background_color_picker,
+        )
+        ColorPicker.changeButtonColor(
+            "FF" + AppSettings.labelColor[1:], self.label_color_picker
+        )
+        ColorPicker.changeButtonColor(
+            "FF" + AppSettings.textColor[1:], self.text_color_picker
+        )
+
+    def myMousePressEvent(self, ev: QMouseEvent | None):
+        if ev is not None and ev.buttons() == Qt.MouseButton.LeftButton:
+            self.dragPos = ev.globalPosition().toPoint()
             self.title.setCursor(Qt.CursorShape.ClosedHandCursor)
-            event.accept()
+            ev.accept()
 
-    def myMouseMoveEvent(self, event: QMouseEvent):
-        if event.buttons() == Qt.MouseButton.LeftButton:
-            self.mainWindow.move(self.mainWindow.pos() + event.globalPosition().toPoint() - self.dragPos)  # type: ignore
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
+    def myMouseMoveEvent(self, ev: QMouseEvent | None):
+        if ev is not None and ev.buttons() == Qt.MouseButton.LeftButton:
+            self.mainWindow.move(
+                self.mainWindow.pos() + ev.globalPosition().toPoint() - self.dragPos  # type:ignore
+            )
+            self.dragPos = ev.globalPosition().toPoint()
+            ev.accept()
 
-    def myMouseReleaseEvent(self, event: QMouseEvent):
-        QLabel.mouseReleaseEvent(self.title, event)
-        self.title.setCursor(Qt.CursorShape.OpenHandCursor)
+    def myMouseReleaseEvent(self, ev: QMouseEvent | None):
+        if isinstance(ev, QMouseEvent):
+            QLabel.mouseReleaseEvent(self.title, ev)
+            self.title.setCursor(Qt.CursorShape.OpenHandCursor)
 
 
 if __name__ == "__main__":

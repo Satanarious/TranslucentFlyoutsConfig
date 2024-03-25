@@ -3,7 +3,7 @@ class StyleSheet:
     def main(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
+        labelColor: str = "#FFFFFF",
         textColor: str = "#7A7A7A",
     ) -> str:
         return (
@@ -46,6 +46,8 @@ class StyleSheet:
         }
         QWidget#tab1,
         QWidget#tab2,
+        QWidget#tab2_1,
+        QWidget#tab2_2,
         QWidget#tab3,
         QWidget#tab3_1,
         QWidget#tab3_2,
@@ -311,6 +313,34 @@ class StyleSheet:
             + textColor
             + """;
         }
+        QToolButton#blockListButton{
+            color:"""
+            + labelColor
+            + """;
+            font-size:14px;
+            background-color: """
+            + secondaryBackgroundColor
+            + """;
+            border-radius:10px;
+            width:150px;
+            height:80px;
+            padding-top:30px;
+            padding-bottom:30px;
+            margin-top:40px
+        }
+        QToolButton#blockListButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QToolButton#blockListButton::pressed{
+            color:"""
+            + labelColor
+            + """;
+            background-color:"""
+            + textColor
+            + """;
+        }
         QListView{
             
             background-color:"""
@@ -345,7 +375,7 @@ class StyleSheet:
     def appliedWidget(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
+        labelColor: str = "#FFFFFF",
         textColor: str = "#7A7A7A",
     ) -> str:
         return (
@@ -393,10 +423,114 @@ class StyleSheet:
         )
 
     @staticmethod
+    def disabledListWidget(
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "#FFFFFF",
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+        QLabel#disabledNote{
+            font-family: Andika;
+            font-size:11px;
+            font-weight: bold;
+            color:"""
+            + labelColor
+            + """;
+        }
+        QFrame#disabledList_frame{
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+            border:1px solid """
+            + labelColor
+            + """;
+            border-radius:8px;
+        }
+        QLineEdit#lineEdit{
+            height:24px;
+            padding-left:10px;
+            font-family: Andika;
+            font-size:14px;
+            background-color:"""
+            + backgroundColor
+            + """;
+            border-radius:5px;
+            color:"""
+            + textColor
+            + """;
+            }
+        QListWidget#disabledList{
+            background-color:"""
+            + backgroundColor
+            + """;
+            font-size:14px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:5px;
+            padding-bottom:5px;
+            font-family: Andika;
+        }
+        QListWidget#disabledList::item:selected{
+            background-color:"""
+            + backgroundColor
+            + """;
+        }
+        QPushButton#applyButton, QPushButton#cancelButton{
+            font-family: Nunito Sans 10pt Condensed;
+            font-size:14px;
+            font-weight:bold;
+            background-color:"""
+            + backgroundColor
+            + """;
+            color:"""
+            + labelColor
+            + """;
+            width:70px;
+        }
+        QPushButton#applyButton::hover, QPushButton#cancelButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QPushButton#applyButton::pressed, QPushButton#cancelButton::pressed{
+            background-color:"""
+            + labelColor
+            + """;
+            color:"""
+            + backgroundColor
+            + """;
+        }
+        """
+        )
+
+    @staticmethod
+    def listWidgetItem(
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+            QLabel{
+                color:"""
+            + textColor
+            + """;
+                font-size:14px;
+                font-weight:normal;
+                font-family: Andika;
+            }
+            QToolButton::hover{
+                background-color:none;
+                border:none;
+            }
+            """
+        )
+
+    @staticmethod
     def infoWidget(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
+        labelColor: str = "#FFFFFF",
         textColor: str = "#7A7A7A",
     ) -> str:
         return (
@@ -408,13 +542,13 @@ class StyleSheet:
             border-top-left-radius:8px;
             border-top-right-radius:8px;
             border-top:1px solid """
-            + labelColor
+            + textColor
             + """;
             border-left:1px solid """
-            + labelColor
+            + textColor
             + """;
             border-right:1px solid """
-            + labelColor
+            + textColor
             + """;
         }
         QLabel#title{
@@ -427,7 +561,7 @@ class StyleSheet:
         }
         QScrollArea{
             border:1px solid """
-            + labelColor
+            + textColor
             + """;
         }
         QToolButton#closeButton::hover{
@@ -441,7 +575,7 @@ class StyleSheet:
     def applyButton(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
+        labelColor: str = "#FFFFFF",
         textColor: str = "#7A7A7A",
     ) -> str:
         return (
@@ -474,10 +608,82 @@ class StyleSheet:
         )
 
     @staticmethod
+    def disabledListButton(
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "#FFFFFF",
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+        QPushButton{
+            border-radius:5px;
+            color:"""
+            + labelColor
+            + """;
+            width:100px;
+            height:30px;
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+        }
+        QPushButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QPushButton::pressed{
+            color:"""
+            + labelColor
+            + """;
+            background-color:"""
+            + textColor
+            + """;
+        }
+        """
+        )
+
+    @staticmethod
+    def resetAllButton(
+        backgroundColor: str = "#202020",
+        secondaryBackgroundColor: str = "#313131",
+        labelColor: str = "#FFFFFF",
+        textColor: str = "#7A7A7A",
+    ) -> str:
+        return (
+            """
+        QPushButton{
+            border-radius:5px;
+            color:"""
+            + labelColor
+            + """;
+            width:80px;
+            height:30px;
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+        }
+        QPushButton::hover{
+            border:1px solid """
+            + labelColor
+            + """;
+        }
+        QPushButton::pressed{
+            color:"""
+            + labelColor
+            + """;
+            background-color:"""
+            + textColor
+            + """;
+        }
+        """
+        )
+
+    @staticmethod
     def mainTabBar(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
+        labelColor: str = "#FFFFFF",
         textColor: str = "#7A7A7A",
     ) -> str:
         return (
@@ -522,7 +728,7 @@ class StyleSheet:
     def menuTabBar(
         backgroundColor: str = "#202020",
         secondaryBackgroundColor: str = "#313131",
-        labelColor: str = "white",
+        labelColor: str = "#FFFFFF",
         textColor: str = "#7A7A7A",
     ) -> str:
         return (
@@ -559,18 +765,28 @@ class StyleSheet:
     @staticmethod
     def buttonColorStylesheet(rgba: tuple | list, secondaryBackgroundColor: str) -> str:
         colorString: str = f"rgb({rgba[0]},{rgba[1]},{rgba[2]})"
-        return """QPushButton{background-color:""" + colorString + """;width:25px;height:25px;border:1px solid """ + secondaryBackgroundColor + """;}"""
+        return (
+            """QPushButton{background-color:"""
+            + colorString
+            + """;width:23px;height:23px;border:1px solid """
+            + secondaryBackgroundColor
+            + """;}"""
+        )
 
     @staticmethod
     def buttoResetStyleSheet(resetColor: str = "#313131") -> str:
-        return """QPushButton{background-color:""" + resetColor + """;width:25px;height:25px;border:0px;}"""
+        return (
+            """QPushButton{background-color:"""
+            + resetColor
+            + """;width:25px;height:25px;border:0px;}"""
+        )
 
     class ColorPicker:
         @staticmethod
         def titleBar(
             backgroundColor: str = "#202020",
             secondaryBackgroundColor: str = "#313131",
-            labelColor: str = "white",
+            labelColor: str = "#FFFFFF",
             textColor: str = "#7A7A7A",
         ) -> str:
             return (
@@ -590,7 +806,7 @@ class StyleSheet:
         def windowTitle(
             backgroundColor: str = "#202020",
             secondaryBackgroundColor: str = "#313131",
-            labelColor: str = "white",
+            labelColor: str = "#FFFFFF",
             textColor: str = "#7A7A7A",
         ) -> str:
             return (
@@ -610,7 +826,7 @@ class StyleSheet:
         def buttonTextStyle(
             backgroundColor: str = "#202020",
             secondaryBackgroundColor: str = "#313131",
-            labelColor: str = "white",
+            labelColor: str = "#FFFFFF",
             textColor: str = "#7A7A7A",
         ) -> str:
             return (
@@ -639,7 +855,7 @@ class StyleSheet:
         def labelStyle(
             backgroundColor: str = "#202020",
             secondaryBackgroundColor: str = "#313131",
-            labelColor: str = "white",
+            labelColor: str = "#FFFFFF",
             textColor: str = "#7A7A7A",
         ) -> str:
             return (

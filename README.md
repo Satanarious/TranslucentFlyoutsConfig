@@ -4,12 +4,13 @@
 <img src="https://img.shields.io/github/downloads/Satanarious/TransparentFlyoutsConfig/total?color=pink">
 <img src="https://img.shields.io/github/issues/Satanarious/TransparentFlyoutsConfig?color=green">
 <img src="https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=purple">
-<img src="https://img.shields.io/badge/Python-v3.12.2-yellow">
+<img src="https://img.shields.io/badge/Python-v3.10.11-yellow">
 <img src="https://img.shields.io/badge/OS-Windows_10+-skyblue">
+<img src="https://img.shields.io/github/last-commit/Satanarious/TranslucentFlyoutsConfig.svg"/>
 </p>
 <img src="Screenshots/language_and_description_spread.png" align="right" width=550>
 
-**Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts) for Windows 10/11, which allows various customizations for windows32 style context menus.
+**Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts¹](#translucentflyouts) for Windows 10/11, which allows various customizations for windows32 style context menus.
 
 ### Other Languages
 
@@ -19,17 +20,23 @@ Catalog:
 
 - [Installation Instructions](#installation-instructions)
 - [Usage Instructions](#usage-instructions)
-- [Translation Contribution](#translation-contribution)
+- [Contribution](#contribution)
 - [Planned Features](#planned-features)
 - [Dependencies](#dependencies)
 - [Disclaimer](#disclaimer)
 - [License](#license)
 
+> [!Important]
+> If the latest version of [Translucent Flyouts¹](#translucentflyouts) doesn't work well or doesn't work at all with the latest version of Translucent Flyouts Config, make sure to create an issue or discussion and talk about it there.
+> Both [Translucent Flyouts¹](#translucentflyouts) and **Translucent Flyouts Config** are developed under a FOSS license, and any incompatibility might be due to communication gap and difference in time zones between the two developers, and the fact that this software is dependent on [Translucent Flyouts¹](#translucentflyouts) and not the other way around.
+> Rest assured, I strive to make this software compatible with the latest version of Translucent Flyouts as soon as possible if that is ever not the case for future releases.
+
 ## Installation Instructions
 
 ### 1. 1-Click Install (★ Recommended)
 
-> Note: For old Translucent Flyout users, uninstall the manually installed version of Translucent Flyouts and then follow the underlying steps.
+> [!Warning]
+> For old [Translucent Flyouts¹](#translucentflyouts) users, uninstall the manually installed version of [Translucent Flyouts¹](#translucentflyouts) and then follow the underlying steps.
 > <img src="Screenshots/all_tabs_spread.png" align="right" width=500>
 
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
@@ -40,7 +47,7 @@ Catalog:
 
 ### 2. Manual Install
 
-> Assuming you have the latest release of [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest) Installed.
+> Assuming you have the latest release of [Translucent Flyouts¹](#translucentflyouts/releases/latest) Installed.
 
 - Download the [latest release](https://github.com/Satanarious/TransparentFlyoutsConfigGUI/releases/latest)
 - Extract all files in a directory/folder.
@@ -50,9 +57,9 @@ Catalog:
 
 ## Usage Instructions
 
-- Left-clicking on the reset button on the far right of any setting resets the value to its default value.
-- Right-clicking on the reset button on the far right of any setting resets the value to its last-saved value.
-- Use the color-picker to choose the color including the alpha(Opacity) value.
+- Left-clicking on the <img src="Assets/icons/light/reset_icon.png" width=13> reset button on the far right of any setting resets the value to its default value.
+- Right-clicking on the <img src="Assets/icons/light/reset_icon.png" width=13> reset button on the far right of any setting resets the value to its last-saved value.
+- Use the <img src="Assets/icons/light/color_picker_icon.png" width=15> color-picker to choose the color including the alpha(Opacity) value.
 - See the avaiable values and their descriptions by click on any parameter label.
 - Any changes are immediately applied on pressing the `Apply` or `Save` button in the respective section.
 - In the Settings section:
@@ -61,7 +68,9 @@ Catalog:
   - Access functions such as Run, Stop, Install and Uninstall in the `Internal Functions` section.
   - Finally, Download and Install Translucent Flyouts with one click of a button present in the `External Functions` section.
 
-## Translation Contribution
+## Contribution
+
+### Translation
 
 You can contribute to the language of your choice that you are confident in contributing to for this project. You may wanna look at [this](Translations/hi-in.json) translation file before proceeding to contribute.
 
@@ -72,7 +81,8 @@ For first time contributors use the following Steps:
 - Copy everything from [hi-in.json](Translations/hi-in.json) and paste it into you new file.
 - Remove Hindi translations for each corresponding English ones and replace with translation for your respective language.
 
-> Note: There's a translations where a line ends with `<code>` and another that starts with `</code>`, pay close attention and keep it that way in you translation as well, else it will break the code.
+> [!Important]
+> There's a translations where a line ends with `<code>` and another that starts with `</code>`, pay close attention and keep it that way in you translation as well, else it will break the code.
 > Here are the lines:
 >
 > - `"Uses the corresponding value in the global tab as the <code>"`
@@ -81,13 +91,19 @@ For first time contributors use the following Steps:
 If you wanna go a few steps further and edit python, you might as well follow these:
 
 - Open [Data/enum.py](Data/enums.py) and add an additional value to the class ` Languages`.
-- Open [Data/paths.py](Data/paths.py) and under class `Translations` add the path to you translation path in the exact as mentioned there for the previously mentioned language(s).
+- Open [Data/paths.py](Data/paths.py) and under class `Translations` add the path to you translation path in the exact way as mentioned there for the previously mentioned language(s).
 - Open [Data/translations.py](Data/translations.py) and under class `TranslationModel`, under method `_fetch()`, find a dictionary `translationPath` and add another pair in the format `LanguageEnum:LanguageJSONPathVariable`
 - Open [main.py](main.py) and under method `__init__` you will find a line which says `self.language` with a list of language names in their own languages. Add one for the one you are adding.
 
-> Note 1: If you just wanna do the first part, I'll accept PR for the same as well and do the 2nd part myself. But the 2nd part would be appreciated.
+> [!Note]
+> If you just wanna do the first part, I'll accept PR for the same as well and do the 2nd part myself. But the 2nd part would be appreciated.
 
-> Note 2: I'm leaving the font as it is for the unsupported languages for the current fonts. I'll add more fonts later.
+### Bug Fixes and Improvements
+
+- Bug Fixes: If you find a bug, please create a pull request with a clear description of the issue and how to fix it.
+- Improvements: Have an idea for how to improve LocalSend? Please create an issue first to discuss why the improvement is needed.
+
+For more information, see the [contribution guide](CONTRIBUTION.md).
 
 ## Planned Features
 
@@ -104,9 +120,7 @@ Checkout the [tracker](https://github.com/users/Satanarious/projects/2/views/2) 
   - [x] Uninstall
 - [x] Download Latest Version of Translucent Flyouts.
 - [ ] Update to the Latest Version of Translucent Flyouts.
-- [ ] Add fonts for supported languages.
 - [ ] UI Animations
-- [ ] Preview Pane for Instant changes preview before applying.
 - [ ] Addition to Microsoft Store and/or Winget.
 
 ## Dependencies
@@ -139,9 +153,10 @@ The Tick icon included in the application, which appears when the user clicks th
 
 This application contains everything necessary to be known and understood about configuring the appearance of context menus without the need to refer to the previously mentioned Config file.
 
-> Note: This application just serves as a GUI to eliminate any kind of registry editing, required by the previously mentioned application to configure the appearnce of context menus. This is not a standalone application and is required to be used alongside [Translucent Flyouts](https://github.com/ALTaleX531/TranslucentFlyouts)
+> [!Note]
+> This application just serves as a GUI to eliminate any kind of registry editing, required by the previously mentioned application to configure the appearance of context menus. This is not a standalone application and is required to be used alongside [Translucent Flyouts¹](#translucentflyouts)
 
-Take a look at the [Config File](https://github.com/ALTaleX531/TranslucentFlyouts/blob/master/CONFIG.md) which provides description as well as methods to configure various aspects of the windows32 style context menus. Though some features are restricted to Windows 11 due to the absence of Mica on Windows 10.
+Take a look at the [Config File](#translucentflyouts/blob/master/CONFIG.md) which provides description as well as methods to configure various aspects of the windows32 style context menus. Though some features are restricted to Windows 11 due to the absence of Mica on Windows 10.
 
 ## License
 
