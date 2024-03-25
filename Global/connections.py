@@ -3045,7 +3045,7 @@ class Connectors:
                 )
                 return
 
-            path: str = rf'start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /start'
+            path: str = rf'start Rundll32 "{AppSettings.path}\TFMain64.dll",Main /start'
             os.system(path)
 
         def stop():
@@ -3056,7 +3056,7 @@ class Connectors:
                 )
                 return
 
-            path: str = rf'start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /stop'
+            path: str = rf'start Rundll32 "{AppSettings.path}\TFMain64.dll",Main /stop'
             os.system(path)
 
         def install():
@@ -3068,7 +3068,7 @@ class Connectors:
                 return
 
             path: str = (
-                rf'/c start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /install'
+                rf'/c start Rundll32 "{AppSettings.path}\TFMain64.dll",Main /install'
             )
             windll.shell32.ShellExecuteW(
                 None,
@@ -3088,7 +3088,7 @@ class Connectors:
                 return
 
             path: str = (
-                rf'/c start Rundll32 "{AppSettings.path}/TFMain64.dll",Main /uninstall'
+                rf'/c start Rundll32 "{AppSettings.path}\TFMain64.dll",Main /uninstall'
             )
             windll.shell32.ShellExecuteW(
                 None,
@@ -3100,16 +3100,17 @@ class Connectors:
             )
 
         def downloadAndInstall():
-            url = "https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest/download/TranslucentFlyoutsV2.x64.rar"
+            url = "https://github.com/ALTaleX531/TranslucentFlyouts/releases/latest/download/TranslucentFlyouts.Win32.V3.x64.rar"
             wget.download(url)
             os.system(
-                r".\\Assets\\unrar.exe -idp -y e .\\TranslucentFlyoutsV2.x64.rar .\\TranslucentFlyouts\\"
+                r".\\Assets\\unrar.exe -idp -y e .\\TranslucentFlyouts.Win32.V3.x64.rar .\\TranslucentFlyouts\\"
             )
-            os.remove(".\\TranslucentFlyoutsV2.x64.rar")
+            os.remove(".\\TranslucentFlyouts.Win32.V3.x64.rar")
             path = os.path.abspath(".\\TranslucentFlyouts")
             window.locationLineEdit.setText(path)
             window.saveButton.click()
             window.installButton.click()
+            window.toolBox.setCurrentIndex(0)
 
         def chooseFolder():
             dialog = QFileDialog()
