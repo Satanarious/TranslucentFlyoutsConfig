@@ -46,10 +46,10 @@ class EditRegistry:
             basePath=Path.RegPaths.Software, keyName=Path.RegKeys.TranslucentFlyouts
         )
         EditRegistry.createKey(
-            basePath=Path.RegPaths.Software, keyName=Path.RegKeys.DisabledList
+            basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.DisabledList
         )
         EditRegistry.createKey(
-            basePath=Path.RegPaths.Software, keyName=Path.RegKeys.BlockList
+            basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.BlockList
         )
         EditRegistry.createKey(
             basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.DropDown
@@ -69,11 +69,11 @@ class EditRegistry:
         EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.Separator)
         EditRegistry.createKey(basePath=menuPath, keyName=Path.RegKeys.DisabledList)
         EditRegistry.createKey(
-            basePath=Path.RegPaths.BasePath + Path.RegPaths.Tooltip,
-            keyName=Path.RegKeys.DisabledList,
+            basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.Tooltip
         )
         EditRegistry.createKey(
-            basePath=Path.RegPaths.BasePath, keyName=Path.RegKeys.Tooltip
+            basePath=Path.RegPaths.BasePath + Path.RegPaths.Tooltip,
+            keyName=Path.RegKeys.DisabledList,
         )
 
     @staticmethod
