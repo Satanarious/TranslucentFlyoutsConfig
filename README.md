@@ -107,7 +107,7 @@ If you wanna go a few steps further and edit python, you might as well follow th
 - Bug Fixes: If you find a bug, please create a pull request with a clear description of the issue and how to fix it.
 - Improvements: Have an idea on how to improve Translucent Flyouts Config? Please create an issue first to discuss why the improvement is needed.
 
-For more information, see the [contribution guide](CONTRIBUTION.md).
+For more information, see the [contribution guide](CONTRIBUTING.md).
 
 ## Planned Features
 
