@@ -1,18 +1,26 @@
-![Banner](Screenshots/banner.png)
-
-<center>
-
-[![Latest Release](https://img.shields.io/github/v/release/Satanarious/TransparentFlyoutsConfig?include_prereleases&logo=github&label=Latest-Release)](https://github.com/Satanarious/TranslucentFlyoutsConfig/releases/latest)
-![Downloads](https://img.shields.io/github/downloads/Satanarious/TransparentFlyoutsConfig/total?color=pink&label=Downloads&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0IDYuNWgtNHYtNkg0djZIMGw3IDcgNy03Wm0tMTQgOXYyaDE0di0ySDBaIiBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsYXNzPSJmaWxsLTAwMDAwMCIgZGF0YS1kYXJrcmVhZGVyLWlubGluZS1maWxsPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLWZpbGw6ICMxODFhMWI7Ij48L3BhdGg+PC9zdmc+)
-[![Open Issues](https://img.shields.io/github/issues/Satanarious/TransparentFlyoutsConfig?color=529c56&logo=github&label=Issues)](https://github.com/Satanarious/TranslucentFlyoutsConfig/issues?q=is%3Aissue+is%3Aopen)
-[![Closed Issues](https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=986ee2&logo=github&label=Issues)](https://github.com/Satanarious/TranslucentFlyoutsConfig/issues?q=is%3Aissue+is%3Aclosed)
-[![Python Version](https://img.shields.io/badge/Python-v3.10.11-yellow?logo=python&logoColor=white&color=f6d24a)](https://www.python.org/downloads/release/python-31011/)
-[![Linter](https://img.shields.io/badge/Linter-🗲_Ruff-cyan?logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDgwIDI1NmgtNjR2LTUwLjdsNTQuNjMtNTQuNjNjMTIuNS0xMi41IDEyLjUtMzIuNzUgMC00NS4yNXMtMzIuNzUtMTIuNS00NS4yNSAwTDM3MC44IDE2MEgxNDEuM2wtNTQuNjctNTQuNmMtMTIuNS0xMi41LTMyLjc1LTEyLjUtNDUuMjUgMHMtMTIuNSAzMi43NSAwIDQ1LjI1TDk2IDIwNS4zVjI1NkgzMmMtMTcuNjkgMC0zMiAxNC4zLTMyIDMyczE0LjMxIDMyIDMyIDMyaDY0djMyYzAgMTUuMTEgMy4wODggMjkuNCA3Ljg5NSA0Mi44NmwtNjIuNTIgNjIuNTJjLTEyLjUgMTIuNS0xMi41IDMyLjc1IDAgNDUuMjVDNDcuNjMgNTA4LjkgNTUuODEgNTEyIDY0IDUxMnMxNi4zOC0zLjEyNSAyMi42Mi05LjM3NWw1NC4xMy01NC4xM0MxNjMuMiA0NjcuOSAxOTIgNDgwIDIyNCA0ODBoMTYuMVYyMzkuOWMwLTguNyA3LjEtMTUuOSAxNS45LTE1LjlzMTYgNy4yIDE2IDE1LjlWNDgwaDE2YzMxLjk2IDAgNjAuODItMTIuMTMgODMuMjUtMzEuNWw1NC4xMyA1NC4xM0M0MzEuNiA1MDguOSA0MzkuOCA1MTIgNDQ4IDUxMnMxNi4zOC0zLjEyNSAyMi42Mi05LjM3NWMxMi41LTEyLjUgMTIuNS0zMi43NSAwLTQ1LjI1bC02Mi41Mi02Mi41MkM0MTIuOSAzODEuNCA0MTYgMzY3LjEgNDE2IDM1MnYtMzJoNjRjMTcuNjkgMCAzMi0xNC4zMyAzMi0zMnMtMTQuMy0zMi0zMi0zMnpNMzUyIDk2YzAtNTMuMDItNDIuOTgtOTYtOTYtOTZzLTk2IDQyLjk4LTk2IDk2djMyaDE5MlY5NnoiIGZpbGw9IiNmZmZmZmYiIGNsYXNzPSJmaWxsLTAwMDAwMCIgZGF0YS1kYXJrcmVhZGVyLWlubGluZS1maWxsPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLWZpbGw6ICMxODFhMWI7Ij48L3BhdGg+PC9zdmc+)](https://docs.astral.sh/ruff/)
-![OS](https://img.shields.io/badge/OS-Windows_10+-skyblue?logo=windows)
-[![Last Commit](https://img.shields.io/github/last-commit/Satanarious/TranslucentFlyoutsConfig.svg?logo=git&label=Last-Commit&logoColor=white)](https://github.com/Satanarious/TranslucentFlyoutsConfig/commits/master/)
-
-</center>
-
+<img src="Screenshots/banner.png">
+<p align=center>
+<a href="https://github.com/Satanarious/TranslucentFlyoutsConfig/releases/latest">
+<img src="https://img.shields.io/github/v/release/Satanarious/TransparentFlyoutsConfig?include_prereleases&logo=github&label=Latest Release">
+</a>
+<img src="https://img.shields.io/github/downloads/Satanarious/TransparentFlyoutsConfig/total?color=pink&label=Downloads&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0IDYuNWgtNHYtNkg0djZIMGw3IDcgNy03Wm0tMTQgOXYyaDE0di0ySDBaIiBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsYXNzPSJmaWxsLTAwMDAwMCIgZGF0YS1kYXJrcmVhZGVyLWlubGluZS1maWxsPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLWZpbGw6ICMxODFhMWI7Ij48L3BhdGg+PC9zdmc+">
+<a href="https://github.com/Satanarious/TranslucentFlyoutsConfig/issues?q=is%3Aissue+is%3Aopen">
+<img src="https://img.shields.io/github/issues/Satanarious/TransparentFlyoutsConfig?color=529c56&logo=github&label=Issues">
+</a>
+<a href="https://github.com/Satanarious/TranslucentFlyoutsConfig/issues?q=is%3Aissue+is%3Aclosed">
+<img src="https://img.shields.io/github/issues-closed/Satanarious/TransparentFlyoutsConfig?color=986ee2&logo=github&label=Issues">
+</a>
+<a href="https://www.python.org/downloads/release/python-31011/">
+<img src="https://img.shields.io/badge/Python-v3.10.11-yellow?logo=python&logoColor=white&color=f6d24a">
+</a>
+<a href="https://docs.astral.sh/ruff/">
+<img src="https://img.shields.io/badge/Linter-🗲_Ruff-cyan?logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDgwIDI1NmgtNjR2LTUwLjdsNTQuNjMtNTQuNjNjMTIuNS0xMi41IDEyLjUtMzIuNzUgMC00NS4yNXMtMzIuNzUtMTIuNS00NS4yNSAwTDM3MC44IDE2MEgxNDEuM2wtNTQuNjctNTQuNmMtMTIuNS0xMi41LTMyLjc1LTEyLjUtNDUuMjUgMHMtMTIuNSAzMi43NSAwIDQ1LjI1TDk2IDIwNS4zVjI1NkgzMmMtMTcuNjkgMC0zMiAxNC4zLTMyIDMyczE0LjMxIDMyIDMyIDMyaDY0djMyYzAgMTUuMTEgMy4wODggMjkuNCA3Ljg5NSA0Mi44NmwtNjIuNTIgNjIuNTJjLTEyLjUgMTIuNS0xMi41IDMyLjc1IDAgNDUuMjVDNDcuNjMgNTA4LjkgNTUuODEgNTEyIDY0IDUxMnMxNi4zOC0zLjEyNSAyMi42Mi05LjM3NWw1NC4xMy01NC4xM0MxNjMuMiA0NjcuOSAxOTIgNDgwIDIyNCA0ODBoMTYuMVYyMzkuOWMwLTguNyA3LjEtMTUuOSAxNS45LTE1LjlzMTYgNy4yIDE2IDE1LjlWNDgwaDE2YzMxLjk2IDAgNjAuODItMTIuMTMgODMuMjUtMzEuNWw1NC4xMyA1NC4xM0M0MzEuNiA1MDguOSA0MzkuOCA1MTIgNDQ4IDUxMnMxNi4zOC0zLjEyNSAyMi42Mi05LjM3NWMxMi41LTEyLjUgMTIuNS0zMi43NSAwLTQ1LjI1bC02Mi41Mi02Mi41MkM0MTIuOSAzODEuNCA0MTYgMzY3LjEgNDE2IDM1MnYtMzJoNjRjMTcuNjkgMCAzMi0xNC4zMyAzMi0zMnMtMTQuMy0zMi0zMi0zMnpNMzUyIDk2YzAtNTMuMDItNDIuOTgtOTYtOTYtOTZzLTk2IDQyLjk4LTk2IDk2djMyaDE5MlY5NnoiIGZpbGw9IiNmZmZmZmYiIGNsYXNzPSJmaWxsLTAwMDAwMCIgZGF0YS1kYXJrcmVhZGVyLWlubGluZS1maWxsPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLWZpbGw6ICMxODFhMWI7Ij48L3BhdGg+PC9zdmc+">
+</a>
+<img src="https://img.shields.io/badge/OS-Windows_10+-skyblue?logo=windows">
+<a href="https://github.com/Satanarious/TranslucentFlyoutsConfig/commits/master/">
+<img src="https://img.shields.io/github/last-commit/Satanarious/TranslucentFlyoutsConfig.svg?logo=git&label=Last Commit&logoColor=white">
+</a>
+</p>
 <img src="Screenshots/language_and_description_spread.png" align="right" width=550>
 
 **Translucent Flyouts Config GUI** is a companion application for [Translucent Flyouts¹](#translucentflyouts) for Windows 10/11, which allows various customizations for windows32 style context menus.
