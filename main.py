@@ -64,10 +64,10 @@ class Main(Ui_MainWindow):
         EditRegistry.createAllKeys()
         Saved.updateUI(self)
         self.setCurrentLanguage()
-        Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
         self.callConnectors()
         self.UpdateSettingsUI()
         self.locationLineEdit.setText(AppSettings.path)
+        Translate.translate(self, Translate.findLanguageFromInt(AppSettings.language))
 
     def callConnectors(self):
         """
