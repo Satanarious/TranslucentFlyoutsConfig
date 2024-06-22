@@ -129,7 +129,7 @@ class DisabledListWidget(Ui_Form):
         self.widget.show()
         self.frame.setGraphicsEffect(QGraphicsBlurEffect())
         self.frame.setDisabled(True)
-        self.listType = ListType
+        self.listType = listType
 
     def stop(self):
         self.widget.hide()
