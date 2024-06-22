@@ -12,6 +12,7 @@ class Path:
         class Light:
             ResetIcon: str = "Assets/icons/light/reset_icon.png"
             ColorPicker: str = "Assets/icons/light/color_picker_icon.png"
+            CheckIcon: str = "Assets/icons/light/check_icon.png"
             Logo: str = "Assets/icons/light/logo.png"
             MinimizeIcon: str = "Assets/icons/light/minimize_icon.png"
             UpArrow: str = "Assets/icons/light/up-arrow.png"
@@ -33,6 +34,7 @@ class Path:
         class Dark:
             ResetIcon: str = "Assets/icons/dark/reset_icon.png"
             ColorPicker: str = "Assets/icons/dark/color_picker_icon.png"
+            CheckIcon: str = "Assets/icons/dark/check_icon.png"
             Logo: str = "Assets/icons/dark/logo.png"
             MinimizeIcon: str = "Assets/icons/dark/minimize_icon.png"
             UpArrow: str = "Assets/icons/dark/up-arrow.png"

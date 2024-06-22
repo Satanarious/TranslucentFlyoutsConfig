@@ -477,6 +477,17 @@ class StyleSheet:
             + backgroundColor
             + """;
         }
+        QPushButton#addButton{
+            background-color:"""
+            + backgroundColor
+            + """;
+            color:"""
+            + labelColor
+            + """;
+            height:24px;
+            width:24px;
+        }
+
         QPushButton#applyButton, QPushButton#cancelButton{
             font-family: Nunito Sans 10pt Condensed;
             font-size:14px;
@@ -488,6 +499,20 @@ class StyleSheet:
             + labelColor
             + """;
             width:70px;
+        }
+        QPushButton#addButton::pressed{
+            background-color:"""
+            + secondaryBackgroundColor
+            + """;
+            height:24px;
+            width:24px;
+        }
+        QPushButton#addButton::hover{
+            height:24px;
+            width:24px;
+            border:1px solid """
+            + labelColor
+            + """;
         }
         QPushButton#applyButton::hover, QPushButton#cancelButton::hover{
             border:1px solid """
