@@ -66,6 +66,7 @@ class DisabledListWidget(Ui_Form):
             self.widget.height() - self.frame.height() - 70,
         )
         self.widget.setGeometry(x, y, self.widget.width(), self.widget.height())
+        self.addButton.clicked.connect(self.addToList)
         self.cancelButton.clicked.connect(self.stop)
         self.applyButton.clicked.connect(self.apply)
         self.lineEdit.returnPressed.connect(self.addToList)

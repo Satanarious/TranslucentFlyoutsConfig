@@ -674,6 +674,14 @@ class Connectors:
             )
         )
 
+        window.disabledListWidget.addButton.setIcon(
+            QIcon(
+                Path.IconPaths.Light.CheckIcon
+                if iconType == IconType.Light
+                else Path.IconPaths.Dark.CheckIcon
+            )
+        )
+
         # Stylesheet
         if iconType == IconType.Light:
             window.mainFrame.setStyleSheet(
