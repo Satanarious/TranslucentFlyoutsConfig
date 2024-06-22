@@ -230,7 +230,14 @@
   "Gradient color sets the color of the background in dark/light mode. You can choose the color to your liking while also being able to choose the opacity with the help of the alpha value.": "ग्रेडिएंट रंग पृष्ठभूमि के रंग को गहरे/प्रकाश मोड में सेट करता है। आप अपनी पसंद के अनुसार रंग चुन सकते हैं और साथ ही अल्फा वैल्यू की मदद से अपारदर्शिता भी चुन सकते हैं।",
   "Process Name, e.g. explorer.exe": "प्रक्रिया का नाम, उदा. explorer.exe",
   "Note: Adding any process to this list would turn off the functionality of this section for that.": "ध्यान दें: इस सूची में कोई भी प्रक्रिया जोड़ने से उसके लिए इस अनुभाग की कार्यक्षमता बंद हो जाएगी।",
-  "Warning: This section is only meant for the advanced user. Configuring the Block List needs a system restart and doesn't load Translucent Flyouts for that application at all. This may cause some serious problems if not used properly, resulting in high CPU usage.":"चेतावनी: यह अनुभाग केवल उन्नत उपयोगकर्ता के लिए है। ब्लॉक सूची को कॉन्फ़िगर करने के लिए सिस्टम पुनरारंभ की आवश्यकता होती है और उस एप्लिकेशन के लिए ट्रांसलूसेंट फ्लाईआउट्स बिल्कुल भी लोड नहीं होता है। यदि ठीक से उपयोग नहीं किया गया तो यह कुछ गंभीर समस्याएं पैदा कर सकता है, जिसके परिणामस्वरूप उच्च CPU उपयोग हो सकता है।",
-  "Configure Block List":"ब्लॉक सूची कॉन्फ़िगर करें",
-  "Advanced Functions":"उन्नत कार्य"
+  "Warning: This section is only meant for the advanced user. Configuring the Block List needs a system restart and doesn't load Translucent Flyouts for that application at all. This may cause some serious problems if not used properly, resulting in high CPU usage.": "चेतावनी: यह अनुभाग केवल उन्नत उपयोगकर्ता के लिए है। ब्लॉक सूची को कॉन्फ़िगर करने के लिए सिस्टम पुनरारंभ की आवश्यकता होती है और उस एप्लिकेशन के लिए ट्रांसलूसेंट फ्लाईआउट्स बिल्कुल भी लोड नहीं होता है। यदि ठीक से उपयोग नहीं किया गया तो यह कुछ गंभीर समस्याएं पैदा कर सकता है, जिसके परिणामस्वरूप उच्च CPU उपयोग हो सकता है।",
+  "Configure Block List": "ब्लॉक सूची कॉन्फ़िगर करें",
+  "Advanced Functions": "उन्नत कार्य",
+  "Black-Grey": "काला-धूसर",
+  "White-Grey": "सफेद-धूसर",
+  "Pink-Purple": "गुलाबी-बैंगनी",
+  "Green-Chocolate": "हरा-कत्‍थई",
+  "Cyan-PaleYellow": "सियान-हल्का पीला",
+  "Orange-Brown": "नारंगी-भूरा",
+  "Wine-PaleYellow": "वाइन-हल्का पीला"
 }

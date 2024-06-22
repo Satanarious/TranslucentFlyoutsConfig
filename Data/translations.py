@@ -180,6 +180,16 @@ class Key:
                 lightMode: str = "Light Mode"
                 darkMode: str = "Dark Mode"
 
+            class Preset:
+                manual: str = "Manual"
+                blackGrey: str = "Black-Grey"
+                whiteGrey: str = "White-Grey"
+                pinkPurple: str = "Pink-Purple"
+                greenChocolate: str = "Green-Chocolate"
+                cyanPaleYellow: str = "Cyan-PaleYellow"
+                orangeBrown: str = "Orange-Brown"
+                winePaleYellow: str = "Wine-PaleYellow"
+
         class InternalFunctions:
             install: str = "Install"
             uninstall: str = "Uninstall"

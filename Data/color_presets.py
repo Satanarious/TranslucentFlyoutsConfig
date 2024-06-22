@@ -30,7 +30,7 @@ class ColorPresets:
         Returns:
             list[str]: A list of color preset names
         """
-        return list(ColorPresets.rawDefaults.keys())
+        return list(map(lambda x: x["name"], ColorPresets.rawDefaults["presets"]))
 
     @staticmethod
     def presetChanged(window: Main) -> None:
@@ -43,9 +43,7 @@ class ColorPresets:
         index = window.preset.currentIndex()
         if index == 0:
             return
-
-        preset = window.preset.itemText(index)
-        presetParams = ColorPresets.rawDefaults[preset]
+        presetParams = ColorPresets.rawDefaults["presets"][index - 1]["colours"]
 
         backgroundColor = "FF" + presetParams[ColorPresets.Key.BackgroundColor][1:]
         window.backgroundColor.setText(backgroundColor)

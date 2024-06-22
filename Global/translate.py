@@ -1084,6 +1084,29 @@ class Translate:
             1, _translate(Key.Settings.Appearance.IconColorMode.darkMode)
         )
         window.lbl_preset.setText(_translate(Key.Settings.Appearance.selectPreset))
+        window.preset.setItemText(0, _translate(Key.Settings.Appearance.Preset.manual))
+        window.preset.setItemText(
+            1, _translate(Key.Settings.Appearance.Preset.blackGrey)
+        )
+        window.preset.setItemText(
+            2, _translate(Key.Settings.Appearance.Preset.whiteGrey)
+        )
+        window.preset.setItemText(
+            3, _translate(Key.Settings.Appearance.Preset.pinkPurple)
+        )
+        window.preset.setItemText(
+            4, _translate(Key.Settings.Appearance.Preset.greenChocolate)
+        )
+        window.preset.setItemText(
+            5, _translate(Key.Settings.Appearance.Preset.cyanPaleYellow)
+        )
+        window.preset.setItemText(
+            6, _translate(Key.Settings.Appearance.Preset.orangeBrown)
+        )
+        window.preset.setItemText(
+            7, _translate(Key.Settings.Appearance.Preset.winePaleYellow)
+        )
+
         window.saveButton_2.setText(_translate(Key.save))
         window.installButton.setText(_translate(Key.Settings.InternalFunctions.install))
         window.uninstallButton.setText(
