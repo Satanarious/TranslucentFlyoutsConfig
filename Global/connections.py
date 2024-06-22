@@ -3170,18 +3170,18 @@ class Connectors:
             ):
                 return
 
-            backgroundColor = "#" + backgroundColor[2:]
-            secondaryBackgroundColor = "#" + secondaryBackgroundColor[2:]
-            labelColor = "#" + labelColor[2:]
-            textColor = "#" + textColor[2:]
+            AppSettings.backgroundColor = "#" + backgroundColor[2:]
+            AppSettings.secondaryBackgroundColor = "#" + secondaryBackgroundColor[2:]
+            AppSettings.labelColor = "#" + labelColor[2:]
+            AppSettings.textColor = "#" + textColor[2:]
             AppSettings.iconType = iconType
 
             Connectors.connectStyleSheets(
                 window=window,
-                backgroundColor=backgroundColor,
-                secondaryBackgroundColor=secondaryBackgroundColor,
-                labelColor=labelColor,
-                textColor=textColor,
+                backgroundColor=AppSettings.backgroundColor,
+                secondaryBackgroundColor=AppSettings.secondaryBackgroundColor,
+                labelColor=AppSettings.labelColor,
+                textColor=AppSettings.textColor,
             )
             Connectors.setIcons(window, iconType)
             AppSettings.updateDict()
