@@ -195,7 +195,7 @@
   "This value is divided by 1000 as it is converted to DIP(Device Independent Pixels)": "该值在转换为 DIP(设备独立像素) 时除以1000。（即1000ms = 1dp）",
   "Corner radius, as the name suggests is radius of corners for this menu item.": "项的边角半径。",
   "This is used for renderig border or filling rectangles.": "用于渲染边框或填充矩形。",
-  "Margins Type defines how the underlying values of margin should be applied to the tooltip.": "选择如何应用边框大小。",
+  "Margins Type defines how the underlying values of margin should be applied to the tooltip.": "选择如何应用内边距大小。",
   "Add margin values to the already existing ones.": "将下面设置的内边距大小添加到原有值。",
   "Replace the currently used values of margin with the new ones": "将内边距大小设为下面设置的值。",
   "Margin helps you set margin for the tooltip corresponding to the directions: left, right, top, bottom. They are applied based on the Margins Type mentioned above.": "修改提示框各方向上内边距的大小。具体如何修改取决于上面的 \"内边距修改方式\" 。",
